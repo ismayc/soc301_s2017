@@ -2,8 +2,8 @@ baseurl = "/"
 publishDir = "docs"
 relativeurls = true
 languageCode = "en-us"
-title = "Lithium Theme"
-theme = "hugo-academic"
+title = "SOC 301 - Spring 2017"
+theme = "hugo-lithium-theme"
 googleAnalytics = ""
 disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
@@ -12,25 +12,26 @@ ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
     post = "/:year/:month/:day/:slug/"
 
 [[menu.main]]
-    name = "About"
-    url = "/about/"
+    name = "Syllabus"
+    url = "/syllabus/"  
 [[menu.main]]
-    name = "GitHub"
-    url = "https://github.com/rstudio/blogdown"
+    name = "Problem Sets"
+    url = "/problem-sets/"  
 [[menu.main]]
-    name = "Twitter"
-    url = "https://twitter.com/rstudio"
+    name = "Resources"
+    url = "/resources/"     
 
 [params]
-    description = "A website built through Hugo and blogdown."
-
+    description = "SOC 301 - Spring 2017"
+    author = "Chester Ismay"
+    
     # options for highlight.js (version, additional languages, and theme)
     highlightjsVersion = "9.9.0"
     highlightjsLang = ["r", "yaml"]
     highlightjsTheme = "github"
 
     [params.logo]
-    url = "logo.png"
+    url = "pacific.jpg"
     width = 50
     height = 50
     alt = "Logo"

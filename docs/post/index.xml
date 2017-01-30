@@ -1,13 +1,36 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Lithium Theme</title>
+    <title>Posts on SOC 301 - Spring 2017</title>
     <link>/post/index.xml</link>
-    <description>Recent content in Posts on Lithium Theme</description>
+    <description>Recent content in Posts on SOC 301 - Spring 2017</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Dec 2016 21:49:57 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 30 Jan 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Welcome to SOC 301!</title>
+      <link>/2017/01/30/welcome-to-soc-301/</link>
+      <pubDate>Mon, 30 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/01/30/welcome-to-soc-301/</guid>
+      <description>&lt;!-- BLOGDOWN-BODY-BEFORE
+
+/BLOGDOWN-BODY-BEFORE --&gt;
+
+&lt;p&gt;You will find links to the content covered in posts made to the main page that you just came from at &lt;a href=&#34;http://ismayc.github.io/soc301-s2017&#34; class=&#34;uri&#34;&gt;http://ismayc.github.io/soc301-s2017&lt;/a&gt;. You can also return to the homepage at any time by clicking on the Boxer image in the top left of the page.&lt;/p&gt;
+&lt;p&gt;Maybe the most important document here is the Syllabus. You can find the current version (and any future updates to it) by clicking on the Syllabus link at the top of this page. Note that this webpage also works on mobile devices too.&lt;/p&gt;
+
+
+&lt;!-- BLOGDOWN-HEAD
+
+
+
+
+/BLOGDOWN-HEAD --&gt;
+</description>
+    </item>
     
     <item>
       <title>A Plain Markdown Post</title>
