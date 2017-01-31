@@ -10,7 +10,7 @@ output:
 subtitle: Social Statistics
 ---
 
-## For interviews in groups of four
+## For interviews in groups of three
 
 1. Name
 2. Email address
@@ -31,9 +31,9 @@ subtitle: Social Statistics
 
 ## Slides link
 
-<http://ismayc.github.io/soc301_2017/slides/week01-tues.html>
+<http://ismayc.github.io/soc301_s2017/slides/week01-tues.html>
 
-- Easier to get from <http://ismayc.github.io/soc301_2017/>
+- Easier to get from <http://ismayc.github.io/soc301_s2017/>
 
 ## Syllabus Review
 
@@ -72,6 +72,14 @@ Please come talk to me after class if you require special accommodations.
   - Needs to be completed by 1 PM Pacific on Tuesday, February 7
   - If you have spent more than 30 minutes on a problem, move on to another one OR
   reach out for help.
+
+## Asking for help
+
+- Recommended:  Post your problem and drag a screenshot image of what you have tried to the #general channel on Slack.
+- If you know the answer to a question there, please attempt to answer it.  It will help you learn!
+- Send me a private message on Slack (@chester)
+- Discuss your problems with the tutors in person
+- Last resort, send the tutors a private message on Slack
 
 ## Thursday plans
 
