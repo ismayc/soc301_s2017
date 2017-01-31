@@ -6,8 +6,64 @@
     <description>Recent content on SOC 301 - Spring 2017</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 30 Jan 2017 20:05:05 -0800</lastBuildDate>
+    <lastBuildDate>Tue, 31 Jan 2017 09:41:25 -0800</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Dinisa</title>
+      <link>/dinisa/</link>
+      <pubDate>Tue, 31 Jan 2017 09:41:25 -0800</pubDate>
+      
+      <guid>/dinisa/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Office Hours:  Available during class (3:00 PM to 4:20 PM on Tuesdays and Thursdays in Price 214)&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Contact: @malcomdinisa on Slack&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Brief bio:  &amp;ldquo;I am originally from Honolulu, Hawaii! I&amp;rsquo;m a Senior here at Pacific, majoring in Public Health. I am very interested in getting a degree in Health Administration and continuing my education further in nursing. My primary goal is to help people in anyway I can!&amp;rdquo;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;img/dinisa.jpg&#34; alt=&#34;Dinisa&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Griffin</title>
+      <link>/griffin/</link>
+      <pubDate>Tue, 31 Jan 2017 09:41:25 -0800</pubDate>
+      
+      <guid>/griffin/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Office Hours:  Tuesdays and Thursdays from 7:30 PM to 9:30 PM&lt;/li&gt;
+&lt;li&gt;Office Location:  First floor of the Library&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Contact: @fras3033 on Slack&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Brief bio:  &amp;ldquo;I&amp;rsquo;m an International Studies major with a concentration in International Policy with minors in Spanish and Comparative Religions. I am a member of the men&amp;rsquo;s tennis team here at Pacific and I plan to study abroad in Spain next fall. I love to help people but bear with me as I am no grand exalted expert at R.&amp;rdquo;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;img/griffin.jpg&#34; alt=&#34;Griffin&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Kawita</title>
+      <link>/kawita/</link>
+      <pubDate>Tue, 31 Jan 2017 09:41:25 -0800</pubDate>
+      
+      <guid>/kawita/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Office Hours:  Mondays and Wednesdays from 7:00 PM to 9:00 PM&lt;/li&gt;
+&lt;li&gt;Office Location:  TLC (Scott Hall 100B4)&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Contact: @kaur8107 on Slack&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Brief bio:  &amp;ldquo;I am a senior Biology major. I intend to go to medical school and I am from southern Oregon. I am really looking forward to tutoring this class!&amp;rdquo;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;img/dinisa.jpg&#34; alt=&#34;Dinisa&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Problem Sets</title>
@@ -131,11 +187,25 @@
 &lt;/div&gt;
 &lt;div id=&#34;tutors&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Tutors&lt;/h2&gt;
-&lt;p&gt;We have three excellent tutors/TAs for this course. Their office hours and where they will be located will be announced soon. Dinisa will frequently join us during our class meeting.&lt;/p&gt;
+&lt;p&gt;We have three excellent tutors/TAs for this course:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Dinisa Malcom&lt;/li&gt;
-&lt;li&gt;Kawita Kaur&lt;/li&gt;
-&lt;li&gt;Griffin Fraser&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://ismayc.github.io/soc301_s2017/dinisa/index.html&#34;&gt;Dinisa Malcom&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Office Hours: Available during class (3:00 PM to 4:20 PM on Tuesdays and Thursdays in Price 214)&lt;/li&gt;
+&lt;li&gt;Contact: &lt;span class=&#34;citation&#34;&gt;@malcomdinisa&lt;/span&gt; on Slack&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://ismayc.github.io/soc301_s2017/kawita/index.html&#34;&gt;Kawita Kaur&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Office Hours: Mondays and Wednesdays from 7:00 PM to 9:00 PM&lt;/li&gt;
+&lt;li&gt;Office Location: TLC (Scott Hall 100B4)&lt;/li&gt;
+&lt;li&gt;Contact: &lt;span class=&#34;citation&#34;&gt;@kaur8107&lt;/span&gt; on Slack&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://ismayc.github.io/soc301_s2017/griffin/index.html&#34;&gt;Griffin Fraser&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Office Hours: Tuesdays and Thursdays from 7:30 PM to 9:30 PM&lt;/li&gt;
+&lt;li&gt;Office Location: First floor of the Library&lt;/li&gt;
+&lt;li&gt;Contact: &lt;span class=&#34;citation&#34;&gt;@fras3033&lt;/span&gt; on Slack&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;overview&#34; class=&#34;section level1&#34;&gt;
