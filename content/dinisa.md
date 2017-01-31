@@ -8,4 +8,4 @@ title: Dinisa
 
 - Brief bio:  "I am originally from Honolulu, Hawaii! I'm a Senior here at Pacific, majoring in Public Health. I am very interested in getting a degree in Health Administration and continuing my education further in nursing. My primary goal is to help people in anyway I can!"  
 
-<img src="http://ismayc.github.io/soc301_s2017/img/dinisa.jpg" alt="Dinisa" style="width:500px">
+<img src="http://ismayc.github.io/soc301_s2017/img/dinisa.jpg" alt="Dinisa" style="width:300px">

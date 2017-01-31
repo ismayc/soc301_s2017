@@ -9,4 +9,4 @@ title: Griffin
 
 - Brief bio:  "I'm an International Studies major with a concentration in International Policy with minors in Spanish and Comparative Religions. I am a member of the men's tennis team here at Pacific and I plan to study abroad in Spain next fall. I love to help people but bear with me as I am no grand exalted expert at R."  
 
-<img src="http://ismayc.github.io/soc301_s2017/img/griffin.jpg" alt="Griffin" style="width:500px">
+<img src="http://ismayc.github.io/soc301_s2017/img/griffin.jpg" alt="Griffin" style="width:300px">
