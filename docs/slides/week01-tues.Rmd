@@ -89,3 +89,13 @@ Please come talk to me after class if you require special accommodations.
 - Work on and finish Introduction to R DataCamp course
 - Make sure to have started and be at the point where you have specific questions Dinisa and I can address
 - This is the time to make a good impression and start off strong!
+
+## Minute papers
+
+- Place your name on a sheet of paper.  Answer the following questions:
+
+1. When you think of statistics what do you think of?
+1. What statistical concepts would you like to learn about in this class?
+2. What concerns you most about this course?
+3. Do you believe you'll be able to devote the time needed to succeed in this course?  Explain.
+  - A three credit-hour course requires between six and nine hours of time outside of it each week.
