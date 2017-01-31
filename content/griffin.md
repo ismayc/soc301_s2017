@@ -5,7 +5,7 @@ title: Griffin
 
 - Office Hours:  Tuesdays and Thursdays from 7:30 PM to 9:30 PM
 - Office Location:  First floor of the Library near the Information Desk
-    - Either [in Room 121](http://ismayc.github.io/soc301_s2017/img/lib1.jpg) or [here](http://ismayc.github.io/soc301_s2017/img/lib12.jpg)
+    - Either [in Room 121](http://ismayc.github.io/soc301_s2017/img/lib1.jpg) or [here](http://ismayc.github.io/soc301_s2017/img/lib2.jpg)
 - Contact: @fras3033 on Slack
 
 - Brief bio:  "I'm an International Studies major with a concentration in International Policy with minors in Spanish and Comparative Religions. I am a member of the men's tennis team here at Pacific and I plan to study abroad in Spain next fall. I love to help people but bear with me as I am no grand exalted expert at R."  
