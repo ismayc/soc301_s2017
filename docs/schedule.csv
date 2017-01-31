@@ -1,0 +1,32 @@
+Weekday,Month,Day,Content / Assessment,Material Due
+Tuesday,January,31,<a href='https://ismayc.github.io/moderndiver-book/'>Introduction (Chapters 1 and 2)</a>,-
+Thursday,February,2,Introduction to R on DataCamp,-
+Tuesday,February,7,Review of Introduction to R on DataCamp,DC course: Introduction to R
+Thursday,February,9,<a href='https://ismayc.github.io/moderndiver-book/3-tidy.html'>Tidy data (Chapter 3)</a>,Quiz 1
+Tuesday,February,14,<a href='https://ismayc.github.io/moderndiver-book/4-viz.html'>Scatter-plots and Line-graphs (Sections 4.1 to 4.4)</a>,DC chapter: Applying R Basics
+Thursday,February,16,<a href='https://ismayc.github.io/moderndiver-book/4-viz.html'>Scatter-plots and Line-graphs (Sections 4.1 to 4.4)</a>,DC chapter: Tidy Data
+Tuesday,February,21,"<a href='https://ismayc.github.io/moderndiver-book/4-viz.html#histograms'>Histograms, Facets, and Boxplots (Sections 4.5 to 4.7)</a>",DC chapter: Scatter-plots & Line-graphs
+Thursday,February,23,<a href='https://ismayc.github.io/moderndiver-book/4-viz.html#geombar'>Barplots (Section 4.8)</a>,DC chapter: Histograms & Boxplots
+Tuesday,February,28,<a href='https://ismayc.github.io/moderndiver-book/4-viz.html#conclusion'>Review Chapter 4 (Section 4.9)</a>,DC chapter: Barplots
+Thursday,March,2,<a href='https://ismayc.github.io/moderndiver-book/5-manip.html'>Five Main Verbs & The Pipe (Sections 5.1 and 5.2)</a>,Quiz 2
+Tuesday,March,7,<a href='https://ismayc.github.io/moderndiver-book/5-manip.html'>Five Main Verbs & The Pipe (Sections 5.1 and 5.2)</a>,DC chapter: ggplot2 Review
+Thursday,March,9,<a href='https://ismayc.github.io/moderndiver-book/5-manip.html#joining-data-frames'>Joins and other verbs (Sections 5.3 to 5.5)</a>,"DC chapter: Filtering, Grouping, & Summarizing"
+Tuesday,March,14,<a href='https://ismayc.github.io/moderndiver-book/5-manip.html#conclusion-1'>Review Chapter 5</a>,"DC chapter: Mutating & Arranging, Group Project Draft"
+Thursday,March,16,Work on Group Project,-
+Tuesday,March,21,Review Chapters 3-5,Quiz 3
+Thursday,March,23,NO CLASS,Group Project due at 10 AM
+Tuesday,March,28,SPRING BREAK,-
+Thursday,March,30,SPRING BREAK,-
+Tuesday,April,4,<a href='https://ismayc.github.io/moderndiver-book/6-sim.html'>Visualizing Random Sampling (Sections 6.1 and 6.2)</a>,-
+Thursday,April,6,"<a href='https://ismayc.github.io/moderndiver-book/6-sim.html'>Simulation (Sections 6.3 to 6.5)</a>, Review for Midterm Exam",
+Tuesday,April,11,MIDTERM EXAM,"(Last day to drop with a W is Friday, April 14)"
+Thursday,April,13,<a href='https://ismayc.github.io/moderndiver-book/7-hypo.html'>Basics of Hypothesis Testing (Sections 7.1 to 7.4)</a>,"DC chapter: Mutating & Arranging, Group Project Draft"
+Tuesday,April,18,<a href='https://ismayc.github.io/moderndiver-book/7-hypo.html#statistical-significance'>Significance and Testing Example 1 (Sections 7.5 and 7.6)</a>,-
+Thursday,April,20,<a href='https://ismayc.github.io/moderndiver-book/7-hypo.html#example-comparing-two-means'>Testing Example 2 / Traditional Methods (Sections 7.7 to 7.9)</a>,DC chapter: Hypothesis testing
+Tuesday,April,25,<a href='https://ismayc.github.io/moderndiver-book/8-ci.html'>Confidence Intervals & Bootstrapping (Section 8.1)</a>,Quiz 4
+Thursday,April,27,<a href='https://ismayc.github.io/moderndiver-book/8-ci.html#relation-to-hypothesis-testing'>Relationship Between Confidence Intervals & Hypothesis Testing (Sections 8.2 to 8.4)</a>,-
+Tuesday,May,2,<a href='https://ismayc.github.io/moderndiver-book/9-regress.html'>Correlation and Regression (Sections 9.1 to 9.3)</a>,DC chapter: Confidence Intervals
+Thursday,May,4,<a href='https://ismayc.github.io/moderndiver-book/9-regress.html'>Inference for Regression (Sections 9.4 to 9.7)</a>,-
+Tuesday,May,9,<a href='https://ismayc.github.io/moderndiver-book/10-effective-data-storytelling.html'>Course Review (Chapter 10)</a>,Quiz 5
+Wednesday,May,10,READING DAY,-
+Monday,May,15,"FINAL EXAM (For Practice - DC chapter: Correlation & Regression, DC chapter: Course Wrap-up)",Noon to 2:30 PM

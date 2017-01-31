@@ -1,0 +1,34 @@
+---
+title: "Schedule"
+author: Chester Ismay
+date: '2017-01-30T10:30:38-08:00'
+subtitle: Pacific University - Spring 2017
+---
+
+The references to **Chapters**/**Sections** here correspond to the [**MODERN DIVE into Data with R**](http://moderndive.com) book.  Be sure to check the **DataCamp** link above for more details on the DataCamp (DC) assignments.
+
+```{r echo=FALSE, message=FALSE}
+#options(servr.daemon = TRUE)
+library(tidyverse)
+library(knitr)
+library(DT)
+schedule <- read_csv("schedule.csv") %>%
+  mutate(Date = paste(Month, Day)) %>%
+  select(-c(Month, Day)) %>%
+  select(Weekday, Date, `Content / Assessment`, `Material Due`)
+```
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+if(knitr:::is_html_output()){
+  schedule %>% datatable(rownames = FALSE,
+                         class = 'cell-border stripe',
+                         filter = list(position = 'top'),
+                         options = list(pageLength = nrow(schedule), 
+                                        autoWidth = TRUE,
+                                        bInfo = FALSE,
+                                        paging = FALSE),
+                         escape = FALSE)
+} else {
+  knitr::kable(schedule, booktabs = TRUE, longtable = TRUE)
+}
+```

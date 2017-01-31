@@ -19,7 +19,13 @@ ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
     url = "/problem-sets/"  
 [[menu.main]]
     name = "Resources"
-    url = "/resources/"     
+    url = "/resources/" 
+[[menu.main]]
+    name = "DataCamp"
+    url = "/datacamp/" 
+[[menu.main]]
+    name = "Schedule"
+    url = "/schedule/"      
 
 [params]
     description = "SOC 301 - Spring 2017"

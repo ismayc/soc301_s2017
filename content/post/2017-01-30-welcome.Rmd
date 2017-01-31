@@ -6,6 +6,10 @@ categories: []
 tags: []
 ---
 
-You will find links to the content covered in posts made to the main page that you just came from at <http://ismayc.github.io/soc301-s2017>.  You can also return to the homepage at any time by clicking on the Boxer image in the top left of the page.
+You will find links to the content covered in each class period in posts made to the main page that you just came from at <http://ismayc.github.io/soc301-s2017>.  You can also return to the homepage at any time by clicking on the Boxer image in the top left of the page.  Note that this webpage and (hopefully) all of its content will also work on mobile devices too.
 
-Maybe the most important document here is the Syllabus.  You can find the current version (and any future updates to it) by clicking on the Syllabus link at the top of this page.  Note that this webpage also works on mobile devices too.
+Maybe the most important document here is the **Syllabus**.  You can find the current version (and any future updates to it) by clicking on the **Syllabus** link at the top of this page.  
+
+You can find links to DataCamp assignments throughout the course via the **DataCamp** link above.  The **Problem Sets** link provides you with reading assignments and problems that we will be working on in class and reviewing.  You are encouraged to work through as many of the _**Learning checks**_ as you can as you read the course textbook at <http://moderndive.com>.
+
+I'm looking forward to helping you learn about Social Statistics and program in R this semester!  You will also find great information in the Resources page available in the top right as well.  Please be sure to frequently review the **Tips to Success** for the course on a frequent basis that is in **Resources**.  I'm providing you with exactly what you need to do well and learn (and *retain*) the content of the course.  Don't miss out!
