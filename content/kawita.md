@@ -9,4 +9,4 @@ title: Kawita
 
 - Brief bio:  "I am a senior Biology major. I intend to go to medical school and I am from southern Oregon. I am really looking forward to tutoring this class!"  
 
-![Dinisa](img/dinisa.jpg)
+![Dinisa](../img/dinisa.jpg)
