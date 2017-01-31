@@ -9,4 +9,4 @@ title: Kawita
 
 - Brief bio:  "I am a senior Biology major. I intend to go to medical school and I am from southern Oregon. I am really looking forward to tutoring this class!"  
 
-<img src="http://ismayc.github.io/soc301_s2017/img/kawita.jpg" alt="Kawita" style="width:400px" align="middle">
+<p style="text-align:center;"><img src="http://ismayc.github.io/soc301_s2017/img/kawita.jpg" alt="Kawita" style="width:400px"></p>
