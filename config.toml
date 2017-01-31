@@ -1,4 +1,5 @@
 baseurl = "/"
+author = "Chester Ismay"
 publishDir = "docs"
 relativeurls = true
 languageCode = "en-us"

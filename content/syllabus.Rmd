@@ -30,7 +30,7 @@ We have three excellent tutors/TAs for this course:
     - Office Hours:  Mondays and Wednesdays from 7:00 PM to 8:30 PM
     - Office Location:  First floor of the Library near the Information Desk
         - Either <a href="http://ismayc.github.io/soc301_s2017/img/lib1.jpg" target="_blank">in Room 121</a> or <a href="http://ismayc.github.io/soc301_s2017/img/lib2.jpg" target="_blank">here</a>
-    - Contact: @kaur8107 on Slack
+    - Contact: @kawitakaur on Slack
 - [Griffin Fraser](http://ismayc.github.io/soc301_s2017/griffin/index.html)
     - Office Hours:  Tuesdays and Thursdays from 7:30 PM to 9:00 PM
     - Office Location:  First floor of the Library near the Information Desk
