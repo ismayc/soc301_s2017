@@ -71,8 +71,8 @@ Please come talk to me after class if you require special accommodations.
 - Make note of important dates on the schedule
 - Read Chapters 1 and 2 of [ModernDive](http://moderndive.com)
 - Begin working on Introduction to R DataCamp course
-  - Needs to be completed by 1 PM Pacific on Tuesday, February 7
-  - If you have spent more than 30 minutes on a problem, move on to another one OR
+    - Needs to be completed by 1 PM Pacific on Tuesday, February 7
+    - If you have spent more than 30 minutes on a problem, move on to another one OR
   reach out for help.
 
 ## Asking for help
