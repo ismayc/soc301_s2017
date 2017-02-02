@@ -1,0 +1,71 @@
+---
+title: "SOC 301 - 01"
+author: "Chester Ismay"
+output:
+  ioslides_presentation:
+    incremental: no
+    logo: figure/boxer.jpg
+    fig.align: center
+    widescreen: true
+subtitle: Introduction - Part 2
+---
+
+## DataCamp Assignments
+
+<https://www.datacamp.com/groups/soc-301-spring-2017/assignments>
+
+## Videos on Resources page
+
+<https://ismayc.github.io/soc301_s2017/resources/>
+
+## Studying well and efficiently
+
+- Image from [_Teach Students How to Learn_](https://www.amazon.com/Teach-Students-How-Learn-Metacognition/dp/162036316X)
+
+<http://ismayc.github.io/soc301_s2017/img/studentlearn.jpg>
+
+## Special accommodations
+
+Please come talk to me after class if you require special accommodations.
+
+
+## To do for next time
+
+- Carefully read over the syllabus in entirety
+- Make note of important dates on the schedule
+- Read Chapters 1 and 2 of [ModernDive](http://moderndive.com)
+- Write down AT LEAST five multiple choice questions covering the Introduction to R
+DataCamp course.  
+    - Each question should have four possible answers.
+    - Create questions based on the content you struggled with most.
+- Finish the Introduction to R DataCamp course
+    - Needs to be completed by 1 PM Pacific on Tuesday, February 7
+    - If you have spent more than 30 minutes on a problem, move on to another one OR
+  reach out for help.
+    - If completed, start working on **Applying R Basics** chapter in my **Effective Data Storytelling via the `tidyverse`** course (Due Tuesday, February 14)
+
+## Asking for help
+
+- Recommended:  Post your problem and drag a screenshot image of what you have tried to the #general channel on Slack.
+- If you know the answer to a question there, please attempt to answer it.  It will help you learn!
+- Send me a private message on Slack (@chester)
+- Discuss your problems with the tutors in person
+- Last resort, send the tutors a private message on Slack
+
+## Tuesday plans
+
+- Review the content in the Introduction to R DataCamp course
+    - Finish writing multiple choice questions
+- Study for Quiz 1 over Introduction to R DataCamp course on Thursday, February 9 in class
+- Bring your laptops on Tuesday, and every class period!
+- This is the time to make a good impression and start off strong!
+
+## Minute papers
+
+- Place your name on a sheet of paper.  Answer the following questions:
+
+1. When you think of statistics what do you think of?
+1. What statistical concepts would you like to learn about in this class?
+2. What concerns you most about this course?
+3. Do you believe you'll be able to devote the time needed to succeed in this course?  Explain.
+  - A three credit-hour course requires between six and nine hours of time outside of it each week.
