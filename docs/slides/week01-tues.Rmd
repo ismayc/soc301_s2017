@@ -1,0 +1,73 @@
+
+---
+title: "SOC 301 - 01"
+author: "Chester Ismay"
+output:
+  ioslides_presentation:
+    incremental: no
+    logo: figure/boxer.jpg
+    fig.align: center
+    widescreen: true
+subtitle: Social Statistics
+---
+
+## For interviews in groups of three
+
+1. Name
+2. Email address
+3. How do you think this course applies to your major?
+5. What are your goals for this course?
+3. What is your class standing (Sophomore, Junior, etc.)?
+3. What is your major?
+4. What is your hometown?
+6. What is the farthest from Pacific that you were over winter break (in miles)?
+7. What is one interesting fact about you?
+8. How old is Chester (in years)?
+
+---
+
+<div class="centered">
+<img src="figure/notebook.jpg" alt="notebook" style="width:550px;">
+</div>
+
+## Slides link
+
+<http://ismayc.github.io/soc301_s2017/slides/week01-tues.html>
+
+- Easier to get from <http://ismayc.github.io/soc301_s2017/>
+
+
+## Course Textbook
+
+<http://moderndive.com>
+
+
+## DataCamp Assignments
+
+<https://www.datacamp.com/groups/soc-301-spring-2017/assignments>
+
+
+## To do for next time
+
+- Carefully read over the syllabus in entirety
+- Make note of important dates on the schedule
+- Read Chapters 1 and 2 of [ModernDive](http://moderndive.com)
+- Begin working on Introduction to R DataCamp course
+    - Needs to be completed by 1 PM Pacific on Tuesday, February 7
+    - If you have spent more than 30 minutes on a problem, move on to another one OR
+  reach out for help.
+
+## Asking for help
+
+- Recommended:  Post your problem and drag a screenshot image of what you have tried to the #general channel on Slack.
+- If you know the answer to a question there, please attempt to answer it.  It will help you learn!
+- Send me a private message on Slack (@chester)
+- Discuss your problems with the tutors in person
+- Last resort, send the tutors a private message on Slack
+
+## Thursday plans
+
+- Bring your laptops on Thursday, and every class period!
+- Work on and finish Introduction to R DataCamp course
+- Make sure to have started and be at the point where you have specific questions Dinisa and I can address
+- This is the time to make a good impression and start off strong!
