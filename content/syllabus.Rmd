@@ -182,7 +182,7 @@ grades as I see fit.
 
 # Course Schedule
 
-The course schedule is available in the link at the top of this webpage.
+The course schedule is available at <http://ismayc.github.io/soc301-f2017/schedule>.
 
 # What to Expect in Class
 
