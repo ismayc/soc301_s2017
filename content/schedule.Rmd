@@ -14,6 +14,9 @@ library(knitr)
 library(DT)
 schedule <- read_csv("schedule.csv") %>%
   mutate(Date = paste(Month, Day)) %>%
+  mutate(`Material Due` = ifelse(material == "-" | grepl("Quiz", material) | is.na(material_link),
+    material,
+    paste0("<a href='", material_link, "'>", material, "</a>"))) %>% 
   select(-c(Month, Day)) %>%
   select(Weekday, Date, `Content / Assessment`, `Material Due`)
 ```
