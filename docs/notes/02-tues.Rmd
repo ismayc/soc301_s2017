@@ -1,0 +1,52 @@
+---
+title: "Week Two, Day 1"
+author: "Chester Ismay"
+#date: "August 29, 2016"
+output: html_document
+---
+
+***
+
+1. Have them recreate the DATA diagram again and answer a multiple choice question from Quiz #1 last semester
+2. Finish their DataCamp profiles
+2. Updated tutor schedules and locations
+2. Talk about how to ask for help [SLIDE] (and encourage them to do so!)
+2. Your future boss won't lecture you on how to do everything first and then let you go do it.  You'll need to learn how to do things and then ask for help as needed.
+2. Watch the [You Should Learn to Program video](https://www.youtube.com/watch?v=xfBWk4nw440&t=7s)
+3. Easy classes are worthless classes
+    - You or someone else pays good money to go to school here
+    - I very much value that investment as it pays my salary and I want to do everything in my power to help you learn this material as I see it as THE MOST IMPORTANT class you can take as an undergraduate.
+    - Can we build muscles sitting on the couch?
+3. Why am I using R?
+    - Show the [diagram](https://i0.wp.com/r4stats.com/wp-content/uploads/2012/04/Fig_2f_ScholarlyImpactLogs.png)
+    - R is free
+    - You can take everything you learn in this class and show a potential employer exactly what you've done (You can't do that with SPSS or Excel in a nice way)
+    - I want to prepare you for the real world as best as I can and make you more employable than your competitors
+    - It will save you TONS of time in the long run.  Long term thinking is key.
+    - You can easily tweak your code if you need to do another analysis
+        - Good luck trying to remember what drop-down menu some thing is in two years from now
+4. Review the basics of R data structures by drawing diagram with colors
+    - Elements, vectors, matrices, data frames, lists
+    - Different types of data (logical, character, numeric)
+    
+<img src="../slides/figure/dataStructuresNew.png" style="width:520px;">    
+  
+***  
+  
+<img src="../slides/figure/r_data_structures.png" style="width:520px;">   
+    
+5. Go over most important functions from Introduction to R course
+6.  How should you prepare for the quiz?
+    - Watch the video [How to Study - Top 6 Effective Strategies](https://www.youtube.com/watch?v=CPxSzxylRCI)
+6. Show them Advice from Former Students on tutor pages and its own link
+7. Review multiple choice questions in Shared Google Doc
+    - Get into groups of 3 or 4 and pass around your questions for another group member to take
+8. Assign Problem Set 2
+    - Read Tidy Data Chapter
+    - Learning Checks
+    - After your individual quiz and group quiz, I'll discuss "tidy data", you'll work on the learning checks in groups (better if you have started them first)
+    - Start working on the DC Chapter:  Applying R Basics
+9.  Review Course Syllabus and webpage
+    - Should be your first spot to check before you ask questions
+10.  I want your feedback!  If something isn't going well, tell me now and not at the end of the course.  That doesn't help you at all!
+10.  Minute Paper:  What were the big take-aways from class today?  What questions do you have?

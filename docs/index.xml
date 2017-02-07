@@ -6,8 +6,71 @@
     <description>Recent content on SOC 301 - Spring 2017</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 02 Feb 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Feb 2017 12:46:16 -0800</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Advice from Former Students</title>
+      <link>/advice_from_former/</link>
+      <pubDate>Tue, 07 Feb 2017 12:46:16 -0800</pubDate>
+      
+      <guid>/advice_from_former/</guid>
+      <description>&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Read the freakin book. It might seem that you will do just fine and you could figure things out without reading the book. That may be the case BUT things would be so much easier if you just did the assigned readings. It will help you clarify any questions that you may have and it provides examples.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Don&amp;rsquo;t be afraid to ask questions. Clarification of any issues that you may encounter is always beneficial, especially since you usually want to resolve any issues before continuing.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Go to class - missing class can slow your learning process because you have to get caught back up. Attending every class also gives you the opportunity to get practice in R while having the professor there to answer questions.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;I would encourage that when doing the reading assignments you take notes. Sometimes the wording can be confusing - putting things in your own words helps. I would also encourage them to do google/youtube searches when having trouble understanding concepts.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Form a study group - working in groups is a great way to learn and can be fun!&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Ask for help - don&amp;rsquo;t be afraid to ask for help if you are struggling. The professor is there to support you and he is really good at responding in a timely manner.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Be willing to put work into this course and be as prepared as possible for each class. Always do the assigned reading, problem sets and labs prior to class. You will get more out of the lecture and practice done in class that way, and you will be able to get any questions you had from the reading answered then. It is a great chance to work though problems/confusing bits when Chester is there in person to help– but you must know which specific things you are hung up on instead of just general confusion because you did not read and haven&amp;rsquo;t ever seen the material.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Ask for help when you need it! Do not hesitate to contact Chester with problems you are having, just be sure to have at least tried to find the solution on your own. Still there is no point in spending hours getting the same error message when Chester is absurdly prompt in answering questions and always provides detailed explanations. On that note also go into office hours before class (and after having done the reading!) to work through issues.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Be ready to get incredibly frustrated at times. At first even the simplest task may take a whole lot of time and effort. It will also be irritating to find out the problem was quite simple, like too many quotes or brackets. If you keep trying eventually you will get the hang of it, you will learn what the error messages mean and how to fix them and you won&amp;rsquo;t have to spend as long to do even more complicated things. You can cut down on little mistakes that cause big problems, but are easy to miss by taking notes of these things from the reading. Then when nothing seems to be working and it so frustrating, you can refer to your notes and realize you forgot to specify something.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Week 02 - Tuesday</title>
+      <link>/2017/02/07/week-02---tuesday/</link>
+      <pubDate>Tue, 07 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/02/07/week-02---tuesday/</guid>
+      <description>
+
+&lt;p&gt;Slides available &lt;a href=&#34;http://ismayc.github.io/soc301_s2017/slides/week02-tues.html&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;covered-content&#34;&gt;Covered Content&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Discuss why we are using R&lt;/li&gt;
+&lt;li&gt;Go over the basics of R with a diagram on the chalkboard&lt;/li&gt;
+&lt;li&gt;Watch videos on study strategies&lt;/li&gt;
+&lt;li&gt;Take the multiple choice problems your fellow students have created&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;to-do-for-next-time&#34;&gt;To do for next time&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Study for Quiz #1 using the strategies laid out over the Introduction to R DataCamp course on Thursday, February 9&lt;/li&gt;
+&lt;li&gt;Review the Learning Strategies given &lt;a href=&#34;http://www.learningscientists.org/posters&#34;&gt;here&lt;/a&gt; and commit to using them to succeed in learning&lt;/li&gt;
+&lt;li&gt;Complete DataCamp profile&lt;/li&gt;
+&lt;li&gt;Read Chapter 3 of &lt;a href=&#34;http://moderndive.com&#34;&gt;ModernDive&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;As you read attempt the Learning Checks for understanding&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Begin work on &lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/applying-r-basics?ex=1&#34;&gt;Applying R Basics&lt;/a&gt; DataCamp chapter (Due on February 14 at 1 PM)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Week 01 - Thursday</title>
@@ -58,7 +121,8 @@ reach out for help.&lt;/li&gt;
       
       <guid>/dinisa/</guid>
       <description>&lt;ul&gt;
-&lt;li&gt;Office Hours:  Available during class (3:00 PM to 4:20 PM on Tuesdays and Thursdays in Price 214)&lt;/li&gt;
+&lt;li&gt;Office Hours:  Sundays 7-9 PM and Tuesdays 11:30 AM - 12:30 PM&lt;/li&gt;
+&lt;li&gt;Office Location:  TLC in Scott Hall (also available during class)&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Contact: @malcomdinisa on Slack&lt;/p&gt;&lt;/li&gt;
 
@@ -77,13 +141,18 @@ reach out for help.&lt;/li&gt;
       <guid>/griffin/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;Office Hours:  Tuesdays and Thursdays from 7:30 PM to 9:00 PM&lt;/li&gt;
-&lt;li&gt;Office Location:  First floor of the Library near the Information Desk
-
-&lt;ul&gt;
-&lt;li&gt;Either &lt;a href=&#34;http://ismayc.github.io/soc301_s2017/img/lib1.jpg&#34; target=&#34;_blank&#34;&gt;in Room 121&lt;/a&gt; or &lt;a href=&#34;http://ismayc.github.io/soc301_s2017/img/lib2.jpg&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Office Location:  TLC in Scott Hall&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Contact: @fras3033 on Slack&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Advice for SOC 301 students:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Value learning R as something that will be beneficial in other areas after this class. Visualize what your table/graph/etc is supposed to look like and type out code that you think will lead to that image. When that fails, which it often does, either utilize R helpers online via google, or see how Chester writes the code in class. Then copy that down in your notes to refer back to.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;The way I quizzed myself for this type of class is through what I mentioned earlier with trying and failing, the only time I resort to online resources or wait to see how you do it is when my knuckles start turning white from frustration. The struggle is important in learning, there is no doubt about it.&lt;/li&gt;
+&lt;li&gt;Lastly, errors happen. It is inevitable. But once you start to get a handle on the concepts, pinpointing the errors will come with relative ease.&lt;/li&gt;
+&lt;li&gt;And have fun with it, honestly. Because this stuff is cool as hell and incredibly useful in the near-future.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Brief bio:  &amp;ldquo;I&amp;rsquo;m an International Studies major with a concentration in International Policy with minors in Spanish and Comparative Religions. I am a member of the men&amp;rsquo;s tennis team here at Pacific and I plan to study abroad in Spain next fall. I love to help people but bear with me as I am no grand exalted expert at R.&amp;rdquo;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -100,15 +169,19 @@ reach out for help.&lt;/li&gt;
       <guid>/kawita/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;Office Hours:  Mondays and Wednesdays from 7:00 PM to 8:30 PM&lt;/li&gt;
-&lt;li&gt;Office Location:  First floor of the Library near the Information Desk
-
-&lt;ul&gt;
-&lt;li&gt;Either &lt;a href=&#34;http://ismayc.github.io/soc301_s2017/img/lib1.jpg&#34; target=&#34;_blank&#34;&gt;in Room 121&lt;/a&gt; or &lt;a href=&#34;http://ismayc.github.io/soc301_s2017/img/lib2.jpg&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Office Location:  TLC in Scott Hall&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Contact: @kawitakaur on Slack&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Brief bio:  &amp;ldquo;I am a senior Biology major. I intend to go to medical school and I am from southern Oregon. I am really looking forward to tutoring this class!&amp;rdquo;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Advice for SOC 301 students:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Take a deep breath&amp;hellip; You may be scared now of using R and/or writing code, but trust Chester, he will get you through the course load and help you every step of the way. It will challenge your work ethic and patience, but it is so gratifying when you get a working code, and Chester will be there to answer any questions you have.&lt;/li&gt;
+&lt;li&gt;Take notes!!!! Even if something doesn&amp;rsquo;t seem important or crucial for the class, trust me, it is! When reading the textbook, take notes, when Chester is lecturing, take notes, if someone asks an interesting question, make a note! This will definitely help you in the long run.&lt;/li&gt;
+&lt;li&gt;Take advantage of your classmates and professor. Ask questions, work together, and find a solution. Go to office hours, make study groups, and most importantly, communicate with those around you. No one is going to know if you are struggling unless you ask for help.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p style=&#34;text-align:center;&#34;&gt;&lt;img src=&#34;http://ismayc.github.io/soc301_s2017/img/kawita.jpg&#34; alt=&#34;Kawita&#34; style=&#34;width:400px&#34;&gt;&lt;/p&gt;
@@ -155,7 +228,7 @@ reach out for help.&lt;/li&gt;
 
 &lt;ul&gt;
 &lt;li&gt;You&amp;rsquo;ll have chapter assignments from this course that I am designing throughout our SOC 301 course.&lt;/li&gt;
-&lt;li&gt;This course is designed to have you apply the content you learn during class and the textbook to interesting social data sets that &lt;a href=&#34;http://fivethirtyeight.com&#34;&gt;FiveThirtyEight&lt;/a&gt; has made public and that was put together into an R package called &lt;a href=&#34;https://cran.r-project.org/web/packages/fivethirtyeight/vignettes/fivethirtyeight.html&#34;&gt;&lt;code&gt;fivethirtyeight&lt;/code&gt;&lt;/a&gt; by Albert Y. Kim, Jennifer Chunn, and myself (Chester).&lt;/li&gt;
+&lt;li&gt;This course is designed to have you apply the content you learn during class and the textbook to interesting social data sets that &lt;a href=&#34;http://fivethirtyeight.com&#34;&gt;FiveThirtyEight&lt;/a&gt; has made public and that was put together into an R package called &lt;a href=&#34;https://cran.r-project.org/web/packages/fivethirtyeight/vignettes/fivethirtyeight.html&#34;&gt;&lt;code&gt;fivethirtyeight&lt;/code&gt;&lt;/a&gt; by Albert Y. Kim, Jennifer Chunn, and I (Chester).&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
@@ -207,6 +280,7 @@ reach out for help.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.learningscientists.org/posters&#34;&gt;Accompanying free PDFs to download&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../img/studentlearn.jpg&#34;&gt;Grade Predictor based on study habits&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;./advice_from_former/&#34;&gt;Advice from Former Students&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
@@ -266,32 +340,13 @@ reach out for help.&lt;/li&gt;
 &lt;/div&gt;
 &lt;div id=&#34;tutors&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Tutors&lt;/h2&gt;
-&lt;p&gt;We have three excellent tutors/TAs for this course:&lt;/p&gt;
+&lt;p&gt;We have three excellent tutors/TAs for this course who will be tutoring in the TLC:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://ismayc.github.io/soc301_s2017/dinisa/index.html&#34;&gt;Dinisa Malcom&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;Office Hours: Available during class (3:00 PM to 4:20 PM on Tuesdays and Thursdays in Price 214)&lt;/li&gt;
-&lt;li&gt;Contact: &lt;span class=&#34;citation&#34;&gt;@malcomdinisa&lt;/span&gt; on Slack&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://ismayc.github.io/soc301_s2017/kawita/index.html&#34;&gt;Kawita Kaur&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;Office Hours: Mondays and Wednesdays from 7:00 PM to 8:30 PM&lt;/li&gt;
-&lt;li&gt;Office Location: First floor of the Library near the Information Desk
-&lt;ul&gt;
-&lt;li&gt;Either &lt;a href=&#34;http://ismayc.github.io/soc301_s2017/img/lib1.jpg&#34; target=&#34;_blank&#34;&gt;in Room 121&lt;/a&gt; or &lt;a href=&#34;http://ismayc.github.io/soc301_s2017/img/lib2.jpg&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Contact: &lt;span class=&#34;citation&#34;&gt;@kawitakaur&lt;/span&gt; on Slack&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://ismayc.github.io/soc301_s2017/griffin/index.html&#34;&gt;Griffin Fraser&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;Office Hours: Tuesdays and Thursdays from 7:30 PM to 9:00 PM&lt;/li&gt;
-&lt;li&gt;Office Location: First floor of the Library near the Information Desk
-&lt;ul&gt;
-&lt;li&gt;Either &lt;a href=&#34;http://ismayc.github.io/soc301_s2017/img/lib1.jpg&#34; target=&#34;_blank&#34;&gt;in Room 121&lt;/a&gt; or &lt;a href=&#34;http://ismayc.github.io/soc301_s2017/img/lib2.jpg&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Contact: &lt;span class=&#34;citation&#34;&gt;@fras3033&lt;/span&gt; on Slack&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://ismayc.github.io/soc301_s2017/dinisa/index.html&#34;&gt;Dinisa Malcom&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://ismayc.github.io/soc301_s2017/kawita/index.html&#34;&gt;Kawita Kaur&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://ismayc.github.io/soc301_s2017/griffin/index.html&#34;&gt;Griffin Fraser&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;The schedule for all TLC tutors is available &lt;a href=&#34;https://www.pacificu.edu/about-us/centers-institutes/tutoring-and-learning-center/tutoring-and-learning-schedule&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;overview&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Overview&lt;/h1&gt;
@@ -395,7 +450,7 @@ reach out for help.&lt;/li&gt;
 &lt;/div&gt;
 &lt;div id=&#34;course-schedule&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Course Schedule&lt;/h1&gt;
-&lt;p&gt;The course schedule is available in the link at the top of this webpage.&lt;/p&gt;
+&lt;p&gt;The course schedule is available at &lt;a href=&#34;http://ismayc.github.io/soc301-f2017/schedule&#34; class=&#34;uri&#34;&gt;http://ismayc.github.io/soc301-f2017/schedule&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;what-to-expect-in-class&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;What to Expect in Class&lt;/h1&gt;

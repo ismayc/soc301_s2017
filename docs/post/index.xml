@@ -6,8 +6,43 @@
     <description>Recent content in Posts on SOC 301 - Spring 2017</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 02 Feb 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Feb 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Week 02 - Tuesday</title>
+      <link>/2017/02/07/week-02---tuesday/</link>
+      <pubDate>Tue, 07 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/02/07/week-02---tuesday/</guid>
+      <description>
+
+&lt;p&gt;Slides available &lt;a href=&#34;http://ismayc.github.io/soc301_s2017/slides/week02-tues.html&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;covered-content&#34;&gt;Covered Content&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Discuss why we are using R&lt;/li&gt;
+&lt;li&gt;Go over the basics of R with a diagram on the chalkboard&lt;/li&gt;
+&lt;li&gt;Watch videos on study strategies&lt;/li&gt;
+&lt;li&gt;Take the multiple choice problems your fellow students have created&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;to-do-for-next-time&#34;&gt;To do for next time&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Study for Quiz #1 using the strategies laid out over the Introduction to R DataCamp course on Thursday, February 9&lt;/li&gt;
+&lt;li&gt;Review the Learning Strategies given &lt;a href=&#34;http://www.learningscientists.org/posters&#34;&gt;here&lt;/a&gt; and commit to using them to succeed in learning&lt;/li&gt;
+&lt;li&gt;Complete DataCamp profile&lt;/li&gt;
+&lt;li&gt;Read Chapter 3 of &lt;a href=&#34;http://moderndive.com&#34;&gt;ModernDive&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;As you read attempt the Learning Checks for understanding&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Begin work on &lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/applying-r-basics?ex=1&#34;&gt;Applying R Basics&lt;/a&gt; DataCamp chapter (Due on February 14 at 1 PM)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Week 01 - Thursday</title>

@@ -1,0 +1,124 @@
+---
+title: "SOC 301 - 01"
+author: "Chester Ismay"
+output:
+  ioslides_presentation:
+    incremental: no
+    logo: figure/boxer.jpg
+    fig.align: center
+#    widescreen: true
+subtitle: Introduction to R
+---
+
+
+## Asking for help
+
+- Recommended:  Post your problem and drag a screenshot image of what you have tried to the #general channel on Slack.
+- If you know the answer to a question there, please attempt to answer it.  It will help you learn!
+- Send me a private message on Slack (@chester)
+- Discuss your problems with the tutors in person
+- Last resort, send the tutors a private message on Slack
+
+## You Should Learn to Program
+
+```{r echo=FALSE}
+library("htmltools")
+library("vembedr")
+embed_url("https://www.youtube.com/watch?v=xfBWk4nw440&t=7s")
+```
+
+
+## Easy classes are worthless classes
+
+> - You won't retain any of the material covered
+> - You or someone else pays good money for you to get a good education here
+> - I want to do everything in my power to help you learn this material as I see it as THE MOST IMPORTANT class you can take as an undergraduate.
+> - You have many misconceptions about how you learn best.  That's not your fault, but habits must be broken.
+> - Can we build muscles sitting on the couch?
+
+## Why are you learning R?
+
+- ~~Because I enjoy partaking in [Schadenfreude](https://en.wikipedia.org/wiki/Schadenfreude)~~
+
+<center>
+`r knitr::include_graphics("figure/google_scholar.png", dpi = 110)`
+</center>
+
+## Why are you learning R?
+
+> - R is free, R improves, R has been around for a long time
+> - You can show what you have learned to a potential employer easily
+> - I want to prepare you for the real world as best as I can and make you more employable than your competitors
+
+> - R will save you TONS of time in the long run. Long term thinking is key.
+
+>    - You can easily tweak your code if you need to do another analysis
+>    - Good luck trying to remember what drop-down menu some thing is in two years from now in a different program
+
+# Reviewing R basics <br> (on chalkboard)
+
+## Key R functions/operators going forward
+
+Operators
+
+- `<-`
+- `[]`
+- `[ , ]`
+- `:`
+- `<`, `>`, `<=`, `>=`
+- `==`, `!=`
+- `?`
+
+## Key R functions/operators going forward
+
+Functions
+
+- `names()`
+- `c()`
+- `sum()`
+- `mean()`
+- `factor()`
+    - `factor( , order = TRUE, levels = c( , , )`)
+- `str()`
+- ~~`str()`~~ `tibble::glimpse()`
+
+## How should you prepare for the quiz?
+
+```{r echo=FALSE}
+embed_url("https://www.youtube.com/watch?v=CPxSzxylRCI")
+```
+
+## How should you prepare for the quiz?
+
+- [Advice from former students](http://ismayc.github.io/soc301_s2017/advice_from_former/index.html)
+
+- Practice!
+
+## Get into groups of 3 or 4
+
+- Pass your multiple choice questions to someone else in your group
+    - Take the "quiz" with no notes
+    - Discuss your answers with your group
+    - Take another "quiz"
+    - Rinse and repeat
+
+# Check the [webpage](https://ismayc.github.io/soc301_s2017/)!
+
+# I want your feedback!
+
+## To do for next time
+
+- Study for Quiz #1 on Thursday, February 9 using the strategies laid out 
+    - The quiz will cover the Introduction to R DataCamp course 
+- Review the Learning Strategies given [here](http://www.learningscientists.org/posters) and commit to using them to succeed in learning
+- Complete DataCamp profile
+- Read Chapter 3 of [ModernDive](http://moderndive.com)
+    - As you read attempt the Learning Checks for understanding
+- Begin work on [Applying R Basics](https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/applying-r-basics?ex=1) DataCamp chapter (Due on February 14 at 1 PM)
+
+## Minute Paper
+
+(Half sheet of paper is fine.  Share with your neighbor.)
+
+- What are the big take-aways for you from class today?
+- What questions do you have about the course?  About the material you've learned so far?

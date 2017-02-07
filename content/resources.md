@@ -12,3 +12,4 @@ This page will be updated with links throughout the course.
 - [How to Study: Top 6 Effective Strategies VIDEO](https://www.youtube.com/watch?v=CPxSzxylRCI)
     - [Accompanying free PDFs to download](http://www.learningscientists.org/posters)
 - [Grade Predictor based on study habits](../img/studentlearn.jpg)
+- [Advice from Former Students]({{< relref "advice_from_former.md" >}})
