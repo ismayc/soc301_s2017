@@ -4,3 +4,18 @@ title: Problem Sets
 ---
 
 This page will list the Problem Sets and when they will be turned in throughout the course.
+
+***
+
+- Problem Set 2 (Due Thursday, February 9 by 4:20 PM)
+    - Turn in on paper
+    - Will be working to finish in class on Thursday in groups, but you should have a start on it BEFORE class
+    - Learning Checks LC3.2-LC3.7, LC3.9-LC3.10 from [ModernDive](https://ismayc.github.io/moderndiver-book/3-tidy.html)
+
+***
+
+- Problem Set 1 (Due Tuesday, February 7 by 4:20 PM)
+    - Write down AT LEAST five multiple choice questions covering the **Introduction to R**
+DataCamp course.  
+    - Each question should have four possible answers.
+    - Create a Google Doc with your questions and share with chester@pacificu.edu
