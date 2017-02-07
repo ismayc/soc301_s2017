@@ -10,6 +10,16 @@ output:
 subtitle: Introduction to R
 ---
 
+## Sample quiz question
+
+<center>
+`r knitr::include_graphics("figure/jeopardy.png", dpi = 300)`
+</center>
+
+<center>
+`r knitr::include_graphics("figure/jq.png", dpi = 200)`
+</center>
+
 
 ## Asking for help
 
