@@ -9,7 +9,7 @@ title: Griffin
 
 - Advice for SOC 301 students: 
     - Value learning R as something that will be beneficial in other areas after this class. Visualize what your table/graph/etc is supposed to look like and type out code that you think will lead to that image. When that fails, which it often does, either utilize R helpers online via google, or see how Chester writes the code in class. Then copy that down in your notes to refer back to.  
-    - The way I quizzed myself for this type of class is through what I mentioned earlier with trying and failing, the only time I resort to online resources or wait to see how you do it is when my knuckles start turning white from frustration. The struggle is important in learning, there is no doubt about it.
+    - The way I quizzed myself for this type of class is through trying and failing, the only time I resorted to online resources or waited to see how Chester did it is when my knuckles start turning white from frustration. The struggle is important in learning, there is no doubt about it.
     - Lastly, errors happen. It is inevitable. But once you start to get a handle on the concepts, pinpointing the errors will come with relative ease. 
     - And have fun with it, honestly. Because this stuff is cool as hell and incredibly useful in the near-future. 
 
