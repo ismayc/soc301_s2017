@@ -22,6 +22,15 @@ knitr::include_graphics("figure/hadley.png")
 
 <img src="figure/tidy-1.png" alt="Drawing" style="width: 750px;"/>
 
+## Is this tidy?
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+dem_score <- read_csv("data/dem_score.csv")
+dem_score
+```
+
+
 ## Beginning steps
 
 Frequently the first thing you should do when given a dataset is to
