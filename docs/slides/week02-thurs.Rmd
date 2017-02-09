@@ -1,0 +1,96 @@
+---
+title: "SOC 301 - 01"
+author: "Chester Ismay"
+output:
+  ioslides_presentation:
+    incremental: no
+    logo: figure/boxer.jpg
+    fig.align: center
+#    widescreen: true
+subtitle: Tidy Data
+---
+
+## Learning Quote of the Day {.flexbox .vcenter}
+
+```{r echo=FALSE}
+knitr::include_graphics("figure/hadley.png")
+```
+
+# Take Notes!
+
+## Tidy Data
+
+```{r echo=FALSE}
+knitr::include_graphics("figure/tidy-1.png")
+```
+
+## Beginning steps
+
+Frequently the first thing you should do when given a dataset is to
+
+- check that the data is **tidy**,
+- identify the observation unit,
+- specify the variables, and
+- give the types of variables you are presented with.
+
+This will help you with 
+
+- choosing the appropriate plot, 
+- summarizing the data, and 
+- understanding which inferences can be applied.
+
+## What is Tidy Data?
+
+<img src="http://garrettgman.github.io/images/tidy-1.png" alt="Drawing" style="width: 800px;"/>
+
+1. Each variable forms a column.
+2. Each observation forms a row.
+3. Each type of observational unit forms a table.
+
+The third point means we don't mix apples and oranges, keep apples together with apples.
+
+
+## What is Tidy Data?
+
+1. Each observation forms a row. In other words, each row corresponds to a single **observational unit**
+1. Each variable forms a column:
+    + Some of the variables may be used to identify the **observational units**. For organizational purposes, it's generally better to put these in the left-hand columns
+    + Some of the variables may be **observed values** associated with each observational unit
+1. Each type of observational unit forms a table.
+
+
+
+## What is Tidy Data?
+
+This is just a spreadsheet! 
+
+But we are very strict about the previous three rules.
+
+
+
+## [nycflights13 Package](http://github.com/hadley/nycflights13)
+
+- Loaded via `library(nycflights13)` 
+
+- Contains
+information about all flights that departed from NYC (e.g. EWR, JFK and LGA) in
+2013: 336,776 flights in total. 
+
+- To help understand what causes delays, it also
+includes a number of other useful datasets:
+
+    * `weather`: hourly meterological data for each airport
+    * `planes`: construction information about each plane
+    * `airports`: airport names and locations
+    * `airlines`: translation between two letter carrier codes and names
+
+All of these data frames are available for viewing [here](https://ismayc.github.io/Effective-Data-Storytelling-using-the-tidyverse/moderndive.html).
+
+# Work on [Problem Set 2](https://ismayc.github.io/soc301_s2017/problem-sets/)
+
+## Minute Paper
+
+(Half sheet of paper is fine.  Share with your neighbor.)
+
+- What are the three characteristics of tidy data?
+- Draw the DATA diagram that was presented on the board every day we have met as a class so far.
