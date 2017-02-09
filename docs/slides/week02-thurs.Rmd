@@ -20,16 +20,14 @@ knitr::include_graphics("figure/hadley.png")
 
 ## Tidy Data
 
-```{r echo=FALSE}
-knitr::include_graphics("figure/tidy-1.png")
-```
+<img src="figure/tidy-1.png" alt="Drawing" style="width: 750px;"/>
 
 ## Beginning steps
 
 Frequently the first thing you should do when given a dataset is to
 
 - check that the data is **tidy**,
-- identify the observation unit,
+- identify the observational unit,
 - specify the variables, and
 - give the types of variables you are presented with.
 
@@ -41,7 +39,7 @@ This will help you with
 
 ## What is Tidy Data?
 
-<img src="http://garrettgman.github.io/images/tidy-1.png" alt="Drawing" style="width: 800px;"/>
+<img src="http://garrettgman.github.io/images/tidy-1.png" alt="Drawing" style="width: 600px;"/>
 
 1. Each variable forms a column.
 2. Each observation forms a row.
@@ -93,4 +91,4 @@ All of these data frames are available for viewing [here](https://ismayc.github.
 (Half sheet of paper is fine.  Share with your neighbor.)
 
 - What are the three characteristics of tidy data?
-- Draw the DATA diagram that was presented on the board every day we have met as a class so far.
+- Draw the DATA diagram that was presented on the board in all previous classes.
