@@ -1,0 +1,125 @@
+---
+date: 2017-02-09T13:14:16-08:00
+title: Problem Sets Discussion
+output: 
+  blogdown::html_page:
+    toc: true
+    toc_depth: 1
+---
+
+***
+
+Page last updated at `r format(Sys.time(), "%A, %B %d, %Y %X %Z")`
+
+```{r echo=FALSE}
+knitr::opts_chunk$set(message=FALSE, warning=FALSE)
+```
+
+
+# Problem Set 2 {#ps2}
+
+Learning Checks LC3.2-LC3.7, LC3.9-LC3.10 from [ModernDive](https://ismayc.github.io/moderndiver-book/3-tidy.html)
+
+## LC3.2
+
+Say the following table are stock prices, how would you make this tidy? 
+
+```{r echo=FALSE}
+library(dplyr)
+data.frame(
+  time = as.Date('2009-01-01') + 0:4,
+  x = round(rnorm(5, 0, 1), 3),
+  y = round(rnorm(5, 0, 2), 3),
+  z = round(rnorm(5, 0, 4), 3)
+) %>% 
+knitr::kable()
+```
+
+**Discussion**:  `x`, `y`, and `z` are not variables by themselves, but rather levels of another variable `stock`.  The numbers inside the table themselves are prices.  Therefore, in its current form, `x` corresponds both to the "name of a stock" and the "price of a stock" which violates the rules of tidy data.  We can transform the data to make it **tidy**:
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyr)
+data.frame(
+  time = as.Date('2009-01-01') + 0:4,
+  x = round(rnorm(5, 0, 1), 3),
+  y = round(rnorm(5, 0, 2), 3),
+  z = round(rnorm(5, 0, 4), 3)
+) %>% 
+  gather(key = "stock", value = "price", x:z) %>% 
+  knitr::kable(align = c('l', 'c', 'r'))
+```
+
+
+## LC3.3
+
+What does any *ONE* row in this `flights` dataset refer to?
+
+- A. Data on an airline 
+- B. Data on a flight
+- C. Data on an airport
+- D. Data on multiple flights
+
+**Discussion**:  The correct answer is B here.  The observational unit is flight.  All of the variables are measurements/characteristics of a given flight.  Each row is an observation of one flight containing data about that flight.
+
+## LC3.4
+
+What are some examples in this dataset of **categorical** variables?  What makes them different than **quantitative** variables?
+
+**Discussion**:  The **categorical** variables are `carrier`, `tailnum`, `origin`, and `dest`.  The **quantitative** variables are all of the `<int`> and `<dbl>` class variables:  `year`, `month`, `day`, `dep_time`, `sched_dep_time`, `arr_time`, `sched_arr_time`, `arr_delay`, `flight`, `air_time`, `distance`, `hour`, and `minute`.  Note that `time_hour` is labeled as `<dttm>` corresponding to date-time.  This is a special format in R for handling the oddities of dates and times.  Note also that `dep_time` and other similar variables are not labeled as `<dttm>`, but rather as a number.  Think about what problems this might cause in your analyses.
+
+## LC3.5
+
+What does `int`, `dbl`, and `chr` mean in the output above?  If you need a hint, you might want to run `str(flights)` instead.
+
+**Discussion**:  These correspond to the `class` of each variable in R.  `dbl` is the same thing as `num` and represents numbers with decimal values.  `int` corresponds to integers (whole numbers and their negative opposites (-5, 4, 79, 0, 12342, etc.)).  `chr` corresponds to character values/strings and these are almost always categorical variables.  The output of the similar `str(flights)` is below.
+
+```{r}
+library(nycflights13)
+str(flights)
+```
+
+
+## LC3.6
+
+How many different columns are in this dataset?
+
+**Discussion**:  
+
+```{r}
+library(nycflights13)
+glimpse(flights)
+```
+
+We see above from running `glimpse(flights)` that the number of variables is `r ncol(flights)`.  In a tidy data frame such as `flights`, the number of columns corresponds directly to the number of variables so the number of columns is `r ncol(flights)`. This can also be obtained using the `ncol` function via `ncol(flights)`.
+
+## LC3.7
+
+How many different rows are in this dataset?
+
+**Discussion**:
+
+We see above from running `glimpse(flights)` that the number of observations is `r format(nrow(flights), big.mark = ",", scientific = FALSE)`.  In a tidy data frame such as `flights`, the number of rows corresponds directly to the number of observations/cases so the number of rows is also `r format(nrow(flights), big.mark = ",", scientific = FALSE)`. This can also be obtained using the `nrow` function via `nrow(flights)`.
+
+## LC3.9
+
+What properties of the observational unit do each of `lat`, `lon`, `alt`, `tz`, `dst`, and `tzone` describe for the `airports` data frame?  Note that you may want to use `?airports` to get more information or go to the reference manual for the `nycflights13` package [here](https://cran.r-project.org/web/packages/nycflights13/nycflights13.pdf).
+
+**Discussion**:  
+
+Using `?airports`, we see that `lat` and `lon` correspond to the latitude and longitude of the location of the airport.  `alt` is the altitude of the airport in feet.  `tz` is the offset of the airport's time zone from Greenwich Mean Time.  `dst` corresponds to "Daylight savings time zone" with values of `"A"` for US DST, `"U"` for unknown, and `"N"` for no DST.  Lastly, `tzone` is the name of the time zone in which the airport is located.
+
+
+## LC3.10
+
+Provide the names of variables in a data frame with at least three variables in which one of them is an identification variable and the other two are not.
+
+**Discussion**:  Many answers are appropriate here.  The identification variable should correspond to the observational unit of the data frame.  Here is one example:
+
+Student ID  |  Major       | Percentage | Grade 
+------------|--------------|:------------:|-------
+1000        | Sociology    |  95        |  A
+1001        | Biology      |  50        |  F
+1002        | History      |  76        |  C
+
+
+

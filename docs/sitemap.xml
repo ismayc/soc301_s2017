@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>/ps-key/</loc>
+    <loc>/problem-sets/ps-key/</loc>
     <lastmod>2017-02-09T13:14:16-08:00</lastmod>
   </url>
   
@@ -84,6 +84,12 @@
   <url>
     <loc>/post/</loc>
     <lastmod>2017-02-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/problem-sets/</loc>
+    <lastmod>2017-02-09T13:14:16-08:00</lastmod>
     <priority>0</priority>
   </url>
   

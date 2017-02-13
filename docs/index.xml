@@ -11,15 +11,21 @@
     
     <item>
       <title>Problem Sets Discussion</title>
-      <link>/ps-key/</link>
+      <link>/problem-sets/ps-key/</link>
       <pubDate>Thu, 09 Feb 2017 13:14:16 -0800</pubDate>
       
-      <guid>/ps-key/</guid>
+      <guid>/problem-sets/ps-key/</guid>
       <description>&lt;!-- BLOGDOWN-BODY-BEFORE
 
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#ps2&#34;&gt;Problem Set 2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 /BLOGDOWN-BODY-BEFORE --&gt;
 
-&lt;p&gt;Page last updated at Sunday, February 12, 2017 17:51:15 PST&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;Page last updated at Sunday, February 12, 2017 21:24:00 PST&lt;/p&gt;
 &lt;div id=&#34;ps2&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Problem Set 2&lt;/h1&gt;
 &lt;p&gt;Learning Checks LC3.2-LC3.7, LC3.9-LC3.10 from &lt;a href=&#34;https://ismayc.github.io/moderndiver-book/3-tidy.html&#34;&gt;ModernDive&lt;/a&gt;&lt;/p&gt;
@@ -38,33 +44,33 @@
 &lt;tbody&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-01&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;1.045&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;-4.417&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;3.346&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.871&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4.317&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-4.587&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-02&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;-0.510&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;2.154&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;-7.959&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.429&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.969&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.352&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-03&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;-1.489&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.377&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.532&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.872&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.493&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.298&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-04&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.698&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;2.479&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;-6.622&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.231&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.156&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.939&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-05&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;1.331&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;-3.631&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;-6.564&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2.250&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.924&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.797&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -81,81 +87,80 @@
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-01&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;x&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;-1.603&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.274&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-02&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;x&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.224&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.102&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-03&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;x&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;-0.447&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.417&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-04&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;x&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;1.451&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.177&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-05&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;x&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.512&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.368&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-01&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;y&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;1.724&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.882&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-02&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;y&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;-0.104&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.980&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-03&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;y&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;2.402&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.184&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-04&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;y&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.022&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.149&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-05&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;y&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.908&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.757&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-01&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;z&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;3.116&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-1.504&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-02&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;z&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;-4.007&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.325&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-03&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;z&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;-0.538&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.237&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-04&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;z&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;-4.220&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.050&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-05&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;z&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;-2.111&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-1.873&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;hr /&gt;
 &lt;/div&gt;
 &lt;div id=&#34;lc3.3&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;LC3.3&lt;/h2&gt;
@@ -167,39 +172,114 @@
 &lt;li&gt;D. Data on multiple flights&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;: The correct answer is B here. The observational unit is flight. All of the variables are measurements/characteristics of a given flight. Each row is an observation of one flight containing data about that flight.&lt;/p&gt;
-&lt;hr /&gt;
 &lt;/div&gt;
 &lt;div id=&#34;lc3.4&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;LC3.4&lt;/h2&gt;
 &lt;p&gt;What are some examples in this dataset of &lt;strong&gt;categorical&lt;/strong&gt; variables? What makes them different than &lt;strong&gt;quantitative&lt;/strong&gt; variables?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;: The &lt;strong&gt;categorical&lt;/strong&gt; variables are &lt;code&gt;carrier&lt;/code&gt;, &lt;code&gt;tailnum&lt;/code&gt;, &lt;code&gt;origin&lt;/code&gt;, and &lt;code&gt;dest&lt;/code&gt;. The &lt;strong&gt;quantitative&lt;/strong&gt; variables are all of the &lt;code&gt;&amp;lt;int&lt;/code&gt;&amp;gt; and &lt;code&gt;&amp;lt;dbl&amp;gt;&lt;/code&gt; class variables: &lt;code&gt;year&lt;/code&gt;, &lt;code&gt;month&lt;/code&gt;, &lt;code&gt;day&lt;/code&gt;, &lt;code&gt;dep_time&lt;/code&gt;, &lt;code&gt;sched_dep_time&lt;/code&gt;, &lt;code&gt;arr_time&lt;/code&gt;, &lt;code&gt;sched_arr_time&lt;/code&gt;, &lt;code&gt;arr_delay&lt;/code&gt;, &lt;code&gt;flight&lt;/code&gt;, &lt;code&gt;air_time&lt;/code&gt;, &lt;code&gt;distance&lt;/code&gt;, &lt;code&gt;hour&lt;/code&gt;, and &lt;code&gt;minute&lt;/code&gt;. Note that &lt;code&gt;time_hour&lt;/code&gt; is labeled as &lt;code&gt;&amp;lt;dttm&amp;gt;&lt;/code&gt; corresponding to date-time. This is a special format in R for handling the oddities of dates and times. Note also that &lt;code&gt;dep_time&lt;/code&gt; and other similar variables are not labeled as &lt;code&gt;&amp;lt;dttm&amp;gt;&lt;/code&gt;, but rather as a number. Think about what problems this might cause in your analyses.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;lc3.5&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;LC3.5&lt;/h2&gt;
 &lt;p&gt;What does &lt;code&gt;int&lt;/code&gt;, &lt;code&gt;dbl&lt;/code&gt;, and &lt;code&gt;chr&lt;/code&gt; mean in the output above? If you need a hint, you might want to run &lt;code&gt;str(flights)&lt;/code&gt; instead.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;: These correspond to the &lt;code&gt;class&lt;/code&gt; of each variable in R. &lt;code&gt;dbl&lt;/code&gt; is the same thing as &lt;code&gt;num&lt;/code&gt; and represents numbers with decimal values. &lt;code&gt;int&lt;/code&gt; corresponds to integers (whole numbers and negative )&lt;/p&gt;
-&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;: These correspond to the &lt;code&gt;class&lt;/code&gt; of each variable in R. &lt;code&gt;dbl&lt;/code&gt; is the same thing as &lt;code&gt;num&lt;/code&gt; and represents numbers with decimal values. &lt;code&gt;int&lt;/code&gt; corresponds to integers (whole numbers and their negative opposites (-5, 4, 79, 0, 12342, etc.)). &lt;code&gt;chr&lt;/code&gt; corresponds to character values/strings and these are almost always categorical variables. The output of the similar &lt;code&gt;str(flights)&lt;/code&gt; is below.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(nycflights13)
+str(flights)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Classes &amp;#39;tbl_df&amp;#39;, &amp;#39;tbl&amp;#39; and &amp;#39;data.frame&amp;#39;:    336776 obs. of  19 variables:
+##  $ year          : int  2013 2013 2013 2013 2013 2013 2013 2013 2013 2013 ...
+##  $ month         : int  1 1 1 1 1 1 1 1 1 1 ...
+##  $ day           : int  1 1 1 1 1 1 1 1 1 1 ...
+##  $ dep_time      : int  517 533 542 544 554 554 555 557 557 558 ...
+##  $ sched_dep_time: int  515 529 540 545 600 558 600 600 600 600 ...
+##  $ dep_delay     : num  2 4 2 -1 -6 -4 -5 -3 -3 -2 ...
+##  $ arr_time      : int  830 850 923 1004 812 740 913 709 838 753 ...
+##  $ sched_arr_time: int  819 830 850 1022 837 728 854 723 846 745 ...
+##  $ arr_delay     : num  11 20 33 -18 -25 12 19 -14 -8 8 ...
+##  $ carrier       : chr  &amp;quot;UA&amp;quot; &amp;quot;UA&amp;quot; &amp;quot;AA&amp;quot; &amp;quot;B6&amp;quot; ...
+##  $ flight        : int  1545 1714 1141 725 461 1696 507 5708 79 301 ...
+##  $ tailnum       : chr  &amp;quot;N14228&amp;quot; &amp;quot;N24211&amp;quot; &amp;quot;N619AA&amp;quot; &amp;quot;N804JB&amp;quot; ...
+##  $ origin        : chr  &amp;quot;EWR&amp;quot; &amp;quot;LGA&amp;quot; &amp;quot;JFK&amp;quot; &amp;quot;JFK&amp;quot; ...
+##  $ dest          : chr  &amp;quot;IAH&amp;quot; &amp;quot;IAH&amp;quot; &amp;quot;MIA&amp;quot; &amp;quot;BQN&amp;quot; ...
+##  $ air_time      : num  227 227 160 183 116 150 158 53 140 138 ...
+##  $ distance      : num  1400 1416 1089 1576 762 ...
+##  $ hour          : num  5 5 5 5 6 5 6 6 6 6 ...
+##  $ minute        : num  15 29 40 45 0 58 0 0 0 0 ...
+##  $ time_hour     : POSIXct, format: &amp;quot;2013-01-01 05:00:00&amp;quot; &amp;quot;2013-01-01 05:00:00&amp;quot; ...&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;lc3.6&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;LC3.6&lt;/h2&gt;
 &lt;p&gt;How many different columns are in this dataset?&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;hr /&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(nycflights13)
+glimpse(flights)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Observations: 336,776
+## Variables: 19
+## $ year           &amp;lt;int&amp;gt; 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013,...
+## $ month          &amp;lt;int&amp;gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,...
+## $ day            &amp;lt;int&amp;gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,...
+## $ dep_time       &amp;lt;int&amp;gt; 517, 533, 542, 544, 554, 554, 555, 557, 557, 55...
+## $ sched_dep_time &amp;lt;int&amp;gt; 515, 529, 540, 545, 600, 558, 600, 600, 600, 60...
+## $ dep_delay      &amp;lt;dbl&amp;gt; 2, 4, 2, -1, -6, -4, -5, -3, -3, -2, -2, -2, -2...
+## $ arr_time       &amp;lt;int&amp;gt; 830, 850, 923, 1004, 812, 740, 913, 709, 838, 7...
+## $ sched_arr_time &amp;lt;int&amp;gt; 819, 830, 850, 1022, 837, 728, 854, 723, 846, 7...
+## $ arr_delay      &amp;lt;dbl&amp;gt; 11, 20, 33, -18, -25, 12, 19, -14, -8, 8, -2, -...
+## $ carrier        &amp;lt;chr&amp;gt; &amp;quot;UA&amp;quot;, &amp;quot;UA&amp;quot;, &amp;quot;AA&amp;quot;, &amp;quot;B6&amp;quot;, &amp;quot;DL&amp;quot;, &amp;quot;UA&amp;quot;, &amp;quot;B6&amp;quot;, &amp;quot;EV&amp;quot;,...
+## $ flight         &amp;lt;int&amp;gt; 1545, 1714, 1141, 725, 461, 1696, 507, 5708, 79...
+## $ tailnum        &amp;lt;chr&amp;gt; &amp;quot;N14228&amp;quot;, &amp;quot;N24211&amp;quot;, &amp;quot;N619AA&amp;quot;, &amp;quot;N804JB&amp;quot;, &amp;quot;N668DN...
+## $ origin         &amp;lt;chr&amp;gt; &amp;quot;EWR&amp;quot;, &amp;quot;LGA&amp;quot;, &amp;quot;JFK&amp;quot;, &amp;quot;JFK&amp;quot;, &amp;quot;LGA&amp;quot;, &amp;quot;EWR&amp;quot;, &amp;quot;EWR&amp;quot;...
+## $ dest           &amp;lt;chr&amp;gt; &amp;quot;IAH&amp;quot;, &amp;quot;IAH&amp;quot;, &amp;quot;MIA&amp;quot;, &amp;quot;BQN&amp;quot;, &amp;quot;ATL&amp;quot;, &amp;quot;ORD&amp;quot;, &amp;quot;FLL&amp;quot;...
+## $ air_time       &amp;lt;dbl&amp;gt; 227, 227, 160, 183, 116, 150, 158, 53, 140, 138...
+## $ distance       &amp;lt;dbl&amp;gt; 1400, 1416, 1089, 1576, 762, 719, 1065, 229, 94...
+## $ hour           &amp;lt;dbl&amp;gt; 5, 5, 5, 5, 6, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 5,...
+## $ minute         &amp;lt;dbl&amp;gt; 15, 29, 40, 45, 0, 58, 0, 0, 0, 0, 0, 0, 0, 0, ...
+## $ time_hour      &amp;lt;dttm&amp;gt; 2013-01-01 05:00:00, 2013-01-01 05:00:00, 2013...&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We see above from running &lt;code&gt;glimpse(flights)&lt;/code&gt; that the number of variables is 19. In a tidy data frame such as &lt;code&gt;flights&lt;/code&gt;, the number of columns corresponds directly to the number of variables so the number of columns is 19. This can also be obtained using the &lt;code&gt;ncol&lt;/code&gt; function via &lt;code&gt;ncol(flights)&lt;/code&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;lc3.7&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;LC3.7&lt;/h2&gt;
 &lt;p&gt;How many different rows are in this dataset?&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;hr /&gt;
+&lt;p&gt;We see above from running &lt;code&gt;glimpse(flights)&lt;/code&gt; that the number of observations is 336,776. In a tidy data frame such as &lt;code&gt;flights&lt;/code&gt;, the number of rows corresponds directly to the number of observations/cases so the number of rows is also 336,776. This can also be obtained using the &lt;code&gt;nrow&lt;/code&gt; function via &lt;code&gt;nrow(flights)&lt;/code&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;lc3.9&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;LC3.9&lt;/h2&gt;
-&lt;hr /&gt;
+&lt;p&gt;What properties of the observational unit do each of &lt;code&gt;lat&lt;/code&gt;, &lt;code&gt;lon&lt;/code&gt;, &lt;code&gt;alt&lt;/code&gt;, &lt;code&gt;tz&lt;/code&gt;, &lt;code&gt;dst&lt;/code&gt;, and &lt;code&gt;tzone&lt;/code&gt; describe for the &lt;code&gt;airports&lt;/code&gt; data frame? Note that you may want to use &lt;code&gt;?airports&lt;/code&gt; to get more information or go to the reference manual for the &lt;code&gt;nycflights13&lt;/code&gt; package &lt;a href=&#34;https://cran.r-project.org/web/packages/nycflights13/nycflights13.pdf&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;Using &lt;code&gt;?airports&lt;/code&gt;, we see that &lt;code&gt;lat&lt;/code&gt; and &lt;code&gt;lon&lt;/code&gt; correspond to the latitude and longitude of the location of the airport. &lt;code&gt;alt&lt;/code&gt; is the altitude of the airport in feet. &lt;code&gt;tz&lt;/code&gt; is the offset of the airport’s time zone from Greenwich Mean Time. &lt;code&gt;dst&lt;/code&gt; corresponds to “Daylight savings time zone” with values of &lt;code&gt;&amp;quot;A&amp;quot;&lt;/code&gt; for US DST, &lt;code&gt;&amp;quot;U&amp;quot;&lt;/code&gt; for unknown, and &lt;code&gt;&amp;quot;N&amp;quot;&lt;/code&gt; for no DST. Lastly, &lt;code&gt;tzone&lt;/code&gt; is the name of the time zone in which the airport is located.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;lc3.10&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;LC3.10&lt;/h2&gt;
-&lt;hr /&gt;
+&lt;p&gt;Provide the names of variables in a data frame with at least three variables in which one of them is an identification variable and the other two are not.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;: Many answers are appropriate here. The identification variable should correspond to the observational unit of the data frame. Here is one example:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th&gt;Student ID&lt;/th&gt;
+&lt;th&gt;Major&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Percentage&lt;/th&gt;
+&lt;th&gt;Grade&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;1000&lt;/td&gt;
+&lt;td&gt;Sociology&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;95&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;1001&lt;/td&gt;
+&lt;td&gt;Biology&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;50&lt;/td&gt;
+&lt;td&gt;F&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;1002&lt;/td&gt;
+&lt;td&gt;History&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;76&lt;/td&gt;
+&lt;td&gt;C&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -446,39 +526,36 @@ reach out for help.&lt;/li&gt;
       <pubDate>Mon, 30 Jan 2017 20:05:05 -0800</pubDate>
       
       <guid>/problem-sets/</guid>
-      <description>&lt;!-- BLOGDOWN-BODY-BEFORE
+      <description>
 
-/BLOGDOWN-BODY-BEFORE --&gt;
+&lt;p&gt;This page will list the Problem Sets and when they will be turned in throughout the course.  You can find discussions about all of the Problem Sets &lt;a href=&#34;ps-key/index.html&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;This page will list the Problem Sets and when they will be turned in throughout the course. You can find a discussion about all of the Problem Sets &lt;a href=&#34;http://ismayc.github.io/soc301_s2017/ps-key/index.html&#34;&gt;here&lt;/a&gt;. Links to specific Problem Set discussions will be posted after the Problem Set is turned in below the Problem Set assignment.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Problem Set 2 (Due Thursday, February 9 by 4:20 PM)
+&lt;p&gt;Note that the discussion page is updated with the most recent problem sets at the top and the earlier problem sets at the bottom.  Links to specific Problem Set discussions will be posted after the Problem Set is turned in below the Problem Set assignment here.&lt;/p&gt;
+
+&lt;h2 id=&#34;problem-set-2-due-thursday-february-9-by-4-20-pm&#34;&gt;Problem Set 2 (Due Thursday, February 9 by 4:20 PM)&lt;/h2&gt;
+
 &lt;ul&gt;
 &lt;li&gt;Turn in on paper&lt;/li&gt;
 &lt;li&gt;Will be working to finish in class on Thursday in groups, but you should have a start on it BEFORE class&lt;/li&gt;
 &lt;li&gt;Learning Checks LC3.2-LC3.7, LC3.9-LC3.10 from &lt;a href=&#34;https://ismayc.github.io/moderndiver-book/3-tidy.html&#34;&gt;ModernDive&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;To run the R code given in the gray chunks in the textbook, you can use this “sandbox” I’ve created for you as the last chapter of the DataCamp course. Click &lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/8864?ex=1&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Discussion &lt;a href=&#34;http://ismayc.github.io/soc301_s2017/ps-key/index.html#ps2&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;To run the R code given in the gray chunks in the textbook, you can use this &amp;ldquo;sandbox&amp;rdquo; I&amp;rsquo;ve created for you as the last chapter of the DataCamp course.  Click &lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/supplement-to-moderndive-textbook?ex=1&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Discussion &lt;a href=&#34;ps-key/index.html#ps2&#34;&gt;here&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr /&gt;
+
+&lt;h2 id=&#34;problem-set-1-due-tuesday-february-7-by-4-20-pm&#34;&gt;Problem Set 1 (Due Tuesday, February 7 by 4:20 PM)&lt;/h2&gt;
+
 &lt;ul&gt;
-&lt;li&gt;Problem Set 1 (Due Tuesday, February 7 by 4:20 PM)
+&lt;li&gt;Write down AT LEAST five multiple choice questions covering the &lt;strong&gt;Introduction to R&lt;/strong&gt;
+DataCamp course.&lt;br /&gt;
+
 &lt;ul&gt;
-&lt;li&gt;Write down AT LEAST five multiple choice questions covering the &lt;strong&gt;Introduction to R&lt;/strong&gt; DataCamp course.&lt;br /&gt;
-&lt;/li&gt;
 &lt;li&gt;Each question should have four possible answers.&lt;/li&gt;
-&lt;li&gt;Create a Google Doc with your questions and share with &lt;a href=&#34;mailto:chester@pacificu.edu&#34;&gt;chester@pacificu.edu&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Don&amp;rsquo;t mark what you choose to be the correct answer on what you turn in, but make note of your choice elsewhere to facilitate your learning.&lt;/li&gt;
+&lt;li&gt;Create a Google Doc with your questions and share with isma5720@pacificu.edu&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-
-&lt;!-- BLOGDOWN-HEAD
-
-
-
-
-/BLOGDOWN-HEAD --&gt;
 </description>
     </item>
     
