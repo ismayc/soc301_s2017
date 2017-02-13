@@ -19,14 +19,14 @@
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#ps2&#34;&gt;Problem Set 2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#ps2-key&#34;&gt;Problem Set 2&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 /BLOGDOWN-BODY-BEFORE --&gt;
 
 &lt;hr /&gt;
-&lt;p&gt;Page last updated at Sunday, February 12, 2017 21:24:00 PST&lt;/p&gt;
-&lt;div id=&#34;ps2&#34; class=&#34;section level1&#34;&gt;
+&lt;p&gt;Page last updated at Sunday, February 12, 2017 21:52:03 PST&lt;/p&gt;
+&lt;div id=&#34;ps2-key&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Problem Set 2&lt;/h1&gt;
 &lt;p&gt;Learning Checks LC3.2-LC3.7, LC3.9-LC3.10 from &lt;a href=&#34;https://ismayc.github.io/moderndiver-book/3-tidy.html&#34;&gt;ModernDive&lt;/a&gt;&lt;/p&gt;
 &lt;div id=&#34;lc3.2&#34; class=&#34;section level2&#34;&gt;
@@ -44,33 +44,33 @@
 &lt;tbody&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-01&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.871&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;4.317&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;-4.587&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.417&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.389&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-6.430&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-02&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;-0.429&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;1.969&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;1.352&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.029&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-3.186&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;6.295&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-03&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;1.872&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.493&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;1.298&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.133&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.449&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-8.694&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-04&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.231&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;-0.156&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;3.939&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-1.643&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.356&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-4.438&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-05&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;2.250&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.924&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;-0.797&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.162&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-2.476&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-6.804&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -87,77 +87,77 @@
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-01&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;x&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.274&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.209&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-02&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;x&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.102&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.048&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-03&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;x&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;-0.417&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.692&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-04&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;x&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;1.177&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.744&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-05&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;x&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.368&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.234&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-01&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;y&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.882&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-1.369&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-02&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;y&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;-0.980&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-3.192&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-03&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;y&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;1.184&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-2.452&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-04&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;y&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;-0.149&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-1.327&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-05&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;y&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;-0.757&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-2.812&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-01&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;z&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;-1.504&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-1.038&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-02&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;z&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;1.325&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-4.632&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-03&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;z&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;1.237&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.392&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-04&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;z&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.050&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-5.078&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-05&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;z&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;-1.873&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-4.731&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -532,7 +532,7 @@ reach out for help.&lt;/li&gt;
 
 &lt;p&gt;Note that the discussion page is updated with the most recent problem sets at the top and the earlier problem sets at the bottom.  Links to specific Problem Set discussions will be posted after the Problem Set is turned in below the Problem Set assignment here.&lt;/p&gt;
 
-&lt;h2 id=&#34;problem-set-3-due-thursday-february-16-by-4-20-pm&#34;&gt;Problem Set 3 (Due Thursday, February 16 by 4:20 PM)&lt;/h2&gt;
+&lt;h1 id=&#34;ps3&#34;&gt;Problem Set 3 (Due Thursday, February 16 by 4:20 PM)&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;We will be working on this in class on Tuesday and Thursday in groups, but you likely will need to work outside of class to complete it.&lt;/li&gt;
@@ -545,7 +545,11 @@ reach out for help.&lt;/li&gt;
 &lt;li&gt;To run the R code given in the gray chunks in the textbook, you can use this &amp;ldquo;sandbox&amp;rdquo; I&amp;rsquo;ve created for you as the last chapter of the DataCamp course.  Click &lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/supplement-to-moderndive-textbook?ex=1&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;problem-set-2-due-thursday-february-9-by-4-20-pm&#34;&gt;Problem Set 2 (Due Thursday, February 9 by 4:20 PM)&lt;/h2&gt;
+&lt;!--
+- Discussion [here](ps-key/index.html#ps3-key)
+--&gt;
+
+&lt;h1 id=&#34;ps2&#34;&gt;Problem Set 2 (Due Thursday, February 9 by 4:20 PM)&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;We will be working to finish in class on Thursday in groups, but you should have a start on it BEFORE class&lt;/li&gt;
@@ -553,10 +557,10 @@ reach out for help.&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;To run the R code given in the gray chunks in the textbook, you can use this &amp;ldquo;sandbox&amp;rdquo; I&amp;rsquo;ve created for you as the last chapter of the DataCamp course.  Click &lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/supplement-to-moderndive-textbook?ex=1&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Discussion &lt;a href=&#34;ps-key/index.html#ps2&#34;&gt;here&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;DISCUSSION &lt;a href=&#34;ps-key/index.html#ps2-key&#34;&gt;here&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;problem-set-1-due-tuesday-february-7-by-4-20-pm&#34;&gt;Problem Set 1 (Due Tuesday, February 7 by 4:20 PM)&lt;/h2&gt;
+&lt;h1 id=&#34;ps1&#34;&gt;Problem Set 1 (Due Tuesday, February 7 by 4:20 PM)&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Write down AT LEAST five multiple choice questions covering the &lt;strong&gt;Introduction to R&lt;/strong&gt;
@@ -885,8 +889,8 @@ DataCamp course.&lt;br /&gt;
 /BLOGDOWN-BODY-BEFORE --&gt;
 
 &lt;p&gt;The references to &lt;strong&gt;Chapters&lt;/strong&gt;/&lt;strong&gt;Sections&lt;/strong&gt; here correspond to the &lt;a href=&#34;http://moderndive.com&#34;&gt;&lt;strong&gt;MODERN DIVE into Data with R&lt;/strong&gt;&lt;/a&gt; book. Be sure to check the &lt;strong&gt;DataCamp&lt;/strong&gt; link above for more details on the DataCamp (DC) assignments. More details on the Problem Sets (PS) are available in the link above for Problem Sets.&lt;/p&gt;
-&lt;div id=&#34;htmlwidget-2c0ed7db3f6a13ffed7a&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;datatables html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-2c0ed7db3f6a13ffed7a&#34;&gt;{&#34;x&#34;:{&#34;filter&#34;:&#34;top&#34;,&#34;filterHTML&#34;:&#34;&lt;tr&gt;\n  &lt;td data-type=\&#34;character\&#34; style=\&#34;vertical-align: top;\&#34;&gt;\n    &lt;div class=\&#34;form-group has-feedback\&#34; style=\&#34;margin-bottom: auto;\&#34;&gt;\n      &lt;input type=\&#34;search\&#34; placeholder=\&#34;All\&#34; class=\&#34;form-control\&#34; style=\&#34;width: 100%;\&#34;/&gt;\n      &lt;span class=\&#34;glyphicon glyphicon-remove-circle form-control-feedback\&#34;&gt;\u003c/span&gt;\n    \u003c/div&gt;\n  \u003c/td&gt;\n  &lt;td data-type=\&#34;character\&#34; style=\&#34;vertical-align: top;\&#34;&gt;\n    &lt;div class=\&#34;form-group has-feedback\&#34; style=\&#34;margin-bottom: auto;\&#34;&gt;\n      &lt;input type=\&#34;search\&#34; placeholder=\&#34;All\&#34; class=\&#34;form-control\&#34; style=\&#34;width: 100%;\&#34;/&gt;\n      &lt;span class=\&#34;glyphicon glyphicon-remove-circle form-control-feedback\&#34;&gt;\u003c/span&gt;\n    \u003c/div&gt;\n  \u003c/td&gt;\n  &lt;td data-type=\&#34;character\&#34; style=\&#34;vertical-align: top;\&#34;&gt;\n    &lt;div class=\&#34;form-group has-feedback\&#34; style=\&#34;margin-bottom: auto;\&#34;&gt;\n      &lt;input type=\&#34;search\&#34; placeholder=\&#34;All\&#34; class=\&#34;form-control\&#34; style=\&#34;width: 100%;\&#34;/&gt;\n      &lt;span class=\&#34;glyphicon glyphicon-remove-circle form-control-feedback\&#34;&gt;\u003c/span&gt;\n    \u003c/div&gt;\n  \u003c/td&gt;\n  &lt;td data-type=\&#34;character\&#34; style=\&#34;vertical-align: top;\&#34;&gt;\n    &lt;div class=\&#34;form-group has-feedback\&#34; style=\&#34;margin-bottom: auto;\&#34;&gt;\n      &lt;input type=\&#34;search\&#34; placeholder=\&#34;All\&#34; class=\&#34;form-control\&#34; style=\&#34;width: 100%;\&#34;/&gt;\n      &lt;span class=\&#34;glyphicon glyphicon-remove-circle form-control-feedback\&#34;&gt;\u003c/span&gt;\n    \u003c/div&gt;\n  \u003c/td&gt;\n\u003c/tr&gt;&#34;,&#34;data&#34;:[[&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Wednesday&#34;,&#34;Monday&#34;],[&#34;January 31&#34;,&#34;February 2&#34;,&#34;February 7&#34;,&#34;February 9&#34;,&#34;February 14&#34;,&#34;February 16&#34;,&#34;February 21&#34;,&#34;February 23&#34;,&#34;February 28&#34;,&#34;March 2&#34;,&#34;March 7&#34;,&#34;March 9&#34;,&#34;March 14&#34;,&#34;March 16&#34;,&#34;March 21&#34;,&#34;March 23&#34;,&#34;March 28&#34;,&#34;March 30&#34;,&#34;April 4&#34;,&#34;April 6&#34;,&#34;April 11&#34;,&#34;April 13&#34;,&#34;April 18&#34;,&#34;April 20&#34;,&#34;April 25&#34;,&#34;April 27&#34;,&#34;May 2&#34;,&#34;May 4&#34;,&#34;May 9&#34;,&#34;May 10&#34;,&#34;May 15&#34;],[&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/&#39;&gt;Introduction (Chapters 1 and 2)\u003c/a&gt;&#34;,&#34;Introduction to R on DataCamp&#34;,&#34;Review of Introduction to R on DataCamp&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/3-tidy.html&#39;&gt;Tidy data (Chapter 3)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/4-viz.html&#39;&gt;Joining Data Frames (Sections 3.4-3.5)\u003c/a&gt;, &lt;a href=&#39;https://ismayc.github.io/moderndiver-book/4-viz.html&#39;&gt;Scatter-plots and Line-graphs (Sections 4.1 to 4.4)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/4-viz.html&#39;&gt;Scatter-plots and Line-graphs (Sections 4.1 to 4.4)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/4-viz.html#histograms&#39;&gt;Histograms, Facets, and Boxplots (Sections 4.5 to 4.7)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/4-viz.html#geombar&#39;&gt;Barplots (Section 4.8)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/4-viz.html#conclusion&#39;&gt;Review Chapter 4 (Section 4.9)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/5-manip.html&#39;&gt;Five Main Verbs &amp; The Pipe (Sections 5.1 and 5.2)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/5-manip.html&#39;&gt;Five Main Verbs &amp; The Pipe (Sections 5.1 and 5.2)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/5-manip.html#joining-data-frames&#39;&gt;Joins and other verbs (Sections 5.3 to 5.5)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/5-manip.html#conclusion-1&#39;&gt;Review Chapter 5\u003c/a&gt;&#34;,&#34;Work on Group Project&#34;,&#34;Review Chapters 3-5&#34;,&#34;NO CLASS&#34;,&#34;SPRING BREAK&#34;,&#34;SPRING BREAK&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/6-sim.html&#39;&gt;Visualizing Random Sampling (Sections 6.1 and 6.2)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/6-sim.html&#39;&gt;Simulation (Sections 6.3 to 6.5)\u003c/a&gt;, Review for Midterm Exam&#34;,&#34;MIDTERM EXAM&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/7-hypo.html&#39;&gt;Basics of Hypothesis Testing (Sections 7.1 to 7.4)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/7-hypo.html#statistical-significance&#39;&gt;Significance and Testing Example 1 (Sections 7.5 and 7.6)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/7-hypo.html#example-comparing-two-means&#39;&gt;Testing Example 2 / Traditional Methods (Sections 7.7 to 7.9)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/8-ci.html&#39;&gt;Confidence Intervals &amp; Bootstrapping (Section 8.1)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/8-ci.html#relation-to-hypothesis-testing&#39;&gt;Relationship Between Confidence Intervals &amp; Hypothesis Testing (Sections 8.2 to 8.4)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/9-regress.html&#39;&gt;Correlation and Regression (Sections 9.1 to 9.3)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/9-regress.html&#39;&gt;Inference for Regression (Sections 9.4 to 9.7)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/10-effective-data-storytelling.html&#39;&gt;Course Review (Chapter 10)\u003c/a&gt;&#34;,&#34;READING DAY&#34;,&#34;FINAL EXAM (For Practice - DC chapter: Correlation &amp; Regression, DC chapter: Course Wrap-up)&#34;],[&#34;-&#34;,&#34;-&#34;,&#34;&lt;a href=&#39;https://www.datacamp.com/courses/free-introduction-to-r&#39;&gt;DC course: Introduction to R\u003c/a&gt;&#34;,&#34;Quiz 1&#34;,&#34;&lt;a href=&#39;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/applying-r-basics?ex=1&#39;&gt;DC chapter: Applying R Basics\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/tidy-data?ex=1&#39;&gt;DC chapter: Tidy Data\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/scatter-plots-line-graphs?ex=1&#39;&gt;DC chapter: Scatter-plots &amp; Line-graphs\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/histograms-boxplots?ex=1&#39;&gt;DC chapter: Histograms &amp; Boxplots\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/barplots?ex=1&#39;&gt;DC chapter: Barplots\u003c/a&gt;&#34;,&#34;Quiz 2&#34;,&#34;DC chapter: ggplot2 Review&#34;,&#34;DC chapter: Filtering, Grouping, &amp; Summarizing&#34;,&#34;DC chapter: Mutating &amp; Arranging, Group Project Draft&#34;,&#34;DC chapter: dplyr Review&#34;,&#34;Quiz 3&#34;,&#34;Group Project due at 10 AM&#34;,&#34;-&#34;,&#34;-&#34;,&#34;-&#34;,null,&#34;(Last day to drop with a W is Friday, April 14)&#34;,&#34;DC chapter: Simulating Randomness, Group Project Draft&#34;,&#34;-&#34;,&#34;DC chapter: Hypothesis testing&#34;,&#34;Quiz 4&#34;,&#34;-&#34;,&#34;DC chapter: Confidence Intervals&#34;,&#34;-&#34;,&#34;Quiz 5&#34;,&#34;-&#34;,&#34;Noon to 2:30 PM&#34;]],&#34;container&#34;:&#34;&lt;table class=\&#34;cell-border stripe\&#34;&gt;\n  &lt;thead&gt;\n    &lt;tr&gt;\n      &lt;th&gt;Weekday\u003c/th&gt;\n      &lt;th&gt;Date\u003c/th&gt;\n      &lt;th&gt;Content / Assessment\u003c/th&gt;\n      &lt;th&gt;Material Due\u003c/th&gt;\n    \u003c/tr&gt;\n  \u003c/thead&gt;\n\u003c/table&gt;&#34;,&#34;options&#34;:{&#34;pageLength&#34;:31,&#34;autoWidth&#34;:true,&#34;bInfo&#34;:false,&#34;paging&#34;:false,&#34;order&#34;:[],&#34;orderClasses&#34;:false,&#34;orderCellsTop&#34;:true,&#34;lengthMenu&#34;:[10,25,31,50,100]}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;div id=&#34;htmlwidget-03c3aa28a690e625dc7e&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;datatables html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-03c3aa28a690e625dc7e&#34;&gt;{&#34;x&#34;:{&#34;filter&#34;:&#34;top&#34;,&#34;filterHTML&#34;:&#34;&lt;tr&gt;\n  &lt;td data-type=\&#34;character\&#34; style=\&#34;vertical-align: top;\&#34;&gt;\n    &lt;div class=\&#34;form-group has-feedback\&#34; style=\&#34;margin-bottom: auto;\&#34;&gt;\n      &lt;input type=\&#34;search\&#34; placeholder=\&#34;All\&#34; class=\&#34;form-control\&#34; style=\&#34;width: 100%;\&#34;/&gt;\n      &lt;span class=\&#34;glyphicon glyphicon-remove-circle form-control-feedback\&#34;&gt;\u003c/span&gt;\n    \u003c/div&gt;\n  \u003c/td&gt;\n  &lt;td data-type=\&#34;character\&#34; style=\&#34;vertical-align: top;\&#34;&gt;\n    &lt;div class=\&#34;form-group has-feedback\&#34; style=\&#34;margin-bottom: auto;\&#34;&gt;\n      &lt;input type=\&#34;search\&#34; placeholder=\&#34;All\&#34; class=\&#34;form-control\&#34; style=\&#34;width: 100%;\&#34;/&gt;\n      &lt;span class=\&#34;glyphicon glyphicon-remove-circle form-control-feedback\&#34;&gt;\u003c/span&gt;\n    \u003c/div&gt;\n  \u003c/td&gt;\n  &lt;td data-type=\&#34;character\&#34; style=\&#34;vertical-align: top;\&#34;&gt;\n    &lt;div class=\&#34;form-group has-feedback\&#34; style=\&#34;margin-bottom: auto;\&#34;&gt;\n      &lt;input type=\&#34;search\&#34; placeholder=\&#34;All\&#34; class=\&#34;form-control\&#34; style=\&#34;width: 100%;\&#34;/&gt;\n      &lt;span class=\&#34;glyphicon glyphicon-remove-circle form-control-feedback\&#34;&gt;\u003c/span&gt;\n    \u003c/div&gt;\n  \u003c/td&gt;\n  &lt;td data-type=\&#34;character\&#34; style=\&#34;vertical-align: top;\&#34;&gt;\n    &lt;div class=\&#34;form-group has-feedback\&#34; style=\&#34;margin-bottom: auto;\&#34;&gt;\n      &lt;input type=\&#34;search\&#34; placeholder=\&#34;All\&#34; class=\&#34;form-control\&#34; style=\&#34;width: 100%;\&#34;/&gt;\n      &lt;span class=\&#34;glyphicon glyphicon-remove-circle form-control-feedback\&#34;&gt;\u003c/span&gt;\n    \u003c/div&gt;\n  \u003c/td&gt;\n  &lt;td data-type=\&#34;character\&#34; style=\&#34;vertical-align: top;\&#34;&gt;\n    &lt;div class=\&#34;form-group has-feedback\&#34; style=\&#34;margin-bottom: auto;\&#34;&gt;\n      &lt;input type=\&#34;search\&#34; placeholder=\&#34;All\&#34; class=\&#34;form-control\&#34; style=\&#34;width: 100%;\&#34;/&gt;\n      &lt;span class=\&#34;glyphicon glyphicon-remove-circle form-control-feedback\&#34;&gt;\u003c/span&gt;\n    \u003c/div&gt;\n  \u003c/td&gt;\n\u003c/tr&gt;&#34;,&#34;data&#34;:[[&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Wednesday&#34;,&#34;Monday&#34;],[&#34;January 31&#34;,&#34;February 2&#34;,&#34;February 7&#34;,&#34;February 9&#34;,&#34;February 14&#34;,&#34;February 16&#34;,&#34;February 21&#34;,&#34;February 23&#34;,&#34;February 28&#34;,&#34;March 2&#34;,&#34;March 7&#34;,&#34;March 9&#34;,&#34;March 14&#34;,&#34;March 16&#34;,&#34;March 21&#34;,&#34;March 23&#34;,&#34;March 28&#34;,&#34;March 30&#34;,&#34;April 4&#34;,&#34;April 6&#34;,&#34;April 11&#34;,&#34;April 13&#34;,&#34;April 18&#34;,&#34;April 20&#34;,&#34;April 25&#34;,&#34;April 27&#34;,&#34;May 2&#34;,&#34;May 4&#34;,&#34;May 9&#34;,&#34;May 10&#34;,&#34;May 15&#34;],[&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/&#39;&gt;Introduction (Chapters 1 and 2)\u003c/a&gt;&#34;,&#34;Introduction to R on DataCamp&#34;,&#34;Review of Introduction to R on DataCamp&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/3-tidy.html&#39;&gt;Tidy data (Chapter 3)\u003c/a&gt;, Quiz 1&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/3-tidy.html#normal-forms-of-data&#39;&gt;Joining Data Frames (Sections 3.4-3.5)\u003c/a&gt;, &lt;a href=&#39;https://ismayc.github.io/moderndiver-book/4-viz.html&#39;&gt;Scatter-plots and Line-graphs (Sections 4.1 to 4.4)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/4-viz.html&#39;&gt;Scatter-plots and Line-graphs (Sections 4.1 to 4.4)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/4-viz.html#histograms&#39;&gt;Histograms, Facets, and Boxplots (Sections 4.5 to 4.7)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/4-viz.html#geombar&#39;&gt;Barplots (Section 4.8)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/4-viz.html#conclusion&#39;&gt;Review Chapter 4 (Section 4.9)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/5-manip.html&#39;&gt;Five Main Verbs &amp; The Pipe (Sections 5.1 and 5.2)\u003c/a&gt;, Quiz 2&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/5-manip.html&#39;&gt;Five Main Verbs &amp; The Pipe (Sections 5.1 and 5.2)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/5-manip.html#joining-data-frames&#39;&gt;Joins and other verbs (Sections 5.3 to 5.5)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/5-manip.html#conclusion-1&#39;&gt;Review Chapter 5\u003c/a&gt;&#34;,&#34;Work on Group Project&#34;,&#34;Review Chapters 3-5, Quiz 3&#34;,&#34;NO CLASS, Group Project due at 10 AM&#34;,&#34;SPRING BREAK&#34;,&#34;SPRING BREAK&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/6-sim.html&#39;&gt;Visualizing Random Sampling (Sections 6.1 and 6.2)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/6-sim.html&#39;&gt;Simulation (Sections 6.3 to 6.5)\u003c/a&gt;, Review for Midterm Exam&#34;,&#34;MIDTERM EXAM (Last day to drop with a W is Friday, April 14)&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/7-hypo.html&#39;&gt;Basics of Hypothesis Testing (Sections 7.1 to 7.4)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/7-hypo.html#statistical-significance&#39;&gt;Significance and Testing Example 1 (Sections 7.5 and 7.6)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/7-hypo.html#example-comparing-two-means&#39;&gt;Testing Example 2 / Traditional Methods (Sections 7.7 to 7.9)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/8-ci.html&#39;&gt;Confidence Intervals &amp; Bootstrapping (Section 8.1)\u003c/a&gt;, Quiz 4&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/8-ci.html#relation-to-hypothesis-testing&#39;&gt;Relationship Between Confidence Intervals &amp; Hypothesis Testing (Sections 8.2 to 8.4)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/9-regress.html&#39;&gt;Correlation and Regression (Sections 9.1 to 9.3)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/9-regress.html&#39;&gt;Inference for Regression (Sections 9.4 to 9.7)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/10-effective-data-storytelling.html&#39;&gt;Course Review (Chapter 10)\u003c/a&gt;, Quiz 5&#34;,&#34;READING DAY&#34;,&#34;FINAL EXAM (Noon to 2:30 PM)&#34;],[&#34;-&#34;,&#34;-&#34;,&#34;&lt;a href=&#39;https://www.datacamp.com/courses/free-introduction-to-r&#39;&gt;DC course: Introduction to R\u003c/a&gt;&#34;,&#34;-&#34;,&#34;&lt;a href=&#39;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/applying-r-basics?ex=1&#39;&gt;DC chapter: Applying R Basics\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/tidy-data?ex=1&#39;&gt;DC chapter: Tidy Data\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/scatter-plots-line-graphs?ex=1&#39;&gt;DC chapter: Scatter-plots &amp; Line-graphs\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/histograms-boxplots?ex=1&#39;&gt;DC chapter: Histograms &amp; Boxplots\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/barplots?ex=1&#39;&gt;DC chapter: Barplots\u003c/a&gt;&#34;,&#34;-&#34;,&#34;DC chapter: ggplot2 Review&#34;,&#34;DC chapter: Filtering, Grouping, &amp; Summarizing&#34;,&#34;DC chapter: Mutating &amp; Arranging, Group Project Draft&#34;,&#34;DC chapter: dplyr Review&#34;,&#34;-&#34;,&#34;-&#34;,&#34;-&#34;,&#34;-&#34;,&#34;-&#34;,&#34;-&#34;,&#34;-&#34;,&#34;DC chapter: Simulating Randomness, Group Project Draft&#34;,&#34;-&#34;,&#34;DC chapter: Hypothesis testing&#34;,&#34;-&#34;,&#34;-&#34;,&#34;DC chapter: Confidence Intervals&#34;,&#34;-&#34;,&#34;-&#34;,&#34;-&#34;,&#34;For Practice - DC chapter: Correlation &amp; Regression, DC chapter: Course Wrap-up)&#34;],[&#34;-&#34;,&#34;-&#34;,&#34;&lt;a href=&#39;http://ismayc.github.io/soc301_s2017/problem-sets/index.html#ps1&#39;&gt;PS1\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;http://ismayc.github.io/soc301_s2017/problem-sets/index.html#ps2&#39;&gt;PS2\u003c/a&gt;&#34;,&#34;-&#34;,&#34;&lt;a href=&#39;http://ismayc.github.io/soc301_s2017/problem-sets/index.html#ps3&#39;&gt;PS3\u003c/a&gt;&#34;,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]],&#34;container&#34;:&#34;&lt;table class=\&#34;cell-border stripe\&#34;&gt;\n  &lt;thead&gt;\n    &lt;tr&gt;\n      &lt;th&gt;Weekday\u003c/th&gt;\n      &lt;th&gt;Date\u003c/th&gt;\n      &lt;th&gt;Content / Assessment\u003c/th&gt;\n      &lt;th&gt;DataCamp Due\u003c/th&gt;\n      &lt;th&gt;Problem Set Due\u003c/th&gt;\n    \u003c/tr&gt;\n  \u003c/thead&gt;\n\u003c/table&gt;&#34;,&#34;options&#34;:{&#34;pageLength&#34;:31,&#34;autoWidth&#34;:true,&#34;bInfo&#34;:false,&#34;paging&#34;:false,&#34;order&#34;:[],&#34;orderClasses&#34;:false,&#34;orderCellsTop&#34;:true,&#34;lengthMenu&#34;:[10,25,31,50,100]}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
 
 
 &lt;!-- BLOGDOWN-HEAD

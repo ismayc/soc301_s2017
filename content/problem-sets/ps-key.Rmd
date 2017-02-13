@@ -16,7 +16,7 @@ knitr::opts_chunk$set(message=FALSE, warning=FALSE)
 ```
 
 
-# Problem Set 2 {#ps2}
+# Problem Set 2 {#ps2-key}
 
 Learning Checks LC3.2-LC3.7, LC3.9-LC3.10 from [ModernDive](https://ismayc.github.io/moderndiver-book/3-tidy.html)
 

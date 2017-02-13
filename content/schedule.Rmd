@@ -14,11 +14,13 @@ library(knitr)
 library(DT)
 schedule <- read_csv("schedule.csv") %>%
   mutate(Date = paste(Month, Day)) %>%
-  mutate(`Material Due` = ifelse(material == "-" | grepl("Quiz", material) | is.na(material_link),
+  mutate(`DataCamp Due` = ifelse(material == "-" | grepl("Quiz", material) | is.na(material_link),
     material,
     paste0("<a href='", material_link, "'>", material, "</a>"))) %>% 
-  select(-c(Month, Day)) %>%
-  select(Weekday, Date, `Content / Assessment`, `Material Due`)
+  mutate(`Problem Set Due` = ifelse(ps == "-" | is.na(ps) | is.na(ps_link),
+    ps,
+    paste0("<a href='", ps_link, "'>", ps, "</a>"))) %>% 
+  select(Weekday, Date, `Content / Assessment`, `DataCamp Due`, `Problem Set Due`)
 ```
 
 ```{r echo=FALSE, warning=FALSE, message=FALSE}
