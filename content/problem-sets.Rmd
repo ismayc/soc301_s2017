@@ -3,13 +3,15 @@ date: 2017-01-30T20:05:05-08:00
 title: Problem Sets
 ---
 
-This page will list the Problem Sets and when they will be turned in throughout the course.  You can find a discussion about all of the Problem Sets [here](http://ismayc.github.io/soc301_s2017/ps-key/index.html).  Links to specific Problem Set discussions are below:
+This page will list the Problem Sets and when they will be turned in throughout the course.  You can find a discussion about all of the Problem Sets [here](http://ismayc.github.io/soc301_s2017/ps-key/index.html).  Links to specific Problem Set discussions will be posted after the Problem Set is turned in below the Problem Set assignment.
 
 - Problem Set 2 (Due Thursday, February 9 by 4:20 PM)
     - Turn in on paper
     - Will be working to finish in class on Thursday in groups, but you should have a start on it BEFORE class
     - Learning Checks LC3.2-LC3.7, LC3.9-LC3.10 from [ModernDive](https://ismayc.github.io/moderndiver-book/3-tidy.html)
     - To run the R code given in the gray chunks in the textbook, you can use this "sandbox" I've created for you as the last chapter of the DataCamp course.  Click [here](https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/8864?ex=1).
+
+- Discussion [here](http://ismayc.github.io/soc301_s2017/ps-key/index.html)
 
 ***
 

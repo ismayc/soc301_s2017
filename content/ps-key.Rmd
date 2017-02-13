@@ -1,13 +1,9 @@
 ---
 date: 2017-02-09T13:14:16-08:00
 title: Problem Sets Discussion
-output: 
-  html_document:
-    toc: true
-    toc_float: true
 ---
 
-# Problem Set 2
+# Problem Set 2 {#ps2}
 
 Learning Checks LC3.2-LC3.7, LC3.9-LC3.10 from [ModernDive](https://ismayc.github.io/moderndiver-book/3-tidy.html)
 
@@ -23,7 +19,7 @@ data.frame(
   y = round(rnorm(5, 0, 2), 3),
   z = round(rnorm(5, 0, 4), 3)
 ) %>% 
-knitr::kable()
+knitr::kable(align = 'c')
 ```
 
 **Discussion**:  `x`, `y`, and `z` are not variables by themselves, but rather levels of another variable `stock`.  The numbers inside the table themselves are prices.  Therefore, in its current form, `x` corresponds both to the "name of a stock" and the "price of a stock" which violates the rules of tidy data.  We can transform the data to make it **tidy**:
