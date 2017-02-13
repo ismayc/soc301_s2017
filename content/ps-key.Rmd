@@ -21,7 +21,7 @@ data.frame(
   y = round(rnorm(5, 0, 2), 3),
   z = round(rnorm(5, 0, 4), 3)
 ) %>% 
-knitr::kable(align = 'c')
+knitr::kable()
 ```
 
 **Discussion**:  `x`, `y`, and `z` are not variables by themselves, but rather levels of another variable `stock`.  The numbers inside the table themselves are prices.  Therefore, in its current form, `x` corresponds both to the "name of a stock" and the "price of a stock" which violates the rules of tidy data.  We can transform the data to make it **tidy**:
@@ -35,7 +35,7 @@ data.frame(
   z = round(rnorm(5, 0, 4), 3)
 ) %>% 
   gather(key = "stock", value = "price", x:z) %>% 
-  knitr::kable()
+  knitr::kable(align = c('l', 'c', 'r'))
 ```
 
 ***
