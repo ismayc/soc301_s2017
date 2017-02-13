@@ -3,6 +3,8 @@ date: 2017-02-09T13:14:16-08:00
 title: Problem Sets Discussion
 ---
 
+Page last updated at `r format(Sys.time(), "%A, %B %d, %Y %X %Z")`
+
 # Problem Set 2 {#ps2}
 
 Learning Checks LC3.2-LC3.7, LC3.9-LC3.10 from [ModernDive](https://ismayc.github.io/moderndiver-book/3-tidy.html)
@@ -88,3 +90,6 @@ How many different rows are in this dataset?
 ***
 
 ## LC3.10
+
+***
+
