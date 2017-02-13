@@ -10,20 +10,18 @@
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Problem Set 2 Discussion</title>
-      <link>/ps2-key/</link>
+      <title>Problem Sets Discussion</title>
+      <link>/ps-key/</link>
       <pubDate>Thu, 09 Feb 2017 13:14:16 -0800</pubDate>
       
-      <guid>/ps2-key/</guid>
+      <guid>/ps-key/</guid>
       <description>&lt;!-- BLOGDOWN-BODY-BEFORE
 
 /BLOGDOWN-BODY-BEFORE --&gt;
 
-&lt;div id=&#34;problem-set-2-discussion&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Problem Set 2 Discussion&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Learning Checks LC3.2-LC3.7, LC3.9-LC3.10 from &lt;a href=&#34;https://ismayc.github.io/moderndiver-book/3-tidy.html&#34;&gt;ModernDive&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;div id=&#34;problem-set-2&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Problem Set 2&lt;/h1&gt;
+&lt;p&gt;Learning Checks LC3.2-LC3.7, LC3.9-LC3.10 from &lt;a href=&#34;https://ismayc.github.io/moderndiver-book/3-tidy.html&#34;&gt;ModernDive&lt;/a&gt;&lt;/p&gt;
 &lt;div id=&#34;lc3.2&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;LC3.2&lt;/h2&gt;
 &lt;p&gt;Say the following table are stock prices, how would you make this tidy?&lt;/p&gt;
@@ -39,38 +37,167 @@
 &lt;tbody&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-01&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;1.721&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;-0.347&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;4.346&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.707&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2.627&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-1.074&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-02&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;-0.642&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;1.639&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.169&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.405&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-3.283&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-6.278&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-03&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;-0.281&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;3.388&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;2.684&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.686&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-1.536&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.998&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-04&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;-0.076&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;-1.812&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;-0.916&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2.085&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-1.116&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.159&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;left&#34;&gt;2009-01-05&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;-0.529&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;-0.900&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;1.393&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.458&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.157&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.934&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;: &lt;code&gt;x&lt;/code&gt;, &lt;code&gt;y&lt;/code&gt;, and &lt;code&gt;z&lt;/code&gt; are not variables by themselves, but rather levels of another variable &lt;code&gt;stock&lt;/code&gt;. The numbers inside the table themselves are prices. Therefore, in its current form, &lt;code&gt;x&lt;/code&gt; corresponds both to the “name of a stock” and the “price of a stock” which violates the rules of tidy data. We can transform the data to make it &lt;strong&gt;tidy&lt;/strong&gt;:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;time&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;stock&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;price&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2009-01-01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;x&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.127&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2009-01-02&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;x&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.668&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2009-01-03&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;x&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-2.138&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2009-01-04&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;x&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.750&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2009-01-05&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;x&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.343&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2009-01-01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;y&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-1.134&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2009-01-02&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;y&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-3.431&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2009-01-03&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;y&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.445&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2009-01-04&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;y&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.071&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2009-01-05&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;y&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-2.808&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2009-01-01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;z&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-1.179&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2009-01-02&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;z&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-1.728&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2009-01-03&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;z&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-2.496&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2009-01-04&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;z&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-5.584&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2009-01-05&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;z&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-5.216&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;lc3.3&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;LC3.3&lt;/h2&gt;
+&lt;p&gt;What does any &lt;em&gt;ONE&lt;/em&gt; row in this &lt;code&gt;flights&lt;/code&gt; dataset refer to?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A. Data on an airline&lt;/li&gt;
+&lt;li&gt;B. Data on a flight&lt;/li&gt;
+&lt;li&gt;C. Data on an airport&lt;/li&gt;
+&lt;li&gt;D. Data on multiple flights&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;: The correct answer is B here. The observational unit is flight. All of the variables are measurements/characteristics of a given flight. Each row is an observation of one flight containing data about that flight.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;lc3.4&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;LC3.4&lt;/h2&gt;
+&lt;p&gt;What are some examples in this dataset of &lt;strong&gt;categorical&lt;/strong&gt; variables? What makes them different than &lt;strong&gt;quantitative&lt;/strong&gt; variables?&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
 &lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;lc3.5&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;LC3.5&lt;/h2&gt;
+&lt;p&gt;What does &lt;code&gt;int&lt;/code&gt;, &lt;code&gt;dbl&lt;/code&gt;, and &lt;code&gt;chr&lt;/code&gt; mean in the output above? If you need a hint, you might want to run &lt;code&gt;str(flights)&lt;/code&gt; instead.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;: These correspond to the &lt;code&gt;class&lt;/code&gt; of each variable in R. &lt;code&gt;dbl&lt;/code&gt; is the same thing as &lt;code&gt;num&lt;/code&gt; and represents numbers with decimal values. &lt;code&gt;int&lt;/code&gt; corresponds to integers (whole numbers and negative )&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;lc3.6&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;LC3.6&lt;/h2&gt;
+&lt;p&gt;How many different columns are in this dataset?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;lc3.7&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;LC3.7&lt;/h2&gt;
+&lt;p&gt;How many different rows are in this dataset?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;lc3.9&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;LC3.9&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;lc3.10&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;LC3.10&lt;/h2&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -321,8 +448,7 @@ reach out for help.&lt;/li&gt;
 
 /BLOGDOWN-BODY-BEFORE --&gt;
 
-&lt;p&gt;This page will list the Problem Sets and when they will be turned in throughout the course.&lt;/p&gt;
-&lt;hr /&gt;
+&lt;p&gt;This page will list the Problem Sets and when they will be turned in throughout the course. You can find a discussion about all of the Problem Sets &lt;a href=&#34;http://ismayc.github.io/soc301_s2017/ps-key/index.html&#34;&gt;here&lt;/a&gt;. Links to specific Problem Set discussions are below:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Problem Set 2 (Due Thursday, February 9 by 4:20 PM)
 &lt;ul&gt;
@@ -332,9 +458,6 @@ reach out for help.&lt;/li&gt;
 &lt;li&gt;To run the R code given in the gray chunks in the textbook, you can use this “sandbox” I’ve created for you as the last chapter of the DataCamp course. Click &lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/8864?ex=1&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!--    
-    - Discussion [here](http://ismayc.github.io/soc301_s2017/ps2-key/index.html)
---&gt;
 &lt;hr /&gt;
 &lt;ul&gt;
 &lt;li&gt;Problem Set 1 (Due Tuesday, February 7 by 4:20 PM)
