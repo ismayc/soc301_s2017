@@ -1,4 +1,3 @@
-
 ---
 title: "SOC 301 - 01"
 author: "Chester Ismay"

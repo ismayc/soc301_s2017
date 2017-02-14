@@ -1,0 +1,460 @@
+---
+title: SOC 301 Slides
+subtitle: Pacific University
+author: Chester Ismay
+date: Spring 2017
+output: 
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: monokai
+      highlightLines: true
+    countIncrementalSlides: false
+    css: example.css
+---
+
+layout: true
+
+.footer[[Week 02 - Thursday](https://ismayc.github.io/soc301_s2017/2017/02/09/week-02---thursday/)]
+
+---
+
+name: week02th
+class: center, middle
+
+# Week 02 - Thursday
+
+# February 9, 2017
+
+---
+
+class: center, middle
+
+## Learning Quote of the Day
+
+```{r echo=FALSE}
+knitr::include_graphics("figure/hadley.png")
+```
+
+---
+
+class: center, middle
+
+# Take Notes!
+
+---
+
+## Tidy Data
+
+<img src="figure/tidy-1.png" alt="Drawing" style="width: 750px;"/>
+
+---
+
+## Is this tidy?
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+dem_score <- read_csv("data/dem_score.csv")
+dem_score
+```
+
+---
+
+## Beginning steps
+
+### Frequently the first thing you should do when given a dataset is to
+
+- check that the data is *tidy*,
+- identify the observational unit,
+- specify the variables, and
+- give the types of variables you are presented with.
+
+### This will help you with 
+
+- choosing the appropriate plot, 
+- summarizing the data, and 
+- understanding which inferences can be applied.
+
+---
+
+## What is Tidy Data?
+
+<img src="http://garrettgman.github.io/images/tidy-1.png" alt="Drawing" style="width: 600px;"/>
+
+1. Each variable forms a column.
+2. Each observation forms a row.
+3. Each type of observational unit forms a table.
+
+### The third point means we don't mix apples and oranges, keep apples together with apples.
+
+---
+
+## What is Tidy Data?
+
+1. Each observation forms a row. In other words, each row corresponds to a single *observational unit*
+1. Each variable forms a column:
+    + Some of the variables may be used to identify the *observational units*. For organizational purposes, it's generally better to put these in the left-hand columns
+    + Some of the variables may be *observed values* associated with each observational unit
+1. Each type of observational unit forms a table.
+
+---
+
+## What is Tidy Data?
+
+### This is just a spreadsheet! 
+
+### But we are very strict about the previous three rules.
+
+---
+
+## [nycflights13 Package](http://github.com/hadley/nycflights13)
+
+- Loaded via `library(nycflights13)`
+
+- Contains
+information about all flights that departed from NYC in
+2013: 336,776 flights in total. 
+
+---
+
+## [nycflights13 Package](http://github.com/hadley/nycflights13)
+
+- To help understand what causes delays, it also
+includes a number of other useful datasets: <small>
+    * `weather`: hourly meterological data for each airport
+    * `planes`: construction information about each plane
+    * `airports`: airport names and locations
+    * `airlines`: translation between two letter carrier codes and names
+
+### All of these data frames are available for viewing [here](https://ismayc.github.io/Effective-Data-Storytelling-using-the-tidyverse/moderndive.html).
+
+---
+
+class: center, middle
+
+# Work on [Problem Set 2](https://ismayc.github.io/soc301_s2017/problem-sets/)
+
+---
+
+## Minute Paper
+
+### (Half sheet of paper is fine.  Share with your neighbor.)
+
+- What are the three characteristics of tidy data?
+- Draw the DATA diagram that was presented on the board in all previous classes.
+
+---
+
+name: week02t
+layout: true
+
+.footer[[Week 02 - Tuesday](https://ismayc.github.io/soc301_s2017/2017/02/07/week-02---tuesday/)]
+
+---
+
+class: center, middle
+
+# Week 02 - Tuesday
+
+# February 7, 2017
+
+---
+
+## Sample quiz question
+
+<center>
+`r knitr::include_graphics("figure/jeopardy.png", dpi = 300)`
+</center>
+
+<center>
+`r knitr::include_graphics("figure/jq.png", dpi = 200)`
+</center>
+
+---
+
+## Asking for help
+
+- Recommended:  Post your problem and drag a screenshot image of what you have tried to the #general channel on Slack.
+- If you know the answer to a question there, please attempt to answer it.  It will help you learn!
+- Send me a private message on Slack (@chester)
+- Discuss your problems with the tutors in person
+- Last resort, send the tutors a private message on Slack
+
+---
+
+## You Should Learn to Program
+
+
+<div class="videoWrapper">
+```{r echo=FALSE}
+library("htmltools")
+library("vembedr")
+embed_url("https://www.youtube.com/watch?v=xfBWk4nw440&t=7s")
+```
+</div>
+
+---
+
+## Easy classes are worthless classes
+
+> - You won't retain any of the material covered
+> - You or someone else pays good money for you to get a good education here
+> - I want to do everything in my power to help you learn this material as I see it as THE MOST IMPORTANT class you can take as an undergraduate.
+> - You have many misconceptions about how you learn best.  That's not your fault, but habits must be broken.
+> - Can we build muscles sitting on the couch?
+
+---
+
+## Why are you learning R?
+
+- ~~Because I enjoy partaking in [Schadenfreude](https://en.wikipedia.org/wiki/Schadenfreude)~~
+
+<center>
+`r knitr::include_graphics("figure/google_scholar.png", dpi = 110)`
+</center>
+
+---
+
+## Why are you learning R?
+
+- R is free, R improves, R has existed for 40+ years
+- You can show what you have learned to a potential employer easily
+- I want to prepare you for the real world as best as I can and make you more employable than your competitors
+- R will save you TONS of time in the long run. Long term thinking is key.
+    - You can easily tweak your code if you need to do another analysis
+    - Remembering what drop-down menu some thing is in two years from now in a different program will be hard
+
+---
+
+class: center, middle
+
+# Reviewing R basics <br> (on chalkboard)
+
+---
+
+## Key R functions/operators going forward
+
+### Operators
+
+- `<-`
+- `[]`
+- `[ , ]`
+- `$` (VERY IMPORTANT)
+- `:`
+- `<`, `>`, `<=`, `>=`
+- `==`, `!=`
+- `?`
+
+---
+
+## Key R functions/operators going forward
+
+### Functions
+
+- `names()`
+- `c()`
+- `sum()`
+- `mean()`
+- `factor()`
+    - `factor( , order = TRUE, levels = c( , , )`)
+- `str()`
+- ~~`str()`~~ `tibble::glimpse()`
+
+---
+
+## How should you prepare for the quiz?
+
+<div class="videoWrapper">
+```{r echo=FALSE}
+embed_url("https://www.youtube.com/watch?v=CPxSzxylRCI")
+```
+</div>
+
+---
+
+## How should you prepare for the quiz?
+
+- [Advice from former students](http://ismayc.github.io/soc301_s2017/advice_from_former/index.html)
+
+- Practice!
+
+---
+
+## Get into groups of 3 or 4
+
+- Pass your multiple choice questions to someone else in your group
+    - Take the "quiz" with no notes
+    - Discuss your answers with your group
+    - Take another "quiz"
+    - Rinse and repeat
+
+---
+
+class: middle, center
+
+# Check the [webpage](https://ismayc.github.io/soc301_s2017/)!
+
+---
+
+class: middle, center
+
+# I want your feedback!
+
+---
+
+## Minute Paper
+
+### (Half sheet of paper is fine.  Share with your neighbor.)
+
+- What are the big take-aways for you from class today?
+- What questions do you have about the course?  About the material you've learned so far?
+
+---
+
+layout: true
+
+.footer[[Week 01 - Thursday](https://ismayc.github.io/soc301_s2017/2017/02/02/week-01---thursday/)]
+
+---
+
+name: week01th
+class: center, middle
+
+# Week 01 - Thursday
+
+# February 2, 2017
+
+---
+
+## DataCamp Assignments
+
+- <https://www.datacamp.com/groups/soc-301-spring-2017/assignments>
+
+---
+
+## Videos on Resources page
+
+- <https://ismayc.github.io/soc301_s2017/resources/>
+
+---
+
+## Studying well and efficiently
+
+- Image from [_Teach Students How to Learn_](https://www.amazon.com/Teach-Students-How-Learn-Metacognition/dp/162036316X)
+
+### <http://ismayc.github.io/soc301_s2017/img/studentlearn.jpg>
+
+---
+
+## Tuesday plans
+
+- Review the content in the Introduction to R DataCamp course
+    - Finish writing multiple choice questions
+- Study for Quiz 1 over Introduction to R DataCamp course on Thursday, February 9 in class
+- Bring your laptops on Tuesday, and every class period!
+- This is the time to make a good impression and start off strong!
+
+---
+
+## Minute papers
+
+- Place your name on a sheet of paper.  Answer the following questions:
+
+1. When you think of statistics what do you think of?
+1. What statistical concepts would you like to learn about in this class?
+2. What concerns you most about this course?
+3. Do you believe you'll be able to devote the time needed to succeed in this course?  Explain.
+  - A three credit-hour course requires between six and nine hours of time outside of it each week.
+
+---
+
+layout: true
+
+.footer[[Week 01 - Tuesday](https://ismayc.github.io/soc301_s2017/2017/01/31/week-01---tuesday/)]
+
+---
+
+name: week01t
+class: center, middle
+
+# Week 01 - Tuesday
+
+# January 31, 2017
+
+---
+
+## For interviews in groups of three
+
+1. Name
+2. Email address
+3. How do you think this course applies to your major?
+5. What are your goals for this course?
+3. What is your class standing (Sophomore, Junior, etc.)?
+3. What is your major?
+4. What is your hometown?
+6. What is the farthest from Pacific that you were over winter break (in miles)?
+7. What is one interesting fact about you?
+8. How old is Chester (in years)?
+
+---
+
+class: center, middle
+
+<img src="figure/notebook.jpg" alt="notebook" style="width:450px;">
+
+---
+
+## Slides link
+
+### <http://ismayc.github.io/soc301_s2017/slides/slide_deck.html>
+
+- Easier to get from <http://ismayc.github.io/soc301_s2017/>
+
+---
+
+## Course Textbook
+
+- <http://moderndive.com>
+
+---
+
+## DataCamp Assignments
+
+- <https://www.datacamp.com/groups/soc-301-spring-2017/assignments>
+
+---
+
+## Special accommodations
+
+Please come talk to me after class if you require special accommodations.
+
+---
+
+## To do for next time
+
+- Carefully read over the syllabus in entirety
+- Make note of important dates on the schedule
+- Read Chapters 1 and 2 of [ModernDive](http://moderndive.com)
+- Begin working on Introduction to R DataCamp course
+    - Needs to be completed by 1 PM Pacific on Tuesday, February 7
+    - If you have spent more than 30 minutes on a problem, move on to another one OR
+  reach out for help.
+
+---
+
+## Asking for help
+
+- Recommended:  Post your problem and drag a screenshot image of what you have tried to the #general channel on Slack.
+- If you know the answer to a question there, please attempt to answer it.  It will help you learn!
+- Send me a private message on Slack (@chester)
+- Discuss your problems with the tutors in person
+- Last resort, send the tutors a private message on Slack
+
+---
+
+## Thursday plans
+
+- Bring your laptops on Thursday, and every class period!
+- Work on and finish Introduction to R DataCamp course
+- Make sure to have started and be at the point where you have specific questions Dinisa and I can address
+- This is the time to make a good impression and start off strong!
