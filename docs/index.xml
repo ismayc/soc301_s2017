@@ -19,8 +19,6 @@
 
 &lt;hr /&gt;
 
-&lt;p&gt;Page last updated at &lt;code&gt;r format(Sys.time(), &amp;quot;%A, %B %d, %Y %X %Z&amp;quot;)&lt;/code&gt;&lt;/p&gt;
-
 &lt;h1 id=&#34;w03plick&#34;&gt;Week 03 - Tuesday (February 14)&lt;/h1&gt;
 
 &lt;ol&gt;
@@ -43,7 +41,7 @@
 &lt;/ol&gt;
 
 &lt;p&gt;&lt;center&gt;
-&lt;img src=&#34;pew.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;../pew.png&#34; alt=&#34;&#34; /&gt;
 &lt;/center&gt;&lt;/p&gt;
 
 &lt;ol&gt;

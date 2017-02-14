@@ -9,8 +9,6 @@ output:
 
 ***
 
-Page last updated at `r format(Sys.time(), "%A, %B %d, %Y %X %Z")`
-
 # Week 03 - Tuesday (February 14) {#w03plick}
 
 2. Which of the following is a characteristic of a tidy data frame?
@@ -24,7 +22,7 @@ Page last updated at `r format(Sys.time(), "%A, %B %d, %Y %X %Z")`
     - B. No
 
 <center>
-![](pew.png)
+![](../pew.png)
 </center>
 
 4. What is the observational unit in the [`police_locals` data frame](https://ismayc.github.io/Effective-Data-Storytelling-using-the-tidyverse/police_locals.html)?
