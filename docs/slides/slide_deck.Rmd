@@ -13,6 +13,308 @@ output:
     css: example.css
 ---
 
+
+layout: true
+
+.footer[[Week 03 - Tuesday](https://ismayc.github.io/soc301_s2017/2017/02/14/week-03---tuesday/)]
+
+---
+
+name: week03t
+class: center, middle
+
+# Week 03 - Tuesday
+
+# February 9, 2017
+
+---
+
+# Warmup
+
+### Take out a (half) sheet of paper
+
+- What are the three properties of a tidy data set?
+
+---
+
+class:center, middle
+
+# Happy Valentine's Day!
+
+[![](https://imgs.xkcd.com/comics/boyfriend.png)](https://xkcd.com/539/)
+
+---
+
+# Questions/concerns about class
+
+- What is the longest assignment we will be given?
+--
+
+- Eventually are we going to write our own code to solve problems?
+--
+
+- What are good ways to practice programming without DataCamp?
+--
+
+- How do you format your exams?
+
+---
+
+# Questions/concerns about class
+
+- If I get questions wrong many times before I get it right on DataCamp, will this hurt my grade?
+--
+
+- I worry I don't actually know what I'm doing.
+--
+
+- More details about the project.
+--
+
+- Does `?`/`help()` only work with explaining functions?
+
+---
+
+## Studying well and efficiently
+
+- Image from [_Teach Students How to Learn_](https://www.amazon.com/Teach-Students-How-Learn-Metacognition/dp/162036316X)
+
+### <http://ismayc.github.io/soc301_s2017/img/studentlearn.jpg>
+
+---
+
+# Some clarifications
+
+- Telling me early that you will be gone on a day in the future is NOT an excused absence
+   - You can miss class three times for whatever you wish
+   - You need institutional excuse to miss more than three
+--
+
+- Just doing the homework is not enough to build sufficient understanding
+   - You need to go back over DataCamp, the Learning Checks, and the book on your own to check for understanding
+   
+---
+
+# Some clarifications   
+   
+-  I'm not trying to scare you, but quizzes and exams will be HARD and you will struggle if you don't
+follow what I am telling you.
+  - If you follow the effective learning strategies I have shown you and devote yourself to practice, you'll do great AND you'll retain the material.
+  - You'll find that you'll actually be studying LESS, since you won't have to re-learn all the material and cram for exams/quizzes.
+
+
+---
+
+class: center, middle
+
+# Review [Problem Set 2 Discussion](https://ismayc.github.io/soc301_s2017/problem-sets/ps-key/index.html#ps2-key)
+
+---
+
+class: center, middle
+
+# Plickers for Review
+
+---
+
+# Important R functions/operators from [Chapter 3](https://ismayc.github.io/moderndiver-book/3-tidy.html)
+
+- `library()` (VERY IMPORTANT)
+--
+
+- `<-`
+--
+
+- `glimpse()`
+--
+
+- `?`
+--
+
+- `inner_join()`
+
+---
+
+# What is meant by "joining data frames" and why is it useful?
+
+--
+
+```{r echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://ismayc.github.io/moderndiver-book/images/join-inner.png")
+```
+
+
+---
+
+# Do joins change the observational unit?
+
+--
+
+
+### View [`police_locals`](https://ismayc.github.io/Effective-Data-Storytelling-using-the-tidyverse/police_locals.html)
+### View [`ideology`](https://ismayc.github.io/Effective-Data-Storytelling-using-the-tidyverse/ideology.html)
+
+- Join based on `"city"`
+
+---
+
+# Do joins change the observational unit?
+
+
+```{r eval=FALSE, message=FALSE, warning=FALSE}
+library(fivethirtyeight); library(dplyr); library(readr)
+data(police_locals)
+ideology <- read_csv("http://bit.ly/ideology-csv")
+police_join <- inner_join(x = police_locals, y = ideology, 
+                          by = "city")
+```
+
+### View [`police_join`](https://ismayc.github.io/Effective-Data-Storytelling-using-the-tidyverse/police_join.html)
+
+---
+
+class: center, middle
+
+## THINK ABOUT IT
+
+###  How does linking these two data sets together help in analyzing the relationship between `state_ideology` and percentage of police officers residing in the cities they serve by race?
+
+---
+
+# Shifting to [Data Viz](https://ismayc.github.io/moderndiver-book/4-viz.html)
+
+<div class="videoWrapper">
+```{r echo=FALSE}
+library("htmltools")
+library("vembedr")
+embed_url("https://www.youtube.com/watch?v=jbkSRLYSojo")
+```
+</div>
+
+
+
+---
+
+class: center, middle
+
+# What is a statistical graphic?
+
+
+---
+
+# Grammar of Graphics
+
+### Wilkinson (2005) laid out the proposed "Grammar of Graphics"
+
+```{r echo=FALSE, fig.align='center'}
+knitr::include_graphics("figure/graphics.jpg")
+```
+
+
+---
+
+# Grammar of Graphics in R
+
+### Wickham implemented the grammar in R in the `ggplot2` package
+
+```{r echo=FALSE, fig.align='center'}
+knitr::include_graphics("figure/ggplot2.jpg")
+```
+
+
+---
+
+# But...what is a statistical graphic?
+
+- A statistical graphic is a mapping of `data` variables to `aes()`thetic
+attributes of `geom_`etric objects.
+
+---
+
+# A scatter-plot example
+
+From `ggplot2movies` package, the `movies` data set:
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.height=5.7, fig.width=10}
+library(ggplot2)
+library(ggplot2movies)
+# Scatterplot i.e. bivariate plot
+ggplot(data = movies, aes(x=budget, y=rating)) +
+  geom_point() +
+  labs(x="Movie Budget", y="IMDB Rating", title="IMDB Rating vs Budget")
+```
+
+---
+
+# A scatter-plot example - the code!
+
+From `ggplot2movies` package, the [`movies`](ismayc.github.io/effective-Data-Storytelling-using-the-tidyverse/movies.html) data set:
+
+```{r, message=FALSE, warning=FALSE, fig.height=3.5, fig.width=10}
+library(ggplot2); library(ggplot2movies)
+ggplot(data = movies, aes(x = budget, y = rating)) +
+  geom_point() +
+  labs(x = "Movie Budget", y = "IMDB Rating", 
+       title = "IMDB Rating vs Budget")
+```
+
+---
+
+# A line-graph example
+
+From `nycflights13` package, the `flights` data set:
+
+```{r, echo=FALSE, fig.height=5, fig.width=10}
+# Line graph
+library(nycflights13)
+library(dplyr)
+library(lubridate)
+flights %>% 
+  mutate(date = ymd(paste(year, month, day, sep="-"))) %>% 
+  filter(month==1) %>% 
+  group_by(date) %>% 
+  tally() %>% 
+  ggplot(data=., aes(x=date, y=n)) + 
+  labs(x="Date", y="Number of Flights", title="Number of Daily Flights from NYC in Jan 2013") +
+  geom_line()
+```
+
+--
+
+`geom()`etry is `geom_line()`
+
+---
+
+## Grade Viewer is up
+
+### <http://ismay.shinyapps.io/soc301_grades>
+
+- Also available on the [course page](http://ismayc.github.io/soc301_s2017) under Resources
+
+---
+
+class: center, middle
+
+# Work on [Problem Set 3](https://ismayc.github.io/soc301_s2017/problem-sets/#ps3) in groups
+
+## Due on Thursday at the end of class
+
+***
+
+## [DC2: Tidy Data chapter](https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/tidy-data?ex=1) due on Thursday at 1 PM
+
+---
+
+# Minute Paper
+
+### (Half sheet of paper is fine.  Share with your neighbor.  Make sure to put your name on it!)
+
+- What are the three characteristics of tidy data?
+- How did Hans Rosling use data visualization to help tell the story he wanted to tell in the video we watched?
+
+
+---
+
 layout: true
 
 .footer[[Week 02 - Thursday](https://ismayc.github.io/soc301_s2017/2017/02/09/week-02---thursday/)]
@@ -63,14 +365,11 @@ dem_score
 ## Beginning steps
 
 ### Frequently the first thing you should do when given a dataset is to
-
 - check that the data is *tidy*,
 - identify the observational unit,
 - specify the variables, and
 - give the types of variables you are presented with.
-
 ### This will help you with 
-
 - choosing the appropriate plot, 
 - summarizing the data, and 
 - understanding which inferences can be applied.
@@ -197,11 +496,19 @@ embed_url("https://www.youtube.com/watch?v=xfBWk4nw440&t=7s")
 
 ## Easy classes are worthless classes
 
-> - You won't retain any of the material covered
-> - You or someone else pays good money for you to get a good education here
-> - I want to do everything in my power to help you learn this material as I see it as THE MOST IMPORTANT class you can take as an undergraduate.
-> - You have many misconceptions about how you learn best.  That's not your fault, but habits must be broken.
-> - Can we build muscles sitting on the couch?
+- You won't retain any of the material covered
+--
+
+- You or someone else pays good money for you to get a good education here
+--
+
+- I want to do everything in my power to help you learn this material as I see it as THE MOST IMPORTANT class you can take as an undergraduate.
+--
+
+- You have many misconceptions about how you learn best.  That's not your fault, but habits must be broken.
+--
+
+- Can we build muscles sitting on the couch?
 
 ---
 
@@ -220,6 +527,11 @@ embed_url("https://www.youtube.com/watch?v=xfBWk4nw440&t=7s")
 - R is free, R improves, R has existed for 40+ years
 - You can show what you have learned to a potential employer easily
 - I want to prepare you for the real world as best as I can and make you more employable than your competitors
+
+---
+
+## Why are you learning R?
+
 - R will save you TONS of time in the long run. Long term thinking is key.
     - You can easily tweak your code if you need to do another analysis
     - Remembering what drop-down menu some thing is in two years from now in a different program will be hard
@@ -257,7 +569,6 @@ class: center, middle
 - `mean()`
 - `factor()`
     - `factor( , order = TRUE, levels = c( , , )`)
-- `str()`
 - ~~`str()`~~ `tibble::glimpse()`
 
 ---
@@ -358,13 +669,13 @@ class: center, middle
 
 ## Minute papers
 
-- Place your name on a sheet of paper.  Answer the following questions:
+- Place your name on a sheet of paper.  Answer the following:
 
 1. When you think of statistics what do you think of?
-1. What statistical concepts would you like to learn about in this class?
+1. What statistical concepts would you like to learn about?
 2. What concerns you most about this course?
 3. Do you believe you'll be able to devote the time needed to succeed in this course?  Explain.
-  - A three credit-hour course requires between six and nine hours of time outside of it each week.
+  - A four credit-hour course requires between 9 and 12 hours of time outside of it each week.
 
 ---
 
@@ -386,13 +697,12 @@ class: center, middle
 ## For interviews in groups of three
 
 1. Name
-2. Email address
 3. How do you think this course applies to your major?
 5. What are your goals for this course?
 3. What is your class standing (Sophomore, Junior, etc.)?
 3. What is your major?
 4. What is your hometown?
-6. What is the farthest from Pacific that you were over winter break (in miles)?
+6. What is the farthest from Pacific you were over break (in miles)?
 7. What is one interesting fact about you?
 8. How old is Chester (in years)?
 
@@ -426,7 +736,7 @@ class: center, middle
 
 ## Special accommodations
 
-Please come talk to me after class if you require special accommodations.
+### Please come talk to me after class if you require special accommodations.
 
 ---
 

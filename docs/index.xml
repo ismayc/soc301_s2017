@@ -6,8 +6,102 @@
     <description>Recent content on SOC 301 - Spring 2017</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Feb 2017 13:14:16 -0800</lastBuildDate>
+    <lastBuildDate>Tue, 14 Feb 2017 11:02:16 -0800</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Plicker Questions from class</title>
+      <link>/plickers/</link>
+      <pubDate>Tue, 14 Feb 2017 11:02:16 -0800</pubDate>
+      
+      <guid>/plickers/</guid>
+      <description>
+
+&lt;hr /&gt;
+
+&lt;p&gt;Page last updated at &lt;code&gt;r format(Sys.time(), &amp;quot;%A, %B %d, %Y %X %Z&amp;quot;)&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;w03plick&#34;&gt;Week 03 - Tuesday (February 14)&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Which of the following is a characteristic of a tidy data frame?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A. Variables correspond to rows.&lt;/li&gt;
+&lt;li&gt;B. Columns may correspond to multiple variables.&lt;/li&gt;
+&lt;li&gt;C. Values are what is stored on the inside of the data frame.&lt;/li&gt;
+&lt;li&gt;D. Observational units are stored in the columns.
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Is this data set from the Pew Research Center in tidy data format?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A. Yes&lt;/li&gt;
+&lt;li&gt;B. No&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;img src=&#34;pew.png&#34; alt=&#34;&#34; /&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;What is the observational unit in the &lt;a href=&#34;https://ismayc.github.io/Effective-Data-Storytelling-using-the-tidyverse/police_locals.html&#34;&gt;&lt;code&gt;police_locals&lt;/code&gt; data frame&lt;/a&gt;?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A. Percentage of officers&lt;/li&gt;
+&lt;li&gt;B. Police force&lt;/li&gt;
+&lt;li&gt;C. Race&lt;/li&gt;
+&lt;li&gt;D. City
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;What is the appropriate definition of &amp;ldquo;observational unit&amp;rdquo;?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A. A characteristic being measured about an object.&lt;/li&gt;
+&lt;li&gt;B. The unit within a row that is being observed via the columns.&lt;/li&gt;
+&lt;li&gt;C. The result of rows and columns creating a table.&lt;/li&gt;
+&lt;li&gt;D. None of the above.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Week 03 - Tuesday</title>
+      <link>/2017/02/14/week-03---tuesday/</link>
+      <pubDate>Tue, 14 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/02/14/week-03---tuesday/</guid>
+      <description>
+
+&lt;p&gt;Slides available &lt;a href=&#34;http://ismayc.github.io/soc301_s2017/slides/slide_deck.html#week03t&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;covered-content&#34;&gt;Covered Content&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Review the concept of &lt;strong&gt;tidy data&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Plicker questions &lt;a href=&#34;./plickers/&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Discuss joining data frames by a common key variable&lt;/li&gt;
+&lt;li&gt;Introduce the Grammar of Graphic with scatter-plot and line-graph examples&lt;/li&gt;
+&lt;li&gt;Work on &lt;a href=&#34;https://ismayc.github.io/soc301_s2017/problem-sets/#ps3&#34;&gt;Problem Set 3&lt;/a&gt; in groups&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;to-do-for-next-time&#34;&gt;To do for next time&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Complete DataCamp profile&lt;/li&gt;
+&lt;li&gt;Take notes on Chapter 4 of &lt;a href=&#34;http://moderndive.com&#34;&gt;ModernDive&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Complete  &lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/tidy-data?ex=1&#34;&gt;Tidy Data&lt;/a&gt; DataCamp chapter (Due on February 16 at 1 PM)&lt;/li&gt;
+&lt;li&gt;Begin &lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/scatter-plots-line-graphs?ex=1&#34;&gt;Scatter-plots &amp;amp; Line-graphs&lt;/a&gt; DataCamp chapter (Due on February 21 at 1 PM)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Problem Sets Discussion</title>
@@ -630,7 +724,19 @@ DataCamp course.&lt;br /&gt;
       <pubDate>Mon, 30 Jan 2017 19:40:34 -0800</pubDate>
       
       <guid>/resources/</guid>
-      <description>&lt;p&gt;This page will be updated with links throughout the course.&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;https://ismay.shinyapps.io/soc301_grades/&#34;&gt;Your Grade Viewer&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Login using your Pacific ID&lt;/li&gt;
+&lt;li&gt;Password was sent via Slack on Tuesday, February 14 as private message
+
+&lt;ul&gt;
+&lt;li&gt;If you want to change your password to something else, send me a Slack message or give me a piece of paper
+with your password clearly written.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This page will be updated with links throughout the course.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Slack
@@ -676,239 +782,6 @@ DataCamp course.&lt;br /&gt;
 &lt;li&gt;Get signed up for Slack and download to your computer and/or mobile device&lt;/li&gt;
 &lt;li&gt;Start working on Introduction to R DataCamp course as soon as possible!&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>SOC 301-01 - Social Statistics Syllabus</title>
-      <link>/syllabus/</link>
-      <pubDate>Mon, 30 Jan 2017 10:30:38 -0800</pubDate>
-      
-      <guid>/syllabus/</guid>
-      <description>&lt;!-- BLOGDOWN-BODY-BEFORE
-
-/BLOGDOWN-BODY-BEFORE --&gt;
-
-&lt;div id=&#34;dr.chester-ismay&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;&lt;a href=&#34;https://ismayc.github.io&#34;&gt;Dr. Chester Ismay&lt;/a&gt;&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Course meeting time&lt;/strong&gt;: Tuesdays and Thursdays 2:45 PM - 4:20 PM in Price Hall, Room 214&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Course webpage&lt;/strong&gt;: &lt;a href=&#34;http://ismayc.github.io/soc301-f2017&#34; class=&#34;uri&#34;&gt;http://ismayc.github.io/soc301-f2017&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Office Hours&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;Tuesdays and Thursdays 1:00 PM - 2:30 PM in Scott Hall 100B5 in the Center for Languages &amp;amp; International Collaboration (CLIC)&lt;/li&gt;
-&lt;li&gt;By appointment&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Office Phone Number&lt;/strong&gt;: Not available (Happy to meet in the Library/CLIC or another place on campus as needed though.)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Email&lt;/strong&gt;: &lt;a href=&#34;mailto:chester@pacificu.edu&#34;&gt;chester@pacificu.edu&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Slack&lt;/strong&gt;: &lt;span class=&#34;citation&#34;&gt;@chester&lt;/span&gt; (Preferred and &lt;strong&gt;highly encouraged&lt;/strong&gt; way of contact)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;tutors&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Tutors&lt;/h2&gt;
-&lt;p&gt;We have three excellent tutors/TAs for this course who will be tutoring in the TLC:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://ismayc.github.io/soc301_s2017/dinisa/index.html&#34;&gt;Dinisa Malcom&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://ismayc.github.io/soc301_s2017/kawita/index.html&#34;&gt;Kawita Kaur&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://ismayc.github.io/soc301_s2017/griffin/index.html&#34;&gt;Griffin Fraser&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The schedule for all TLC tutors is available &lt;a href=&#34;https://www.pacificu.edu/about-us/centers-institutes/tutoring-and-learning-center/tutoring-and-learning-schedule&#34;&gt;here&lt;/a&gt;. Check the links above for the tutors for confirmation of their times.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;overview&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Overview&lt;/h1&gt;
-&lt;p&gt;Welcome to the Age of Data, where information is all around us, helping us live happier, healthier lives. Or does it? Do we know yet if cell phones cause cancer? Have we come to a decision on whether we should be eating lots of meat or none at all to stay healthy? Despite all of this information, it can be challenging to turn it into the knowledge from which we can make sound decisions. Statistics is the field that aims to bridge this gap between information and knowledge and this course is an application-oriented introduction to modern statistical modeling and inference in the social sciences.&lt;/p&gt;
-&lt;p&gt;The main focus of this course will be on data visualization as the bridge to statistical and data science topics from a social perspective. We will avoid the traditional, formula-based methodologies of “plug-and-chug” statistics courses and instead use the statistical computing language R to help build intuitions and solve problems in a reproducible way. We will strive to identify the correct problem types and focus on the interpretation of results and plots.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;course-goals&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Course Goals&lt;/h1&gt;
-&lt;p&gt;Upon leaving this course you’ll be able to answer the following questions:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;What is a &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt;-value and how is it used in social science literature? How does it relate to a confidence interval and why are both of them important topics for the social sciences?&lt;/li&gt;
-&lt;li&gt;What makes an effective plot for a given set of variables?&lt;/li&gt;
-&lt;li&gt;What goes into making a good statistical analysis? What assumptions are made?&lt;/li&gt;
-&lt;li&gt;How do we start a statistical analysis? What questions should we ask?&lt;/li&gt;
-&lt;li&gt;How can we create an effective story with data?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;We will be using &lt;a href=&#34;https://www.datacamp.com/groups/soc-301-spring-2017&#34;&gt;DataCamp&lt;/a&gt;, which provides an interactive way for you to learn how to use R to conduct analyses and make plots, throughout the course. You can expect very frequent assignments to be due using it. The expectation is that by the end of the course you are able to conduct statistical analyses and produce appropriate plots and do so in a reproducible environment. We will also be shifting much of this work in R to R Markdown and using an RStudio Server as the course progresses. You’ll find that R is the best way to provide customizability and reproducibility and I believe is the best way to use the tools that statisticians, data scientists, and scientific researchers are using today without being too overwhelming.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;student-learning-objectives&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Student Learning Objectives&lt;/h1&gt;
-&lt;p&gt;Upon completion of this course, students who have been full participants in the course should be able to:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Identify tidy data sets by carefully specifying the observational units and the types of variables that make up the data set.&lt;/li&gt;
-&lt;li&gt;Make and interpret the Five Named Graphs: scatter-plots, line-graphs, histograms, boxplots, and barplots.&lt;/li&gt;
-&lt;li&gt;Use multivariate thinking by producing and discussing appropriate plots showing the relationships between three (or more) variables.&lt;/li&gt;
-&lt;li&gt;Identify the appropriate plot and type of analysis needed to answer a given social research question.&lt;/li&gt;
-&lt;li&gt;Describe the process of simulation to build inferential statistics concepts.&lt;/li&gt;
-&lt;li&gt;Explain the results of hypothesis testing and confidence intervals in layman’s terms.&lt;/li&gt;
-&lt;li&gt;Check that assumptions are met in order to perform traditional statistical tests (&lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt;-tests, ANOVA, regression, etc.) and be able to provide an alternative randomization-or-bootstrap-type analysis if assumptions are not met.&lt;/li&gt;
-&lt;li&gt;Utilize correlation and regression to begin the process of statistical modeling.&lt;/li&gt;
-&lt;li&gt;Use R, RStudio, and R Markdown to conduct reproducible, well-documented, statistical analyses.&lt;/li&gt;
-&lt;li&gt;Discuss how social science research depends on carefully made statistical graphics and analyses.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;course-description-from-the-catalog&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Course Description from the Catalog&lt;/h1&gt;
-&lt;p&gt;Introductory statistics course for students in the social sciences. The emphasis of the course will be on understanding how social scientists use numerical data to understand social phenomena, and how to use and interpret statistical measures and techniques commonly reported in the social sciences literature. Prerequisite: MATH 122. Does not meet Social Sciences core requirement (2010 catalog). 4 credits.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;textbook&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Textbook&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&#34;http://moderndive.com&#34;&gt;&lt;strong&gt;A MODERN DIVE into Data with R&lt;/strong&gt;&lt;/a&gt; (2016) by Chester Ismay and Albert Y. Kim. The online HTML version is preferred but a PDF version is also available. This textbook is free and open-source and will be a key component of the course. You’ll frequently be asked to read through the textbook and complete the Learning Checks and Review Questions for practice prior to class to check for comprehension.&lt;/p&gt;
-&lt;p&gt;The textbook is more general in focus than social statistics specifically, but it is intended to be as user-friendly and engaging as possible. The assignments throughout the course will be more applied to social statistics in particular.&lt;/p&gt;
-&lt;div id=&#34;additional-resources&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Additional Resources&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://ismayc.github.io/rbasics-book/&#34;&gt;&lt;strong&gt;Getting used to R, RStudio, and R Markdown&lt;/strong&gt;&lt;/a&gt; (2016) by Chester Ismay. This is also a free online resource I put together to help completely new users of R not be quite as intimidated in learning what might initially be scary. We’ll refer to this document frequently throughout the course after the first few weeks of work at DataCamp.com.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.openintro.org/stat/textbook.php?stat_book=isrs&#34;&gt;&lt;strong&gt;OpenIntro: Introductory Statistics with Randomization and Simulation&lt;/strong&gt;&lt;/a&gt; (2014), by David M. Diez, Christopher D. Barr, and Mine Çetinkaya-Rundel, available in three formats: pdf, tablet-friendly pdf, and paperback edition. You’ll notice a pattern here: the textbook is also free and open-source.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;class-components&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Class components&lt;/h1&gt;
-&lt;p&gt;This course has four components: Problem Sets, DataCamp Assignments, Group Project, and Exams/Quizzes.&lt;/p&gt;
-&lt;div id=&#34;problem-sets&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Problem Sets&lt;/h2&gt;
-&lt;p&gt;Problem sets reinforce the concepts from the reading as well as the material that we address in class. You’re encouraged to work on the problem sets with fellow students both outside and during class. We will sometimes work through the problem sets together in class, but you should expect to be asked to hand in your problem sets at the end of class each time they are assigned. Late problems sets will &lt;strong&gt;not&lt;/strong&gt; be accepted, so you are encouraged to work on them before and/or during class meetings. If you do work on the assignment with other students (no more than 2), please turn in the assignment as a group and clearly note who you worked with at the top of your sheet of paper.&lt;/p&gt;
-&lt;p&gt;We will also have frequent checking for understanding using Plickers and other low stakes quizzing strategies in class. This is done to ensure the coverage of topics is at the right level while allowing you the chance to check your own understanding as much as possible in a low stress environment.&lt;/p&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;div id=&#34;important&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Extremely important note&lt;/h2&gt;
-&lt;p&gt;In order to pass the class (with a grade of C- or better), you &lt;strong&gt;MUST&lt;/strong&gt; complete AT LEAST 75% of the Problem Sets and DataCamp Assignments. Students that fall behind in the class are the ones that feel like the course didn’t meet their expectations in my experience. I will support you, but if you aren’t doing the work for the course, you will not receive an A, B, or C grade in the course. If you feel like you are falling behind, you are encouraged to schedule a time to meet with me (on a weekly basis if needed).&lt;/p&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;div id=&#34;datacamp-assignments&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;DataCamp Assignments&lt;/h2&gt;
-&lt;p&gt;Almost every week you’ll be working with data using R and completing assignments on our &lt;a href=&#34;https://www.datacamp.com/groups/soc-301-spring-2017&#34;&gt;DataCamp course page&lt;/a&gt;. These assignments will usually be due on Tuesdays at 1:00 PM Pacific time and Thursdays at 1:00 PM Pacific time. DataCamp allows me to track when and how often you are working on the assignments and your progress, so if you’d like to make a good impression and boost your learning, I encourage you to start these assignments as soon as possible and ask me questions as needed. The best way to ask questions is in person during my office hours or in meeting with the tutors. If this doesn’t work for you, you should take a screenshot of your webpage showing the error and what you’ve tried as clearly as possible. You can then include the image to the #general discussion on Slack or as a private message to me there.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;group-project&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Group Project&lt;/h2&gt;
-&lt;p&gt;You will also have the opportunity to use RStudio Server to complete a group project with your peers near the middle of the semester. This group project will include your writing of a data journalism piece in the style of &lt;a href=&#34;http://FiveThirtyEight.com&#34; class=&#34;uri&#34;&gt;http://FiveThirtyEight.com&lt;/a&gt;. It will include carefully created graphics and clean descriptions to a layperson and will serve as a culminating experience of the first half of the course. The Group Project will likely be assigned on or before March 2nd, a draft of your Group Project will be due on March 14th, and your final revised Group Project will be due on March 23rd at 10 AM Pacific time.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;examsquizzes&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Exams/Quizzes&lt;/h2&gt;
-&lt;p&gt;We’ll have one midterm exam and several quizzes throughout the semester in order to challenge your understanding and provide me and you with a sense of where you’re at. Each of these assessments will build on previous knowledge and you can think of them as being &lt;strong&gt;cumulative&lt;/strong&gt; in much the same way the final exam will be. This is to your benefit. I want to help you learn how to study cumulatively and practice so that final exams aren’t as terrifying. I’ll provide plenty of tips and we’ll practice a lot in class to help you with this. My goal is for you to see how the course all fits together whenever possible.&lt;/p&gt;
-&lt;p&gt;Quizzes will be multiple choice and the questions will frequently come from a subset of questions that you will each create and turn in during the class period before the quiz is to be given. Quizzes will first be taken individually and then immediately following in groups of about three. Exams will be more traditional, pencil-and-paper assessments, but you will be allowed to use RStudio cheatsheets on the exams. More details on this as the semester progresses.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;A cumulative final exam will be given on May 15th from noon to 2:30 PM.&lt;/strong&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;grading-criteria&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Grading Criteria&lt;/h1&gt;
-&lt;p&gt;This course will provide you with many opportunities to demonstrate your learning of statistical concepts and your ability to apply them to a variety of social data sets and contexts. DataCamp Assignments will encourage and allow you to continue to attempt the problems until you have obtained the right answer and will give you immediate feedback on whether your response is correct or not. I’ll also provide you with opportunities to show me that you have gained knowledge of concepts later on in the course if you initially struggled.&lt;/p&gt;
-&lt;p&gt;That being said, I do EXPECT hard work and focus from you as students. I want you to aspire to learn and grow as students and individuals. The content from a course that is too easy is quickly forgotten at the end of the semester and a course that is too difficult can cause anxiety that interferes with genuine learning opportunities. I strive to find the right balance of challenge and fairness for you.&lt;/p&gt;
-&lt;p&gt;Your course grade will be determined by the following basis with relative weights given:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Attendance/Participation/Problem Sets – 5%&lt;/li&gt;
-&lt;li&gt;DataCamp Assignments - 10%&lt;/li&gt;
-&lt;li&gt;Group Project – 15%&lt;/li&gt;
-&lt;li&gt;Midterm Exam - 20%&lt;/li&gt;
-&lt;li&gt;Cumulative Quizzes – 25%&lt;/li&gt;
-&lt;li&gt;Final Exam - 25%&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Note the &lt;a href=&#34;#important&#34;&gt;policy&lt;/a&gt; mentioned above about 75% of Problem Sets and DataCamp Assignments being completed to receive a grade higher than a D in the course.&lt;/p&gt;
-&lt;p&gt;I won’t assign or give extra credit in this course. There are plenty of opportunities to show me (and yourself) that you are improving and learning the material. Getting behind will get you in trouble quickly though as I’ve found getting out of a rut academically is far harder than you may think.&lt;/p&gt;
-&lt;div id=&#34;grading-system&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Grading System&lt;/h2&gt;
-&lt;p&gt;I strongly encourage you to focus on your own learning of the materials and how they align with the goals for the course I have laid out. You should identify for yourself how well you are understanding the material and be able to assess this frequently. This will allow you to keep the knowledge that you obtain during the course much after the semester is over. I am required to assign you letter grades though and they will be assigned as follows:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;A: 90-100%; B: 80-89%; C: 70-79%; D: 60-69%; F: less than 60%&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;These cut-offs may be lowered at the end of the semester and I reserve the right to give +/- grades as I see fit.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;course-schedule&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Course Schedule&lt;/h1&gt;
-&lt;p&gt;The course schedule is available at &lt;a href=&#34;http://ismayc.github.io/soc301-f2017/schedule&#34; class=&#34;uri&#34;&gt;http://ismayc.github.io/soc301-f2017/schedule&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;what-to-expect-in-class&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;What to Expect in Class&lt;/h1&gt;
-&lt;p&gt;As much as possible, I will devote the first five to ten minutes of class and the last five minutes of class to activities designed to help you retain the material you have just encountered or to reflect on previous content. It is imperative that you value these opportunities and your attendance and participation during them will help you succeed in the course.&lt;/p&gt;
-&lt;p&gt;We’ll be working through problems together in class and discussing content from your reading assignments. This class may be different from other classes you take or your experiences in classrooms from the past. I prefer to think of myself as your guide on the side instead of the sage on the stage. I’m here to assist you as needed, but I don’t want to be the passer of all knowledge to you. In other words, I’m hoping to create an environment where you develop understanding based on each of your own needs rather than just dictating how and what to think to you.&lt;/p&gt;
-&lt;p&gt;You’ll be actively working to learn about social statistics inside the classroom. I will lecture from time to time, but this will not be a class where you can passively sit back and copy everything from the board. You’ll need to play along with R, to answer and ask questions during class, to take careful and thoughtful notes, and to work well with your classmates to solve problems.&lt;/p&gt;
-&lt;p&gt;Most importantly, I want the classes to be fun and I want you to value what we cover. It’s my job to make it interesting; it’s your job to put in the effort and have a growth mindset about statistics. You’ll be amazed at the end of the semester just how much knowledge you’ve gained and how your hard work has paid off.&lt;/p&gt;
-&lt;div id=&#34;course-attendance-policy&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Course attendance policy&lt;/h2&gt;
-&lt;p&gt;Attendance will be collected and active participation in in-class and out-of-class activities is expected. &lt;strong&gt;THREE&lt;/strong&gt; absences of any sort are allowed. That being said I understand all the demands that are on you as students. Keep me posted on what is going on if you must miss class. These three absences can serve any purpose you like.&lt;/p&gt;
-&lt;p&gt;If you have a medical emergency or another valid institutional reason for missing class, we can set up a plan together. You’ll find that missing classes hurts your understanding of the material and map of how the whole course fits together. Each additional class missed beyond the third absense will result in a &lt;strong&gt;10%&lt;/strong&gt; grade reduction on your final course grade. I take TIMELY attendance very seriously.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;makeup-quizzes&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Makeup quizzes&lt;/h2&gt;
-&lt;p&gt;Makeup quizzes and exams are rarely given. It isn’t fair to the other students in the class to take an assessment at a later date and it hurts your flow in the class because you’ll be playing catch-up with other material.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;what-to-expect-outside-of-class&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;What to Expect Outside of Class&lt;/h1&gt;
-&lt;p&gt;This course &lt;strong&gt;requires&lt;/strong&gt; you to read the textbook and to check for understanding as you learn new material and review past material. You’ll be working on Learning Checks and Review Questions from the textbook and doing statistical analysis and making graphics using R. This will be time-consuming, especially if you aren’t focusing on them, but it is my goal to separate these assignments into smaller pieces. This will help ensure that you aren’t procrastinating until the last minute on a big assignment and also that you are using the new knowledge gained as much as possible just when you learn it.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Tips for success:&lt;/strong&gt;&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;Spend 15 minutes every day at least five days a week quizzing yourself on concepts from the course. I recommend you create flash cards as the course progresses and ask yourself to provide the definition when given a term or to explain what particular R code produces. The process of forcing yourself to think about the concept even if you can’t get the answer exactly right will help you learn.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Don’t just read over your notes or the book multiple times. One of the most common things I hear from students that didn’t perform well on a quiz or assignment is that they studied the material a lot by reading over the book many times. This doesn’t help you learn the content. It creates a false sense of understanding by creating an association with the words. YOU HAVE TO QUIZ YOURSELF if you want to learn and to succeed.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Create your own quizzes. One of the best strategies you can do if you have had trouble with exams and quizzes in the past is to identify the key ideas from the class and create your own problems to solve in an environment similar to the one in which you take quizzes and exams. Try as much as you can to create problems that you can relate to that involve the content. This can be your everyday life, your specific major, or any other interest you may have. Real-life connections help to build actual connections in your brain, thus, helping you learn.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Make mind maps that relate all of the content throughout the course together. By creating a diagram that connects concepts together you’ll see how everything is related and that will help you create the story of the course instead of seeing concepts as disjoint pieces.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Study with someone else, especially with the R material. You’ll need to practice with R nearly every day if you want to learn how to use it. It’s going to be like learning a foreign language at the beginning. You’ll need to learn the syntax and practice “speaking it” as much as possible. You’ll likely catch on quickly, but you won’t if you don’t practice often.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Ask questions of me, of the course tutors, and of your classmates. I’m always open to answering questions and you should never feel like your question isn’t appropriate. You should also look for opportunities to help others and teach them the content whether it be in person or online using Slack. This will help you as a learner as well.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Enjoy the learning process! Failure to not understand everything all at once is to be expected. Our brains need to struggle to learn. You can’t build muscles by sitting on the couch and you can’t learn statistics by not struggling a little bit. Devote some time every day to thinking about a more difficult problem than what is given to you. How would you solve it? What’s more difficult about it? Evaluate your learning and find out what works best for you.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div id=&#34;additional-information&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Additional Information&lt;/h1&gt;
-&lt;div id=&#34;academic-misconduct-policy&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Academic Misconduct Policy&lt;/h2&gt;
-&lt;p&gt;Pacific University has no tolerance for academic misconduct/cheating. It is university policy that all acts of misconduct and dishonesty be reported to the Associate Dean for Student Academic Affairs. Sanctions that may be imposed for such misconduct range from an “F” for the assignment, an “F” for the course, and suspension or dismissal from the university. Forms of academic misconduct include but are not limited to plagiarism, fabrication, cheating, tampering with grades, forging signatures, and using electronic information resources in violation of acceptable use policies.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;learning-support-services-for-students-with-disabilities&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Learning Support Services for Students with Disabilities&lt;/h2&gt;
-&lt;p&gt;If you have documented challenges that will impede your learning in any way, please contact our LSS office in Clark Hall (ext.2717; &lt;a href=&#34;mailto:lss@pacificu.edu&#34;&gt;lss@pacificu.edu&lt;/a&gt;). LSS staff will meet with students, review the documentation of their disabilities, and discuss the services that Pacific offers and any appropriate ADA accommodations for specific courses. Please follow up with me about how we can best match your accommodations if you need them.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;tutoring-and-learning-center-tlc&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Tutoring and Learning Center (TLC)&lt;/h2&gt;
-&lt;p&gt;The TLC is located in Scott Hall, 1st-floor. The center focuses on delivering one-on-one and group tutoring services for foreign languages, math and science courses, and writing skills in all subjects. Students should consult with the center’s director for information on tutoring available for other subjects. Day and evening hours; walk-ins welcome!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;unauthorized-recordings&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Unauthorized Recordings&lt;/h2&gt;
-&lt;p&gt;Students are prohibited from making audio and/or visual recordings of lectures or presentations without prior consent of the instructor or presenter.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-
-&lt;!-- BLOGDOWN-HEAD
-
-
-
-
-/BLOGDOWN-HEAD --&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Schedule</title>
-      <link>/schedule/</link>
-      <pubDate>Mon, 30 Jan 2017 10:30:38 -0800</pubDate>
-      
-      <guid>/schedule/</guid>
-      <description>&lt;!-- BLOGDOWN-BODY-BEFORE
-
-/BLOGDOWN-BODY-BEFORE --&gt;
-
-&lt;p&gt;The references to &lt;strong&gt;Chapters&lt;/strong&gt;/&lt;strong&gt;Sections&lt;/strong&gt; here correspond to the &lt;a href=&#34;http://moderndive.com&#34;&gt;&lt;strong&gt;MODERN DIVE into Data with R&lt;/strong&gt;&lt;/a&gt; book. Be sure to check the &lt;strong&gt;DataCamp&lt;/strong&gt; link above for more details on the DataCamp (DC) assignments. More details on the Problem Sets (PS) are available in the link above for Problem Sets.&lt;/p&gt;
-&lt;div id=&#34;htmlwidget-03c3aa28a690e625dc7e&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;datatables html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-03c3aa28a690e625dc7e&#34;&gt;{&#34;x&#34;:{&#34;filter&#34;:&#34;top&#34;,&#34;filterHTML&#34;:&#34;&lt;tr&gt;\n  &lt;td data-type=\&#34;character\&#34; style=\&#34;vertical-align: top;\&#34;&gt;\n    &lt;div class=\&#34;form-group has-feedback\&#34; style=\&#34;margin-bottom: auto;\&#34;&gt;\n      &lt;input type=\&#34;search\&#34; placeholder=\&#34;All\&#34; class=\&#34;form-control\&#34; style=\&#34;width: 100%;\&#34;/&gt;\n      &lt;span class=\&#34;glyphicon glyphicon-remove-circle form-control-feedback\&#34;&gt;\u003c/span&gt;\n    \u003c/div&gt;\n  \u003c/td&gt;\n  &lt;td data-type=\&#34;character\&#34; style=\&#34;vertical-align: top;\&#34;&gt;\n    &lt;div class=\&#34;form-group has-feedback\&#34; style=\&#34;margin-bottom: auto;\&#34;&gt;\n      &lt;input type=\&#34;search\&#34; placeholder=\&#34;All\&#34; class=\&#34;form-control\&#34; style=\&#34;width: 100%;\&#34;/&gt;\n      &lt;span class=\&#34;glyphicon glyphicon-remove-circle form-control-feedback\&#34;&gt;\u003c/span&gt;\n    \u003c/div&gt;\n  \u003c/td&gt;\n  &lt;td data-type=\&#34;character\&#34; style=\&#34;vertical-align: top;\&#34;&gt;\n    &lt;div class=\&#34;form-group has-feedback\&#34; style=\&#34;margin-bottom: auto;\&#34;&gt;\n      &lt;input type=\&#34;search\&#34; placeholder=\&#34;All\&#34; class=\&#34;form-control\&#34; style=\&#34;width: 100%;\&#34;/&gt;\n      &lt;span class=\&#34;glyphicon glyphicon-remove-circle form-control-feedback\&#34;&gt;\u003c/span&gt;\n    \u003c/div&gt;\n  \u003c/td&gt;\n  &lt;td data-type=\&#34;character\&#34; style=\&#34;vertical-align: top;\&#34;&gt;\n    &lt;div class=\&#34;form-group has-feedback\&#34; style=\&#34;margin-bottom: auto;\&#34;&gt;\n      &lt;input type=\&#34;search\&#34; placeholder=\&#34;All\&#34; class=\&#34;form-control\&#34; style=\&#34;width: 100%;\&#34;/&gt;\n      &lt;span class=\&#34;glyphicon glyphicon-remove-circle form-control-feedback\&#34;&gt;\u003c/span&gt;\n    \u003c/div&gt;\n  \u003c/td&gt;\n  &lt;td data-type=\&#34;character\&#34; style=\&#34;vertical-align: top;\&#34;&gt;\n    &lt;div class=\&#34;form-group has-feedback\&#34; style=\&#34;margin-bottom: auto;\&#34;&gt;\n      &lt;input type=\&#34;search\&#34; placeholder=\&#34;All\&#34; class=\&#34;form-control\&#34; style=\&#34;width: 100%;\&#34;/&gt;\n      &lt;span class=\&#34;glyphicon glyphicon-remove-circle form-control-feedback\&#34;&gt;\u003c/span&gt;\n    \u003c/div&gt;\n  \u003c/td&gt;\n\u003c/tr&gt;&#34;,&#34;data&#34;:[[&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Thursday&#34;,&#34;Tuesday&#34;,&#34;Wednesday&#34;,&#34;Monday&#34;],[&#34;January 31&#34;,&#34;February 2&#34;,&#34;February 7&#34;,&#34;February 9&#34;,&#34;February 14&#34;,&#34;February 16&#34;,&#34;February 21&#34;,&#34;February 23&#34;,&#34;February 28&#34;,&#34;March 2&#34;,&#34;March 7&#34;,&#34;March 9&#34;,&#34;March 14&#34;,&#34;March 16&#34;,&#34;March 21&#34;,&#34;March 23&#34;,&#34;March 28&#34;,&#34;March 30&#34;,&#34;April 4&#34;,&#34;April 6&#34;,&#34;April 11&#34;,&#34;April 13&#34;,&#34;April 18&#34;,&#34;April 20&#34;,&#34;April 25&#34;,&#34;April 27&#34;,&#34;May 2&#34;,&#34;May 4&#34;,&#34;May 9&#34;,&#34;May 10&#34;,&#34;May 15&#34;],[&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/&#39;&gt;Introduction (Chapters 1 and 2)\u003c/a&gt;&#34;,&#34;Introduction to R on DataCamp&#34;,&#34;Review of Introduction to R on DataCamp&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/3-tidy.html&#39;&gt;Tidy data (Chapter 3)\u003c/a&gt;, Quiz 1&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/3-tidy.html#normal-forms-of-data&#39;&gt;Joining Data Frames (Sections 3.4-3.5)\u003c/a&gt;, &lt;a href=&#39;https://ismayc.github.io/moderndiver-book/4-viz.html&#39;&gt;Scatter-plots and Line-graphs (Sections 4.1 to 4.4)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/4-viz.html&#39;&gt;Scatter-plots and Line-graphs (Sections 4.1 to 4.4)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/4-viz.html#histograms&#39;&gt;Histograms, Facets, and Boxplots (Sections 4.5 to 4.7)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/4-viz.html#geombar&#39;&gt;Barplots (Section 4.8)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/4-viz.html#conclusion&#39;&gt;Review Chapter 4 (Section 4.9)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/5-manip.html&#39;&gt;Five Main Verbs &amp; The Pipe (Sections 5.1 and 5.2)\u003c/a&gt;, Quiz 2&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/5-manip.html&#39;&gt;Five Main Verbs &amp; The Pipe (Sections 5.1 and 5.2)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/5-manip.html#joining-data-frames&#39;&gt;Joins and other verbs (Sections 5.3 to 5.5)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/5-manip.html#conclusion-1&#39;&gt;Review Chapter 5\u003c/a&gt;&#34;,&#34;Work on Group Project&#34;,&#34;Review Chapters 3-5, Quiz 3&#34;,&#34;NO CLASS, Group Project due at 10 AM&#34;,&#34;SPRING BREAK&#34;,&#34;SPRING BREAK&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/6-sim.html&#39;&gt;Visualizing Random Sampling (Sections 6.1 and 6.2)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/6-sim.html&#39;&gt;Simulation (Sections 6.3 to 6.5)\u003c/a&gt;, Review for Midterm Exam&#34;,&#34;MIDTERM EXAM (Last day to drop with a W is Friday, April 14)&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/7-hypo.html&#39;&gt;Basics of Hypothesis Testing (Sections 7.1 to 7.4)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/7-hypo.html#statistical-significance&#39;&gt;Significance and Testing Example 1 (Sections 7.5 and 7.6)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/7-hypo.html#example-comparing-two-means&#39;&gt;Testing Example 2 / Traditional Methods (Sections 7.7 to 7.9)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/8-ci.html&#39;&gt;Confidence Intervals &amp; Bootstrapping (Section 8.1)\u003c/a&gt;, Quiz 4&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/8-ci.html#relation-to-hypothesis-testing&#39;&gt;Relationship Between Confidence Intervals &amp; Hypothesis Testing (Sections 8.2 to 8.4)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/9-regress.html&#39;&gt;Correlation and Regression (Sections 9.1 to 9.3)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/9-regress.html&#39;&gt;Inference for Regression (Sections 9.4 to 9.7)\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://ismayc.github.io/moderndiver-book/10-effective-data-storytelling.html&#39;&gt;Course Review (Chapter 10)\u003c/a&gt;, Quiz 5&#34;,&#34;READING DAY&#34;,&#34;FINAL EXAM (Noon to 2:30 PM)&#34;],[&#34;-&#34;,&#34;-&#34;,&#34;&lt;a href=&#39;https://www.datacamp.com/courses/free-introduction-to-r&#39;&gt;DC course: Introduction to R\u003c/a&gt;&#34;,&#34;-&#34;,&#34;&lt;a href=&#39;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/applying-r-basics?ex=1&#39;&gt;DC chapter: Applying R Basics\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/tidy-data?ex=1&#39;&gt;DC chapter: Tidy Data\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/scatter-plots-line-graphs?ex=1&#39;&gt;DC chapter: Scatter-plots &amp; Line-graphs\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/histograms-boxplots?ex=1&#39;&gt;DC chapter: Histograms &amp; Boxplots\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/barplots?ex=1&#39;&gt;DC chapter: Barplots\u003c/a&gt;&#34;,&#34;-&#34;,&#34;DC chapter: ggplot2 Review&#34;,&#34;DC chapter: Filtering, Grouping, &amp; Summarizing&#34;,&#34;DC chapter: Mutating &amp; Arranging, Group Project Draft&#34;,&#34;DC chapter: dplyr Review&#34;,&#34;-&#34;,&#34;-&#34;,&#34;-&#34;,&#34;-&#34;,&#34;-&#34;,&#34;-&#34;,&#34;-&#34;,&#34;DC chapter: Simulating Randomness, Group Project Draft&#34;,&#34;-&#34;,&#34;DC chapter: Hypothesis testing&#34;,&#34;-&#34;,&#34;-&#34;,&#34;DC chapter: Confidence Intervals&#34;,&#34;-&#34;,&#34;-&#34;,&#34;-&#34;,&#34;For Practice - DC chapter: Correlation &amp; Regression, DC chapter: Course Wrap-up)&#34;],[&#34;-&#34;,&#34;-&#34;,&#34;&lt;a href=&#39;http://ismayc.github.io/soc301_s2017/problem-sets/index.html#ps1&#39;&gt;PS1\u003c/a&gt;&#34;,&#34;&lt;a href=&#39;http://ismayc.github.io/soc301_s2017/problem-sets/index.html#ps2&#39;&gt;PS2\u003c/a&gt;&#34;,&#34;-&#34;,&#34;&lt;a href=&#39;http://ismayc.github.io/soc301_s2017/problem-sets/index.html#ps3&#39;&gt;PS3\u003c/a&gt;&#34;,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]],&#34;container&#34;:&#34;&lt;table class=\&#34;cell-border stripe\&#34;&gt;\n  &lt;thead&gt;\n    &lt;tr&gt;\n      &lt;th&gt;Weekday\u003c/th&gt;\n      &lt;th&gt;Date\u003c/th&gt;\n      &lt;th&gt;Content / Assessment\u003c/th&gt;\n      &lt;th&gt;DataCamp Due\u003c/th&gt;\n      &lt;th&gt;Problem Set Due\u003c/th&gt;\n    \u003c/tr&gt;\n  \u003c/thead&gt;\n\u003c/table&gt;&#34;,&#34;options&#34;:{&#34;pageLength&#34;:31,&#34;autoWidth&#34;:true,&#34;bInfo&#34;:false,&#34;paging&#34;:false,&#34;order&#34;:[],&#34;orderClasses&#34;:false,&#34;orderCellsTop&#34;:true,&#34;lengthMenu&#34;:[10,25,31,50,100]}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-
-
-&lt;!-- BLOGDOWN-HEAD
-
-&lt;script src=&#34;#####content/schedule_files/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####content/schedule_files/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####content/schedule_files/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;#####content/schedule_files/dt-core/css/jquery.dataTables.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;link href=&#34;#####content/schedule_files/dt-core/css/jquery.dataTables.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;#####content/schedule_files/dt-core/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;#####content/schedule_files/nouislider/jquery.nouislider.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;#####content/schedule_files/nouislider/jquery.nouislider.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;#####content/schedule_files/selectize/selectize.bootstrap3.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;#####content/schedule_files/selectize/selectize.min.js&#34;&gt;&lt;/script&gt;
-
-
-
-/BLOGDOWN-HEAD --&gt;
 </description>
     </item>
     

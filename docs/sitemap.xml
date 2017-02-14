@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>/plickers/</loc>
+    <lastmod>2017-02-14T11:02:16-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2017/02/14/week-03---tuesday/</loc>
+    <lastmod>2017-02-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/problem-sets/ps-key/</loc>
     <lastmod>2017-02-09T13:14:16-08:00</lastmod>
   </url>
@@ -83,7 +93,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2017-02-09T00:00:00+00:00</lastmod>
+    <lastmod>2017-02-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -95,7 +105,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2017-02-09T13:14:16-08:00</lastmod>
+    <lastmod>2017-02-14T11:02:16-08:00</lastmod>
     <priority>0</priority>
   </url>
   
