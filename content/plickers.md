@@ -1,10 +1,6 @@
 ---
 date: 2017-02-14T11:02:16-08:00
 title: Plicker Questions from class
-output: 
-  blogdown::html_page:
-    toc: true
-    toc_depth: 1
 ---
 
 ***
