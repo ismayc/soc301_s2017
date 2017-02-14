@@ -264,7 +264,7 @@ ggplot(data = movies, aes(x = budget, y = rating)) +
 
 From `nycflights13` package, the `flights` data set:
 
-```{r, echo=FALSE, fig.height=5, fig.width=10}
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=5, fig.width=10}
 # Line graph
 library(nycflights13)
 library(dplyr)
