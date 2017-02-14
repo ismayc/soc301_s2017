@@ -5,13 +5,11 @@ title: Resources
 
 This page will be updated with links throughout the course.
 
-[Your Grade Viewer](https://ismay.shinyapps.io/soc301_grades/)
-
+- [Your Grade Viewer](https://ismay.shinyapps.io/soc301_grades/)
   - Login using your Pacific ID
   - Password was sent via Slack on Tuesday, February 14 as private message
     - If you want to change your password to something else, send me a Slack message or give me a piece of paper
         with your password clearly written.
-
 - Slack
   - [Download for computer and mobile](https://slack.com/downloads/)
   - [Watch tour VIDEO](https://slack.com/is)
