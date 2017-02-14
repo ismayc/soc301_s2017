@@ -21,7 +21,7 @@
 
 &lt;h1 id=&#34;w03plick&#34;&gt;Week 03 - Tuesday (February 14)&lt;/h1&gt;
 
-&lt;ol&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Which of the following is a characteristic of a tidy data frame?&lt;/p&gt;
 
 &lt;ul&gt;
@@ -38,13 +38,13 @@
 &lt;li&gt;A. Yes&lt;/li&gt;
 &lt;li&gt;B. No&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;&lt;center&gt;
-&lt;img src=&#34;../pew.png&#34; alt=&#34;&#34; /&gt;
-&lt;/center&gt;&lt;/p&gt;
+  &lt;img src=&#34;../pew.png&#34; alt=&#34;&#34; /&gt;
+  &lt;/center&gt;&lt;/p&gt;
 
-&lt;ol&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;What is the observational unit in the &lt;a href=&#34;https://ismayc.github.io/Effective-Data-Storytelling-using-the-tidyverse/police_locals.html&#34;&gt;&lt;code&gt;police_locals&lt;/code&gt; data frame&lt;/a&gt;?&lt;/p&gt;
 
 &lt;ul&gt;
@@ -63,7 +63,7 @@
 &lt;li&gt;C. The result of rows and columns creating a table.&lt;/li&gt;
 &lt;li&gt;D. None of the above.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
