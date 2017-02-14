@@ -21,9 +21,9 @@ output:
     - A. Yes
     - B. No
 
-<center>
-![](../pew.png)
-</center>
+  <center>
+  ![](../pew.png)
+  </center>
 
 4. What is the observational unit in the [`police_locals` data frame](https://ismayc.github.io/Effective-Data-Storytelling-using-the-tidyverse/police_locals.html)?
     - A. Percentage of officers
