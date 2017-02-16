@@ -12,7 +12,6 @@ Slides available [here](http://ismayc.github.io/soc301_s2017/slides/slide_deck.h
 - Review the concept of **tidy data**
     - Plicker questions [here]({{< relref "plickers.md" >}})
 - Discuss joining data frames by a common key variable
-- Introduce the Grammar of Graphic with scatter-plot and line-graph examples
 - Work on [Problem Set 3](https://ismayc.github.io/soc301_s2017/problem-sets/#ps3) in groups
 
 ### To do for next time
