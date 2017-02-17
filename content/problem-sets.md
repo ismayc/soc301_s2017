@@ -14,7 +14,7 @@ Note that the discussion page is updated with the most recent problem sets at th
 - To run the R code given in the gray chunks in the textbook, you can use this "sandbox" I've created for you as the last chapter of the DataCamp course.  Click [here](https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/supplement-to-moderndive-textbook?ex=1).
 
 <!--
-- Discussion [here](ps-key/index.html#ps3-key)
+- Discussion [here](ps-key/index.html#ps4-key)
 -->
 
 
