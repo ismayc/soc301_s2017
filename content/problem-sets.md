@@ -7,7 +7,19 @@ This page will list the Problem Sets and when they will be turned in on paper th
 
 Note that the discussion page is updated with the most recent problem sets at the top and the earlier problem sets at the bottom.  Links to specific Problem Set discussions will be posted after the Problem Set is turned in below the Problem Set assignment here.
 
-# Problem Set 3 (Due Thursday, February 16 by 4:20 PM) {#ps3}
+# Problem Set 4 (Due Thursday, February 23 by 4:20 PM) {#ps4}
+
+- We will be working on this in class on Tuesday and Thursday in groups, but you likely will need to work outside of class to complete it.
+- Learning Checks [LC4.14, LC4.16, LC4.18, LC4.19, LC4.21-LC4.28, LC4.30, LC4.33-LC4.34, LC4.36-LC4.37](https://ismayc.github.io/moderndiver-book/4-viz.html)
+- To run the R code given in the gray chunks in the textbook, you can use this "sandbox" I've created for you as the last chapter of the DataCamp course.  Click [here](https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/supplement-to-moderndive-textbook?ex=1).
+
+<!--
+- Discussion [here](ps-key/index.html#ps3-key)
+-->
+
+
+
+# Problem Set 3 (Due Tuesday, February 21 by 2:45 PM) {#ps3}
 
 - We will be working on this in class on Tuesday and Thursday in groups, but you likely will need to work outside of class to complete it.
 - Learning Checks [LC3.11-LC3.13 and LC3.15](https://ismayc.github.io/moderndiver-book/3-tidy.html) AND [LC4.1-LC4.2, LC4.4, LC4.6-LC4.7, and LC4.10-LC4.13](https://ismayc.github.io/moderndiver-book/4-viz.html)

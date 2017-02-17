@@ -20,7 +20,6 @@ Slides available [here](http://ismayc.github.io/soc301_s2017/slides/slide_deck.h
     - Select Edit Account Settings.
     - Input at the very least your first and last name.  More helpful if you include a picture.
 - Take notes on Sections 4.5 to 4.7 of [ModernDive](http://moderndive.com)
-    - Work on Learning Checks in those sections
-    - A subset of them will be due on Tuesday at the end of class
+    - Work on [Problem Set 4](http://ismayc.github.io/soc301_s2017/problem-sets/index.html#ps4) corresponding to those sections.
 - Complete  [Scatter-plots & Line-graphs](https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/scatter-plots-line-graphs?ex=1) DataCamp chapter (Due on February 21 at 1 PM)
 - Begin [Histograms & Boxplots](https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/histograms-boxplots?ex=1) DataCamp chapter (Due on February 23 at 1 PM)
