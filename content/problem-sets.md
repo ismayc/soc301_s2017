@@ -12,7 +12,7 @@ Note that the discussion page is updated with the most recent problem sets at th
 - We will be working on this in class on Tuesday and Thursday in groups, but you likely will need to work outside of class to complete it.
 - Learning Checks [LC3.11-LC3.13 and LC3.15](https://ismayc.github.io/moderndiver-book/3-tidy.html) AND [LC4.1-LC4.2, LC4.4, LC4.6-LC4.7, and LC4.10-LC4.13](https://ismayc.github.io/moderndiver-book/4-viz.html)
     - Recall that `View` is not a function that works in DataCamp but does work in RStudio that we will work with later.  You can view the data frames interactively [here](https://ismayc.github.io/Effective-Data-Storytelling-using-the-tidyverse/moderndive.html) though.
-    - For LC4.6 and LC4.13, run your code in DataCamp and then write your code on your paper.  Discuss what findings you have when looking at the plot.  Remember that scatter-plots only work when analzying the relationship between two **numerical** variables!
+    - For LC4.6 and LC4.13, run your code in the [sandbox in DataCamp][(https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/supplement-to-moderndive-textbook?ex=1) and then write your code on your paper.  Discuss what findings you have when looking at the plot.  Remember that scatter-plots only work when analyzing the relationship between two **numerical** variables!
 - To run the R code given in the gray chunks in the textbook, you can use this "sandbox" I've created for you as the last chapter of the DataCamp course.  Click [here](https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/supplement-to-moderndive-textbook?ex=1).
 
 <!--

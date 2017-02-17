@@ -30,7 +30,7 @@ layout: true
 name: week03th
 class: center, middle
 
-# Week 03 - Tuesday
+# Week 03 - Thursday
 
 # February 16, 2017
 
@@ -152,6 +152,7 @@ simple_ex %>% knitr::kable(format="html")
 ### 1. A scatterplot
 
 ```{r, eval=FALSE}
+library(ggplot2)
 ggplot(data = simple_ex, mapping = aes(x = A, y = B)) + 
   geom_point()
 ```
@@ -171,6 +172,7 @@ ggplot(data = simple_ex, aes(x = A, y = B)) +
 ### 2. A scatter plot where the `color` of the points corresponds to `D`
 
 ```{r, eval=FALSE}
+library(ggplot2)
 ggplot(data = simple_ex, mapping = aes(x = A, y = B)) + 
   geom_point(aes(color = D))
 ```
@@ -189,6 +191,7 @@ ggplot(data = simple_ex, mapping = aes(x = A, y = B)) +
 ### 3. A scatter plot where the `size` of the points corresponds to `C`
 
 ```{r, eval=FALSE}
+library(ggplot2)
 ggplot(data = simple_ex, mapping = aes(x = A, y = B, size = C)) + 
   geom_point()
 ```
@@ -207,6 +210,7 @@ ggplot(data = simple_ex, mapping = aes(x = A, y = B, size = C)) +
 ### 4. A line graph
 
 ```{r, eval=FALSE}
+library(ggplot2)
 ggplot(data = simple_ex, mapping = aes(x = A, y = B)) + 
   geom_line()
 ```
@@ -225,6 +229,7 @@ ggplot(data = simple_ex, aes(x = A, y = B)) +
 ### 5. A line graph where the `color` of the line corresponds to `D`
 
 ```{r, eval=FALSE}
+library(ggplot2)
 ggplot(data = simple_ex, mapping = aes(x = A, y = B, color = D)) + 
   geom_line()
 ```
@@ -409,7 +414,7 @@ class: center, middle
 
 # Work on [Problem Set 3](https://ismayc.github.io/soc301_s2017/problem-sets/#ps3) in groups
 
-## Due today at the end of class
+## Due Tuesday at the beginning of class
 
 ***
 
@@ -422,12 +427,16 @@ class: center, middle
 - Leaderboard not available currently
 
 - Complete your DataCamp profiles!
+    - Click on your user ID in the top right of the screen when you first open DataCamp.
+    - Click on My Profile.
+    - Select Edit Account Settings.
+    - Input at the very least your first and last name.  More helpful if you include a picture.
 
 ---
 
 ## Minute Paper - Put your name on it!
 
-What `ggplot2` code is needed to produce this plot? The `simple_ex` data frame is printed for support. This time, you can use your hand-written notes.
+What `ggplot2` code is needed to produce this plot? The `simple_ex` data frame is printed for support. 
 
 ```{r echo=FALSE, fig.height=3.5, fig.align="center"}
 simple_ex <-

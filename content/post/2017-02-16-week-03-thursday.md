@@ -15,6 +15,10 @@ Slides available [here](http://ismayc.github.io/soc301_s2017/slides/slide_deck.h
 
 ### To do for next time
 - Complete DataCamp profile
+    - Click on your user ID in the top right of the screen when you first open DataCamp.
+    - Click on My Profile.
+    - Select Edit Account Settings.
+    - Input at the very least your first and last name.  More helpful if you include a picture.
 - Take notes on Sections 4.5 to 4.7 of [ModernDive](http://moderndive.com)
     - Work on Learning Checks in those sections
     - A subset of them will be due on Tuesday at the end of class

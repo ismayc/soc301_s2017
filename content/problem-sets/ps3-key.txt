@@ -1,0 +1,149 @@
+---
+title: Problem Set 3 Discussion
+output: 
+  blogdown::html_page:
+    toc: true
+    toc_depth: 1
+---
+
+***
+
+Page last updated at `r format(Sys.time(), "%A, %B %d, %Y %X %Z")`
+
+```{r echo=FALSE}
+knitr::opts_chunk$set(message=FALSE, warning=FALSE)
+```
+
+
+
+# Problem Set 3 {#ps3-key}
+
+Learning Checks [LC3.11-LC3.13 and LC3.15](https://ismayc.github.io/moderndiver-book/3-tidy.html) AND [LC4.1-LC4.2, LC4.4, LC4.6-LC4.7, and LC4.10-LC4.13](https://ismayc.github.io/moderndiver-book/4-viz.html)
+
+## LC3.11 
+
+What are common characteristics of "tidy" datasets?
+
+**Discussion**: Tidy data sets tend to be in a narrow, long format since they list all possible values of each combination of the different variables.  They have one observation per row, one variable per column, one observational unit per data frame, and the entries on the inside of the table are values, each representing the intersection of a particular observation and a particular variable.
+
+## LC3.12
+
+
+What makes "tidy" datasets useful for organizing data?
+
+**Discussion**: They allow you to easily summarize data across a variable or to plot data and show different relationships across other variables.  They are incredibly useful in looking for multivariate relationships (more than two variables) in data.  You'll see more of this as the semester goes along.
+
+## LC3.13
+
+
+How many variables are presented in the table below?  What does each row correspond to? (**Hint:** You may not be able to answer both of these questions immediately but take your best guess.)
+
+```{r echo=FALSE, message=FALSE}
+library(dplyr)
+library(knitr)
+students <- c(4, 6)
+faculty <- c(2, 3)
+kable(data_frame("students" = students, "faculty" = faculty))
+```
+
+**Discussion**: This is an incredibly difficult problem to figure out.  You can guess that `students` and `faculty` should actually be levels of a variable called something like `type` or `role`.  The numbers inside the table represent counts of some sort, so there may be at least two other variables floating around in there.
+
+## LC3.15 
+
+The actual data presented in LC3.13 is given below in tidy data format:
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+role <- c(rep("student", 10), rep("faculty", 5))
+sociology <- c(rep(TRUE, 4), rep(FALSE, 6), rep(TRUE, 2), rep(FALSE, 3))
+school_type <- c(rep("Public", 6), rep("Private", 4), rep("Public", 3), rep("Private", 2))
+kable(data_frame("role" = role, `Sociology?` = sociology,
+  `Type of School` = school_type))
+```
+
+- What does each row correspond to?  
+- What are the different variables in this data frame?  
+- The `Sociology?` variable is known as a logical variable.  What types of values does a logical variable take on?
+
+
+**Discussion**:
+
+- Each row corresponds to a particular observation (an instance of the observational unit).  In this case, each row corresponds to a particular person, either a faculty member or a student.
+- The different variables are `role`, `Sociology?`, and `Type of School`.
+- Logical variables take on the values of `TRUE` or `FALSE`.
+
+
+## LC4.1  
+
+Take a look at both the `flights` and `all_alaska_flights` data frames by running `View(flights)` and `View(all_alaska_flights)` in the console. In what respect do these data frames differ?
+
+**Discussion**:   Recall that you don't have the ability to run `View` in DataCamp and we aren't using RStudio just yet.  You can find interactive versions of both data frames [here](https://ismayc.github.io/Effective-Data-Storytelling-using-the-tidyverse/moderndive.html) though.
+
+The only difference between these data frames is that `flights` contains information about 2013 NYC flights from all carriers and `all_alaska_flights` only contains information about flights using Alaskan Airlines.
+
+## LC4.2
+
+
+What are some practical reasons why `dep_delay` and `arr_delay` have a positive relationship?
+
+**Discussion**:
+
+Flights that are late in leaving the origin airport will almost surely be late in arriving at the destination airport.  Further, a flight that is delayed 15 minutes on departure will probably be delayed around 15 minutes on arrival.  Pilots are able to make up some time in the air sometimes, but a positive relationship is clear here.  As `dep_delay` increases, `arr_delay` also increases.
+
+
+###
+
+## LC4.6
+
+Create a new scatter-plot using different variables in the `all_alaska_flights` data frame by modifying the example above.
+
+
+**Discussion**:
+
+```{r}
+library(nycflights13)
+all_alaska_flights <- flights %>% filter(carrier == "AS")
+ggplot(data = all_alaska_flights, mapping = aes(x = air_time, y = distance)) +
+  geom_point()
+```
+
+This might initially look like an error but Alaskan Airlines online flies to Seattle from New York City.  Therefore, all of the `distance` values are 2402.  We can see that there was quite a bit of variability in terms of `air_time` though.
+
+<!-- -->
+
+## LC4.7
+
+Why is setting the `alpha` argument value useful with scatter-plots? What further information does it give you that a regular scatter-plot cannot?
+
+
+**Discussion**:
+
+## LC4.10
+
+
+The weather data is recorded hourly. Why does the `time_hour` variable correctly identify the hour of the measurement whereas the `hour` variable does not?
+
+**Discussion**:
+
+## LC4.11
+
+
+Why should line-graphs be avoided when there is not a clear ordering of the horizontal axis?
+
+
+**Discussion**:
+
+## LC4.12
+
+
+Why are line-graphs frequently used when time is the explanatory variable?
+
+
+**Discussion**:
+
+## LC4.13
+
+Plot a time series of a variable other than `temp` for Newark Airport in the first 15 days of January 2013.
+
+
+**Discussion**:

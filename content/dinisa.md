@@ -3,7 +3,7 @@ date: 2017-01-31T09:41:25-08:00
 title: Dinisa
 ---
 
-- Office Hours:  Sundays 7-9 PM and Tuesdays 11:30 AM - 12:30 PM
+- Office Hours:  Sundays 7-9 PM
 - Office Location:  TLC in Scott Hall (also available during class)
 - Contact: @malcomdinisa on Slack
 
