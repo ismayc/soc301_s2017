@@ -354,7 +354,7 @@ class: center, middle
 ## The <small>`gapminder`</small> package and data frame
 
 ```{r}
-library(gapminder); library(ggplot2)
+library(gapminder)
 data(gapminder)
 glimpse(gapminder)
 ```
@@ -374,6 +374,7 @@ head(gapminder, 4) %>% knitr::kable(format = "html")
 
 
 ```{r}
+library(dplyr)
 gap2007 <- gapminder %>% filter(year == 2007)
 head(gap2007, n = 10)
 ```

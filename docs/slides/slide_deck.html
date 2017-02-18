@@ -480,7 +480,7 @@ class: center, middle
 
 
 ```r
-library(gapminder); library(ggplot2)
+library(gapminder)
 data(gapminder)
 glimpse(gapminder)
 ```
@@ -555,6 +555,7 @@ glimpse(gapminder)
 
 
 ```r
+library(dplyr)
 gap2007 &lt;- gapminder %&gt;% filter(year == 2007)
 head(gap2007, n = 10)
 ```
