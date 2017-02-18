@@ -59,7 +59,7 @@ knitr::kable(head(select(total_fertility, country, `1945`:`1956`), 3), format = 
 
 Source: Original data from [Gapminder](https://www.gapminder.org/data/), [Google Sheet with explanations](https://docs.google.com/spreadsheets/d/1oq3r8W7ajenKFgoAYoOf2MXeTWWNPpudR-Fo5m2-o30/pub?gid=0)
 
-<small>Back to [Why is tidy data important?](#why-tidy) slide<small>
+<small>[Why is tidy data important?](#whytidy) slide<small>
 
 ---
 
@@ -242,7 +242,7 @@ ggplot(data = simple_ex, aes(x = A, y = B, color = D)) +
 
 ---
 
-name: why-tidy
+name: whytidy
 
 ## Why is tidy data important?
 
