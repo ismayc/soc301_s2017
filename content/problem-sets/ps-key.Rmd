@@ -26,26 +26,26 @@ Say the following table are stock prices, how would you make this tidy?
 
 ```{r echo=FALSE}
 library(dplyr)
-data.frame(
+data_frame(
   time = as.Date('2009-01-01') + 0:4,
-  x = round(rnorm(5, 0, 1), 3),
-  y = round(rnorm(5, 0, 2), 3),
-  z = round(rnorm(5, 0, 4), 3)
-) %>% 
+  Boeing = paste("$", c(173.55, 172.61, 173.86, 170.77, 174.29), sep = ""),
+  Amazon = paste("$", format(round(c(174.90, 171.42, 171.58, 173.89, 170.16), 2), nsmall = 2), sep = ""),
+  Google = paste("$", c(174.34, 170.04, 173.65, 174.87, 172.19), sep = "")
+) %>%  
 knitr::kable()
 ```
 
-**Discussion**:  `x`, `y`, and `z` are not variables by themselves, but rather levels of another variable `stock`.  The numbers inside the table themselves are prices.  Therefore, in its current form, `x` corresponds both to the "name of a stock" and the "price of a stock" which violates the rules of tidy data.  We can transform the data to make it **tidy**:
+**Discussion**:  `Boeing`, `Amazon`, and `Google` are not variables by themselves, but rather levels of another variable `stock`.  The numbers inside the table themselves are prices.  Therefore, in its current form, `Google` corresponds both to the "name of a stock" and the "price of a stock" which violates the rules of tidy data.  We can transform the data to make it **tidy**:
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 library(tidyr)
-data.frame(
+data_frame(
   time = as.Date('2009-01-01') + 0:4,
-  x = round(rnorm(5, 0, 1), 3),
-  y = round(rnorm(5, 0, 2), 3),
-  z = round(rnorm(5, 0, 4), 3)
-) %>% 
-  gather(key = "stock", value = "price", x:z) %>% 
+  Boeing = paste("$", c(173.55, 172.61, 173.86, 170.77, 174.29), sep = ""),
+  Amazon = paste("$", format(round(c(174.90, 171.42, 171.58, 173.89, 170.16), 2), nsmall = 2), sep = ""),
+  Google = paste("$", c(174.34, 170.04, 173.65, 174.87, 172.19), sep = "")
+) %>%
+  gather(key = "stock", value = "price", Boeing:Google) %>% 
   knitr::kable(align = c('l', 'c', 'r'))
 ```
 

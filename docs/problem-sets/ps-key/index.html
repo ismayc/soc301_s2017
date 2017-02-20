@@ -75,7 +75,7 @@
 </div>
 
 <hr />
-<p>Page last updated at Thursday, February 16, 2017 16:57:13 PST</p>
+<p>Page last updated at Monday, February 20, 2017 10:33:57 PST</p>
 <div id="ps2-key" class="section level1">
 <h1>Problem Set 2</h1>
 <p>Learning Checks LC3.2-LC3.7, LC3.9-LC3.10 from <a href="https://ismayc.github.io/moderndiver-book/3-tidy.html">ModernDive</a></p>
@@ -86,45 +86,45 @@
 <thead>
 <tr class="header">
 <th align="left">time</th>
-<th align="right">x</th>
-<th align="right">y</th>
-<th align="right">z</th>
+<th align="left">Boeing</th>
+<th align="left">Amazon</th>
+<th align="left">Google</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="left">2009-01-01</td>
-<td align="right">1.660</td>
-<td align="right">-2.155</td>
-<td align="right">-1.097</td>
+<td align="left">$173.55</td>
+<td align="left">$174.90</td>
+<td align="left">$174.34</td>
 </tr>
 <tr class="even">
 <td align="left">2009-01-02</td>
-<td align="right">1.991</td>
-<td align="right">1.313</td>
-<td align="right">0.509</td>
+<td align="left">$172.61</td>
+<td align="left">$171.42</td>
+<td align="left">$170.04</td>
 </tr>
 <tr class="odd">
 <td align="left">2009-01-03</td>
-<td align="right">1.042</td>
-<td align="right">2.824</td>
-<td align="right">3.864</td>
+<td align="left">$173.86</td>
+<td align="left">$171.58</td>
+<td align="left">$173.65</td>
 </tr>
 <tr class="even">
 <td align="left">2009-01-04</td>
-<td align="right">0.339</td>
-<td align="right">-1.745</td>
-<td align="right">0.039</td>
+<td align="left">$170.77</td>
+<td align="left">$173.89</td>
+<td align="left">$174.87</td>
 </tr>
 <tr class="odd">
 <td align="left">2009-01-05</td>
-<td align="right">0.149</td>
-<td align="right">0.128</td>
-<td align="right">1.966</td>
+<td align="left">$174.29</td>
+<td align="left">$170.16</td>
+<td align="left">$172.19</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Discussion</strong>: <code>x</code>, <code>y</code>, and <code>z</code> are not variables by themselves, but rather levels of another variable <code>stock</code>. The numbers inside the table themselves are prices. Therefore, in its current form, <code>x</code> corresponds both to the “name of a stock” and the “price of a stock” which violates the rules of tidy data. We can transform the data to make it <strong>tidy</strong>:</p>
+<p><strong>Discussion</strong>: <code>Boeing</code>, <code>Amazon</code>, and <code>Google</code> are not variables by themselves, but rather levels of another variable <code>stock</code>. The numbers inside the table themselves are prices. Therefore, in its current form, <code>Google</code> corresponds both to the “name of a stock” and the “price of a stock” which violates the rules of tidy data. We can transform the data to make it <strong>tidy</strong>:</p>
 <table>
 <thead>
 <tr class="header">
@@ -136,78 +136,78 @@
 <tbody>
 <tr class="odd">
 <td align="left">2009-01-01</td>
-<td align="center">x</td>
-<td align="right">-1.529</td>
+<td align="center">Boeing</td>
+<td align="right">$173.55</td>
 </tr>
 <tr class="even">
 <td align="left">2009-01-02</td>
-<td align="center">x</td>
-<td align="right">0.746</td>
+<td align="center">Boeing</td>
+<td align="right">$172.61</td>
 </tr>
 <tr class="odd">
 <td align="left">2009-01-03</td>
-<td align="center">x</td>
-<td align="right">-0.834</td>
+<td align="center">Boeing</td>
+<td align="right">$173.86</td>
 </tr>
 <tr class="even">
 <td align="left">2009-01-04</td>
-<td align="center">x</td>
-<td align="right">1.442</td>
+<td align="center">Boeing</td>
+<td align="right">$170.77</td>
 </tr>
 <tr class="odd">
 <td align="left">2009-01-05</td>
-<td align="center">x</td>
-<td align="right">-0.464</td>
+<td align="center">Boeing</td>
+<td align="right">$174.29</td>
 </tr>
 <tr class="even">
 <td align="left">2009-01-01</td>
-<td align="center">y</td>
-<td align="right">-0.781</td>
+<td align="center">Amazon</td>
+<td align="right">$174.90</td>
 </tr>
 <tr class="odd">
 <td align="left">2009-01-02</td>
-<td align="center">y</td>
-<td align="right">-5.959</td>
+<td align="center">Amazon</td>
+<td align="right">$171.42</td>
 </tr>
 <tr class="even">
 <td align="left">2009-01-03</td>
-<td align="center">y</td>
-<td align="right">0.561</td>
+<td align="center">Amazon</td>
+<td align="right">$171.58</td>
 </tr>
 <tr class="odd">
 <td align="left">2009-01-04</td>
-<td align="center">y</td>
-<td align="right">2.047</td>
+<td align="center">Amazon</td>
+<td align="right">$173.89</td>
 </tr>
 <tr class="even">
 <td align="left">2009-01-05</td>
-<td align="center">y</td>
-<td align="right">2.629</td>
+<td align="center">Amazon</td>
+<td align="right">$170.16</td>
 </tr>
 <tr class="odd">
 <td align="left">2009-01-01</td>
-<td align="center">z</td>
-<td align="right">2.026</td>
+<td align="center">Google</td>
+<td align="right">$174.34</td>
 </tr>
 <tr class="even">
 <td align="left">2009-01-02</td>
-<td align="center">z</td>
-<td align="right">6.999</td>
+<td align="center">Google</td>
+<td align="right">$170.04</td>
 </tr>
 <tr class="odd">
 <td align="left">2009-01-03</td>
-<td align="center">z</td>
-<td align="right">-2.598</td>
+<td align="center">Google</td>
+<td align="right">$173.65</td>
 </tr>
 <tr class="even">
 <td align="left">2009-01-04</td>
-<td align="center">z</td>
-<td align="right">-1.156</td>
+<td align="center">Google</td>
+<td align="right">$174.87</td>
 </tr>
 <tr class="odd">
 <td align="left">2009-01-05</td>
-<td align="center">z</td>
-<td align="right">0.995</td>
+<td align="center">Google</td>
+<td align="right">$172.19</td>
 </tr>
 </tbody>
 </table>
