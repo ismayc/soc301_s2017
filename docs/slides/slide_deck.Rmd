@@ -20,6 +20,279 @@ knitr::opts_chunk$set(warning=FALSE, message=FALSE, fig.width=9.5, fig.height=4.
 theme_set(theme_gray(base_size = 26))
 ```
 
+layout: true
+
+.footer[[Week 04 - Tuesday](https://ismayc.github.io/soc301_s2017/2017/02/21/week-04---tuesday/)]
+
+---
+
+name: week04t
+class: center, middle
+
+# Week 04 - Tuesday
+
+# February 21, 2017
+
+---
+
+class: center, middle
+
+# Turn in Problem Set 3
+
+***
+
+### Also note that a short link for the course page is <br> http://bit.ly/soc-301
+
+### My office is now Marsh 213
+
+### Useful tip:  Take notes on where R functions are introduced in the book and in DataCamp
+---
+
+# Warmup
+
+Write the code necessary to produce the last plot using the `US_births_2014` data frame from the [Scatter-plots and Line-graphs](https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/scatter-plots-line-graphs?ex=4) chapter of DataCamp:
+
+
+```{r echo=FALSE, fig.height=6, fig.width=11}
+library(ggplot2)
+library(fivethirtyeight)
+library(dplyr)
+US_births_2014 <- US_births_2000_2014 %>% filter(year == 2014)
+ggplot(data = US_births_2014,
+       mapping = aes(x = date,
+           y = births)) +
+  geom_point(aes(color = day_of_week)) 
+```
+
+---
+
+# Discuss in groups of three
+
+- What stands out to you when you look at this plot?  In other words, what stories could be told by observing this data?
+
+```{r echo=FALSE, fig.height=5.3, fig.width=11}
+library(ggplot2)
+library(fivethirtyeight)
+library(dplyr)
+library(plotly)
+US_births_2014 <- US_births_2000_2014 %>% filter(year == 2014)
+ggplot(data = US_births_2014,
+       mapping = aes(x = date,
+           y = births)) +
+  geom_point(aes(color = day_of_week)) 
+```
+
+---
+
+class: center, middle
+
+# Histogram Basics
+
+---
+
+### Consider the following numerical data frame
+
+```{r eval=FALSE}
+library(dplyr)
+numeric_var <- c(10, 12, 14, 15, 18, 21)
+hist_example <- data_frame(numeric_var)
+hist_example
+```
+
+--
+
+```{r echo=FALSE}
+library(dplyr)
+numeric_var <- c(10, 12, 14, 15, 18, 21)
+hist_example <- data_frame(numeric_var)
+hist_example
+```
+
+
+- Place the data into two bins of size 6
+- Then produce a table showing how many data points fall in each bin
+
+---
+
+### Sketch a plot of this frequency table
+
+Bin     | Count
+--------|-------
+(9-15] | 4
+(15-21] | 2
+
+--
+
+```{r fig.height=4}
+library(ggplot2)
+ggplot(data = hist_example, mapping = aes(x = numeric_var)) +
+  geom_histogram(binwidth = 6, color = "black", fill = "white")
+```
+
+---
+
+class: center, middle
+
+# Recall that a statistical graphic is
+
+## A <small>`mapping`</small> of <br> <small>`data`</small> variables
+
+
+## to <br> <small>`aes()`</small>thetic attributes
+
+
+## of <br> <small>`geom_`</small>etric objects.
+
+---
+
+## Practice in pairs
+
+- Write the code to produce a histogram of the humidity recordings in the [<small>`weather`</small> data frame](https://ismayc.github.io/Effective-Data-Storytelling-using-the-tidyverse/moderndive.html#weather) from the <small>`nycflights13`</small> package 
+  - with a bin width of 15, 
+  - white border color, and 
+  - fill with the [color of your choosing](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf).
+- Practice in the DataCamp sandbox at <br> http://bit.ly/stats-sandbox
+
+--
+
+```{r include=FALSE}
+library(nycflights13)
+library(ggplot2)
+ggplot(data = weather, mapping = aes(x = humid)) +
+  geom_histogram(binwidth = 15, color = "white", fill = "goldenrod")
+```
+
+- THINK ABOUT IT: What does this plot tell us?
+
+---
+
+# Faceting
+
+- Oftentimes, we'd like to produce a small multiple of the same plot across the levels of a different variable. Suppose we'd like to look at the plot created on the last slide *across* the different <small>`origin`</small> airports.
+--
+
+  - Use the code given in Section 4.6 of [ModernDive](https://ismayc.github.io/moderndiver-book/4-viz.html#facets) and the plot you created on the last slide.
+  - Write down your code on paper and test in the [sandbox](http://bit.ly/stats-sandbox)
+
+```{r include=FALSE}
+library(nycflights13)
+library(ggplot2)
+ggplot(data = weather, mapping = aes(x = humid)) +
+  geom_histogram(binwidth = 15, color = "white", fill = "goldenrod") +
+  facet_wrap(facets = ~ origin)
+```
+--
+
+- THINK ABOUT IT: What does this faceted plot tell us?
+
+---
+
+# Faceting
+
+- Write the code to produce the plot below
+
+```{r echo=FALSE, fig.height=6, fig.width=11}
+library(nycflights13)
+library(ggplot2)
+ggplot(data = weather, mapping = aes(x = humid, fill = origin)) +
+  geom_histogram(binwidth = 15, color = "white") +
+  facet_wrap(facets = ~ origin)
+```
+
+---
+
+# Another way to <small>`facet`</small>
+
+```{r fig.height=5, fig.width=11}
+library(nycflights13); library(ggplot2)
+ggplot(data = weather, mapping = aes(x = humid, fill = origin)) +
+  geom_histogram(bins = 5, color = "white") + # NOTE bins here
+  facet_grid(facets = origin ~ .)
+```
+
+---
+
+# Explanatory and Response Variables
+
+### Suppose we were interested in investigating the humidity throughout 2013 across the airports in NYC.
+
+- What would be the explanatory and response variables?
+
+- Note there is only one correct answer here.
+
+---
+
+# Boxplots
+
+- Another way to view the relationship between a categorical explanatory variable and a numerical response variable is via a boxplot.  Think about how we might write the code to produce the boxplot for humidity across airports.
+
+```{r echo=FALSE, fig.height=4}
+library(nycflights13)
+library(ggplot2)
+ggplot(data = weather, mapping = aes(x = origin, y = humid)) +
+  geom_boxplot()
+```
+
+---
+
+class: center, middle
+
+# Recall that a statistical graphic is
+
+## A <small>`mapping`</small> of <br> <small>`data`</small> variables
+
+
+## to <br> <small>`aes()`</small>thetic attributes
+
+
+## of <br> <small>`geom_`</small>etric objects.
+
+---
+
+# Another boxplot example
+
+### Time slept versus day of the week for a college professor
+
+<img src="figure/box.jpg"  width="900" height="300" alt="Sleep Boxplot">
+--
+
+- What does this plot tell you/what story does it tell?
+
+---
+
+class: center, middle
+
+# Work on [Problem Set 4](https://ismayc.github.io/soc301_s2017/problem-sets/#ps4) in groups
+
+## Due on Thursday at the end of class
+
+
+
+***
+
+## [DC4: Histograms & Boxplots chapter](https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/histograms-boxplots?ex=1) due on Thursday at 1 PM
+
+***
+
+# Quiz 2 over Chapters 3 and 4 of [ModernDive](http://moderndive.com) is on Tuesday, March 2!
+
+---
+
+# Minute paper
+
+### Write the code necessary to produce this plot from earlier in class.  
+
+- <small>Make sure to load all needed packages!</small>
+
+
+```{r echo=FALSE, fig.height=5, fig.width=11}
+library(nycflights13)
+library(ggplot2)
+ggplot(data = weather, mapping = aes(x = origin, y = humid)) +
+  geom_boxplot()
+```
+
+---
 
 layout: true
 

@@ -6,8 +6,48 @@
     <description>Recent content on SOC 301 - Spring 2017</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 Feb 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Feb 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Week 04 - Tuesday</title>
+      <link>/2017/02/21/week-04---tuesday/</link>
+      <pubDate>Tue, 21 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/02/21/week-04---tuesday/</guid>
+      <description>
+
+&lt;p&gt;Slides available &lt;a href=&#34;http://ismayc.github.io/soc301_s2017/slides/slide_deck.html#week04t&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;covered-content&#34;&gt;Covered Content&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Review scatterplots&lt;/li&gt;
+&lt;li&gt;Go over Grammar of Graphics with histogram, faceted histogram, and boxplot examples&lt;/li&gt;
+&lt;li&gt;Work on &lt;a href=&#34;https://ismayc.github.io/soc301_s2017/problem-sets/#ps4&#34;&gt;Problem Set 4&lt;/a&gt; in groups&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;to-do-for-next-time&#34;&gt;To do for next time&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Complete DataCamp profile
+
+&lt;ul&gt;
+&lt;li&gt;Click on your user ID in the top right of the screen when you first open DataCamp.&lt;/li&gt;
+&lt;li&gt;Click on My Profile.&lt;/li&gt;
+&lt;li&gt;Select Edit Account Settings.&lt;/li&gt;
+&lt;li&gt;Input at the very least your first and last name.  More helpful if you include a picture.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Read and take notes on Section 4.8 of &lt;a href=&#34;http://moderndive.com&#34;&gt;ModernDive&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Work on &lt;a href=&#34;http://ismayc.github.io/soc301_s2017/problem-sets/index.html#ps4&#34;&gt;Problem Set 4&lt;/a&gt; corresponding to those sections.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Complete &lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/histograms-boxplots?ex=1&#34;&gt;Histograms &amp;amp; Boxplots&lt;/a&gt; DataCamp chapter (Due on February 23 at 1 PM)&lt;/li&gt;
+&lt;li&gt;Begin &lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/barplots?ex=1&#34;&gt;Barplots&lt;/a&gt; DataCamp chapter (Due on February 28 at 1 PM)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Week 03 - Thursday</title>
@@ -764,41 +804,6 @@ DataCamp course.&lt;br /&gt;
 
 &lt;li&gt;&lt;p&gt;Enjoy the learning process!  Failure to not understand everything all at once is to be expected.  Our brains need to struggle to learn.  You can&amp;rsquo;t build muscles by sitting on the couch and you can&amp;rsquo;t learn statistics by not struggling a little bit.  Devote some time every day to thinking about a more difficult problem than what is given to you.  How would you solve it? What&amp;rsquo;s more difficult about it?  Evaluate your learning and find out what works best for you.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Resources</title>
-      <link>/resources/</link>
-      <pubDate>Mon, 30 Jan 2017 19:40:34 -0800</pubDate>
-      
-      <guid>/resources/</guid>
-      <description>&lt;p&gt;This page will be updated with links throughout the course.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://ismay.shinyapps.io/soc301_grades/&#34;&gt;Your Grade Viewer&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Login using your Pacific ID&lt;/li&gt;
-&lt;li&gt;Password was sent via Slack on Tuesday, February 14 as private message&lt;/li&gt;
-&lt;li&gt;If you want to change your password to something else, send me a Slack message or give me a piece of paper
-with your password clearly written.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Slack
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://slack.com/downloads/&#34;&gt;Download for computer and mobile&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://slack.com/is&#34;&gt;Watch tour VIDEO&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;./tips/&#34;&gt;Tips for Success in SOC 301&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=CPxSzxylRCI&#34;&gt;How to Study: Top 6 Effective Strategies VIDEO&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.learningscientists.org/posters&#34;&gt;Accompanying free PDFs to download&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;../img/studentlearn.jpg&#34;&gt;Grade Predictor based on study habits&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;./advice_from_former/&#34;&gt;Advice from Former Students&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     

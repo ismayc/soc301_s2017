@@ -13,9 +13,9 @@ subtitle: Pacific University - Spring 2017
 - **Course meeting time**: Tuesdays and Thursdays 2:45 PM - 4:20 PM in Price Hall, Room 214
 - **Course webpage**: <http://ismayc.github.io/soc301-f2017>
 - **Office Hours**
-    - Tuesdays and Thursdays 1:00 PM - 2:30 PM in Scott Hall 100B5 in the Center for Languages & International Collaboration (CLIC)
-    - By appointment
-- **Office Phone Number**: Not available (Happy to meet in the Library/CLIC or another place on campus as needed though.)
+    - Tuesdays and Thursdays 1:00 PM - 2:30 PM in Marsh 213
+    - By appointment on Tuesdays and Thursdays
+- **Office Phone Number**: Not available
 - **Email**: [chester@pacificu.edu](mailto:chester@pacificu.edu)
 - **Slack**: @chester (Preferred and **highly encouraged** way of contact)
 
