@@ -27,9 +27,7 @@ Note that the discussion page is updated with the most recent problem sets at th
     - For LC4.6 and LC4.13, run your code in the [sandbox in DataCamp](https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/supplement-to-moderndive-textbook?ex=1) and then write your code on your paper.  Discuss what findings you have when looking at the plot.  Remember that scatter-plots only work when analyzing the relationship between two **numerical** variables!
 - To run the R code given in the gray chunks in the textbook, you can use this "sandbox" I've created for you as the last chapter of the DataCamp course.  Click [here](https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/supplement-to-moderndive-textbook?ex=1).
 
-<!--
 - Discussion [here](ps-key/index.html#ps3-key)
--->
 
 
 # Problem Set 2 (Due Thursday, February 9 by 4:20 PM) {#ps2}
