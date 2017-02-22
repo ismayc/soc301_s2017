@@ -274,7 +274,7 @@ class: center, middle
 
 ***
 
-# Quiz 2 over Chapters 3 and 4 of [ModernDive](http://moderndive.com) is on Tuesday, March 2!
+# Quiz 2 over Chapters 3 and 4 of [ModernDive](http://moderndive.com) is on Thursday, March 2!
 
 ---
 
