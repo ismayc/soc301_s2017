@@ -7,7 +7,7 @@ This page will list the Problem Sets and when they will be turned in on paper th
 
 Note that the discussion page is updated with the most recent problem sets at the top and the earlier problem sets at the bottom.  Links to specific Problem Set discussions will be posted after the Problem Set is turned in below the Problem Set assignment here.
 
-# Problem Set 5 (Due Tuesday, February 28 by 2:45 PM) {#ps5}
+# Problem Set 5 (Due Tuesday, February 28 by 1:00 PM) {#ps5}
 
 - Write down AT LEAST five multiple choice questions covering Chapters 3 and 4 of [ModernDive](http://moderndive.com) and the corresponding chapters on DataCamp ([Tidy Data](https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/tidy-data) through [ggplot2 Review](https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/ggplot2-review?ex=1))
     - Each question should have four possible answers.
