@@ -7,6 +7,16 @@ This page will list the Problem Sets and when they will be turned in on paper th
 
 Note that the discussion page is updated with the most recent problem sets at the top and the earlier problem sets at the bottom.  Links to specific Problem Set discussions will be posted after the Problem Set is turned in below the Problem Set assignment here.
 
+# Problem Set 5 (Due Tuesday, February 28 by 2:45 PM) {#ps5}
+
+- Write down AT LEAST five multiple choice questions covering Chapters 3 and 4 of [ModernDive](http://moderndive.com) and the corresponding chapters on DataCamp ([Tidy Data](https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/tidy-data) through [ggplot2 Review](https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/ggplot2-review?ex=1))
+    - Each question should have four possible answers.
+    - Don't mark what you choose to be the correct answer on what you turn in, but make note of your choice elsewhere to facilitate your learning.
+    - **Please use Courier New font for all pieces of R code.**
+    - Create a Google Doc with your questions and share with isma5720@pacificu.edu
+    - Please follow the layout I have provided in the Sample Question Layout document [here](https://docs.google.com/a/pacificu.edu/document/d/1QrhQl_R5YrYSPNyx8WxTFesYZvSARN_TDGzmD6HeMvQ/edit?usp=sharing).  Copy over this document into a new Google Doc and then enter your questions.
+
+
 # Problem Set 4 (Due Thursday, February 23 by 4:20 PM) {#ps4}
 
 - We will be working on this in class on Tuesday and Thursday in groups, but you likely will need to work outside of class to complete it.
