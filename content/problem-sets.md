@@ -9,7 +9,7 @@ Note that the discussion page is updated with the most recent problem sets at th
 
 # Problem Set 5 (Due Tuesday, February 28 by 1:00 PM) {#ps5}
 
-- Write down AT LEAST five multiple choice questions covering Chapters 3 and 4 of [ModernDive](http://moderndive.com) and the corresponding chapters on DataCamp ([Tidy Data](https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/tidy-data) through [ggplot2 Review](https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/ggplot2-review?ex=1))
+- Write down on a piece of paper AT LEAST five multiple choice questions covering Chapters 3 and 4 of [ModernDive](http://moderndive.com) and the corresponding chapters on DataCamp ([Tidy Data](https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/tidy-data) through [ggplot2 Review](https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/ggplot2-review?ex=1))
     - Each question should have four possible answers.
     - Don't mark what you choose to be the correct answer on what you turn in, but make note of your choice elsewhere to facilitate your learning.
     - **Please use Courier New font for all pieces of R code.**
