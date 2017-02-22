@@ -14,7 +14,7 @@ Note that the discussion page is updated with the most recent problem sets at th
     - Don't mark what you choose to be the correct answer on what you turn in, but make note of your choice elsewhere to facilitate your learning.
     - **Please use Courier New font for all pieces of R code.**
     - Create a Google Doc with your questions and share with isma5720@pacificu.edu
-    - Please follow the layout I have provided in the Sample Question Layout document [here](https://docs.google.com/a/pacificu.edu/document/d/1QrhQl_R5YrYSPNyx8WxTFesYZvSARN_TDGzmD6HeMvQ/edit?usp=sharing).  Copy over this document into a new Google Doc and then enter your questions.
+    - Please follow the layout I have provided in the Sample Question Layout document [here](https://docs.google.com/a/pacificu.edu/document/d/1QrhQl_R5YrYSPNyx8WxTFesYZvSARN_TDGzmD6HeMvQ/edit?usp=sharing).  Copy over the content of this document into a new Google Doc and then enter your questions.
 
 
 # Problem Set 4 (Due Thursday, February 23 by 4:20 PM) {#ps4}
