@@ -12,7 +12,7 @@ This page will list the Problem Sets and when they will be turned in on paper th
     - Click on My Profile.
     - Select Edit Account Settings.
     - Input at the very least your first and last name.  More helpful if you include a picture.
-    - Your group will lose half the points on PS5 if all members of the group have not completed this by Tuesday, February 28 at 1 PM!
+    - You will lose half the points on PS5 if you have not completed this by Tuesday, February 28 at 1 PM!
 - Write down on a piece of paper AT LEAST five multiple choice questions covering Chapters 3 and 4 of [ModernDive](http://moderndive.com) and the corresponding chapters on DataCamp ([Tidy Data](https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/tidy-data) through [ggplot2 Review](https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/ggplot2-review?ex=1))
     - Each question should have four possible answers.
     - Don't mark what you choose to be the correct answer on what you turn in, but make note of your choice elsewhere to facilitate your learning.

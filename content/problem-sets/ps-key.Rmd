@@ -277,3 +277,94 @@ ggplot(data = early_january_weather, mapping = aes(x = time_hour, y = wind_gust)
 ```
 
 What immediately stands out in this plot are the days with no wind gusts at all and values of 0.  There appears to be only one wind gust over 25 mpg around January 2nd or 3rd.
+
+***
+
+# Problem Set 4 {#ps4-key}
+
+Learning Checks [LC4.14, LC4.16, LC4.18, LC4.19, LC4.21-LC4.28, LC4.30, LC4.33-LC4.34, LC4.36-LC4.37](https://ismayc.github.io/moderndiver-book/4-viz.html)
+
+## LC4.14 
+
+
+**Discussion**: 
+
+## LC4.16
+
+
+**Discussion**: 
+
+## LC4.18
+
+
+**Discussion**: 
+
+## LC4.19
+
+
+**Discussion**: 
+
+## LC4.21
+
+
+**Discussion**: 
+
+## LC4.22
+
+
+**Discussion**: 
+
+## LC4.23
+
+
+**Discussion**: 
+
+## LC4.24
+
+
+**Discussion**: 
+
+## LC4.25
+
+
+**Discussion**: 
+
+## LC4.26
+
+
+**Discussion**:
+
+## LC4.27
+
+
+**Discussion**: 
+
+## LC4.28
+
+
+**Discussion**: 
+
+## LC4.30
+
+
+**Discussion**: 
+
+## LC4.33
+
+
+**Discussion**: 
+
+## LC4.34
+
+
+**Discussion**: 
+
+## LC4.36
+
+
+**Discussion**: 
+
+## LC4.37
+
+
+**Discussion**: 
