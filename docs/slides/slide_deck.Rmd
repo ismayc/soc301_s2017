@@ -575,12 +575,13 @@ class: center, middle
 
 ---
 
-# Another boxplot example
+name: box
+
+## Another boxplot example
 
 ### Time slept versus day of the week for a college professor
 
 <img src="figure/box.jpg"  width="900" height="300" alt="Sleep Boxplot">
---
 
 - What does this plot tell you/what story does it tell?
 
