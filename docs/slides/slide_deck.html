@@ -22,6 +22,338 @@ class: center, middle, inverse, title-slide
 
 layout: true
 
+.footer[[Week 04 - Thursday](https://ismayc.github.io/soc301_s2017/2017/02/23/week-04---thursday/)]
+
+---
+
+name: week04th
+class: center, middle
+
+# Week 04 - Thursday
+
+# February 23, 2017
+
+---
+
+# Warmup - Old Exam Question
+
+- Recall the `gap2007` data frame derived from the `gapminder` data frame in the `gapminder` package we worked with last week.  (Assume that `gap2007` has been created and loaded for you.)
+- Write the code to produce an appropriate plot looking at the distribution of `gdpPercap` in `gap2007`. 
+    - Change the color of the inside of the plotted values and the border of the plotted values.
+
+---
+
+class: center, middle
+
+# [DataCamp Demo](http://bit.ly/stats-sandbox)
+
+---
+
+# Warmup in groups
+
+- Discuss the difference between the `binwidth` and `bins` arguments to `geom_histogram`
+
+---
+
+class: split-50
+
+## The `library` function
+
+- Loads a package that contain functions and/or data
+
+### At this point in the course you should only be adding these packages
+
+.column[
+### &lt;u&gt;For functions&lt;/u&gt;
+`library(tibble)`&lt;br&gt;
+`library(ggplot2)`&lt;br&gt;
+`library(dplyr)`
+]
+.column[
+&lt;hr style="height:0pt; visibility:hidden;" /&gt;
+### &lt;u&gt;For data&lt;/u&gt;
+`library(nycflights13)`&lt;br&gt;
+`library(fivethirtyeight)`&lt;br&gt;
+`library(gapminder)`
+]
+
+---
+
+# Reviewing `ggplot2` syntax
+
+
+```r
+library(________(1)_____________)
+ggplot(data = ______(2)___________,
+       mapping = aes(x = ________(3)___________,
+                     y = ________(4)___________)) +
+  geom_ _____(5)______() +
+  facet_grid(facets = _______(6)___________)
+```
+
+--
+
+### Notes
+
+- Remember that faceting is setting up a formula so it needs a `~`.  You'll get an error without it.
+- Note that the `+` must appear at the end of the line of code NOT at the beginning.
+
+---
+
+
+# Time slept vs day of the week for ONE professor over 100 weeks
+
+&lt;img src="figure/box.jpg"  width="900" height="350" alt="Sleep Boxplot"&gt;
+
+- What does this plot tell you/what story does it tell?
+
+---
+
+class: center, middle
+
+# [Reviewing Problem Set 3 Discussion](https://ismayc.github.io/soc301_s2017/problem-sets/ps-key/index.html#ps3-key)
+
+---
+
+## Types of variables &amp; appropriate plots (so far)
+
+- One numerical variable
+--
+
+    - Histogram: `geom_histogram()`
+--
+- Categorical explanatory &amp; numerical response variable
+--
+
+    - Boxplot: `geom_boxplot()`
+    - Faceted histogram: &lt;br&gt;`geom_histogram() + facet_grid( ~ _______)`
+--
+- Numerical explanatory &amp; response variables
+--
+
+  - Scatter-plot: `geom_point()`
+  - Line-graph: `geom_line()`
+
+---
+
+## Recall creating a histogram from a frequency table
+
+Bin     | Count
+--------|-------
+(9-15] | 4
+(15-21] | 2
+
+
+
+
+
+```r
+library(ggplot2)
+ggplot(data = hist_example, mapping = aes(x = numeric_var)) +
+  geom_histogram(binwidth = 6, color = "black", fill = "white")
+```
+
+![](slide_deck_files/figure-html/unnamed-chunk-4-1.png)&lt;!-- --&gt;
+
+---
+
+- We are interested in the distribution of SOC 301 by grade.
+
+
+```r
+class &lt;- c(rep("Sophomore", times = 6),
+           rep("Junior", times = 13),
+           rep("Senior", times = 8))
+class &lt;- factor(class, levels = c("Sophomore", "Junior", "Senior"))
+class_df &lt;- tibble::data_frame(class)
+class_df
+```
+
+```
+## # A tibble: 27 × 1
+##        class
+##       &lt;fctr&gt;
+## 1  Sophomore
+## 2  Sophomore
+## 3  Sophomore
+## 4  Sophomore
+## 5  Sophomore
+## 6  Sophomore
+## 7     Junior
+## 8     Junior
+## 9     Junior
+## 10    Junior
+## # ... with 17 more rows
+```
+
+- Create a frequency table for this data on paper
+
+---
+
+- Sketch a plot based on this frequency table
+
+class    | Count
+--------|-------
+Sophomore | 6
+Junior | 13
+Senior | 8
+
+--
+
+
+```r
+library(ggplot2)
+ggplot(data = class_df, mapping = aes(x = class)) +
+  geom_bar(fill = "black")
+```
+
+![](slide_deck_files/figure-html/unnamed-chunk-6-1.png)&lt;!-- --&gt;
+
+---
+
+# For aggregated data, use `geom_col`
+
+
+```r
+class &lt;- factor(c("Sophomore", "Junior", "Senior"), 
+                levels = c("Sophomore", "Junior", "Senior"))
+count &lt;- c(6, 13, 8)
+class_freq &lt;- tibble::data_frame(class, count)
+class_freq
+```
+
+```
+## # A tibble: 3 × 2
+##       class count
+##      &lt;fctr&gt; &lt;dbl&gt;
+## 1 Sophomore     6
+## 2    Junior    13
+## 3    Senior     8
+```
+---
+
+# For aggregated data, use `geom_col`
+
+
+```r
+ggplot(data = class_freq, mapping = aes(x = class, y = count)) +
+  geom_col(fill = "black")
+```
+
+![](slide_deck_files/figure-html/unnamed-chunk-8-1.png)&lt;!-- --&gt;
+
+---
+
+# What about for two categorical variables?
+
+1. Stacked barplot
+--
+
+2. Side-by-side barplot
+--
+
+3. Faceted barplot
+--
+
+4. Stacked proportional plot
+  - Preferred if &lt;br&gt; numbers of groups in the second variable `\(\le 3\)`
+  
+---
+
+## What code is needed to produce this plot?
+
+- This is using the `profiles` data frame in the `okcupiddata` package.
+
+![](slide_deck_files/figure-html/unnamed-chunk-9-1.png)&lt;!-- --&gt;
+
+---
+
+# Stacked barplot
+
+- Uses `fill` to change the colors of the bars of the `x` variable based on the values of another variable
+--
+
+- What code is needed to produce this plot?
+
+![](slide_deck_files/figure-html/unnamed-chunk-10-1.png)&lt;!-- --&gt;
+
+
+---
+
+# Side-by-side barplot
+
+- Uses `position = "dodge"` to place the bars next to each other for each group of the `x` variable
+--
+
+- What code is needed to produce this plot?
+
+![](slide_deck_files/figure-html/unnamed-chunk-11-1.png)&lt;!-- --&gt;
+
+---
+
+# Faceted barplot
+
+- Uses `facet_wrap()` or `facet_grid()` to make small multiples of the plot
+--
+
+- What code is needed to produce this plot?
+
+![](slide_deck_files/figure-html/unnamed-chunk-12-1.png)&lt;!-- --&gt;
+
+---
+
+# Stacked proportional barplot
+
+- Uses `position = "fill"` to show the percentage of the `fill` variable for each group of `x`
+--
+
+- What code is needed to produce this plot?
+
+![](slide_deck_files/figure-html/unnamed-chunk-13-1.png)&lt;!-- --&gt;
+
+
+---
+
+class: center, middle
+
+# [Basic Data Visualization mindmap](https://coggle.it/diagram/V_G2gzukTDoQ-aZt-)
+
+---
+
+class: center, middle
+
+# The [`ggplot2` Cheatsheet](https://www.rstudio.com/wp-content/uploads/2016/11/ggplot2-cheatsheet-2.1.pdf) 
+
+---
+
+class: center, middle
+
+# Finish [Problem Set 4](https://ismayc.github.io/soc301_s2017/problem-sets/#ps4) in groups
+
+## Due today at the end of class
+
+***
+
+## [DC5: Barplots](https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/barplots?ex=1) due on Tuesday at 1 PM
+
+## [PS5](https://ismayc.github.io/soc301_s2017/problem-sets/index.html#ps5) due on Tuesday at 1 PM
+
+***
+
+# Quiz 2 over Chapters 3 and 4 of [ModernDive](http://moderndive.com) is on Thursday, March 2!
+
+---
+
+class: middle, center
+
+# Minute paper
+
+- Write down as much information as you can about what you have learned about using `ggplot2` for graphics
+
+---
+  
+layout: true
+
 .footer[[Week 04 - Tuesday](https://ismayc.github.io/soc301_s2017/2017/02/21/week-04---tuesday/)]
 
 ---
@@ -53,7 +385,7 @@ class: center, middle
 Write the code necessary to produce the last plot using the `US_births_2014` data frame from the [Scatter-plots and Line-graphs](https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/scatter-plots-line-graphs?ex=4) chapter of DataCamp:
 
 
-![](slide_deck_files/figure-html/unnamed-chunk-2-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-14-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -61,7 +393,7 @@ Write the code necessary to produce the last plot using the `US_births_2014` dat
 
 - What stands out to you when you look at this plot?  In other words, what stories could be told by observing this data?
 
-![](slide_deck_files/figure-html/unnamed-chunk-3-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-15-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -118,7 +450,7 @@ ggplot(data = hist_example, mapping = aes(x = numeric_var)) +
   geom_histogram(binwidth = 6, color = "black", fill = "white")
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-6-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-18-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -171,7 +503,7 @@ class: center, middle
 
 - Write the code to produce the plot below
 
-![](slide_deck_files/figure-html/unnamed-chunk-9-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-21-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -185,7 +517,7 @@ ggplot(data = weather, mapping = aes(x = humid, fill = origin)) +
   facet_grid(facets = origin ~ .)
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-10-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-22-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -203,7 +535,7 @@ ggplot(data = weather, mapping = aes(x = humid, fill = origin)) +
 
 - Another way to view the relationship between a categorical explanatory variable and a numerical response variable is via a boxplot.  Think about how we might write the code to produce the boxplot for humidity across airports.
 
-![](slide_deck_files/figure-html/unnamed-chunk-11-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-23-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -257,7 +589,7 @@ class: center, middle
 - &lt;small&gt;Make sure to load all needed packages!&lt;/small&gt;
 
 
-![](slide_deck_files/figure-html/unnamed-chunk-12-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-24-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -478,7 +810,7 @@ ggplot(data = simple_ex, mapping = aes(x = A, y = B)) +
 ```
 --
 
-![](slide_deck_files/figure-html/unnamed-chunk-18-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-30-1.png)&lt;!-- --&gt;
 
 
 ---
@@ -496,7 +828,7 @@ ggplot(data = simple_ex, mapping = aes(x = A, y = B)) +
 ```
 --
 
-![](slide_deck_files/figure-html/unnamed-chunk-20-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-32-1.png)&lt;!-- --&gt;
 
 
 ---
@@ -513,7 +845,7 @@ ggplot(data = simple_ex, mapping = aes(x = A, y = B, size = C)) +
 ```
 --
 
-![](slide_deck_files/figure-html/unnamed-chunk-22-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-34-1.png)&lt;!-- --&gt;
 
 
 ---
@@ -530,7 +862,7 @@ ggplot(data = simple_ex, mapping = aes(x = A, y = B)) +
 ```
 --
 
-![](slide_deck_files/figure-html/unnamed-chunk-24-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-36-1.png)&lt;!-- --&gt;
 
 
 ---
@@ -547,7 +879,7 @@ ggplot(data = simple_ex, mapping = aes(x = A, y = B, color = D)) +
 ```
 --
 
-![](slide_deck_files/figure-html/unnamed-chunk-26-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-38-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -613,14 +945,14 @@ ggplot(data = total_fert_tidy, mapping = aes(x = year, y = fert)) +
   geom_point()
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-28-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-40-1.png)&lt;!-- --&gt;
 
 
 ---
 
 ## Discussing the scatterplot
 
-![](slide_deck_files/figure-html/unnamed-chunk-29-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-41-1.png)&lt;!-- --&gt;
 
 - What stands out to you as you look at this plot?
 - What other information would be useful here?
@@ -677,7 +1009,7 @@ ggplot(data = total_fert_tidy,
   geom_point()
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-31-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-43-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -691,7 +1023,7 @@ ggplot(data = total_fert_tidy,
   geom_point()
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-32-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-44-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -706,7 +1038,7 @@ ggplot(data = total_fert_tidy,
   geom_point()
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-33-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-45-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -822,7 +1154,7 @@ head(gap2007, n = 10)
 
 - Write the code on paper and then discuss in groups of 3.
 
-![](slide_deck_files/figure-html/unnamed-chunk-37-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-49-1.png)&lt;!-- --&gt;
 
 --
 
@@ -835,7 +1167,7 @@ that would be of interest here?
 
 - Write the code on paper and then discuss in groups of 3.
 
-![](slide_deck_files/figure-html/unnamed-chunk-38-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-50-1.png)&lt;!-- --&gt;
 --
 
 - What information is added by the coloring here?
@@ -907,7 +1239,7 @@ What `ggplot2` code is needed to produce this plot? The `simple_ex` data frame i
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;img src="slide_deck_files/figure-html/unnamed-chunk-39-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="slide_deck_files/figure-html/unnamed-chunk-51-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 

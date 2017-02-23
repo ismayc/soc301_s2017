@@ -3,9 +3,24 @@ date: 2017-01-30T20:05:05-08:00
 title: Problem Sets
 ---
 
-This page will list the Problem Sets and when they will be turned in on paper throughout the course.  You will turn in one problem set per group.  You can find discussions about all of the Problem Sets [here](ps-key/index.html).
+This page will list the Problem Sets and when they will be turned in on paper throughout the course.  You will turn in one problem set per group.  You can find discussions about all of the Problem Sets [here](ps-key/index.html).  Links to specific Problem Set discussions will be posted after the Problem Set is turned in below the Problem Set assignment here.
 
-Note that the discussion page is updated with the most recent problem sets at the top and the earlier problem sets at the bottom.  Links to specific Problem Set discussions will be posted after the Problem Set is turned in below the Problem Set assignment here.
+# Problem Set 5 (Due Tuesday, February 28 by 1:00 PM) {#ps5}
+
+- Complete DataCamp profile
+    - Click on your user ID in the top right of the screen when you first open DataCamp.
+    - Click on My Profile.
+    - Select Edit Account Settings.
+    - Input at the very least your first and last name.  More helpful if you include a picture.
+    - Your group will lose half the points on PS5 if all members of the group have not completed this by Tuesday, February 28 at 1 PM!
+- Write down on a piece of paper AT LEAST five multiple choice questions covering Chapters 3 and 4 of [ModernDive](http://moderndive.com) and the corresponding chapters on DataCamp ([Tidy Data](https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/tidy-data) through [ggplot2 Review](https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/ggplot2-review?ex=1))
+    - Each question should have four possible answers.
+    - Don't mark what you choose to be the correct answer on what you turn in, but make note of your choice elsewhere to facilitate your learning.
+    - **Please use Courier New font for all pieces of R code.**
+    - Create a Google Doc with your questions and share with isma5720@pacificu.edu
+    - Please follow the layout I have provided in the Sample Question Layout document [here](https://docs.google.com/a/pacificu.edu/document/d/1QrhQl_R5YrYSPNyx8WxTFesYZvSARN_TDGzmD6HeMvQ/edit?usp=sharing).  Copy over the content of this document into a new Google Doc and then enter your questions.
+
+
 
 # Problem Set 4 (Due Thursday, February 23 by 4:20 PM) {#ps4}
 

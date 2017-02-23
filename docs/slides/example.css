@@ -13,7 +13,7 @@ a, a > code {
   text-decoration: none;
 }
 
-.remark-code, .remark-inline-code { font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;}
+.remark-code, .remark-inline-code { font-family: 'Courier New', 'Lucida Console', Monaco, monospace;}
 .remark-code-line-highlighted     { background-color: #ffff88; }
 
 .inverse {
@@ -146,3 +146,9 @@ ol{
 	width: 100%;
 	height: 100%;
 }
+
+.column:first-of-type {float:left}
+.column:last-of-type {float:right}
+
+.split-50 .column:first-of-type {width: 50%}
+.split-50 .column:last-of-type {width: 50%}

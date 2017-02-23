@@ -167,7 +167,7 @@ role <- c(rep("student", 10), rep("faculty", 5))
 sociology <- c(rep(TRUE, 4), rep(FALSE, 6), rep(TRUE, 2), rep(FALSE, 3))
 school_type <- c(rep("Public", 6), rep("Private", 4), rep("Public", 3), rep("Private", 2))
 kable(data_frame("role" = role, `Sociology?` = sociology,
-  `Type of School` = school_type))
+  `Type of School` = school_type), align = c('l', 'c', 'l'))
 ```
 
 - What does each row correspond to?  
