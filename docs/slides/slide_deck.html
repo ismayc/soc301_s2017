@@ -49,9 +49,11 @@ class: center, middle
 
 ---
 
+class: center, middle
+
 # Warmup in groups
 
-- Discuss the difference between the `binwidth` and `bins` arguments to `geom_histogram`
+### Discuss the difference between the `binwidth` and the `bins` arguments to `geom_histogram`
 
 ---
 
@@ -63,19 +65,15 @@ class: split-50
 
 ### At this point in the course you should only be adding these packages
 
-.column[
 ### &lt;u&gt;For functions&lt;/u&gt;
 `library(tibble)`&lt;br&gt;
 `library(ggplot2)`&lt;br&gt;
 `library(dplyr)`
-]
-.column[
-&lt;hr style="height:0pt; visibility:hidden;" /&gt;
+
 ### &lt;u&gt;For data&lt;/u&gt;
 `library(nycflights13)`&lt;br&gt;
 `library(fivethirtyeight)`&lt;br&gt;
 `library(gapminder)`
-]
 
 ---
 
@@ -101,7 +99,7 @@ ggplot(data = ______(2)___________,
 ---
 
 
-# Time slept vs day of the week for ONE professor over 100 weeks
+## Time slept vs day of the week for ONE professor over 100 weeks
 
 &lt;img src="figure/box.jpg"  width="900" height="350" alt="Sleep Boxplot"&gt;
 
@@ -204,7 +202,7 @@ Senior | 8
 ```r
 library(ggplot2)
 ggplot(data = class_df, mapping = aes(x = class)) +
-  geom_bar(fill = "black")
+  geom_bar(fill = "lightgreen", color = "black")
 ```
 
 ![](slide_deck_files/figure-html/unnamed-chunk-6-1.png)&lt;!-- --&gt;
@@ -237,7 +235,7 @@ class_freq
 
 ```r
 ggplot(data = class_freq, mapping = aes(x = class, y = count)) +
-  geom_col(fill = "black")
+  geom_col(fill = "lightgreen", color = "black")
 ```
 
 ![](slide_deck_files/figure-html/unnamed-chunk-8-1.png)&lt;!-- --&gt;
@@ -256,7 +254,7 @@ ggplot(data = class_freq, mapping = aes(x = class, y = count)) +
 --
 
 4. Stacked proportional plot
-  - Preferred if &lt;br&gt; numbers of groups in the second variable `\(\le 3\)`
+  - Preferred if &lt;br&gt; number of groups in the second variable `\(\le 3\)`
   
 ---
 
@@ -348,10 +346,10 @@ class: middle, center
 
 # Minute paper
 
-- Write down as much information as you can about what you have learned about using `ggplot2` for graphics
+### Write down as much information as you can about what you have learned about using `ggplot2` for graphics
 
 ---
-  
+
 layout: true
 
 .footer[[Week 04 - Tuesday](https://ismayc.github.io/soc301_s2017/2017/02/21/week-04---tuesday/)]
@@ -713,7 +711,7 @@ class: center, middle
 
 ### Wilkinson (2005) laid out the proposed "Grammar of Graphics"
 
-&lt;img src="figure/graphics.jpg" width="292" style="display: block; margin: auto;" /&gt;
+&lt;img src="figure/graphics.jpg" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -722,7 +720,7 @@ class: center, middle
 
 ### Wickham implemented the grammar in R in the `ggplot2` package
 
-&lt;img src="figure/ggplot2.jpg" width="308" style="display: block; margin: auto;" /&gt;
+&lt;img src="figure/ggplot2.jpg" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -1914,5 +1912,23 @@ class: center, middle
 });
 if (window.HTMLWidgets) slideshow.on('showSlide', function (slide) {setTimeout(function() {window.dispatchEvent(new Event('resize'));}, 100)});</script>
 
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
   </body>
 </html>

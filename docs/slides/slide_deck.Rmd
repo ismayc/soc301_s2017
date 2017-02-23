@@ -49,9 +49,11 @@ class: center, middle
 
 ---
 
+class: center, middle
+
 # Warmup in groups
 
-- Discuss the difference between the `binwidth` and `bins` arguments to `geom_histogram`
+### Discuss the difference between the `binwidth` and the `bins` arguments to `geom_histogram`
 
 ---
 
@@ -63,19 +65,15 @@ class: split-50
 
 ### At this point in the course you should only be adding these packages
 
-.column[
 ### <u>For functions</u>
 `library(tibble)`<br>
 `library(ggplot2)`<br>
 `library(dplyr)`
-]
-.column[
-<hr style="height:0pt; visibility:hidden;" />
+
 ### <u>For data</u>
 `library(nycflights13)`<br>
 `library(fivethirtyeight)`<br>
 `library(gapminder)`
-]
 
 ---
 
@@ -101,7 +99,7 @@ ggplot(data = ______(2)___________,
 ---
 
 
-# Time slept vs day of the week for ONE professor over 100 weeks
+## Time slept vs day of the week for ONE professor over 100 weeks
 
 <img src="figure/box.jpg"  width="900" height="350" alt="Sleep Boxplot">
 
@@ -187,7 +185,7 @@ Senior | 8
 ```{r fig.height=4}
 library(ggplot2)
 ggplot(data = class_df, mapping = aes(x = class)) +
-  geom_bar(fill = "black")
+  geom_bar(fill = "lightgreen", color = "black")
 ```
 
 ---
@@ -207,7 +205,7 @@ class_freq
 
 ```{r}
 ggplot(data = class_freq, mapping = aes(x = class, y = count)) +
-  geom_col(fill = "black")
+  geom_col(fill = "lightgreen", color = "black")
 ```
 
 ---
@@ -224,7 +222,7 @@ ggplot(data = class_freq, mapping = aes(x = class, y = count)) +
 --
 
 4. Stacked proportional plot
-  - Preferred if <br> numbers of groups in the second variable $\le 3$
+  - Preferred if <br> number of groups in the second variable $\le 3$
   
 ---
 
@@ -265,11 +263,11 @@ ggplot(data = profiles, mapping = aes(x = orientation)) +
 
 - What code is needed to produce this plot?
 
-```{r echo=FALSE}
+```{r echo=FALSE, fig.width=11}
 library(okcupiddata)
 library(ggplot2)
 ggplot(data = profiles, mapping = aes(x = orientation)) +
-  geom_bar(position = "dodge", aes(fill = smokes))
+  geom_bar(position = "dodge", mapping = aes(fill = smokes))
 ```
 
 ---
@@ -342,10 +340,10 @@ class: middle, center
 
 # Minute paper
 
-- Write down as much information as you can about what you have learned about using `ggplot2` for graphics
+### Write down as much information as you can about what you have learned about using `ggplot2` for graphics
 
 ---
-  
+
 layout: true
 
 .footer[[Week 04 - Tuesday](https://ismayc.github.io/soc301_s2017/2017/02/21/week-04---tuesday/)]
