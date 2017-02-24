@@ -21,7 +21,7 @@ This page will list the Problem Sets and when they will be turned in on paper th
     - Please follow the layout I have provided in the Sample Question Layout document [here](https://docs.google.com/a/pacificu.edu/document/d/1QrhQl_R5YrYSPNyx8WxTFesYZvSARN_TDGzmD6HeMvQ/edit?usp=sharing).  Copy over the content of this document into a new Google Doc and then enter your questions.
 
 
-# Problem Set 4 (Due Thursday, February 23 by 4:20 PM) {#ps4}
+# Problem Set 4 (Due Tuesday, February 28 by 2:45 PM) {#ps4}
 
 - We will be working on this in class on Tuesday and Thursday in groups, but you likely will need to work outside of class to complete it.
 - Learning Checks [LC4.14, LC4.16, LC4.18, LC4.19, LC4.21-LC4.28, LC4.30, LC4.33-LC4.34, LC4.36-LC4.37](https://ismayc.github.io/moderndiver-book/4-viz.html)

@@ -329,7 +329,7 @@ class: center, middle
 
 # Finish [Problem Set 4](https://ismayc.github.io/soc301_s2017/problem-sets/#ps4) in groups
 
-## Due today at the end of class
+## Due Tuesday at the beginning of class
 
 ***
 
