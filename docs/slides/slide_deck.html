@@ -22,6 +22,169 @@ class: center, middle, inverse, title-slide
 
 layout: true
 
+.footer[[Week 05 - Tuesday](https://ismayc.github.io/soc301_s2017/2017/02/28/week-05---tuesday/)]
+
+---
+
+name: week04th
+class: center, middle
+
+# Week 05 - Tuesday
+
+# February 28, 2017
+
+***
+
+# Make sure to turn in PS4
+
+---
+
+# Warmup
+
+What code is needed to produce this plot using the `na.omit(flying)` data frame derived from the `fivethirtyeight` package?  Make sure to load all needed libraries.
+
+&lt;img src="slide_deck_files/figure-html/unnamed-chunk-2-1.png" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+# `scale_fill_manual`
+
+- We will use `scale_`s sparingly but they can be nice for customizing your plots more
+
+    - You'll probably want to use them on your Group Project
+--
+
+- Let's review how it works on the `bechdel` plot on the  **Showing Off** question you produced in your DataCamp homework.
+
+---
+
+# Build the pieces
+
+
+
+
+
+```r
+library(fivethirtyeight)
+library(ggplot2)
+ggplot(data = bechdel, mapping = aes(x = five_year)) +
+  geom_bar(position = "fill")
+```
+
+![](slide_deck_files/figure-html/unnamed-chunk-4-1.png)&lt;!-- --&gt;
+
+---
+
+# Build the pieces
+
+
+```r
+ggplot(data = bechdel, mapping = aes(x = five_year, 
+                                     fill = clean_test)) +
+  geom_bar(position = "fill")
+```
+
+![](slide_deck_files/figure-html/unnamed-chunk-5-1.png)&lt;!-- --&gt;
+
+---
+
+# Build the pieces
+
+
+```r
+ggplot(data = bechdel, mapping = aes(x = five_year, 
+                                     fill = clean_test)) +
+  geom_bar(position = "fill", color = "white")
+```
+
+![](slide_deck_files/figure-html/unnamed-chunk-6-1.png)&lt;!-- --&gt;
+
+---
+
+
+```r
+ggplot(data = bechdel, mapping = aes(x = five_year, 
+                                     fill = clean_test)) +
+  geom_bar(position = "fill", color = "white") +
+  scale_fill_manual(values = 
+      c("#FF2603", "#FF937F", "#FEC9C3", "#6AB4DA", "#018ED5"))
+```
+
+![](slide_deck_files/figure-html/unnamed-chunk-7-1.png)&lt;!-- --&gt;
+
+Identified colors from the `bechdel` 538 [image](https://espnfivethirtyeight.files.wordpress.com/2014/04/hickey-bechdel-11.png?quality=90&amp;strip=all&amp;w=1150&amp;ssl=1) at http://imagecolorpicker.com/
+
+---
+
+### Could also...
+
+
+```r
+ggplot(data = bechdel, mapping = aes(x = five_year, 
+                                     fill = clean_test)) +
+  geom_bar(position = "fill", color = "black") +
+  scale_fill_manual(values = 
+      c("navy", "blanchedalmond", "brown", "gray87", "lawngreen"))
+```
+
+![](slide_deck_files/figure-html/unnamed-chunk-8-1.png)&lt;!-- --&gt;
+
+
+---
+
+class: center, middle
+
+# Review [PS4 Discussion](https://ismayc.github.io/soc301_s2017/problem-sets/ps-key/index.html#ps4-key)
+
+---
+
+class: center, middle
+
+# Plicker time!
+
+## Let's take last semester's Quiz 2
+
+---
+
+class: center, middle
+
+# Discussion
+
+## Why am I using DataCamp?
+
+--
+
+### How does this material apply to your everyday life?  To your major?  To the world as a whole?
+
+---
+
+class: center, middle
+
+# Review Q &amp; A
+
+- Get into groups and identify questions you have that you aren't sure about with the material from Chapters 3 and 4
+
+- If you have no questions, take someone else's practice quiz
+
+---
+
+class: center, middle
+
+# Check the post for the [day!](https://ismayc.github.io/soc301_s2017/2017/02/28/week-05---tuesday/)
+
+---
+
+class: middle, center
+
+# Minute paper
+
+### Write down as much information as you can about what you have learned about using `ggplot2` for graphics
+
+---
+
+layout: true
+
 .footer[[Week 04 - Thursday](https://ismayc.github.io/soc301_s2017/2017/02/23/week-04---thursday/)]
 
 ---
@@ -151,7 +314,7 @@ ggplot(data = hist_example, mapping = aes(x = numeric_var)) +
   geom_histogram(binwidth = 6, color = "black", fill = "white")
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-4-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-11-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -205,7 +368,7 @@ ggplot(data = class_df, mapping = aes(x = class)) +
   geom_bar(fill = "lightgreen", color = "black")
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-6-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-13-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -238,7 +401,7 @@ ggplot(data = class_freq, mapping = aes(x = class, y = count)) +
   geom_col(fill = "lightgreen", color = "black")
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-8-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-15-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -262,7 +425,7 @@ ggplot(data = class_freq, mapping = aes(x = class, y = count)) +
 
 - This is using the `profiles` data frame in the `okcupiddata` package.
 
-![](slide_deck_files/figure-html/unnamed-chunk-9-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-16-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -273,7 +436,7 @@ ggplot(data = class_freq, mapping = aes(x = class, y = count)) +
 
 - What code is needed to produce this plot?
 
-![](slide_deck_files/figure-html/unnamed-chunk-10-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-17-1.png)&lt;!-- --&gt;
 
 
 ---
@@ -285,7 +448,7 @@ ggplot(data = class_freq, mapping = aes(x = class, y = count)) +
 
 - What code is needed to produce this plot?
 
-![](slide_deck_files/figure-html/unnamed-chunk-11-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-18-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -296,7 +459,7 @@ ggplot(data = class_freq, mapping = aes(x = class, y = count)) +
 
 - What code is needed to produce this plot?
 
-![](slide_deck_files/figure-html/unnamed-chunk-12-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-19-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -307,7 +470,7 @@ ggplot(data = class_freq, mapping = aes(x = class, y = count)) +
 
 - What code is needed to produce this plot?
 
-![](slide_deck_files/figure-html/unnamed-chunk-13-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-20-1.png)&lt;!-- --&gt;
 
 
 ---
@@ -335,7 +498,7 @@ class: center, middle
 
 # Finish [Problem Set 4](https://ismayc.github.io/soc301_s2017/problem-sets/#ps4) in groups
 
-## Due today at the end of class
+## Due Tuesday at the beginning of class
 
 ***
 
@@ -349,13 +512,6 @@ class: center, middle
 
 ---
 
-class: middle, center
-
-# Minute paper
-
-### Write down as much information as you can about what you have learned about using `ggplot2` for graphics
-
----
 
 layout: true
 
@@ -390,7 +546,7 @@ class: center, middle
 Write the code necessary to produce the last plot using the `US_births_2014` data frame from the [Scatter-plots and Line-graphs](https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/scatter-plots-line-graphs?ex=4) chapter of DataCamp:
 
 
-![](slide_deck_files/figure-html/unnamed-chunk-14-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-21-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -398,7 +554,7 @@ Write the code necessary to produce the last plot using the `US_births_2014` dat
 
 - What stands out to you when you look at this plot?  In other words, what stories could be told by observing this data?
 
-![](slide_deck_files/figure-html/unnamed-chunk-15-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-22-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -455,7 +611,7 @@ ggplot(data = hist_example, mapping = aes(x = numeric_var)) +
   geom_histogram(binwidth = 6, color = "black", fill = "white")
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-18-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-25-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -508,7 +664,7 @@ class: center, middle
 
 - Write the code to produce the plot below
 
-![](slide_deck_files/figure-html/unnamed-chunk-21-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-28-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -522,7 +678,7 @@ ggplot(data = weather, mapping = aes(x = humid, fill = origin)) +
   facet_grid(facets = origin ~ .)
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-22-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-29-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -540,7 +696,7 @@ ggplot(data = weather, mapping = aes(x = humid, fill = origin)) +
 
 - Another way to view the relationship between a categorical explanatory variable and a numerical response variable is via a boxplot.  Think about how we might write the code to produce the boxplot for humidity across airports.
 
-![](slide_deck_files/figure-html/unnamed-chunk-23-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-30-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -595,7 +751,7 @@ class: center, middle
 - &lt;small&gt;Make sure to load all needed packages!&lt;/small&gt;
 
 
-![](slide_deck_files/figure-html/unnamed-chunk-24-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-31-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -816,7 +972,7 @@ ggplot(data = simple_ex, mapping = aes(x = A, y = B)) +
 ```
 --
 
-![](slide_deck_files/figure-html/unnamed-chunk-30-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-37-1.png)&lt;!-- --&gt;
 
 
 ---
@@ -834,7 +990,7 @@ ggplot(data = simple_ex, mapping = aes(x = A, y = B)) +
 ```
 --
 
-![](slide_deck_files/figure-html/unnamed-chunk-32-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-39-1.png)&lt;!-- --&gt;
 
 
 ---
@@ -851,7 +1007,7 @@ ggplot(data = simple_ex, mapping = aes(x = A, y = B, size = C)) +
 ```
 --
 
-![](slide_deck_files/figure-html/unnamed-chunk-34-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-41-1.png)&lt;!-- --&gt;
 
 
 ---
@@ -868,7 +1024,7 @@ ggplot(data = simple_ex, mapping = aes(x = A, y = B)) +
 ```
 --
 
-![](slide_deck_files/figure-html/unnamed-chunk-36-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-43-1.png)&lt;!-- --&gt;
 
 
 ---
@@ -885,7 +1041,7 @@ ggplot(data = simple_ex, mapping = aes(x = A, y = B, color = D)) +
 ```
 --
 
-![](slide_deck_files/figure-html/unnamed-chunk-38-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-45-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -951,14 +1107,14 @@ ggplot(data = total_fert_tidy, mapping = aes(x = year, y = fert)) +
   geom_point()
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-40-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-47-1.png)&lt;!-- --&gt;
 
 
 ---
 
 ## Discussing the scatterplot
 
-![](slide_deck_files/figure-html/unnamed-chunk-41-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-48-1.png)&lt;!-- --&gt;
 
 - What stands out to you as you look at this plot?
 - What other information would be useful here?
@@ -1015,7 +1171,7 @@ ggplot(data = total_fert_tidy,
   geom_point()
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-43-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-50-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -1029,7 +1185,7 @@ ggplot(data = total_fert_tidy,
   geom_point()
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-44-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-51-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -1044,7 +1200,7 @@ ggplot(data = total_fert_tidy,
   geom_point()
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-45-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-52-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -1160,7 +1316,7 @@ head(gap2007, n = 10)
 
 - Write the code on paper and then discuss in groups of 3.
 
-![](slide_deck_files/figure-html/unnamed-chunk-49-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-56-1.png)&lt;!-- --&gt;
 
 --
 
@@ -1173,7 +1329,7 @@ that would be of interest here?
 
 - Write the code on paper and then discuss in groups of 3.
 
-![](slide_deck_files/figure-html/unnamed-chunk-50-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-57-1.png)&lt;!-- --&gt;
 --
 
 - What information is added by the coloring here?
@@ -1245,7 +1401,7 @@ What `ggplot2` code is needed to produce this plot? The `simple_ex` data frame i
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;img src="slide_deck_files/figure-html/unnamed-chunk-51-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="slide_deck_files/figure-html/unnamed-chunk-58-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 

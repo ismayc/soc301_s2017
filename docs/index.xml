@@ -6,8 +6,40 @@
     <description>Recent content on SOC 301 - Spring 2017</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Feb 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 Feb 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Week 05 - Tuesday</title>
+      <link>/2017/02/28/week-05---tuesday/</link>
+      <pubDate>Tue, 28 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/02/28/week-05---tuesday/</guid>
+      <description>
+
+&lt;p&gt;Slides available &lt;a href=&#34;http://ismayc.github.io/soc301_s2017/slides/slide_deck.html#week05t&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;covered-content&#34;&gt;Covered Content&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Take Quiz #2 from last semester as a class using Plickers&lt;/li&gt;
+&lt;li&gt;Review Chapters 3 and 4 of &lt;a href=&#34;http://moderndive.com&#34;&gt;ModernDive&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Work on &lt;a href=&#34;https://docs.google.com/a/pacificu.edu/document/d/1uNEM3zOidLbsfTYcYVc78jxNB6DwfjI7ZGgeDSxCvAI/edit?usp=sharing&#34;&gt;Practice Problems for Quiz #2&lt;/a&gt; in groups&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;to-do-for-next-time&#34;&gt;To do for next time&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Study for Quiz #2 covering Chapters 3 and 4 of &lt;a href=&#34;http://moderndive.com&#34;&gt;ModernDive&lt;/a&gt; and the corresponding chapters on DataCamp (&lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/tidy-data&#34;&gt;Tidy Data&lt;/a&gt; through &lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/ggplot2-review?ex=1&#34;&gt;ggplot2 Review&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Complete &lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/ggplot2-review?ex=1&#34;&gt;ggplot2 Review&lt;/a&gt; DataCamp chapter (Due on March 2 at 1 PM)&lt;/li&gt;
+&lt;li&gt;Begin &lt;a href=&#34;https://campus.datacamp.com/courses/working-with-the-rstudio-ide-part-1/orientation?ex=1&#34;&gt;Working with the RStudio IDE (Part 1) - Orientation chapter&lt;/a&gt; on DataCamp (Due on March ) (Due on March 7 at 1 PM)
+
+&lt;ul&gt;
+&lt;li&gt;This will require you to download R and RStudio Desktop to your laptop computer.  The sooner you do this the better.  If you have issues, please reach out to me AS SOON AS POSSIBLE!&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Week 04 - Thursday</title>
@@ -45,8 +77,8 @@
 &lt;li&gt;Work on &lt;a href=&#34;http://ismayc.github.io/soc301_s2017/problem-sets/index.html#ps5&#34;&gt;Problem Set 5&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;Study for Quiz #2 covering Chapters 3 and 4 of &lt;a href=&#34;http://moderndive.com&#34;&gt;ModernDive&lt;/a&gt; and the corresponding chapters on DataCamp (&lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/tidy-data&#34;&gt;Tidy Data&lt;/a&gt; through &lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/ggplot2-review?ex=1&#34;&gt;ggplot2 Review&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Complete Begin &lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/barplots?ex=1&#34;&gt;Barplots&lt;/a&gt; DataCamp chapter (Due on February 28 at 1 PM)&lt;/li&gt;
-&lt;li&gt;Begin &lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/ggplot2-review?ex=1&#34;&gt;ggplot2 Review&lt;/a&gt; DataCamp chapter (Due on March 7 at 1 PM)&lt;/li&gt;
+&lt;li&gt;Complete &lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/barplots?ex=1&#34;&gt;Barplots&lt;/a&gt; DataCamp chapter (Due on February 28 at 1 PM)&lt;/li&gt;
+&lt;li&gt;Begin &lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/ggplot2-review?ex=1&#34;&gt;ggplot2 Review&lt;/a&gt; DataCamp chapter (Due on March 2 at 1 PM)&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
@@ -240,7 +272,7 @@
 /BLOGDOWN-BODY-BEFORE --&gt;
 
 &lt;hr /&gt;
-&lt;p&gt;Page last updated at Thursday, February 23, 2017 14:09:59 PST&lt;/p&gt;
+&lt;p&gt;Page last updated at Tuesday, February 28, 2017 14:24:32 PST&lt;/p&gt;
 &lt;div id=&#34;ps2-key&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Problem Set 2&lt;/h1&gt;
 &lt;p&gt;Learning Checks LC3.2-LC3.7, LC3.9-LC3.10 from &lt;a href=&#34;https://ismayc.github.io/moderndiver-book/3-tidy.html&#34;&gt;ModernDive&lt;/a&gt;&lt;/p&gt;
@@ -711,71 +743,105 @@ ggplot(data = early_january_weather, mapping = aes(x = time_hour, y = wind_gust)
 &lt;p&gt;Learning Checks &lt;a href=&#34;https://ismayc.github.io/moderndiver-book/4-viz.html&#34;&gt;LC4.14, LC4.16, LC4.18, LC4.19, LC4.21-LC4.28, LC4.30, LC4.33-LC4.34, LC4.36-LC4.37&lt;/a&gt;&lt;/p&gt;
 &lt;div id=&#34;lc4.14&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;LC4.14&lt;/h2&gt;
+&lt;p&gt;What does changing the number of bins from 30 to 60 tell us about the distribution of temperatures?&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;Increasing the number of bins allows for us to see the distribution of temperatures in finer detail.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;lc4.16&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;LC4.16&lt;/h2&gt;
+&lt;p&gt;What would you guess is the “center” value in this distribution? Why did you make that choice?&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;There is no exact answer here at this point in the course. I wanted you to think about what the balancing point would be having half the values before it and half after it. This falls somewhere between 50 and 55.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;lc4.18&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;LC4.18&lt;/h2&gt;
+&lt;p&gt;What other things do you notice about the faceted plot above? How does a faceted plot help us see relationships between two variables?&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;The faceted plot allows us to better see the range of temperatures for each month. In general, a faceted plot can be helpful in seeing trends in one variable compared to another.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;lc4.19&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;LC4.19&lt;/h2&gt;
+&lt;p&gt;What do the numbers 1-12 correspond to in the plot above? What about 25, 50, 75, 100?&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;The numbers 1-12 correspond to months in the year 2013. The nubmers 25, 50, 75, and 100 correspond to Fahrenheit temperatures.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;lc4.21&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;LC4.21&lt;/h2&gt;
+&lt;p&gt;Does the &lt;code&gt;temp&lt;/code&gt; variable in the &lt;code&gt;weather&lt;/code&gt; data set have a lot of variability? Why do you say that?&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;New York City does have a broad range of temperatures throughout the year. We see that summer months tend to be much warmer than winter months, so, yes, &lt;code&gt;temp&lt;/code&gt; in &lt;code&gt;weather&lt;/code&gt; does have a lot of variability.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;lc4.22&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;LC4.22&lt;/h2&gt;
+&lt;p&gt;What does the dot at the bottom of the plot for May correspond to? Explain what might have occurred in May to produce this point.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;The dot at the bottom of the plot for May corresponds to a low outlier. This could have been a very cold hour, but since no other hours have that cold of a temperature it is more than likely a measurement error.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;lc4.23&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;LC4.23&lt;/h2&gt;
+&lt;p&gt;Which months have the highest variability in temperature? What reasons do you think this is?&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;The spring and fall months have the highest variability in temperature. These months tend to have cold mornings and warmer high temperatures.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;lc4.24&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;LC4.24&lt;/h2&gt;
+&lt;p&gt;We looked at the distribution of a continuous variable over a categorical variable here with this boxplot. Why can’t we look at the distribution of one continuous variable over the distribution of another continuous variable? Say, temperature across pressure, for example?&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;A boxplot works well because you can look at the distribution of the continuous variable across the different (often only a few) levels of the categorical variable. A continuous explanatory variable will have many, many levels making the boxplot very hard to read and interpret.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;lc4.25&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;LC4.25&lt;/h2&gt;
+&lt;p&gt;Boxplots provide a simple way to identify outliers. Why may outliers be easier to identify when looking at a boxplot instead of a faceted histogram?&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;A faceted histogram shows the height of the bin and if outliers are all alone they will appear as having a bin of height close to zero, which is almost indistinguishable from zero. Therefore, they are more likely to be missed when looking at a faceted histogram. A boxplot will clearly show them.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;lc4.26&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;LC4.26&lt;/h2&gt;
+&lt;p&gt;Why are histograms inappropriate for visualizing categorical variables?&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;Histograms show how many values fall into different bins of a numerical variable that falls on a continuum. (This is one reason why the bins are touching.) Since a categorical variable does not fall on a continuum, histograms are inappropriate.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;lc4.27&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;LC4.27&lt;/h2&gt;
+&lt;p&gt;What is the difference between histograms and barplots?&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;The bins touch on a histogram and the bars/bins on a barplot do not. Histograms show the distribution of a continuous variable whereas barplots show the distribution of a categorical variable.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;lc4.28&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;LC4.28&lt;/h2&gt;
+&lt;p&gt;How many Envoy Air flights departed NYC in 2013?&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;Since Envoy Air corresponds to &lt;code&gt;carrier&lt;/code&gt; code &lt;code&gt;MQ&lt;/code&gt; via the &lt;code&gt;airports&lt;/code&gt; data frame, we see that 26,397 flights departed New York City in 2013.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;lc4.30&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;LC4.30&lt;/h2&gt;
+&lt;p&gt;Why should pie charts be avoided and replaced by barplots?&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;Pie charts rely on us being able to tell the different between different slices of the pie in terms of the percentage of area covered. Our eyes and brains are not naturally good at this task. We are extremely good at determining the height of bars and comparing them across different groups as a barplot shows.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;lc4.33&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;LC4.33&lt;/h2&gt;
+&lt;p&gt;What can you say, if anything, about the relationship between airline and airport in NYC in 2013 in regards to the number of departing flights?&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;Certain airlines tend to depart from one airport far more than the other two airports. For example, ExpressJet Airlines has nearly all of its flights from Newark.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;lc4.34&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;LC4.34&lt;/h2&gt;
+&lt;p&gt;Why might the side-by-side barplot be preferable to a stacked barplot in this case?&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;It is harder to compare the frequency of flights for LaGuardia or JFK when looking at a stacked barplot since they are already stacked on top of Newark.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;lc4.36&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;LC4.36&lt;/h2&gt;
+&lt;p&gt;Why is the faceted barplot preferred to the side-by-side and stacked barplots in this case?&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;A faceted barplot allows for comparisons to be made more easily across both airports AND airlines.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;lc4.37&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;LC4.37&lt;/h2&gt;
+&lt;p&gt;What information about the different carriers at different airports is more easily seen in the faceted barplot?&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;The faceted barplot provides an easier way to see the airlines that have no departing flights and also many flights from each airport.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -1054,12 +1120,11 @@ reach out for help.&lt;/li&gt;
 &lt;ul&gt;
 &lt;li&gt;We will be working on this in class on Tuesday and Thursday in groups, but you likely will need to work outside of class to complete it.&lt;/li&gt;
 &lt;li&gt;Learning Checks &lt;a href=&#34;https://ismayc.github.io/moderndiver-book/4-viz.html&#34;&gt;LC4.14, LC4.16, LC4.18, LC4.19, LC4.21-LC4.28, LC4.30, LC4.33-LC4.34, LC4.36-LC4.37&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;To run the R code given in the gray chunks in the textbook, you can use this &amp;ldquo;sandbox&amp;rdquo; I&amp;rsquo;ve created for you as the last chapter of the DataCamp course.  Click &lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/supplement-to-moderndive-textbook?ex=1&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
 
-&lt;!--
-- Discussion [here](ps-key/index.html#ps4-key)
---&gt;
+&lt;li&gt;&lt;p&gt;To run the R code given in the gray chunks in the textbook, you can use this &amp;ldquo;sandbox&amp;rdquo; I&amp;rsquo;ve created for you as the last chapter of the DataCamp course.  Click &lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/supplement-to-moderndive-textbook?ex=1&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Discussion &lt;a href=&#34;ps-key/index.html#ps4-key&#34;&gt;here&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h1 id=&#34;ps3&#34;&gt;Problem Set 3 (Due Tues, February 21 by 2:45 PM)&lt;/h1&gt;
 
@@ -1098,31 +1163,6 @@ DataCamp course.&lt;br /&gt;
 &lt;li&gt;Each question should have four possible answers.&lt;/li&gt;
 &lt;li&gt;Don&amp;rsquo;t mark what you choose to be the correct answer on what you turn in, but make note of your choice elsewhere to facilitate your learning.&lt;/li&gt;
 &lt;li&gt;Create a Google Doc with your questions and share with isma5720@pacificu.edu&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>DataCamp</title>
-      <link>/datacamp/</link>
-      <pubDate>Mon, 30 Jan 2017 19:58:30 -0800</pubDate>
-      
-      <guid>/datacamp/</guid>
-      <description>&lt;p&gt;You can keep track of DataCamp Assignments and your progress &lt;a href=&#34;https://www.datacamp.com/groups/soc-301-spring-2017/assignments&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.datacamp.com/groups/soc-301-spring-2017/assignments/2772&#34;&gt;Introduction to R course&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;First, complete this course to get you up to speed with the basics of R&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.datacamp.com/groups/soc-301-spring-2017/assignments/2772&#34;&gt;Effective Data Storytelling using the &lt;code&gt;tidyverse&lt;/code&gt;&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;You&amp;rsquo;ll have chapter assignments from this course that I am designing throughout our SOC 301 course.&lt;/li&gt;
-&lt;li&gt;This course is designed to have you apply the content you learn during class and the textbook to interesting social data sets that &lt;a href=&#34;http://fivethirtyeight.com&#34;&gt;FiveThirtyEight&lt;/a&gt; has made public and that was put together into an R package called &lt;a href=&#34;https://cran.r-project.org/web/packages/fivethirtyeight/vignettes/fivethirtyeight.html&#34;&gt;&lt;code&gt;fivethirtyeight&lt;/code&gt;&lt;/a&gt; by Albert Y. Kim, Jennifer Chunn, and I (Chester).&lt;/li&gt;
-&lt;li&gt;You can find direct links to the chapters in the &lt;strong&gt;Material Due&lt;/strong&gt; column of the &lt;a href=&#34;https://ismayc.github.io/soc301_s2017/schedule/&#34;&gt;Schedule&lt;/a&gt; for the course&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>

@@ -27,9 +27,7 @@ This page will list the Problem Sets and when they will be turned in on paper th
 - Learning Checks [LC4.14, LC4.16, LC4.18, LC4.19, LC4.21-LC4.28, LC4.30, LC4.33-LC4.34, LC4.36-LC4.37](https://ismayc.github.io/moderndiver-book/4-viz.html)
 - To run the R code given in the gray chunks in the textbook, you can use this "sandbox" I've created for you as the last chapter of the DataCamp course.  Click [here](https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/supplement-to-moderndive-textbook?ex=1).
 
-<!--
 - Discussion [here](ps-key/index.html#ps4-key)
--->
 
 
 
