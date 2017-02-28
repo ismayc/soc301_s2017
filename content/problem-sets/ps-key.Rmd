@@ -286,85 +286,136 @@ Learning Checks [LC4.14, LC4.16, LC4.18, LC4.19, LC4.21-LC4.28, LC4.30, LC4.33-L
 
 ## LC4.14 
 
+What does changing the number of bins from 30 to 60 tell us about the distribution of temperatures?
 
 **Discussion**: 
+
+Increasing the number of bins allows for us to see the distribution of temperatures in finer detail.
 
 ## LC4.16
 
+What would you guess is the "center" value in this distribution? Why did you make that choice?
 
 **Discussion**: 
+
+There is no exact answer here at this point in the course.  I wanted you to think about what the balancing point would be having half the values before it and half after it.  This falls somewhere between 50 and 55.
 
 ## LC4.18
 
+What other things do you notice about the faceted plot above? How does a faceted plot help us see relationships between two variables?
 
 **Discussion**: 
+
+The faceted plot allows us to better see the range of temperatures for each month.  In general, a faceted plot can be helpful in seeing trends in one variable compared to another.
 
 ## LC4.19
 
+What do the numbers 1-12 correspond to in the plot above? What about 25, 50, 75, 100?
 
 **Discussion**: 
+
+The numbers 1-12 correspond to months in the year 2013.  The nubmers 25, 50, 75, and 100 correspond to Fahrenheit temperatures.
 
 ## LC4.21
 
+Does the `temp` variable in the `weather` data set have a lot of variability? Why do you say that?
 
 **Discussion**: 
+
+New York City does have a broad range of temperatures throughout the year.  We see that summer months tend to be much warmer than winter months, so, yes, `temp` in `weather` does have a lot of variability.
 
 ## LC4.22
 
+What does the dot at the bottom of the plot for May correspond to? Explain what might have occurred in May to produce this point.
 
 **Discussion**: 
+
+The dot at the bottom of the plot for May corresponds to a low outlier.  This could have been a very cold hour, but since no other hours have that cold of a temperature it is more than likely a measurement error.
 
 ## LC4.23
 
+Which months have the highest variability in temperature? What reasons do you think this is?
 
 **Discussion**: 
+
+The spring and fall months have the highest variability in temperature.  These months tend to have cold mornings and warmer high temperatures.
 
 ## LC4.24
 
-
-**Discussion**: 
-
-## LC4.25
-
-
-**Discussion**: 
-
-## LC4.26
-
+We looked at the distribution of a continuous variable over a categorical variable here with this boxplot. Why can’t we look at the distribution of one continuous variable over the distribution of another continuous variable? Say, temperature across pressure, for example?
 
 **Discussion**:
 
-## LC4.27
+A boxplot works well because you can look at the distribution of the continuous variable across the different (often only a few) levels of the categorical variable.  A continuous explanatory variable will have many, many levels making the boxplot very hard to read and interpret.
 
+## LC4.25
+
+Boxplots provide a simple way to identify outliers. Why may outliers be easier to identify when looking at a boxplot instead of a faceted histogram?
 
 **Discussion**: 
+
+A faceted histogram shows the height of the bin and if outliers are all alone they will appear as having a bin of height close to zero, which is almost indistinguishable from zero.  Therefore, they are more likely to be missed when looking at a faceted histogram.  A boxplot will clearly show them.
+
+## LC4.26
+
+Why are histograms inappropriate for visualizing categorical variables?
+
+**Discussion**:
+
+Histograms show how many values fall into different bins of a numerical variable that falls on a continuum.  (This is one reason why the bins are touching.)  Since a categorical variable does not fall on a continuum, histograms are inappropriate.
+
+## LC4.27
+
+What is the difference between histograms and barplots?
+
+**Discussion**: 
+
+The bins touch on a histogram and the bars/bins on a barplot do not.  Histograms show the distribution of a continuous variable whereas barplots show the distribution of a categorical variable.
 
 ## LC4.28
 
+How many Envoy Air flights departed NYC in 2013?
 
 **Discussion**: 
+
+Since Envoy Air corresponds to `carrier` code `MQ` via the `airports` data frame, we see that 26,397 flights departed New York City in 2013.
 
 ## LC4.30
 
+Why should pie charts be avoided and replaced by barplots?
 
 **Discussion**: 
+
+Pie charts rely on us being able to tell the different between different slices of the pie in terms of the percentage of area covered.  Our eyes and brains are not naturally good at this task.  We are extremely good at determining the height of bars and comparing them across different groups as a barplot shows.
 
 ## LC4.33
 
+What can you say, if anything, about the relationship between airline and airport in NYC in 2013 in regards to the number of departing flights?
 
 **Discussion**: 
+
+Certain airlines tend to depart from one airport far more than the other two airports.  For example, ExpressJet Airlines has nearly all of its flights from Newark.
 
 ## LC4.34
 
+Why might the side-by-side barplot be preferable to a stacked barplot in this case?
 
 **Discussion**: 
+
+It is harder to compare the frequency of flights for LaGuardia or JFK when looking at a stacked barplot since they are already stacked on top of Newark.
 
 ## LC4.36
 
+Why is the faceted barplot preferred to the side-by-side and stacked barplots in this case?
 
 **Discussion**: 
+
+A faceted barplot allows for comparisons to be made more easily across both airports AND airlines.
 
 ## LC4.37
 
+What information about the different carriers at different airports is more easily seen in the faceted barplot?
 
 **Discussion**: 
+
+The faceted barplot provides an easier way to see the airlines that have no departing flights and also many flights from each airport.

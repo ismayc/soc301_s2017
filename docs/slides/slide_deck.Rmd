@@ -144,7 +144,7 @@ class: center, middle
 
 # Plicker time!
 
-## Let's take last semester's Quiz 2
+## Let's take [last semester's Quiz 2](https://ismayc.github.io/soc301_s2017/slides/Quiz2.pdf)
 
 ---
 
