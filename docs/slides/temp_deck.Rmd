@@ -1,4 +1,167 @@
 
+
+layout: true
+
+.footer[[Week 05 - Tuesday](https://ismayc.github.io/soc301_s2017/2017/02/28/week-05---tuesday/)]
+
+---
+
+name: week05t
+class: center, middle
+
+# Week 05 - Tuesday
+
+# February 28, 2017
+
+***
+
+# Make sure to turn in PS4
+
+---
+
+# Warmup
+
+What code is needed to produce this plot using the `na.omit(flying)` data frame derived from the `fivethirtyeight` package?  Make sure to load all needed libraries.
+
+```{r echo=FALSE, fig.height=5.7, fig.width=11, fig.align='center'}
+library(fivethirtyeight)
+library(ggplot2)
+ggplot(data = na.omit(flying), mapping = aes(x = age, fill = recline_rude)) +
+    geom_bar(position = "fill", color = "white")
+```
+
+
+---
+
+# `scale_fill_manual`
+
+- We will use `scale_`s sparingly but they can be nice for customizing your plots more
+
+    - You'll probably want to use them on your Group Project
+--
+
+- Let's review how it works on the `bechdel` plot on the  **Showing Off** question you produced in your DataCamp homework.
+
+---
+
+# Build the pieces
+
+```{r include=FALSE}
+library(dplyr)
+year_bins <- c("70-'74", "75-'79", "80-'84", "85-'89",
+               "90-'94", "95-'99", "00-'04", "05-'09",
+               "10-'13")
+bechdel <- bechdel %>%
+  mutate(five_year = cut(year, 
+                         breaks = seq(1969, 2014, 5), 
+                         labels = year_bins)) %>% 
+  mutate(clean_test = factor(clean_test, 
+                             levels = c("nowomen", "notalk", "men", "dubious", "ok")))
+```
+
+
+```{r fig.width=11, fig.height=5.5}
+library(fivethirtyeight)
+library(ggplot2)
+ggplot(data = bechdel, mapping = aes(x = five_year)) +
+  geom_bar(position = "fill")
+```
+
+---
+
+# Build the pieces
+
+```{r fig.width=11, fig.height=5.5}
+ggplot(data = bechdel, mapping = aes(x = five_year, 
+                                     fill = clean_test)) +
+  geom_bar(position = "fill")
+```
+
+---
+
+# Build the pieces
+
+```{r fig.width=11, fig.height=5.5}
+ggplot(data = bechdel, mapping = aes(x = five_year, 
+                                     fill = clean_test)) +
+  geom_bar(position = "fill", color = "white")
+```
+
+---
+
+```{r fig.width=11, fig.height=5.5}
+ggplot(data = bechdel, mapping = aes(x = five_year, 
+                                     fill = clean_test)) +
+  geom_bar(position = "fill", color = "white") +
+  scale_fill_manual(values = 
+      c("#FF2603", "#FF937F", "#FEC9C3", "#6AB4DA", "#018ED5"))
+```
+
+Identified colors from the `bechdel` 538 [image](https://espnfivethirtyeight.files.wordpress.com/2014/04/hickey-bechdel-11.png?quality=90&strip=all&w=1150&ssl=1) at http://imagecolorpicker.com/
+
+---
+
+### Could also...
+
+```{r fig.width=11, fig.height=5.5}
+ggplot(data = bechdel, mapping = aes(x = five_year, 
+                                     fill = clean_test)) +
+  geom_bar(position = "fill", color = "black") +
+  scale_fill_manual(values = 
+      c("navy", "blanchedalmond", "brown", "gray87", "lawngreen"))
+```
+
+
+---
+
+class: center, middle
+
+# Review [PS4 Discussion](https://ismayc.github.io/soc301_s2017/problem-sets/ps-key/index.html#ps4-key)
+
+---
+
+class: center, middle
+
+# Plicker time!
+
+## Let's take [last semester's Quiz 2](https://ismayc.github.io/soc301_s2017/slides/Quiz2.pdf)
+
+---
+
+class: center, middle
+
+# Discussion
+
+## Why am I using DataCamp?
+
+--
+
+### How does this material apply to your everyday life?  To your major?  To the world as a whole?
+
+---
+
+class: center, middle
+
+# Review Q & A
+
+- Get into groups and identify questions you have that you aren't sure about with the material from Chapters 3 and 4
+
+- If you have no questions, take someone else's practice quiz
+
+---
+
+class: center, middle
+
+# Check the post for the [day!](https://ismayc.github.io/soc301_s2017/2017/02/28/week-05---tuesday/)
+
+---
+
+class: middle, center
+
+# Minute paper
+
+### Write down as much information as you can about what you have learned about using `ggplot2` for graphics
+
 ---
 
 layout: true
@@ -324,13 +487,6 @@ class: center, middle
 
 ---
 
-class: middle, center
-
-# Minute paper
-
-### Write down as much information as you can about what you have learned about using `ggplot2` for graphics
-
----
 
 layout: true
 

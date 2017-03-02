@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.18.1" />
+
+
+<title>Week 05 - Thursday - SOC 301 - Spring 2017</title>
+<meta property="og:title" content="Week 05 - Thursday - SOC 301 - Spring 2017">
+
+
+
+  
+
+
+
+
+
+
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/github.min.css' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="../../../../css/main.css" media="all">
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="../../../../" class="nav-logo">
+    <img src="../../../../images/pacific.jpg" 
+         width="50" 
+         height="50" 
+         alt="Logo">
+  </a>
+      
+  <ul class="nav-links">
+    
+    <li><a href="../../../../datacamp/">DataCamp</a></li>
+    
+    <li><a href="../../../../problem-sets/">Problem Sets</a></li>
+    
+    <li><a href="../../../../resources/">Resources</a></li>
+    
+    <li><a href="../../../../schedule/">Schedule</a></li>
+    
+    <li><a href="../../../../syllabus/">Syllabus</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+  
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">2 min read</span>
+    
+
+    <h1 class="article-title">Week 05 - Thursday</h1>
+
+    
+    <span class="article-date">March 2, 2017</span>
+    
+
+    <div class="article-content">
+      
+
+<p>Slides available <a href="http://ismayc.github.io/soc301_s2017/slides/slide_deck.html#week05th">here</a></p>
+
+<h3 id="covered-content">Covered Content</h3>
+
+<ul>
+<li>Quiz #2</li>
+<li>Demonstrate R, RStudio, and R Markdown</li>
+<li>Work on starting <a href="../../../../group_project_outline/index.html">Group Project</a></li>
+</ul>
+
+<h3 id="to-do-for-next-time">To do for next time</h3>
+
+<ul>
+<li>Complete your <a href="../../../../group_project_outline/index.html#proposal">Group Project Proposal</a></li>
+
+<li><p>Complete <a href="https://campus.datacamp.com/courses/working-with-the-rstudio-ide-part-1/orientation?ex=1">Working with the RStudio IDE (Part 1) - Orientation chapter</a> on DataCamp (Due on March 7 at 1 PM)</p>
+
+<ul>
+<li>This will require you to download R and RStudio Desktop to your laptop computer.  The sooner you do this the better.  If you have issues, please reach out to me AS SOON AS POSSIBLE!</li>
+
+<li><p>After you have downloaded and installed both R and RStudio Desktop, copy all lines of the following code, paste it into in the R Console, and press Enter on your keyboard.  This code will install all of the packages we will (probably) need throughout the remainder of the semester. This code is also listed in <a href="https://ismayc.github.io/moderndiver-book/index.html#getting-started---for-students">Chapter 1 of ModernDive</a>.</p>
+
+<p>This will take a few minutes and you&rsquo;ll see lots of red text.  This is not a bad thing but rather just notifications on the progress of the downloading and installation of the packages.  It might take 15 minutes or a little longer to complete.  You can be sure that everything has been installed correctly if you run the exact same chunk of code and it immediately sends you back to <code>&gt;</code> in the R Console.  You can also check the <strong>Packages</strong> tab in the lower right corner of RStudio for a listing of all of the packages installed on your computer.</p></li>
+</ul></li>
+</ul>
+
+<pre><code>needed_pkgs &lt;- c(&quot;nycflights13&quot;, &quot;tibble&quot;, &quot;dplyr&quot;, 
+                 &quot;ggplot2&quot;, &quot;knitr&quot;, &quot;okcupiddata&quot;, &quot;dygraphs&quot;, 
+                 &quot;rmarkdown&quot;, &quot;mosaic&quot;, &quot;ggplot2movies&quot;, 
+                 &quot;fivethirtyeight&quot;)
+
+new.pkgs &lt;- needed_pkgs[!(needed_pkgs %in% installed.packages())]
+
+if(length(new.pkgs)) {
+  install.packages(new.pkgs, repos = &quot;http://cran.rstudio.com&quot;)
+}
+</code></pre>
+
+<ul>
+<li>Begin <a href="https://www.datacamp.com/courses/reporting-with-r-markdown">Reporting with R Markdown</a> DataCamp course (Due on March 9 at 1 PM)</li>
+</ul>
+
+    </div>
+  </article>
+
+  
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="../../../../index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://ismayc.github.io">Chester's homepage</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="../../../../images/hugo-logo.png" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/r.min.js"></script>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/yaml.min.js"></script>
+    
+    <script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+    
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    });
+    </script>
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+  </body>
+</html>
+

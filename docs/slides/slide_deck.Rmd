@@ -22,11 +22,98 @@ theme_set(theme_gray(base_size = 26))
 
 layout: true
 
+.footer[[Week 05 - Thursday](https://ismayc.github.io/soc301_s2017/2017/03/02/week-05---thursday/)]
+
+---
+
+name: week05th
+class: center, middle
+
+# Week 05 - Thursday
+
+# March 2, 2017
+
+
+---
+
+class: center, middle
+
+# The Process
+
+## DataCamp 
+
+***
+
+--
+
+## RStudio
+--
+
+## $\rightarrow$ R script + R Console 
+
+--
+## $\rightarrow$ R Markdown
+
+
+---
+
+class: center, middle
+
+## Analogy
+
+R            |  RStudio |  DataCamp
+:-------------------------:|:-------------------------:|:-------------------------:
+<img src="figure/engine.jpg" alt="Drawing" style="width: 350px;"/>  |  <img src="figure/dashboard.jpg" alt="Drawing" style="width: 350px;"/>  |  <img src="figure/instructor.jpg" alt="Drawing" style="width: 350px;"/>
+
+---
+
+class: center, middle
+
+# I'm ready to grant you your R driver's license
+--
+
+## But, you'll need to continue your tRaining to become an excellent driveR
+
+---
+
+class: center, middle
+
+# R / RStudio / R Markdown DEMO
+
+---
+
+# Diligently work on Group Project
+
+- Determine your group of three
+- Look over the `fivethirtyeight` data sets
+    - [Reference manual](https://cran.r-project.org/web/packages/fivethirtyeight/fivethirtyeight.pdf)
+    - [Listing of all data sets with links to 538 articles](https://cran.r-project.org/web/packages/fivethirtyeight/vignettes/fivethirtyeight.html)
+    - Pick two that would be of interest to all group members
+    - Review the [Group Project Outline](group_project_outline/index.html) for further instructions
+
+---
+
+class: center, middle
+
+# To Do for Next time
+
+## Click the link
+
+```{r echo=FALSE, out.width="50%"}
+knitr::include_graphics("https://image.freepik.com/free-icon/down-arrow-hand-drawn-sign_318-53286.jpg")
+```
+
+---
+
+
+
+layout: true
+
 .footer[[Week 05 - Tuesday](https://ismayc.github.io/soc301_s2017/2017/02/28/week-05---tuesday/)]
 
 ---
 
-name: week04th
+name: week05t
 class: center, middle
 
 # Week 05 - Tuesday
@@ -1878,3 +1965,4 @@ class: center, middle
 - Work on and finish Introduction to R DataCamp course
 - Make sure to have started and be at the point where you have specific questions Dinisa and I can address
 - This is the time to make a good impression and start off strong!  
+

@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>/2017/03/02/week-05---thursday/</loc>
+    <lastmod>2017-03-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/2017/02/28/week-05---tuesday/</loc>
     <lastmod>2017-02-28T00:00:00+00:00</lastmod>
   </url>
@@ -97,6 +102,16 @@
   </url>
   
   <url>
+    <loc>/final_project_outline/</loc>
+    <lastmod>2017-01-30T10:30:38-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/group_project_outline/</loc>
+    <lastmod>2017-01-30T10:30:38-08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/syllabus/</loc>
     <lastmod>2017-01-30T10:30:38-08:00</lastmod>
   </url>
@@ -113,7 +128,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2017-02-28T00:00:00+00:00</lastmod>
+    <lastmod>2017-03-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -125,7 +140,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2017-02-28T00:00:00+00:00</lastmod>
+    <lastmod>2017-03-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
