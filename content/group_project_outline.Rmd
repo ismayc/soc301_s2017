@@ -45,9 +45,12 @@ built so far this semester. In particular:
 
 # Administrative Notes
 
-* **Submission Format**: Each group will use a single RStudio project that is shared amongst the group members and with Chester. In the same folder as the RStudio project, you will have an R Markdown file containing all R code needed and the text of your vignette discussing your plots and data wrangling as well as a knitted HTML document that shows your analysis and writing.  You'll be putting all of your documents into
-a Google Drive folder shared with you on Chester's account and your specific link will be shared with you after you have decided on groups.  All your work will be centrally located here; do not email me any
-files.  In the shared Google Drive folder will be a file called `group_project.Rmd`.  This is where you will put your final analysis.  You are encouraged to also create R script files to show your work as needed.
+* **Submission Format**: Each group must create a single RStudio project that is shared amongst the group members and with Chester. In the same folder as the RStudio project, you will include an R Markdown file containing all R code needed and the text of your vignette as well as a knitted HTML document that shows your analysis and writing.  You'll be putting all of your documents into
+a Google Drive folder on Chester's account and your specific link will be shared with you after you have decided on groups.  All your work will be centrally located here; do not email or message me on Slack with any files.  You can request assistance by specifying on what line your error message occurs and in what file you are working.  Since everything will be synced, I will be able to go look into your work as needed.
+
+    - In the shared Google Drive folder will be a file called `final_project.Rmd`.  This is where you will put your final analysis.  
+    - Use the `scratch.R` file for all of your preliminary work.  I want you to keep track of your progress in this file so try not to delete incorrect code, but rather document the error and then work to fix it.  
+    - You'll also see a `.Rproj` file in this folder.  This is the "single RStudio project" I referred to earlier.  You should always open this file when you are starting/resuming your analysis in RStudio.  It makes sure the RStudio is working in the correct directory and stores a lot of settings related to your project.
 
 ## Project Proposal {#proposal}
 
