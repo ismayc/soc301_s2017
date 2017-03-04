@@ -57,7 +57,7 @@ files.  In the shared Google Drive folder will be a file called `group_project.R
 + Identify as soon as possible who the three members of your group will be.  Send me a message on Slack when you have identified who you'd like to work with.
 + You should identify what are the top two data sets from the `fivethirtyeight` package you'd be interested in analyzing.
 + Identify at least two questions you'd like to answer for each data set
-  - This should include what variables you will use, what types they are, and which of the 5NG would be appropriate for assisting in answering these questions.
+    - This should include what variables you will use, what types they are, and which of the 5NG would be appropriate for assisting in answering these questions.
 + I will review your submissions and assign you your data set by the end of the day on Tuesday, March 7.
 
 ## Group Project Draft
