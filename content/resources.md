@@ -10,6 +10,8 @@ This page will be updated with links throughout the course.
   - Password was sent via Slack on Tuesday, February 14 as private message
     - If you want to change your password to something else, send me a Slack message or give me a piece of paper
         with your password clearly written.
+- Download [R](https://cran.r-project.org/)
+- Download [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/)        
 - Slack
   - [Download for computer and mobile](https://slack.com/downloads/)
   - [Watch tour VIDEO](https://slack.com/is)
