@@ -22,6 +22,408 @@ class: center, middle, inverse, title-slide
 
 layout: true
 
+.footer[[Week 06 - Thursday](https://ismayc.github.io/soc301_s2017/2017/03/07/week-06---tuesday/)]
+
+---
+
+name: week06t
+class: center, middle
+
+# Week 06 - Tuesday
+
+# March 7, 2017
+
+***
+
+### Make sure to share your Group Project proposals with me
+
+---
+
+# Follow-up on assignment for today
+
+## Check that R and RStudio installed on your machine
+
+## And all that needed packages are installed
+
+
+```r
+needed_pkgs &lt;- c("nycflights13", "tibble", "dplyr", 
+                 "ggplot2", "knitr", "okcupiddata", "dygraphs", 
+                 "rmarkdown", "mosaic", "ggplot2movies", 
+                 "fivethirtyeight")
+
+new.pkgs &lt;- needed_pkgs[!(needed_pkgs %in% installed.packages())]
+
+if(length(new.pkgs)) {
+  install.packages(new.pkgs, repos = "http://cran.rstudio.com")
+}
+```
+
+---
+
+# Group Options
+
+- If you want to work in a group of four, you can do so BUT you'll need to complete 2 unrelated vignettes.
+--
+
+- If you are left in a group of two, I will work with you to set up an assignment that is fair.
+--
+
+- Final decisions on group members MUST be made by the end of the day today.  I won't accept any changes in group members after today.
+--
+
+- If you have problems contacting your group members, please let me know on Slack as soon as possible.  **Check** SLACK at least once per day!
+
+
+---
+
+
+# Group Options
+
+- If you are already having trouble setting up times to meet to work on the Group Project, you are going to have an even harder time going forward.
+    - Pick a standard time to meet that works for everyone.
+    - I would count a missed group meeting as a failing grade for the project.
+--
+- You will need to meet outside of class to complete this project.  This could easily include having a Google Hangout video chat as needed.  Further, if you set up tasks appropriately, you may not need to meet in person much.
+
+---
+
+# Set-up Google Drive on your computer
+
+- Click on the link I sent you for your Group Project folder in your email or in the Slack message I sent to your group
+
+    - https://www.google.com/drive/download/
+--
+
+- Open the Rproj file in the Google Drive folder on your computer
+--
+
+- Make sure that `script.R` opens with RStudio
+--
+
+- Try to Knit `group_project.Rmd`
+
+---
+
+# Group Project Deadlines
+
+- Always check [the Group Project Outline](https://ismayc.github.io/soc301_s2017/group_project_outline/index.html) to make sure you are on schedule and more specific deadlines
+
+- March 14 (2:45 PM) - Group Project Draft Due
+
+- March 23 (10:00 AM) - Revised Group Project Due
+
+---
+
+class: center, middle
+
+# Data ~~Manipulation~~ Wrangling
+
+---
+
+## The `gapminder` data frame in the `gapminder` package
+
+
+```r
+library(gapminder)
+library(dplyr)
+glimpse(gapminder)
+```
+
+```
+## Observations: 1,704
+## Variables: 6
+## $ country   &lt;fctr&gt; Afghanistan, Afghanistan, Afghanistan, Afghanistan,...
+## $ continent &lt;fctr&gt; Asia, Asia, Asia, Asia, Asia, Asia, Asia, Asia, Asi...
+## $ year      &lt;int&gt; 1952, 1957, 1962, 1967, 1972, 1977, 1982, 1987, 1992...
+## $ lifeExp   &lt;dbl&gt; 28.801, 30.332, 31.997, 34.020, 36.088, 38.438, 39.8...
+## $ pop       &lt;int&gt; 8425333, 9240934, 10267083, 11537966, 13079460, 1488...
+## $ gdpPercap &lt;dbl&gt; 779.4453, 820.8530, 853.1007, 836.1971, 739.9811, 78...
+```
+
+---
+
+## Base R versus the `tidyverse`
+
+- Say we wanted mean life expectancy across all years for Asia
+--
+
+
+```r
+# Base R
+asia &lt;- gapminder[gapminder$continent == "Asia", ]
+mean(asia$lifeExp)
+```
+
+```
+## [1] 60.0649
+```
+--
+ 
+
+```r
+library(dplyr)
+gapminder %&gt;% filter(continent == "Asia") %&gt;%
+  summarize(mean_exp = mean(lifeExp))
+```
+
+```
+## # A tibble: 1 × 1
+##   mean_exp
+##      &lt;dbl&gt;
+## 1  60.0649
+```
+
+---
+
+## The pipe `%&gt;%`
+
+&lt;img src="figure/pipe.png" width="245" /&gt; &amp;emsp; &amp;emsp; &amp;emsp; ![](figure/MagrittePipe.jpg)&lt;!-- --&gt;
+--
+
+- A way to chain together commands
+--
+
+- It is *essentially* the `dplyr` equivalent to the &lt;br&gt; `+` in `ggplot2`
+
+---
+
+# The 5NG of data viz
+--
+
+### `geom_point()`&lt;br&gt; `geom_line()` &lt;br&gt; `geom_histogram()`&lt;br&gt;  `geom_boxplot()`&lt;br&gt; `geom_bar()`
+
+---
+# The 5MV of data wrangling
+### `filter()` &lt;br&gt; `summarize()` &lt;br&gt; `group_by()` &lt;br&gt; `mutate()` &lt;br&gt; `arrange()`
+
+---
+
+# `filter()`
+
+- Allows you to select a subset of the rows of a data frame. 
+
+- The arguments are the "filters" that you'd like to apply.
+--
+
+
+```r
+library(gapminder); library(dplyr)
+gap_2007 &lt;- gapminder %&gt;% filter(year == 2007)
+head(gap_2007)
+```
+
+```
+## # A tibble: 6 × 6
+##       country continent  year lifeExp      pop  gdpPercap
+##        &lt;fctr&gt;    &lt;fctr&gt; &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;      &lt;dbl&gt;
+## 1 Afghanistan      Asia  2007  43.828 31889923   974.5803
+## 2     Albania    Europe  2007  76.423  3600523  5937.0295
+## 3     Algeria    Africa  2007  72.301 33333216  6223.3675
+## 4      Angola    Africa  2007  42.731 12420476  4797.2313
+## 5   Argentina  Americas  2007  75.320 40301927 12779.3796
+## 6   Australia   Oceania  2007  81.235 20434176 34435.3674
+```
+
+---
+
+# Logical operators
+
+- Use `==` to compare a variable to a value
+--
+
+
+```r
+library(gapminder); library(dplyr)
+gap_2007 &lt;- gapminder %&gt;% filter(year = 2007)
+```
+
+```
+Error: filter() takes unnamed arguments. Do you need `==`?
+```
+
+---
+
+# Logical operators
+
+- Use `|` to check for any in multiple filters being true:
+--
+
+
+```r
+gapminder %&gt;% 
+  filter(year == 2002 | continent == "Europe")
+```
+--
+
+
+```
+## # A tibble: 472 × 6
+##        country continent  year lifeExp      pop gdpPercap
+##         &lt;fctr&gt;    &lt;fctr&gt; &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;
+## 1  Afghanistan      Asia  2002  42.129 25268405  726.7341
+## 2      Albania    Europe  1952  55.230  1282697 1601.0561
+## 3      Albania    Europe  1957  59.280  1476505 1942.2842
+## 4      Albania    Europe  1962  64.820  1728137 2312.8890
+## 5      Albania    Europe  1967  66.220  1984060 2760.1969
+## 6      Albania    Europe  1972  67.690  2263554 3313.4222
+## 7      Albania    Europe  1977  68.930  2509048 3533.0039
+## 8      Albania    Europe  1982  70.420  2780097 3630.8807
+## 9      Albania    Europe  1987  72.000  3075321 3738.9327
+## 10     Albania    Europe  1992  71.581  3326498 2497.4379
+## # ... with 462 more rows
+```
+
+---
+
+# Logical operators
+
+- Use `&amp;` or `,` to check for all of multiple filters being true:
+--
+
+
+```r
+gapminder %&gt;% 
+  filter(year == 2002, continent == "Europe")
+```
+
+
+```
+## # A tibble: 30 × 6
+##                   country continent  year lifeExp      pop gdpPercap
+##                    &lt;fctr&gt;    &lt;fctr&gt; &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;
+## 1                 Albania    Europe  2002  75.651  3508512  4604.212
+## 2                 Austria    Europe  2002  78.980  8148312 32417.608
+## 3                 Belgium    Europe  2002  78.320 10311970 30485.884
+## 4  Bosnia and Herzegovina    Europe  2002  74.090  4165416  6018.975
+## 5                Bulgaria    Europe  2002  72.140  7661799  7696.778
+## 6                 Croatia    Europe  2002  74.876  4481020 11628.389
+## 7          Czech Republic    Europe  2002  75.510 10256295 17596.210
+## 8                 Denmark    Europe  2002  77.180  5374693 32166.500
+## 9                 Finland    Europe  2002  78.370  5193039 28204.591
+## 10                 France    Europe  2002  79.590 59925035 28926.032
+## # ... with 20 more rows
+```
+
+---
+
+# Logical operators
+
+- Use `%in%` to check for any being true &lt;br&gt; (shortcut to using `|` repeatedly)
+--
+
+
+```r
+gapminder %&gt;% 
+  filter(country %in% c("Argentina", "Belgium", "Mexico"),
+         year %in% c(1987, 1992))
+```
+--
+
+
+```
+## # A tibble: 6 × 6
+##     country continent  year lifeExp      pop gdpPercap
+##      &lt;fctr&gt;    &lt;fctr&gt; &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;
+## 1 Argentina  Americas  1987  70.774 31620918  9139.671
+## 2 Argentina  Americas  1992  71.868 33958947  9308.419
+## 3   Belgium    Europe  1987  75.350  9870200 22525.563
+## 4   Belgium    Europe  1992  76.460 10045622 25575.571
+## 5    Mexico  Americas  1987  69.498 80122492  8688.156
+## 6    Mexico  Americas  1992  71.455 88111030  9472.384
+```
+
+
+---
+
+# `summarize()`
+
+- Any numerical summary that you want to apply to a column of a data frame is specified within `summarize()`.
+
+
+```r
+max_exp_1997 &lt;- gapminder %&gt;% 
+  filter(year == 1997) %&gt;% 
+  summarize(max_exp = max(lifeExp))
+max_exp_1997
+```
+--
+
+
+```
+## # A tibble: 1 × 1
+##   max_exp
+##     &lt;dbl&gt;
+## 1   80.69
+```
+
+
+
+---
+
+### Combining `summarize()` with `group_by()`
+
+- When you'd like to determine a numerical summary for all
+levels of a different categorical variable
+
+
+```r
+max_exp_1997_by_cont &lt;- gapminder %&gt;% 
+  filter(year == 1997) %&gt;% 
+  group_by(continent) %&gt;%
+  summarize(max_exp = max(lifeExp))
+knitr::kable(max_exp_1997_by_cont, format = "html")
+```
+
+--
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; continent &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; max_exp &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Africa &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 74.772 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Americas &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 78.610 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Asia &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 80.690 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Europe &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 79.390 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Oceania &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 78.830 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+class: center, middle
+
+# Finalize Group Project Proposal / Groups
+
+***
+
+# Work on [PS6](../problem-sets/index.html#ps6)
+
+# Work on [DC8](https://campus.datacamp.com/courses/reporting-with-r-markdown)
+
+# Work on [DC9](https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/filtering-grouping-summarizing)
+---
+
+layout: true
+
 .footer[[Week 05 - Thursday](https://ismayc.github.io/soc301_s2017/2017/03/02/week-05---thursday/)]
 
 ---
@@ -128,7 +530,7 @@ class: center, middle
 
 What code is needed to produce this plot using the `na.omit(flying)` data frame derived from the `fivethirtyeight` package?  Make sure to load all needed libraries.
 
-&lt;img src="slide_deck_files/figure-html/unnamed-chunk-3-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="slide_deck_files/figure-html/unnamed-chunk-19-1.png" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -157,7 +559,7 @@ ggplot(data = bechdel, mapping = aes(x = five_year)) +
   geom_bar(position = "fill")
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-5-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-21-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -170,7 +572,7 @@ ggplot(data = bechdel, mapping = aes(x = five_year,
   geom_bar(position = "fill")
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-6-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-22-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -183,7 +585,7 @@ ggplot(data = bechdel, mapping = aes(x = five_year,
   geom_bar(position = "fill", color = "white")
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-7-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-23-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -196,7 +598,7 @@ ggplot(data = bechdel, mapping = aes(x = five_year,
       c("#FF2603", "#FF937F", "#FEC9C3", "#6AB4DA", "#018ED5"))
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-8-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-24-1.png)&lt;!-- --&gt;
 
 Identified colors from the `bechdel` 538 [image](https://espnfivethirtyeight.files.wordpress.com/2014/04/hickey-bechdel-11.png?quality=90&amp;strip=all&amp;w=1150&amp;ssl=1) at http://imagecolorpicker.com/
 
@@ -213,7 +615,7 @@ ggplot(data = bechdel, mapping = aes(x = five_year,
       c("navy", "blanchedalmond", "brown", "gray87", "lawngreen"))
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-9-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-25-1.png)&lt;!-- --&gt;
 
 
 ---
@@ -399,7 +801,7 @@ ggplot(data = hist_example, mapping = aes(x = numeric_var)) +
   geom_histogram(binwidth = 6, color = "black", fill = "white")
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-12-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-28-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -453,7 +855,7 @@ ggplot(data = class_df, mapping = aes(x = class)) +
   geom_bar(fill = "lightgreen", color = "black")
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-14-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-30-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -486,7 +888,7 @@ ggplot(data = class_freq, mapping = aes(x = class, y = count)) +
   geom_col(fill = "lightgreen", color = "black")
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-16-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-32-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -510,7 +912,7 @@ ggplot(data = class_freq, mapping = aes(x = class, y = count)) +
 
 - This is using the `profiles` data frame in the `okcupiddata` package.
 
-![](slide_deck_files/figure-html/unnamed-chunk-17-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-33-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -521,7 +923,7 @@ ggplot(data = class_freq, mapping = aes(x = class, y = count)) +
 
 - What code is needed to produce this plot?
 
-![](slide_deck_files/figure-html/unnamed-chunk-18-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-34-1.png)&lt;!-- --&gt;
 
 
 ---
@@ -533,7 +935,7 @@ ggplot(data = class_freq, mapping = aes(x = class, y = count)) +
 
 - What code is needed to produce this plot?
 
-![](slide_deck_files/figure-html/unnamed-chunk-19-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-35-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -544,7 +946,7 @@ ggplot(data = class_freq, mapping = aes(x = class, y = count)) +
 
 - What code is needed to produce this plot?
 
-![](slide_deck_files/figure-html/unnamed-chunk-20-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-36-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -555,7 +957,7 @@ ggplot(data = class_freq, mapping = aes(x = class, y = count)) +
 
 - What code is needed to produce this plot?
 
-![](slide_deck_files/figure-html/unnamed-chunk-21-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-37-1.png)&lt;!-- --&gt;
 
 
 ---
@@ -631,7 +1033,7 @@ class: center, middle
 Write the code necessary to produce the last plot using the `US_births_2014` data frame from the [Scatter-plots and Line-graphs](https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/scatter-plots-line-graphs?ex=4) chapter of DataCamp:
 
 
-![](slide_deck_files/figure-html/unnamed-chunk-22-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-38-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -639,7 +1041,7 @@ Write the code necessary to produce the last plot using the `US_births_2014` dat
 
 - What stands out to you when you look at this plot?  In other words, what stories could be told by observing this data?
 
-![](slide_deck_files/figure-html/unnamed-chunk-23-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-39-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -696,7 +1098,7 @@ ggplot(data = hist_example, mapping = aes(x = numeric_var)) +
   geom_histogram(binwidth = 6, color = "black", fill = "white")
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-26-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-42-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -749,7 +1151,7 @@ class: center, middle
 
 - Write the code to produce the plot below
 
-![](slide_deck_files/figure-html/unnamed-chunk-29-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-45-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -763,7 +1165,7 @@ ggplot(data = weather, mapping = aes(x = humid, fill = origin)) +
   facet_grid(facets = origin ~ .)
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-30-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-46-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -781,7 +1183,7 @@ ggplot(data = weather, mapping = aes(x = humid, fill = origin)) +
 
 - Another way to view the relationship between a categorical explanatory variable and a numerical response variable is via a boxplot.  Think about how we might write the code to produce the boxplot for humidity across airports.
 
-![](slide_deck_files/figure-html/unnamed-chunk-31-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-47-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -836,7 +1238,7 @@ class: center, middle
 - &lt;small&gt;Make sure to load all needed packages!&lt;/small&gt;
 
 
-![](slide_deck_files/figure-html/unnamed-chunk-32-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-48-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -1057,7 +1459,7 @@ ggplot(data = simple_ex, mapping = aes(x = A, y = B)) +
 ```
 --
 
-![](slide_deck_files/figure-html/unnamed-chunk-38-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-54-1.png)&lt;!-- --&gt;
 
 
 ---
@@ -1075,7 +1477,7 @@ ggplot(data = simple_ex, mapping = aes(x = A, y = B)) +
 ```
 --
 
-![](slide_deck_files/figure-html/unnamed-chunk-40-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-56-1.png)&lt;!-- --&gt;
 
 
 ---
@@ -1092,7 +1494,7 @@ ggplot(data = simple_ex, mapping = aes(x = A, y = B, size = C)) +
 ```
 --
 
-![](slide_deck_files/figure-html/unnamed-chunk-42-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-58-1.png)&lt;!-- --&gt;
 
 
 ---
@@ -1109,7 +1511,7 @@ ggplot(data = simple_ex, mapping = aes(x = A, y = B)) +
 ```
 --
 
-![](slide_deck_files/figure-html/unnamed-chunk-44-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-60-1.png)&lt;!-- --&gt;
 
 
 ---
@@ -1126,7 +1528,7 @@ ggplot(data = simple_ex, mapping = aes(x = A, y = B, color = D)) +
 ```
 --
 
-![](slide_deck_files/figure-html/unnamed-chunk-46-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-62-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -1192,14 +1594,14 @@ ggplot(data = total_fert_tidy, mapping = aes(x = year, y = fert)) +
   geom_point()
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-48-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-64-1.png)&lt;!-- --&gt;
 
 
 ---
 
 ## Discussing the scatterplot
 
-![](slide_deck_files/figure-html/unnamed-chunk-49-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-65-1.png)&lt;!-- --&gt;
 
 - What stands out to you as you look at this plot?
 - What other information would be useful here?
@@ -1256,7 +1658,7 @@ ggplot(data = total_fert_tidy,
   geom_point()
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-51-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-67-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -1270,7 +1672,7 @@ ggplot(data = total_fert_tidy,
   geom_point()
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-52-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-68-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -1285,7 +1687,7 @@ ggplot(data = total_fert_tidy,
   geom_point()
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-53-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-69-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -1401,7 +1803,7 @@ head(gap2007, n = 10)
 
 - Write the code on paper and then discuss in groups of 3.
 
-![](slide_deck_files/figure-html/unnamed-chunk-57-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-73-1.png)&lt;!-- --&gt;
 
 --
 
@@ -1414,7 +1816,7 @@ that would be of interest here?
 
 - Write the code on paper and then discuss in groups of 3.
 
-![](slide_deck_files/figure-html/unnamed-chunk-58-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-74-1.png)&lt;!-- --&gt;
 --
 
 - What information is added by the coloring here?
@@ -1486,7 +1888,7 @@ What `ggplot2` code is needed to produce this plot? The `simple_ex` data frame i
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;img src="slide_deck_files/figure-html/unnamed-chunk-59-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="slide_deck_files/figure-html/unnamed-chunk-75-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 

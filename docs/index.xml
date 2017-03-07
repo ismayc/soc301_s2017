@@ -6,8 +6,49 @@
     <description>Recent content on SOC 301 - Spring 2017</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 02 Mar 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Mar 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Week 06 - Tuesday</title>
+      <link>/2017/03/07/week-06---tuesday/</link>
+      <pubDate>Tue, 07 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/03/07/week-06---tuesday/</guid>
+      <description>
+
+&lt;p&gt;Slides available &lt;a href=&#34;http://ismayc.github.io/soc301_s2017/slides/slide_deck.html#week06t&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;covered-content&#34;&gt;Covered Content&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Work on getting Group Project files set up in RStudio&lt;/li&gt;
+&lt;li&gt;Discuss some of the Five Main Verbs of Data Wrangling
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;filter()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;summarize&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;group_by&lt;/code&gt; with &lt;code&gt;summarize&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Work on &lt;a href=&#34;../../../../group_project_outline/index.html&#34;&gt;Group Project&lt;/a&gt;, &lt;a href=&#34;https://ismayc.github.io/soc301_s2017/problem-sets/index.html#ps6&#34;&gt;Problem Set 6&lt;/a&gt;, and DataCamp assignments &lt;a href=&#34;https://www.datacamp.com/courses/reporting-with-r-markdown&#34;&gt;DC8&lt;/a&gt; and &lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/filtering-grouping-summarizing?ex=1&#34;&gt;DC9&lt;/a&gt; below&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;to-do-for-next-time&#34;&gt;To do for next time&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Meet with your group to work on Group Project
+
+&lt;ul&gt;
+&lt;li&gt;Ensure everyone in your group has the Google Drive folder downloaded to their
+computer and is able to work with it inside RStudio&lt;/li&gt;
+&lt;li&gt;I&amp;rsquo;ll check this at the beginning of class and you&amp;rsquo;ll lose points as a group for
+your project if you don&amp;rsquo;t have this working for all members of your group&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Complete &lt;a href=&#34;https://www.datacamp.com/courses/reporting-with-r-markdown&#34;&gt;Reporting with R Markdown&lt;/a&gt; DataCamp course (Due on March 9 at 1 PM)&lt;/li&gt;
+&lt;li&gt;Begin &lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/filtering-grouping-summarizing?ex=1&#34;&gt;Filtering, Grouping, &amp;amp; Summarizing&lt;/a&gt; DataCamp chapter (Due on March 14 at 1 PM)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Week 05 - Thursday</title>
@@ -746,7 +787,7 @@ library(ggplot2)
 all_alaska_flights &amp;lt;- flights %&amp;gt;% filter(carrier == &amp;quot;AS&amp;quot;)
 ggplot(data = all_alaska_flights, mapping = aes(x = air_time, y = distance)) +
   geom_point()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/problem-sets/ps-key/figures/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;#####content/problem-sets/ps-key_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;This might initially look like an error but Alaskan Airlines online flies to Seattle from New York City. Therefore, all of the &lt;code&gt;distance&lt;/code&gt; values are 2402. We can see that there was quite a bit of variability in terms of &lt;code&gt;air_time&lt;/code&gt; though.&lt;/p&gt;
 &lt;!-- --&gt;
 &lt;/div&gt;
@@ -785,7 +826,7 @@ early_january_weather &amp;lt;- weather %&amp;gt;%
   filter(origin == &amp;quot;EWR&amp;quot; &amp;amp; month == 1 &amp;amp; day &amp;lt;= 15)
 ggplot(data = early_january_weather, mapping = aes(x = time_hour, y = wind_gust)) +
   geom_line()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/problem-sets/ps-key/figures/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;#####content/problem-sets/ps-key_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;What immediately stands out in this plot are the days with no wind gusts at all and values of 0. There appears to be only one wind gust over 25 mpg around January 2nd or 3rd.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;/div&gt;
@@ -1104,33 +1145,6 @@ reach out for help.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p style=&#34;text-align:center;&#34;&gt;&lt;img src=&#34;http://ismayc.github.io/soc301_s2017/img/griffin.jpg&#34; alt=&#34;Griffin&#34; style=&#34;width:400px&#34;&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Kawita</title>
-      <link>/kawita/</link>
-      <pubDate>Tue, 31 Jan 2017 09:41:25 -0800</pubDate>
-      
-      <guid>/kawita/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;Office Hours:  Mondays and Wednesdays from 7:00 PM to 8:30 PM&lt;/li&gt;
-&lt;li&gt;Office Location:  TLC in Scott Hall&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Contact: @kawitakaur on Slack&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Advice for SOC 301 students:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Take a deep breath&amp;hellip; You may be scared now of using R and/or writing code, but trust Chester, he will get you through the course load and help you every step of the way. It will challenge your work ethic and patience, but it is so gratifying when you get a working code, and Chester will be there to answer any questions you have.&lt;/li&gt;
-&lt;li&gt;Take notes!!!! Even if something doesn&amp;rsquo;t seem important or crucial for the class, trust me, it is! When reading the textbook, take notes, when Chester is lecturing, take notes, if someone asks an interesting question, make a note! This will definitely help you in the long run.&lt;/li&gt;
-&lt;li&gt;Take advantage of your classmates and professor. Ask questions, work together, and find a solution. Go to office hours, make study groups, and most importantly, communicate with those around you. No one is going to know if you are struggling unless you ask for help.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Brief bio:  &amp;ldquo;I am a senior Biology major. I intend to go to medical school and I am from southern Oregon. I am really looking forward to tutoring this class!&amp;rdquo;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p style=&#34;text-align:center;&#34;&gt;&lt;img src=&#34;http://ismayc.github.io/soc301_s2017/img/kawita.jpg&#34; alt=&#34;Kawita&#34; style=&#34;width:400px&#34;&gt;&lt;/p&gt;
 </description>
     </item>
     
