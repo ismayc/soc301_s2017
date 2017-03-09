@@ -217,10 +217,25 @@ countries <- tbl_df(countries) %>%
 #readr::write_csv(countries, "docs/countries.csv")
 ```
 
-```{r eval=FALSE}
+```{r}
 library(readr)
-countries <- read_csv("http://ismayc.github.io/soc301_s2017/countries.csv")
+library(dplyr)
+url <- "http://ismayc.github.io/soc301_s2017/countries.csv"
+countries <- read_csv(url)
 head(countries)
+```
+
+---
+
+# More with `inner_join()`
+
+```{r}
+new_gap <- inner_join(x = gapminder,
+                      y = countries,
+                      by = c("country" = "name")) %>% 
+  arrange(year) %>% 
+  select(-pop, -gdpPercap)
+head(new_gap, 10)
 ```
 
 
@@ -240,5 +255,5 @@ head(countries)
 
 ---
 
-{r old, child='temp_deck.Rmd'}
- 
+```{r old, child='temp_deck.Rmd'}
+```
