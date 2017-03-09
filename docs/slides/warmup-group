@@ -1,0 +1,26 @@
+# Warmup (in groups)
+
+### Write the code needed to give this table for *African* countries.
+
+```{r echo=FALSE}
+gapminder %>%
+  filter(continent == "Africa") %>%
+  group_by(year) %>%
+  summarize(min_lifeExp = min(lifeExp), max_lifeExp = max(lifeExp))
+```
+
+---
+
+# Warmup (in groups)
+
+### What will this code produce?  Write down in words what this gives and sketch out the table.
+
+```{r eval=FALSE}
+gapminder %>%
+  filter(continent == "Americas") %>%
+  filter(lifeExp > 75) %>%
+  group_by(country) %>%
+  summarize(median_exp = median(lifeExp))
+```
+
+---

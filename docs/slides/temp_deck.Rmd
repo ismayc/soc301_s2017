@@ -1,5 +1,305 @@
 layout: true
 
+.footer[[Week 06 - Tuesday](https://ismayc.github.io/soc301_s2017/2017/03/07/week-06---tuesday/)]
+
+---
+
+name: week06t
+class: center, middle
+
+# Week 06 - Tuesday
+
+# March 7, 2017
+
+***
+
+### Make sure to share your Group Project proposals with me
+
+---
+
+# Follow-up on assignment for today
+
+## Check that R and RStudio installed on your machine
+
+## And all that needed packages are installed
+
+```{r eval=FALSE}
+needed_pkgs <- c("nycflights13", "tibble", "dplyr", 
+                 "ggplot2", "knitr", "okcupiddata", "dygraphs", 
+                 "rmarkdown", "mosaic", "ggplot2movies", 
+                 "fivethirtyeight")
+
+new.pkgs <- needed_pkgs[!(needed_pkgs %in% installed.packages())]
+
+if(length(new.pkgs)) {
+  install.packages(new.pkgs, repos = "http://cran.rstudio.com")
+}
+```
+
+---
+
+# Group Options
+
+- If you want to work in a group of four, you can do so BUT you'll need to complete 2 unrelated vignettes.
+--
+
+- If you are left in a group of two, I will work with you to set up an assignment that is fair.
+--
+
+- Final decisions on group members MUST be made by the end of the day today.  I won't accept any changes in group members after today.
+--
+
+- If you have problems contacting your group members, please let me know on Slack as soon as possible.  **Check** SLACK at least once per day!
+
+
+---
+
+
+# Group Options
+
+- If you are already having trouble setting up times to meet to work on the Group Project, you are going to have an even harder time going forward.
+    - Pick a standard time to meet that works for everyone.
+    - I would count a missed group meeting as a failing grade for the project.
+--
+- You will need to meet outside of class to complete this project.  This could easily include having a Google Hangout video chat as needed.  Further, if you set up tasks appropriately, you may not need to meet in person much.
+
+---
+
+# Set-up Google Drive on your computer
+
+- Click on the link I sent you for your Group Project folder in your email or in the Slack message I sent to your group
+
+    - https://www.google.com/drive/download/
+--
+
+- Open the Rproj file in the Google Drive folder on your computer
+--
+
+- Make sure that `script.R` opens with RStudio
+--
+
+- Try to Knit `group_project.Rmd`
+
+---
+
+# Group Project Deadlines
+
+- Always check [the Group Project Outline](https://ismayc.github.io/soc301_s2017/group_project_outline/index.html) to make sure you are on schedule and more specific deadlines
+
+- March 14 (2:45 PM) - Group Project Draft Due
+
+- March 23 (10:00 AM) - Revised Group Project Due
+
+---
+
+class: center, middle
+
+# Data ~~Manipulation~~ Wrangling
+
+---
+
+## The `gapminder` data frame in the `gapminder` package
+
+```{r}
+library(gapminder)
+library(dplyr)
+glimpse(gapminder)
+```
+
+---
+
+## Base R versus the `tidyverse`
+
+- Say we wanted mean life expectancy across all years for Asia
+--
+
+```{r}
+# Base R
+asia <- gapminder[gapminder$continent == "Asia", ]
+mean(asia$lifeExp)
+```
+--
+ 
+```{r}
+library(dplyr)
+gapminder %>% filter(continent == "Asia") %>%
+  summarize(mean_exp = mean(lifeExp))
+```
+
+---
+
+## The pipe `%>%`
+
+`r knitr::include_graphics("figure/pipe.png")` &emsp; &emsp; &emsp; `r knitr::include_graphics("figure/MagrittePipe.jpg")`
+--
+
+- A way to chain together commands
+--
+
+- It is *essentially* the `dplyr` equivalent to the <br> `+` in `ggplot2`
+
+---
+
+# The 5NG of data viz
+--
+
+### `geom_point()`<br> `geom_line()` <br> `geom_histogram()`<br>  `geom_boxplot()`<br> `geom_bar()`
+
+---
+# The 5MV of data wrangling
+### `filter()` <br> `summarize()` <br> `group_by()` <br> `mutate()` <br> `arrange()`
+
+---
+
+# `filter()`
+
+- Allows you to select a subset of the rows of a data frame. 
+
+- The arguments are the "filters" that you'd like to apply.
+--
+
+```{r}
+library(gapminder); library(dplyr)
+gap_2007 <- gapminder %>% filter(year == 2007)
+head(gap_2007)
+```
+
+---
+
+# Logical operators
+
+- Use `==` to compare a variable to a value
+--
+
+```{r eval=FALSE}
+library(gapminder); library(dplyr)
+gap_2007 <- gapminder %>% filter(year = 2007)
+```
+
+```
+Error: filter() takes unnamed arguments. Do you need `==`?
+```
+
+---
+
+# Logical operators
+
+- Use `|` to check for any in multiple filters being true:
+--
+
+```{r eval=FALSE}
+gapminder %>% 
+  filter(year == 2002 | continent == "Europe")
+```
+--
+
+```{r echo=FALSE}
+gapminder %>% 
+  filter(year == 2002 | continent == "Europe")
+```
+
+---
+
+# Logical operators
+
+- Use `&` or `,` to check for all of multiple filters being true:
+--
+
+```{r eval=FALSE}
+gapminder %>% 
+  filter(year == 2002, continent == "Europe")
+```
+
+```{r echo=FALSE}
+gapminder %>% 
+  filter(year == 2002, continent == "Europe")
+```
+
+---
+
+# Logical operators
+
+- Use `%in%` to check for any being true <br> (shortcut to using `|` repeatedly)
+--
+
+```{r eval=FALSE}
+gapminder %>% 
+  filter(country %in% c("Argentina", "Belgium", "Mexico"),
+         year %in% c(1987, 1992))
+```
+--
+
+```{r echo=FALSE}
+gapminder %>% 
+  filter(country %in% c("Argentina", "Belgium", "Mexico"),
+         year %in% c(1987, 1992))
+```
+
+
+---
+
+# `summarize()`
+
+- Any numerical summary that you want to apply to a column of a data frame is specified within `summarize()`.
+
+```{r eval=FALSE}
+max_exp_1997 <- gapminder %>% 
+  filter(year == 1997) %>% 
+  summarize(max_exp = max(lifeExp))
+max_exp_1997
+```
+--
+
+```{r echo=FALSE}
+max_exp_1997 <- gapminder %>% 
+  filter(year == 1997) %>% 
+  summarize(max_exp = max(lifeExp))
+max_exp_1997
+```
+
+
+
+---
+
+### Combining `summarize()` with `group_by()`
+
+- When you'd like to determine a numerical summary for all
+levels of a different categorical variable
+
+```{r eval=FALSE}
+max_exp_1997_by_cont <- gapminder %>% 
+  filter(year == 1997) %>% 
+  group_by(continent) %>%
+  summarize(max_exp = max(lifeExp))
+knitr::kable(max_exp_1997_by_cont, format = "html")
+```
+
+--
+```{r echo=FALSE}
+max_exp_1997_by_cont <- gapminder %>% 
+  filter(year == 1997) %>% 
+  group_by(continent) %>%
+  summarize(max_exp = max(lifeExp))
+knitr::kable(max_exp_1997_by_cont, format = "html")
+```
+
+---
+
+class: center, middle
+
+# Finalize Group Project Proposal / Groups
+
+***
+
+# Work on [PS6](../problem-sets/index.html#ps6)
+
+# Work on [DC8](https://campus.datacamp.com/courses/reporting-with-r-markdown)
+
+# Work on [DC9](https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/filtering-grouping-summarizing)
+---
+
+layout: true
+
 .footer[[Week 05 - Thursday](https://ismayc.github.io/soc301_s2017/2017/03/02/week-05---thursday/)]
 
 ---
