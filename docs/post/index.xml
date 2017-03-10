@@ -6,8 +6,50 @@
     <description>Recent content in Posts on SOC 301 - Spring 2017</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 Mar 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Mar 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Week 06 - Thursday</title>
+      <link>/2017/03/09/week-06---thursday/</link>
+      <pubDate>Thu, 09 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/03/09/week-06---thursday/</guid>
+      <description>
+
+&lt;p&gt;Slides available &lt;a href=&#34;http://ismayc.github.io/soc301_s2017/slides/slide_deck.html#week06th&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;covered-content&#34;&gt;Covered Content&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Review the Five Main Verbs of Data Wrangling
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;filter()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;summarize&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;group_by()&lt;/code&gt; with &lt;code&gt;summarize()&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Talked about always needing to do &lt;code&gt;filter()&lt;/code&gt; BEFORE you do &lt;code&gt;group_by()&lt;/code&gt; with &lt;code&gt;summarize()&lt;/code&gt;  (It won&amp;rsquo;t work if you do it in a different order!)&lt;/li&gt;
+&lt;li&gt;Discuss the last two of the FMV
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;mutate()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;arrange()&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Work on &lt;a href=&#34;../../../../group_project_outline/index.html&#34;&gt;Group Project&lt;/a&gt;, &lt;a href=&#34;https://ismayc.github.io/soc301_s2017/problem-sets/index.html#ps6&#34;&gt;Problem Set 6&lt;/a&gt;, and DataCamp assignment &lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/filtering-grouping-summarizing?ex=1&#34;&gt;DC9&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;to-do-for-next-time&#34;&gt;To do for next time&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Meet with your group to work on Group Project&lt;/li&gt;
+&lt;li&gt;Make sure to enter your R code in your own &lt;code&gt;scratch_&amp;lt;name&amp;gt;.R&lt;/code&gt; files in the Google Drive
+folder&lt;/li&gt;
+&lt;li&gt;Complete &lt;a href=&#34;https://ismayc.github.io/soc301_s2017/problem-sets/index.html#ps6&#34;&gt;Problem Set 6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Complete  &lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/filtering-grouping-summarizing?ex=1&#34;&gt;Filtering, Grouping, &amp;amp; Summarizing&lt;/a&gt; DataCamp chapter (Due on March 14 at 1 PM)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Week 06 - Tuesday</title>

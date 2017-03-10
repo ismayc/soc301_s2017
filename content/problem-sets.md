@@ -5,6 +5,15 @@ title: Problem Sets
 
 This page will list the Problem Sets and when they will be turned in on paper throughout the course.  You will turn in one problem set per group.  You can find discussions about all of the Problem Sets [here](ps-key/index.html).  Links to specific Problem Set discussions will be posted after the Problem Set is turned in below the Problem Set assignment here.
 
+# PS 7 (Due Thurs, Mar 16 by 1:00 PM) {#ps7}
+
+- Write down on a piece of paper AT LEAST five multiple choice questions covering ONLY Chapter 5 of [ModernDive](http://moderndive.com) and the corresponding chapters on DataCamp.
+    - Each question should have four possible answers.
+    - Don't mark what you choose to be the correct answer on what you turn in, but make note of your choice elsewhere to facilitate your learning.
+    - **Please use Courier New font for all pieces of R code.**
+    - Create a Google Doc with your questions and share with isma5720@pacificu.edu
+    - Please follow the layout I have provided in the Sample Question Layout document [here](https://docs.google.com/a/pacificu.edu/document/d/1QrhQl_R5YrYSPNyx8WxTFesYZvSARN_TDGzmD6HeMvQ/edit?usp=sharing).  Copy over the content of this document into a new Google Doc and then enter your questions.
+
 # PS 6 (Due Tues, Mar 14 by 1:00 PM) {#ps6}
 
 - Read Chapter 5 of [ModernDive](https://ismayc.github.io/moderndiver-book/5-manip.html)

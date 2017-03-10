@@ -6,8 +6,50 @@
     <description>Recent content on SOC 301 - Spring 2017</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 Mar 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Mar 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Week 06 - Thursday</title>
+      <link>/2017/03/09/week-06---thursday/</link>
+      <pubDate>Thu, 09 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/03/09/week-06---thursday/</guid>
+      <description>
+
+&lt;p&gt;Slides available &lt;a href=&#34;http://ismayc.github.io/soc301_s2017/slides/slide_deck.html#week06th&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;covered-content&#34;&gt;Covered Content&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Review the Five Main Verbs of Data Wrangling
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;filter()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;summarize&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;group_by()&lt;/code&gt; with &lt;code&gt;summarize()&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Talked about always needing to do &lt;code&gt;filter()&lt;/code&gt; BEFORE you do &lt;code&gt;group_by()&lt;/code&gt; with &lt;code&gt;summarize()&lt;/code&gt;  (It won&amp;rsquo;t work if you do it in a different order!)&lt;/li&gt;
+&lt;li&gt;Discuss the last two of the FMV
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;mutate()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;arrange()&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Work on &lt;a href=&#34;../../../../group_project_outline/index.html&#34;&gt;Group Project&lt;/a&gt;, &lt;a href=&#34;https://ismayc.github.io/soc301_s2017/problem-sets/index.html#ps6&#34;&gt;Problem Set 6&lt;/a&gt;, and DataCamp assignment &lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/filtering-grouping-summarizing?ex=1&#34;&gt;DC9&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;to-do-for-next-time&#34;&gt;To do for next time&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Meet with your group to work on Group Project&lt;/li&gt;
+&lt;li&gt;Make sure to enter your R code in your own &lt;code&gt;scratch_&amp;lt;name&amp;gt;.R&lt;/code&gt; files in the Google Drive
+folder&lt;/li&gt;
+&lt;li&gt;Complete &lt;a href=&#34;https://ismayc.github.io/soc301_s2017/problem-sets/index.html#ps6&#34;&gt;Problem Set 6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Complete  &lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/filtering-grouping-summarizing?ex=1&#34;&gt;Filtering, Grouping, &amp;amp; Summarizing&lt;/a&gt; DataCamp chapter (Due on March 14 at 1 PM)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Week 06 - Tuesday</title>
@@ -787,7 +829,7 @@ library(ggplot2)
 all_alaska_flights &amp;lt;- flights %&amp;gt;% filter(carrier == &amp;quot;AS&amp;quot;)
 ggplot(data = all_alaska_flights, mapping = aes(x = air_time, y = distance)) +
   geom_point()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/problem-sets/ps-key/figures/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;#####content/problem-sets/ps-key_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;This might initially look like an error but Alaskan Airlines online flies to Seattle from New York City. Therefore, all of the &lt;code&gt;distance&lt;/code&gt; values are 2402. We can see that there was quite a bit of variability in terms of &lt;code&gt;air_time&lt;/code&gt; though.&lt;/p&gt;
 &lt;!-- --&gt;
 &lt;/div&gt;
@@ -826,7 +868,7 @@ early_january_weather &amp;lt;- weather %&amp;gt;%
   filter(origin == &amp;quot;EWR&amp;quot; &amp;amp; month == 1 &amp;amp; day &amp;lt;= 15)
 ggplot(data = early_january_weather, mapping = aes(x = time_hour, y = wind_gust)) +
   geom_line()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/problem-sets/ps-key/figures/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;#####content/problem-sets/ps-key_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;What immediately stands out in this plot are the days with no wind gusts at all and values of 0. There appears to be only one wind gust over 25 mpg around January 2nd or 3rd.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;/div&gt;
@@ -1117,34 +1159,6 @@ reach out for help.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p style=&#34;text-align:center;&#34;&gt;&lt;img src=&#34;http://ismayc.github.io/soc301_s2017/img/dinisa.jpg&#34; alt=&#34;Dinisa&#34; style=&#34;width:400px&#34;&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Griffin</title>
-      <link>/griffin/</link>
-      <pubDate>Tue, 31 Jan 2017 09:41:25 -0800</pubDate>
-      
-      <guid>/griffin/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;Office Hours:  Tuesdays and Thursdays from 7:30 PM to 9:00 PM&lt;/li&gt;
-&lt;li&gt;Office Location:  TLC in Scott Hall&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Contact: @fras3033 on Slack&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Advice for SOC 301 students:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Value learning R as something that will be beneficial in other areas after this class. Visualize what your table/graph/etc is supposed to look like and type out code that you think will lead to that image. When that fails, which it often does, either utilize R helpers online via google, or see how Chester writes the code in class. Then copy that down in your notes to refer back to.&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;The way I quizzed myself for this type of class is through trying and failing, the only time I resorted to online resources or waited to see how Chester did it is when my knuckles start turning white from frustration. The struggle is important in learning, there is no doubt about it.&lt;/li&gt;
-&lt;li&gt;Lastly, errors happen. It is inevitable. But once you start to get a handle on the concepts, pinpointing the errors will come with relative ease.&lt;/li&gt;
-&lt;li&gt;And have fun with it, honestly. Because this stuff is cool as hell and incredibly useful in the near-future.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Brief bio:  &amp;ldquo;I&amp;rsquo;m an International Studies major with a concentration in International Policy with minors in Spanish and Comparative Religions. I am a member of the men&amp;rsquo;s tennis team here at Pacific and I plan to study abroad in Spain next fall. I love to help people but bear with me as I am no grand exalted expert at R.&amp;rdquo;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p style=&#34;text-align:center;&#34;&gt;&lt;img src=&#34;http://ismayc.github.io/soc301_s2017/img/griffin.jpg&#34; alt=&#34;Griffin&#34; style=&#34;width:400px&#34;&gt;&lt;/p&gt;
 </description>
     </item>
     
