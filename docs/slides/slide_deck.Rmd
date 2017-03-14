@@ -38,8 +38,8 @@ class: center, middle
 # Warmup
 
 ### Write the code to produce the following table using ALL 5 of the 5MV functions in the `dplyr` package on the `gapminder` data frame in the `gapminder` R package.  
-
-- Note that you should use `|` in your `filter`.
+- Your code will be simplest if you use `|` in your `filter`.
+- Notice how the data is sorted.
 
 ```{r echo=FALSE}
 library(gapminder)
