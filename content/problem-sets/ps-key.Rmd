@@ -432,11 +432,36 @@ What’s another way using `!` we could filter only the rows that are not going 
 
 **Discussion**:
 
+This question refers to
+
+```{r}
+library(dplyr)
+library(nycflights13)
+not_BTV_SEA <- flights %>% 
+  filter(!(dest == "BTV" | dest == "SEA"))
+```
+
+in choosing only the rows of flights that don't go to Burlington, Vermont or Seattle, Washington.  Another way to do this is to choose those that don't go to Burlington AND those that don't go to Seattle:
+
+```{r}
+not_BTV_SEA2 <- flights %>% 
+  filter(!(dest == "BTV"), !(dest == "SEA"))
+```
+
+We can use the `identical` function to show that these objects are the same:
+
+```{r}
+identical(not_BTV_SEA, not_BTV_SEA2)
+```
+
+
 ## LC5.2
 
 Say a doctor is studying the effect of smoking on lung cancer of a large number of patients who have records measured at five year intervals. He notices that a large number of patients have missing data points because the patient has died, so he chooses to ignore these patients in his analysis. What is wrong with this doctor’s approach?
 
 **Discussion**:
+
+By ignoring these data points, he is creating bias in the data.  One of the major things the study is probably trying to determine is the role of smoking on lung cancer and whether or not patients had died.  The point of this exercise is to understand that just applying `na.rm = TRUE` into your analysis to remove missing values and warnings should only be done with caution.
 
 ## LC5.4
 
@@ -448,8 +473,17 @@ summary_temp <- weather %>%
   summarize(std_dev = sd(temp, na.rm = TRUE))
 ```
 
-
 **Discussion**:
+
+The data frame created via `summary_temp <- weather %>% summarize(mean = mean(temp, na.rm = TRUE))` will only contain one column with one value corresponding to the overall mean temperature.  Thus, we can't also calculate the standard deviation of `temp` since `temp` no longer exists in this aggregated data frame.  The correct code to calculate the mean and standard deviation is
+
+```{r}
+summary_temp <- weather %>%   
+  summarize(mean = mean(temp, na.rm = TRUE),
+            std_dev = sd(temp, na.rm = TRUE))
+summary_temp
+```
+
 
 ## LC5.5
 
@@ -457,11 +491,42 @@ Recall from Chapter [4](https://ismayc.github.io/moderndiver-book/4-viz.html) wh
 
 **Discussion**:
 
+This is referencing 
+
+```{r}
+library(knitr) # for kable function
+summary_monthly_temp <- weather %>% 
+  group_by(month) %>% 
+  summarize(mean = mean(temp, na.rm = TRUE), 
+            std_dev = sd(temp, na.rm = TRUE))
+kable(summary_monthly_temp)
+```
+
+We can see that the variability in temperature is highest in January and November since the standard deviation is highest in those months.  June, July, and August have the lowest variability followed by February and March.  This corresponds to temperature being roughly the same value all throughout those months whereas there is a lot of variability in the temperature in January and November.
+
 ## LC5.7
 
 Recreate `by_monthly_origin`, but instead of grouping via `group_by(origin, month)`, group variables in a different order `group_by(month, origin)`. What differs in the resulting data set?
 
 **Discussion**:
+
+This is referencing
+
+```{r}
+by_monthly_origin <- flights %>% 
+  group_by(origin, month) %>% 
+  summarize(count = n())
+kable(by_monthly_origin)
+```
+
+```{r}
+by_origin_month <- flights %>% 
+  group_by(month, origin) %>% 
+  summarize(count = n())
+kable(by_origin_month)
+```
+
+This grouping orders first by `month` and then by `origin` whereas the previous grouping orders by `origin` and then by `month`.  This is a simple way to sort data but you should be careful to make sure you are grouping in the appropriate order.
 
 ## LC5.9
 
@@ -469,11 +534,22 @@ How does the `filter` operation differ from a `group_by` followed by a `summariz
 
 **Discussion**:
 
+`filter` only reduces the total number of rows in the original data frame to only choose those that match a given set of conditions.  `group_by` with `summarize` creates an aggregated data frame that fundamentally is of a different size with different variables than the original data frame.
+
 ## LC5.10
 
 What do positive values of the `gain` variable in `flights` correspond to? What about negative values? And what about a zero value?
 
 **Discussion**:
+
+Observing how `gain` was defined will give us a better understanding:
+
+```{r}
+flights <- flights %>% 
+  mutate(gain = arr_delay - dep_delay)
+```
+
+We can see that this value will be positive when `arr_delay` is larger than `dep_delay` and negative when `dep_delay` is larger than `arr_delay`.  A zero value corresponds to no gain on the flight.  This means that the pilot was not able to make up any time on the flight.  A positive gain means that the pilot was NOT able to make up time during the flight since the arrival delay is more than the departure delay.  A negative gain means that the pilot was able to make up time during the flight.
 
 ## LC5.11
 
@@ -481,11 +557,50 @@ Could we create the `dep_delay` and `arr_delay` columns by simply subtracting `d
 
 **Discussion**:
 
+We use the `mutate()` function to create new variables.  We will also `select` only the two newly created variables and `dep_delay` and `arr_delay`.  Lastly, we include `dep_time` and `sched_dep_time` to see if the subtractions are correct and display the first 15 rows.
+
+```{r}
+flights_new <- flights %>%
+  mutate(my_dep_delay = dep_time - sched_dep_time,
+         my_arr_delay = arr_time - sched_arr_time) %>% 
+  select(dep_time, sched_dep_time, my_dep_delay, dep_delay, my_arr_delay, arr_delay)
+head(flights_new, 15)
+```
+
+We see that the first four rows look OK, but then some problems occur.  `my_dep_delay` gives a value of `-46` when the true `dep_delay` is `-6`.  You can see that this is due shifting to a new hour.  Since `600 - 554 = -46`, it isn't as simple as just subtracting the two rows to get the delay.  You also need to account for their only being 60 minutes in an hour not 100.
+
+
 ## LC5.12
 
 What can we say about the distribution of `gain`? Describe it in a few sentences using the plot and the `gain_summary` data frame values.
 
 **Discussion**:
+
+Here are the plot and summary values:
+
+```{r}
+library(ggplot2)
+ggplot(data = flights, mapping = aes(x = gain)) +
+  geom_histogram(color = "white", bins = 20)
+```
+
+```{r}
+gain_summary <- flights %>% 
+  summarize(
+    min = min(gain, na.rm = TRUE),
+    q1 = quantile(gain, 0.25, na.rm = TRUE),
+    median = quantile(gain, 0.5, na.rm = TRUE),
+    q3 = quantile(gain, 0.75, na.rm = TRUE),
+    max = max(gain, na.rm = TRUE),
+    mean = mean(gain, na.rm = TRUE),
+    sd = sd(gain, na.rm = TRUE),
+    missing = sum(is.na(gain))
+  )
+kable(gain_summary)
+```
+
+We see from the plot that the distribution of `gain` is roughly symmetric, but with some skew to the right for some very long delays.  The mean and median values are both negative which means that we can expect to arrive a few minutes earlier than expected if our flight departs late from NYC.  The standard deviation value tells us that we can expect any given flight to be about 18 minutes away from the mean value of -5.66 minutes.
+
 
 ## LC5.13
 
@@ -493,8 +608,23 @@ Looking at Figure [5.7](https://ismayc.github.io/moderndiver-book/5-manip.html#f
 
 **Discussion**:
 
+The `hour` variable does not contain enough information for any given row in `flights` or `weather`.  It just gives a single numeric value.  Flights depart during an `hour` of a `day` in a `month` in a `year` from an `origin` airport.  Weather is also recorded at these same variables.
+
 ## LC5.14
 
 What surprises you about the top 10 destinations from NYC in 2013?
 
 **Discussion**:
+
+This is referring to
+
+```{r}
+freq_dest <- flights %>% 
+  group_by(dest) %>%  
+  summarize(num_flights = n()) %>% 
+  arrange(desc(num_flights))
+freq_dest
+```
+
+Answers will vary here.  One thing that stands out is that the most flights go to Chicago (ORD) and Atlanta (ATL).  These airports are not very close to New York City.  Both of these airports are major hubs for airlines though which is likely driving them being at the top of the list as well as Los Angeles (LAX) and Boston (BOS).
+
