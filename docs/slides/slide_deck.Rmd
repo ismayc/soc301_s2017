@@ -41,6 +41,8 @@ class: center, middle
 - Your code will be simplest if you use `|` in your `filter`.
 - Notice how the data is sorted.
 
+<br>
+
 ```{r echo=FALSE}
 library(gapminder)
 gapminder %>% 
@@ -48,7 +50,8 @@ gapminder %>%
   group_by(continent, country) %>% 
   summarize(mean_gdp_all_years = mean(gdpPercap)) %>% 
   mutate(mean_minus_one = mean_gdp_all_years - 1) %>% 
-  arrange(mean_gdp_all_years)
+  arrange(mean_gdp_all_years) %>% 
+  knitr::kable(format = "html")
 ```
 
 ---
