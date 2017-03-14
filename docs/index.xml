@@ -6,8 +6,46 @@
     <description>Recent content on SOC 301 - Spring 2017</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Mar 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Mar 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Week 07 - Tuesday</title>
+      <link>/2017/03/14/week-07---tuesday/</link>
+      <pubDate>Tue, 14 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/03/14/week-07---tuesday/</guid>
+      <description>
+
+&lt;p&gt;Slides available &lt;a href=&#34;http://ismayc.github.io/soc301_s2017/slides/slide_deck.html#week08t&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;covered-content&#34;&gt;Covered Content&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Review the Five Main Verbs of Data Wrangling&lt;/li&gt;
+&lt;li&gt;Go over some questions from &lt;a href=&#34;https://ismayc.github.io/soc301_s2017/problem-sets/ps-key/index.html#ps6-key&#34;&gt;Problem Set 6 Discussion&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Work on &lt;a href=&#34;../../../../group_project_outline/index.html&#34;&gt;Group Project&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;to-do-for-next-time&#34;&gt;To do for next time&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Finish your Group Project by writing your final analysis ALL inside the &lt;code&gt;group_project.Rmd&lt;/code&gt; file
+
+&lt;ul&gt;
+&lt;li&gt;Ensure that the Rmd file produces an HTML file when you press the &lt;strong&gt;Knit&lt;/strong&gt; button in RStudio&lt;/li&gt;
+&lt;li&gt;The Group Project will be due at the beginning of class on Thursday, March 16&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Complete &lt;a href=&#34;https://ismayc.github.io/soc301_s2017/problem-sets/index.html#ps7&#34;&gt;PS7&lt;/a&gt; by 1 PM on Thursday, March 16
+
+&lt;ul&gt;
+&lt;li&gt;Carefully follow the instructions on the PS7 assignment&lt;/li&gt;
+&lt;li&gt;Share the five multiple choice questions based ONLY on Chapter 5 with isma5720@pacificu.edu&lt;/li&gt;
+&lt;li&gt;Quiz #3 on Tuesday, March 21 will cover Chapters 3-5 of ModernDive&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Week 06 - Thursday</title>
@@ -1774,43 +1812,6 @@ reach out for help.&lt;/li&gt;
 &lt;li&gt;If completed, start working on &lt;strong&gt;Applying R Basics&lt;/strong&gt; chapter in my &lt;strong&gt;Effective Data Storytelling via the &lt;code&gt;tidyverse&lt;/code&gt;&lt;/strong&gt; course (Due Tuesday, February 14)&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Dinisa</title>
-      <link>/dinisa/</link>
-      <pubDate>Tue, 31 Jan 2017 09:41:25 -0800</pubDate>
-      
-      <guid>/dinisa/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;Office Hours:  Sundays 7-9 PM&lt;/li&gt;
-&lt;li&gt;Office Location:  TLC in Scott Hall (also available during class)&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Contact: @malcomdinisa on Slack&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Advice for SOC 301 students:&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;The first piece of advice I stress the most is notes, notes, and more notes!! When you come into a class where you are basically learning a new language (or a computer language might I say), it is not only important to do the readings but also to take notes during and post-class sessions. Through the first couple weeks of class, I would do the readings and take notes during class, but that was certainly not enough to retain the information and put it to use. It is certainly most crucial to do the reading before class, take notes in class, and then go over the slides and readings after class and take notes because it is always likely that you could&amp;rsquo;ve missed something or other.. and it really helps when trying to retain the new info!!&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Actually read over the tips for success and keep them in mind throughout the course because they seriously are crucial for success in the class! Personally, I would say the really essential tips would be:&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;(1) Seriously taking the time to practice coding in R mostly because it&amp;rsquo;s difficult to really get a feel as to what the certain functions do without actually trying it for yourself. (This also helps you to quiz yourself at the same time!)&lt;/p&gt;
-
-&lt;p&gt;(2) Not only asking questions to your classmates but working together on stuff–especially the assignments you are stuck on! Just know you are not the only one confused/stuck/struggling because guaranteed someone is right there with you. Also never be afraid to ask Chester for help, he&amp;rsquo;s awesome!&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Make sure to take the time to complete all of your Problem Sets! They don&amp;rsquo;t seem to be that crucial to your grade, but they can honestly contribute a lot especially if you don&amp;rsquo;t do too well on a quiz! (And they&amp;rsquo;re only based on completion, no excuses!)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Brief bio:  &amp;ldquo;I am originally from Honolulu, Hawaii! I&amp;rsquo;m a Senior here at Pacific, majoring in Public Health. I am very interested in getting a degree in Health Administration and continuing my education further in nursing. My primary goal is to help people in any way I can!&amp;rdquo;&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p style=&#34;text-align:center;&#34;&gt;&lt;img src=&#34;http://ismayc.github.io/soc301_s2017/img/dinisa.jpg&#34; alt=&#34;Dinisa&#34; style=&#34;width:400px&#34;&gt;&lt;/p&gt;
 </description>
     </item>
     
