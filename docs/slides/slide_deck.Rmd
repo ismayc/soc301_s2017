@@ -56,7 +56,7 @@ gapminder %>%
 # Check in with your groups
 
 - Ensure all members of your group understand the questions from PS6
-  - Finish up the questions as there as needed
+  - Finish up the Learning Checks from there as needed
   - We will discuss some LCs from there later today
 - Keep working on your Group Projects
   - I will be around to discuss your progress with each group
