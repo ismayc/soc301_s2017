@@ -23,6 +23,9 @@ This page will list the Problem Sets and when they will be turned in on paper th
     - You should be using RStudio on your own machines to check for understanding of the material and the code.
     - You should write the code on your homework to answer the questions as needed and then put your discussion following the written code.
 
+- DISCUSSION [here](ps-key/index.html#ps6-key)
+
+
 # PS 5 (Due Tues, Feb 28 by 1:00 PM) {#ps5}
 
 - Complete DataCamp profile
