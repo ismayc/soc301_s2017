@@ -23,16 +23,17 @@
 
 &lt;ul&gt;
 &lt;li&gt;Review the Five Main Verbs of Data Wrangling&lt;/li&gt;
-&lt;li&gt;Go over some questions from &lt;a href=&#34;https://ismayc.github.io/soc301_s2017/problem-sets/ps-key/index.html#ps6-key&#34;&gt;Problem Set 6 Discussion&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Work on &lt;a href=&#34;../../../../group_project_outline/index.html&#34;&gt;Group Project&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;to-do-for-next-time&#34;&gt;To do for next time&lt;/h3&gt;
 
 &lt;ul&gt;
+&lt;li&gt;Review the &lt;a href=&#34;https://ismayc.github.io/soc301_s2017/problem-sets/ps-key/index.html#ps6-key&#34;&gt;Problem Set 6 Discussion&lt;/a&gt; and identify at least one question you have about what I have written compared to what you wrote as a response.&lt;/li&gt;
 &lt;li&gt;Finish your Group Project by writing your final analysis ALL inside the &lt;code&gt;group_project.Rmd&lt;/code&gt; file
 
 &lt;ul&gt;
+&lt;li&gt;I recommend that you do this on only one machine so that you don&amp;rsquo;t overwrite someone else&amp;rsquo;s work using Google Drive.  Google Drive is great for backing things up but not for everyone working on the same file at the same time.&lt;/li&gt;
 &lt;li&gt;Ensure that the Rmd file produces an HTML file when you press the &lt;strong&gt;Knit&lt;/strong&gt; button in RStudio&lt;/li&gt;
 &lt;li&gt;The Group Project will be due at the beginning of class on Thursday, March 16&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
@@ -868,7 +869,7 @@ library(ggplot2)
 all_alaska_flights &amp;lt;- flights %&amp;gt;% filter(carrier == &amp;quot;AS&amp;quot;)
 ggplot(data = all_alaska_flights, mapping = aes(x = air_time, y = distance)) +
   geom_point()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;#####content/problem-sets/ps-key_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/problem-sets/ps-key/figures/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;This might initially look like an error but Alaskan Airlines online flies to Seattle from New York City. Therefore, all of the &lt;code&gt;distance&lt;/code&gt; values are 2402. We can see that there was quite a bit of variability in terms of &lt;code&gt;air_time&lt;/code&gt; though.&lt;/p&gt;
 &lt;!-- --&gt;
 &lt;/div&gt;
@@ -907,7 +908,7 @@ early_january_weather &amp;lt;- weather %&amp;gt;%
   filter(origin == &amp;quot;EWR&amp;quot; &amp;amp; month == 1 &amp;amp; day &amp;lt;= 15)
 ggplot(data = early_january_weather, mapping = aes(x = time_hour, y = wind_gust)) +
   geom_line()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;#####content/problem-sets/ps-key_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/problem-sets/ps-key/figures/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;What immediately stands out in this plot are the days with no wind gusts at all and values of 0. There appears to be only one wind gust over 25 mpg around January 2nd or 3rd.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;/div&gt;
@@ -1595,7 +1596,7 @@ head(flights_new, 15)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)
 ggplot(data = flights, mapping = aes(x = gain)) +
   geom_histogram(color = &amp;quot;white&amp;quot;, bins = 20)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;#####content/problem-sets/ps-key_files/figure-html/unnamed-chunk-20-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/problem-sets/ps-key/figures/unnamed-chunk-20-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gain_summary &amp;lt;- flights %&amp;gt;% 
   summarize(
     min = min(gain, na.rm = TRUE),

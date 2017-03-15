@@ -23,16 +23,17 @@
 
 &lt;ul&gt;
 &lt;li&gt;Review the Five Main Verbs of Data Wrangling&lt;/li&gt;
-&lt;li&gt;Go over some questions from &lt;a href=&#34;https://ismayc.github.io/soc301_s2017/problem-sets/ps-key/index.html#ps6-key&#34;&gt;Problem Set 6 Discussion&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Work on &lt;a href=&#34;../../../../group_project_outline/index.html&#34;&gt;Group Project&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;to-do-for-next-time&#34;&gt;To do for next time&lt;/h3&gt;
 
 &lt;ul&gt;
+&lt;li&gt;Review the &lt;a href=&#34;https://ismayc.github.io/soc301_s2017/problem-sets/ps-key/index.html#ps6-key&#34;&gt;Problem Set 6 Discussion&lt;/a&gt; and identify at least one question you have about what I have written compared to what you wrote as a response.&lt;/li&gt;
 &lt;li&gt;Finish your Group Project by writing your final analysis ALL inside the &lt;code&gt;group_project.Rmd&lt;/code&gt; file
 
 &lt;ul&gt;
+&lt;li&gt;I recommend that you do this on only one machine so that you don&amp;rsquo;t overwrite someone else&amp;rsquo;s work using Google Drive.  Google Drive is great for backing things up but not for everyone working on the same file at the same time.&lt;/li&gt;
 &lt;li&gt;Ensure that the Rmd file produces an HTML file when you press the &lt;strong&gt;Knit&lt;/strong&gt; button in RStudio&lt;/li&gt;
 &lt;li&gt;The Group Project will be due at the beginning of class on Thursday, March 16&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;

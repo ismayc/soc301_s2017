@@ -14,7 +14,7 @@ This page will list the Problem Sets and when they will be turned in on paper th
     - Create a Google Doc with your questions and share with isma5720@pacificu.edu
     - Please follow the layout I have provided in the Sample Question Layout document [here](https://docs.google.com/a/pacificu.edu/document/d/1QrhQl_R5YrYSPNyx8WxTFesYZvSARN_TDGzmD6HeMvQ/edit?usp=sharing).  Copy over the content of this document into a new Google Doc and then enter your questions.
 
-# PS 6 (Due Tues, Mar 14 by 1:00 PM) {#ps6}
+# PS 6 {#ps6}
 
 - Read Chapter 5 of [ModernDive](https://ismayc.github.io/moderndiver-book/5-manip.html)
     - As you read, take careful notes of what you see as the key points conveyed and key things to remember about the R code.

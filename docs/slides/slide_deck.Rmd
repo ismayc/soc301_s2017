@@ -53,20 +53,11 @@ gapminder %>%
   arrange(mean_gdp_all_years) %>% 
   knitr::kable(format = "html")
 ```
-
 ---
 
-# Check in with your groups
+class: center, middle
 
-- Ensure all members of your group understand the questions from PS6
-  - Finish up the Learning Checks from there as needed
-  - We will discuss some LCs from there later today
-- Keep working on your Group Projects
-  - I will be around to discuss your progress with each group
-  - I am planning to ask particular members of your group about what has been done as a group
-
-
-## Today is a work day
+# Today is a work day on your Group Projects
 
 ---
 
