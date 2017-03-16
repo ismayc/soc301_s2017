@@ -7,7 +7,7 @@ This page will list the Problem Sets and when they will be turned in on paper th
 
 # PS 8 (Due Thurs, Mar 23 by 4:20 PM) {#ps8}
 
-- Complete the form at (https://goo.gl/forms/tCBFF7cuMbYgPIyb2) includes you filling out a midterm course evaluation, a peer review, and an individual review of your group project.
+- Complete the [Google Form](https://goo.gl/forms/tCBFF7cuMbYgPIyb2) providing a midterm course evaluation, a peer review, and an individual review of your group project.
   - Please be candid and up-front about ways I can improve the course after spring break.  Remember that this course will challenge you and that won't be changing after break, but if I can fix the timing or the way content is covered it is much better that I hear about that NOW and not when the class is over.
 
 
