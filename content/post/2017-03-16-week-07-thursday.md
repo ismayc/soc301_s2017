@@ -16,7 +16,7 @@ tags: []
 - Complete [dplyr Review](https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/dplyr-review-8) DataCamp chapter (Due on March 21 at 1 PM)
 - Study for Quiz #3 that will occur at the beginning of class on Tuesday, March 21
   - [Potential questions for Quiz #3](https://docs.google.com/document/d/1XuGwrSX6OJehSDoYtQqDpUhjRzFzul-yarbMC3EaGig/edit?usp=sharing)
-  - You can check to see if your answers are correct on this [Google Form](https://docs.google.com/document/d/1XuGwrSX6OJehSDoYtQqDpUhjRzFzul-yarbMC3EaGig/edit?usp=sharing)
+  - You can check to see if your answers are correct on this [Google Form](https://goo.gl/forms/ui9gMLkrXgsQwv733)
   - The quiz will cover chapters 3, 4, and 5 of ModernDive, the corresponding DataCamp assignments, and material we have covered in class.
 - I will send you a message on Slack to your group when I have provided my comments on your Group Project Draft.
   - Final revisions to your Group Project are due by 10 AM in your Google Drive folder on Thursday, March 23
