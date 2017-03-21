@@ -13,7 +13,7 @@ tags: []
 - Finish [Group Project Draft](../../../../group_project_outline/index.html)
 
 ### To do for next time
-- Complete [dplyr Review](https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/dplyr-review-8) DataCamp chapter (Due on March 21 at 1 PM)
+- Complete [dplyr Review](https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/dplyr-review-8) DataCamp chapter (Due on March 21 at 11:59 PM)
 - Study for Quiz #3 that will occur at the beginning of class on Tuesday, March 21
   - [Potential questions for Quiz #3](https://docs.google.com/document/d/1XuGwrSX6OJehSDoYtQqDpUhjRzFzul-yarbMC3EaGig/edit?usp=sharing)
   - You can check to see if your answers are correct on this [Google Form](https://goo.gl/forms/ui9gMLkrXgsQwv733)

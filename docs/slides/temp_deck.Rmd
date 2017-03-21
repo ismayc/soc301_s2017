@@ -965,6 +965,8 @@ class_freq
 ```
 ---
 
+name: geomcol
+
 # For aggregated data, use `geom_col`
 
 ```{r}
