@@ -6,8 +6,42 @@
     <description>Recent content in Posts on SOC 301 - Spring 2017</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 Mar 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Mar 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Week 08 - Tuesday</title>
+      <link>/2017/03/21/week-08---tuesday/</link>
+      <pubDate>Tue, 21 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/03/21/week-08---tuesday/</guid>
+      <description>
+
+&lt;h3 id=&#34;covered-content&#34;&gt;Covered Content&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Quiz #3 individually and in groups&lt;/li&gt;
+&lt;li&gt;Peer review another group&amp;rsquo;s Group Project Draft&lt;/li&gt;
+&lt;li&gt;Finish &lt;a href=&#34;../../../../group_project_outline/index.html&#34;&gt;Revised Group Project&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Final revisions to your Group Project are due by 10 AM in your Google Drive folder on Thursday, March 23&lt;/li&gt;
+&lt;li&gt;Make sure that you have a knitted HTML document (&lt;code&gt;group_project_final.html&lt;/code&gt;) and the corresponding &lt;code&gt;group_project_final.Rmd&lt;/code&gt; in your group Google Drive folder&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;to-do-for-next-time&#34;&gt;To do for next time&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://goo.gl/forms/tCBFF7cuMbYgPIyb2&#34;&gt;Problem Set 8&lt;/a&gt; includes you filling out a midterm course evaluation, a peer review, and an individual review of your group project.
+
+&lt;ul&gt;
+&lt;li&gt;You will need to fill out the form by 4:20 PM on Thursday, March 23 to receive credit.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Please be candid and up-front about ways I can improve the course after spring break.  Remember that this course will challenge you and that won&amp;rsquo;t be changing after break, but if I can fix the timing or the way content is covered it is much better that I hear about that NOW and not when the class is over.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Week 07 - Thursday</title>
@@ -29,7 +63,7 @@
 &lt;h3 id=&#34;to-do-for-next-time&#34;&gt;To do for next time&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Complete &lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/dplyr-review-8&#34;&gt;dplyr Review&lt;/a&gt; DataCamp chapter (Due on March 21 at 1 PM)&lt;/li&gt;
+&lt;li&gt;Complete &lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/dplyr-review-8&#34;&gt;dplyr Review&lt;/a&gt; DataCamp chapter (Due on March 21 at 11:59 PM)&lt;/li&gt;
 &lt;li&gt;Study for Quiz #3 that will occur at the beginning of class on Tuesday, March 21
 
 &lt;ul&gt;
@@ -545,31 +579,6 @@ reach out for help.&lt;/li&gt;
 &lt;li&gt;Get signed up for Slack and download to your computer and/or mobile device&lt;/li&gt;
 &lt;li&gt;Start working on Introduction to R DataCamp course as soon as possible!&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Welcome to SOC 301!</title>
-      <link>/2017/01/30/welcome-to-soc-301/</link>
-      <pubDate>Mon, 30 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/2017/01/30/welcome-to-soc-301/</guid>
-      <description>&lt;!-- BLOGDOWN-BODY-BEFORE
-
-/BLOGDOWN-BODY-BEFORE --&gt;
-
-&lt;p&gt;You will find links to the content covered in each class period in posts made to the main page that you just came from at &lt;a href=&#34;http://ismayc.github.io/soc301-s2017&#34; class=&#34;uri&#34;&gt;http://ismayc.github.io/soc301-s2017&lt;/a&gt;. You can also return to the homepage at any time by clicking on the Boxer image in the top left of the page. Note that this webpage and (hopefully) all of its content will also work on mobile devices too.&lt;/p&gt;
-&lt;p&gt;Maybe the most important document here is the &lt;strong&gt;Syllabus&lt;/strong&gt;. You can find the current version (and any future updates to it) by clicking on the &lt;strong&gt;Syllabus&lt;/strong&gt; link at the top of this page.&lt;/p&gt;
-&lt;p&gt;You can find links to DataCamp assignments throughout the course via the &lt;strong&gt;DataCamp&lt;/strong&gt; link above. The &lt;strong&gt;Problem Sets&lt;/strong&gt; link provides you with reading assignments and problems that we will be working on in class and reviewing. You are encouraged to work through as many of the &lt;em&gt;&lt;strong&gt;Learning checks&lt;/strong&gt;&lt;/em&gt; as you can as you read the course textbook at &lt;a href=&#34;http://moderndive.com&#34; class=&#34;uri&#34;&gt;http://moderndive.com&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I’m looking forward to helping you learn about Social Statistics and program in R this semester! You will also find great information in the Resources page available in the top right as well. Please be sure to frequently review the &lt;strong&gt;Tips to Success&lt;/strong&gt; for the course on a frequent basis that is in &lt;strong&gt;Resources&lt;/strong&gt;. I’m providing you with exactly what you need to do well and learn (and &lt;em&gt;retain&lt;/em&gt;) the content of the course. Don’t miss out!&lt;/p&gt;
-
-
-&lt;!-- BLOGDOWN-HEAD
-
-
-
-
-/BLOGDOWN-HEAD --&gt;
 </description>
     </item>
     
