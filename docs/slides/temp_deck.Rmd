@@ -1,3 +1,238 @@
+
+layout: true
+
+.footer[[Week 06 - Thursday](https://ismayc.github.io/soc301_s2017/2017/03/09/week-07---thursday/)]
+
+---
+
+name: week06th
+class: center, middle
+
+# Week 06 - Thursday
+
+# March 9, 2017
+---
+
+# Warmup
+
+### Write the code to produce the following table using functions in the `dplyr` package on the `gapminder` data frame in the `gapminder` R package
+
+```{r echo=FALSE}
+library(gapminder)
+gapminder %>% 
+  dplyr::filter(continent == "Oceania" | country %in% c("Canada", "United States")) %>%
+  group_by(continent, country) %>% 
+  summarize(mean_gdp_all_years = mean(gdpPercap))
+```
+
+---
+
+# Setting 1 to change in RStudio
+
+```{r out.width="65%", echo=FALSE, fig.align='center'}
+knitr::include_graphics("figure/setting1.png")
+```
+
+---
+
+# Setting 2 to change in RStudio
+
+```{r out.width="65%", echo=FALSE, fig.align='center'}
+knitr::include_graphics("figure/setting2.png")
+```
+
+---
+
+# Review of the 5MV so far
+
+- `filter()`
+- `summarize()`
+- `group_by()`
+
+---
+
+# The 5MV
+
+- `filter()`
+- `summarize()`
+- `group_by()`
+--
+
+- `mutate()`
+
+--
+- `arrange()`
+
+---
+
+# `mutate()`
+
+- Allows you to 
+    1. <font color="blue">create a new variable with a specific value</font> OR
+    2. create a new variable based on other variables OR
+    3. change the contents of an existing variable
+
+--
+
+```{r}
+gap_plus <- gapminder %>% mutate(just_one = 1)
+head(gap_plus)
+```
+
+---
+
+# `mutate()`
+
+- Allows you to 
+    1. create a new variable with a specific value OR
+    2. <font color="blue">create a new variable based on other variables</font> OR
+    3. change the contents of an existing variable
+
+--
+
+```{r}
+gap_w_gdp <- gapminder %>% mutate(gdp = pop * gdpPercap)
+head(gap_w_gdp)
+```
+
+---
+
+# `mutate()`
+
+- Allows you to 
+    1. create a new variable with a specific value OR
+    2. create a new variable based on other variables OR
+    3. <font color="blue">change the contents of an existing variable</font>
+
+--
+
+```{r}
+gap_weird <- gapminder %>% mutate(pop = pop + 1000)
+head(gap_weird)
+```
+
+---
+
+# `arrange()`
+
+- Reorders the rows in a data frame based on the values of one or more variables
+--
+
+```{r}
+gapminder %>%
+  arrange(year, country)
+```
+
+---
+
+# `arrange()`
+
+- Can also put into descending order
+--
+
+```{r desc, results="hide"}
+gapminder %>%
+  filter(year > 2000) %>%
+  arrange(desc(lifeExp))
+```
+--
+
+```{r ref.label="desc", echo=FALSE}
+```
+
+---
+
+# Other verbs
+
+## `rename()`
+
+- To change a variable's name in a data frame to a new name
+- New name comes before the `=`, old name comes after the `=`
+--
+
+```{r}
+gap2 <- gapminder
+gap2 <- gap2 %>%
+  rename(life_exp = lifeExp,
+         gdp_per_cap = gdpPercap)
+head(gap2, 3)
+```
+
+
+---
+
+# More with `inner_join()`
+
+- Join `by` columns of different names
+
+```{r echo=FALSE}
+countries <- readr::read_csv("https://raw.githubusercontent.com/lukes/ISO-3166-Countries-with-Regional-Codes/master/all/all.csv")
+countries$name[countries$name == "Bolivia (Plurinational State of)"] <- "Bolivia"
+countries$name[countries$name == "Congo"] <- "Congo, Rep."
+countries$name[countries$name == "Congo (Democratic Republic of the)"] <- "Congo, Dem. Rep."
+countries$name[countries$name == "Hong Kong"] <- "Hong Kong, China"
+countries$name[countries$name == "Côte d'Ivoire"] <- "Cote d'Ivoire"
+countries$name[countries$name == "Iran (Islamic Republic of)"] <- "Iran"
+countries$name[countries$name == "Korea (Democratic People's Republic of)"] <- "Korea, Dem. Rep."
+countries$name[countries$name == "Korea (Republic of)"] <- "Korea, Rep."
+countries$name[countries$name == "Réunion"] <- "Reunion"
+countries$name[countries$name == "Slovakia"] <- "Slovak Republic"
+countries$name[countries$name == "Syrian Arab Republic"] <- "Syria"
+countries$name[countries$name == "Taiwan, Province of China"] <- "Taiwan"
+countries$name[countries$name == "Tanzania, United Republic of"] <- "Tanzania"
+countries$name[countries$name == "United Kingdom of Great Britain and Northern Ireland"] <- "United Kingdom"
+countries$name[countries$name == "United States of America"] <- "United States"
+countries$name[countries$name == "Venezuela (Bolivarian Republic of)"] <- "Venezuela"
+countries$name[countries$name == "Viet Nam"] <- "Vietnam"
+countries$name[countries$name == "Yemen"] <- "Yemen, Rep."
+countries$name[countries$name == "Russian Federation"] <- "Russia"
+countries$name[countries$name == "Macedonia (the former Yugoslav Republic of)"] <- "Macedonia, FYR"
+countries$name[countries$name == "Micronesia (Federated States of)"] <- "Micronesia, Fed. Sts."
+countries$name[countries$name == "Moldova (Republic of)"] <- "Moldova"
+countries <- tbl_df(countries) %>%
+  select(name, region, `sub-region`) %>% 
+  rename(sub_region = `sub-region`)
+#readr::write_csv(countries, "docs/countries.csv")
+```
+
+```{r}
+library(readr)
+library(dplyr)
+url <- "http://ismayc.github.io/soc301_s2017/countries.csv"
+countries <- read_csv(url)
+head(countries)
+```
+
+---
+
+# More with `inner_join()`
+
+```{r}
+new_gap <- inner_join(x = gapminder,
+                      y = countries,
+                      by = c("country" = "name")) %>% 
+  arrange(year) %>% 
+  select(-pop, -gdpPercap)
+head(new_gap, 10)
+```
+
+
+---
+
+# Work time!
+
+***
+
+## Work on [PS6](../problem-sets/index.html#ps6)
+
+## Ask questions about [DC8](https://campus.datacamp.com/courses/reporting-with-r-markdown)
+
+## Work on [DC9](https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/filtering-grouping-summarizing)
+
+## Work on Group Project
+
+---
+
 layout: true
 
 .footer[[Week 06 - Tuesday](https://ismayc.github.io/soc301_s2017/2017/03/07/week-06---tuesday/)]
@@ -729,6 +964,8 @@ class_freq <- tibble::data_frame(class, count)
 class_freq
 ```
 ---
+
+name: geomcol
 
 # For aggregated data, use `geom_col`
 

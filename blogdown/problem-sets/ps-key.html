@@ -15,12 +15,13 @@ output:
 <li><a href="#ps2-key">Problem Set 2</a></li>
 <li><a href="#ps3-key">Problem Set 3</a></li>
 <li><a href="#ps4-key">Problem Set 4</a></li>
+<li><a href="#ps6-key">Problem Set 6</a></li>
 </ul>
 </div>
 /BLOGDOWN-BODY-BEFORE -->
 
 <hr />
-<p>Page last updated at Monday, March 06, 2017 17:12:50 PST</p>
+<p>Page last updated at Tuesday, March 14, 2017 08:46:11 PDT</p>
 <div id="ps2-key" class="section level1">
 <h1>Problem Set 2</h1>
 <p>Learning Checks LC3.2-LC3.7, LC3.9-LC3.10 from <a href="https://ismayc.github.io/moderndiver-book/3-tidy.html">ModernDive</a></p>
@@ -590,6 +591,657 @@ ggplot(data = early_january_weather, mapping = aes(x = time_hour, y = wind_gust)
 <p>What information about the different carriers at different airports is more easily seen in the faceted barplot?</p>
 <p><strong>Discussion</strong>:</p>
 <p>The faceted barplot provides an easier way to see the airlines that have no departing flights and also many flights from each airport.</p>
+<hr />
+</div>
+</div>
+<div id="ps6-key" class="section level1">
+<h1>Problem Set 6</h1>
+<p>Learning Checks <a href="https://ismayc.github.io/moderndiver-book/5-manip.html">LC5.1-LC5.2, LC5.4-LC5.5, LC5.7, LC5.9-LC5.14</a></p>
+<div id="lc5.1" class="section level2">
+<h2>LC5.1</h2>
+<p>What’s another way using <code>!</code> we could filter only the rows that are not going to Burlington, VT nor Seattle, WA in the <code>flights</code> data frame? Test this out using the code above.</p>
+<p><strong>Discussion</strong>:</p>
+<p>This question refers to</p>
+<pre class="r"><code>library(dplyr)
+library(nycflights13)
+not_BTV_SEA &lt;- flights %&gt;% 
+  filter(!(dest == &quot;BTV&quot; | dest == &quot;SEA&quot;))</code></pre>
+<p>in choosing only the rows of flights that don’t go to Burlington, Vermont or Seattle, Washington. Another way to do this is to choose those that don’t go to Burlington AND those that don’t go to Seattle:</p>
+<pre class="r"><code>not_BTV_SEA2 &lt;- flights %&gt;% 
+  filter(!(dest == &quot;BTV&quot;), !(dest == &quot;SEA&quot;))</code></pre>
+<p>We can use the <code>identical</code> function to show that these objects are the same:</p>
+<pre class="r"><code>identical(not_BTV_SEA, not_BTV_SEA2)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+</div>
+<div id="lc5.2" class="section level2">
+<h2>LC5.2</h2>
+<p>Say a doctor is studying the effect of smoking on lung cancer of a large number of patients who have records measured at five year intervals. He notices that a large number of patients have missing data points because the patient has died, so he chooses to ignore these patients in his analysis. What is wrong with this doctor’s approach?</p>
+<p><strong>Discussion</strong>:</p>
+<p>By ignoring these data points, he is creating bias in the data. One of the major things the study is probably trying to determine is the role of smoking on lung cancer and whether or not patients had died. The point of this exercise is to understand that just applying <code>na.rm = TRUE</code> into your analysis to remove missing values and warnings should only be done with caution.</p>
+</div>
+<div id="lc5.4" class="section level2">
+<h2>LC5.4</h2>
+<p>Why doesn’t the following code work? You may want to run the code line by line instead of all at once. In other words, run <code>summary_temp &lt;- weather %&gt;% summarize(mean = mean(temp, na.rm = TRUE))</code> first.</p>
+<pre class="r"><code>summary_temp &lt;- weather %&gt;%   
+  summarize(mean = mean(temp, na.rm = TRUE)) %&gt;% 
+  summarize(std_dev = sd(temp, na.rm = TRUE))</code></pre>
+<p><strong>Discussion</strong>:</p>
+<p>The data frame created via <code>summary_temp &lt;- weather %&gt;% summarize(mean = mean(temp, na.rm = TRUE))</code> will only contain one column with one value corresponding to the overall mean temperature. Thus, we can’t also calculate the standard deviation of <code>temp</code> since <code>temp</code> no longer exists in this aggregated data frame. The correct code to calculate the mean and standard deviation is</p>
+<pre class="r"><code>summary_temp &lt;- weather %&gt;%   
+  summarize(mean = mean(temp, na.rm = TRUE),
+            std_dev = sd(temp, na.rm = TRUE))
+summary_temp</code></pre>
+<pre><code>## # A tibble: 1 × 2
+##       mean  std_dev
+##      &lt;dbl&gt;    &lt;dbl&gt;
+## 1 55.20351 17.78212</code></pre>
+</div>
+<div id="lc5.5" class="section level2">
+<h2>LC5.5</h2>
+<p>Recall from Chapter <a href="https://ismayc.github.io/moderndiver-book/4-viz.html">4</a> when we looked at plots of temperatures by months in NYC. What does the standard deviation column in the <code>summary_monthly_temp</code> data frame tell us about temperatures in New York City throughout the year?</p>
+<p><strong>Discussion</strong>:</p>
+<p>This is referencing</p>
+<pre class="r"><code>library(knitr) # for kable function
+summary_monthly_temp &lt;- weather %&gt;% 
+  group_by(month) %&gt;% 
+  summarize(mean = mean(temp, na.rm = TRUE), 
+            std_dev = sd(temp, na.rm = TRUE))
+kable(summary_monthly_temp)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">month</th>
+<th align="right">mean</th>
+<th align="right">std_dev</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">35.64127</td>
+<td align="right">10.185459</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="right">34.15454</td>
+<td align="right">6.940228</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="right">39.81404</td>
+<td align="right">6.224948</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="right">51.67094</td>
+<td align="right">8.785250</td>
+</tr>
+<tr class="odd">
+<td align="right">5</td>
+<td align="right">61.59185</td>
+<td align="right">9.608687</td>
+</tr>
+<tr class="even">
+<td align="right">6</td>
+<td align="right">72.14500</td>
+<td align="right">7.603357</td>
+</tr>
+<tr class="odd">
+<td align="right">7</td>
+<td align="right">80.00967</td>
+<td align="right">7.147631</td>
+</tr>
+<tr class="even">
+<td align="right">8</td>
+<td align="right">74.40495</td>
+<td align="right">5.171365</td>
+</tr>
+<tr class="odd">
+<td align="right">9</td>
+<td align="right">67.42582</td>
+<td align="right">8.475824</td>
+</tr>
+<tr class="even">
+<td align="right">10</td>
+<td align="right">60.03305</td>
+<td align="right">8.829652</td>
+</tr>
+<tr class="odd">
+<td align="right">11</td>
+<td align="right">45.10893</td>
+<td align="right">10.502249</td>
+</tr>
+<tr class="even">
+<td align="right">12</td>
+<td align="right">38.36811</td>
+<td align="right">9.940822</td>
+</tr>
+</tbody>
+</table>
+<p>We can see that the variability in temperature is highest in January and November since the standard deviation is highest in those months. June, July, and August have the lowest variability followed by February and March. This corresponds to temperature being roughly the same value all throughout those months whereas there is a lot of variability in the temperature in January and November.</p>
+</div>
+<div id="lc5.7" class="section level2">
+<h2>LC5.7</h2>
+<p>Recreate <code>by_monthly_origin</code>, but instead of grouping via <code>group_by(origin, month)</code>, group variables in a different order <code>group_by(month, origin)</code>. What differs in the resulting data set?</p>
+<p><strong>Discussion</strong>:</p>
+<p>This is referencing</p>
+<pre class="r"><code>by_monthly_origin &lt;- flights %&gt;% 
+  group_by(origin, month) %&gt;% 
+  summarize(count = n())
+kable(by_monthly_origin)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">origin</th>
+<th align="right">month</th>
+<th align="right">count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">EWR</td>
+<td align="right">1</td>
+<td align="right">9893</td>
+</tr>
+<tr class="even">
+<td align="left">EWR</td>
+<td align="right">2</td>
+<td align="right">9107</td>
+</tr>
+<tr class="odd">
+<td align="left">EWR</td>
+<td align="right">3</td>
+<td align="right">10420</td>
+</tr>
+<tr class="even">
+<td align="left">EWR</td>
+<td align="right">4</td>
+<td align="right">10531</td>
+</tr>
+<tr class="odd">
+<td align="left">EWR</td>
+<td align="right">5</td>
+<td align="right">10592</td>
+</tr>
+<tr class="even">
+<td align="left">EWR</td>
+<td align="right">6</td>
+<td align="right">10175</td>
+</tr>
+<tr class="odd">
+<td align="left">EWR</td>
+<td align="right">7</td>
+<td align="right">10475</td>
+</tr>
+<tr class="even">
+<td align="left">EWR</td>
+<td align="right">8</td>
+<td align="right">10359</td>
+</tr>
+<tr class="odd">
+<td align="left">EWR</td>
+<td align="right">9</td>
+<td align="right">9550</td>
+</tr>
+<tr class="even">
+<td align="left">EWR</td>
+<td align="right">10</td>
+<td align="right">10104</td>
+</tr>
+<tr class="odd">
+<td align="left">EWR</td>
+<td align="right">11</td>
+<td align="right">9707</td>
+</tr>
+<tr class="even">
+<td align="left">EWR</td>
+<td align="right">12</td>
+<td align="right">9922</td>
+</tr>
+<tr class="odd">
+<td align="left">JFK</td>
+<td align="right">1</td>
+<td align="right">9161</td>
+</tr>
+<tr class="even">
+<td align="left">JFK</td>
+<td align="right">2</td>
+<td align="right">8421</td>
+</tr>
+<tr class="odd">
+<td align="left">JFK</td>
+<td align="right">3</td>
+<td align="right">9697</td>
+</tr>
+<tr class="even">
+<td align="left">JFK</td>
+<td align="right">4</td>
+<td align="right">9218</td>
+</tr>
+<tr class="odd">
+<td align="left">JFK</td>
+<td align="right">5</td>
+<td align="right">9397</td>
+</tr>
+<tr class="even">
+<td align="left">JFK</td>
+<td align="right">6</td>
+<td align="right">9472</td>
+</tr>
+<tr class="odd">
+<td align="left">JFK</td>
+<td align="right">7</td>
+<td align="right">10023</td>
+</tr>
+<tr class="even">
+<td align="left">JFK</td>
+<td align="right">8</td>
+<td align="right">9983</td>
+</tr>
+<tr class="odd">
+<td align="left">JFK</td>
+<td align="right">9</td>
+<td align="right">8908</td>
+</tr>
+<tr class="even">
+<td align="left">JFK</td>
+<td align="right">10</td>
+<td align="right">9143</td>
+</tr>
+<tr class="odd">
+<td align="left">JFK</td>
+<td align="right">11</td>
+<td align="right">8710</td>
+</tr>
+<tr class="even">
+<td align="left">JFK</td>
+<td align="right">12</td>
+<td align="right">9146</td>
+</tr>
+<tr class="odd">
+<td align="left">LGA</td>
+<td align="right">1</td>
+<td align="right">7950</td>
+</tr>
+<tr class="even">
+<td align="left">LGA</td>
+<td align="right">2</td>
+<td align="right">7423</td>
+</tr>
+<tr class="odd">
+<td align="left">LGA</td>
+<td align="right">3</td>
+<td align="right">8717</td>
+</tr>
+<tr class="even">
+<td align="left">LGA</td>
+<td align="right">4</td>
+<td align="right">8581</td>
+</tr>
+<tr class="odd">
+<td align="left">LGA</td>
+<td align="right">5</td>
+<td align="right">8807</td>
+</tr>
+<tr class="even">
+<td align="left">LGA</td>
+<td align="right">6</td>
+<td align="right">8596</td>
+</tr>
+<tr class="odd">
+<td align="left">LGA</td>
+<td align="right">7</td>
+<td align="right">8927</td>
+</tr>
+<tr class="even">
+<td align="left">LGA</td>
+<td align="right">8</td>
+<td align="right">8985</td>
+</tr>
+<tr class="odd">
+<td align="left">LGA</td>
+<td align="right">9</td>
+<td align="right">9116</td>
+</tr>
+<tr class="even">
+<td align="left">LGA</td>
+<td align="right">10</td>
+<td align="right">9642</td>
+</tr>
+<tr class="odd">
+<td align="left">LGA</td>
+<td align="right">11</td>
+<td align="right">8851</td>
+</tr>
+<tr class="even">
+<td align="left">LGA</td>
+<td align="right">12</td>
+<td align="right">9067</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>by_origin_month &lt;- flights %&gt;% 
+  group_by(month, origin) %&gt;% 
+  summarize(count = n())
+kable(by_origin_month)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">month</th>
+<th align="left">origin</th>
+<th align="right">count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="left">EWR</td>
+<td align="right">9893</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="left">JFK</td>
+<td align="right">9161</td>
+</tr>
+<tr class="odd">
+<td align="right">1</td>
+<td align="left">LGA</td>
+<td align="right">7950</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="left">EWR</td>
+<td align="right">9107</td>
+</tr>
+<tr class="odd">
+<td align="right">2</td>
+<td align="left">JFK</td>
+<td align="right">8421</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="left">LGA</td>
+<td align="right">7423</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="left">EWR</td>
+<td align="right">10420</td>
+</tr>
+<tr class="even">
+<td align="right">3</td>
+<td align="left">JFK</td>
+<td align="right">9697</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="left">LGA</td>
+<td align="right">8717</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="left">EWR</td>
+<td align="right">10531</td>
+</tr>
+<tr class="odd">
+<td align="right">4</td>
+<td align="left">JFK</td>
+<td align="right">9218</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="left">LGA</td>
+<td align="right">8581</td>
+</tr>
+<tr class="odd">
+<td align="right">5</td>
+<td align="left">EWR</td>
+<td align="right">10592</td>
+</tr>
+<tr class="even">
+<td align="right">5</td>
+<td align="left">JFK</td>
+<td align="right">9397</td>
+</tr>
+<tr class="odd">
+<td align="right">5</td>
+<td align="left">LGA</td>
+<td align="right">8807</td>
+</tr>
+<tr class="even">
+<td align="right">6</td>
+<td align="left">EWR</td>
+<td align="right">10175</td>
+</tr>
+<tr class="odd">
+<td align="right">6</td>
+<td align="left">JFK</td>
+<td align="right">9472</td>
+</tr>
+<tr class="even">
+<td align="right">6</td>
+<td align="left">LGA</td>
+<td align="right">8596</td>
+</tr>
+<tr class="odd">
+<td align="right">7</td>
+<td align="left">EWR</td>
+<td align="right">10475</td>
+</tr>
+<tr class="even">
+<td align="right">7</td>
+<td align="left">JFK</td>
+<td align="right">10023</td>
+</tr>
+<tr class="odd">
+<td align="right">7</td>
+<td align="left">LGA</td>
+<td align="right">8927</td>
+</tr>
+<tr class="even">
+<td align="right">8</td>
+<td align="left">EWR</td>
+<td align="right">10359</td>
+</tr>
+<tr class="odd">
+<td align="right">8</td>
+<td align="left">JFK</td>
+<td align="right">9983</td>
+</tr>
+<tr class="even">
+<td align="right">8</td>
+<td align="left">LGA</td>
+<td align="right">8985</td>
+</tr>
+<tr class="odd">
+<td align="right">9</td>
+<td align="left">EWR</td>
+<td align="right">9550</td>
+</tr>
+<tr class="even">
+<td align="right">9</td>
+<td align="left">JFK</td>
+<td align="right">8908</td>
+</tr>
+<tr class="odd">
+<td align="right">9</td>
+<td align="left">LGA</td>
+<td align="right">9116</td>
+</tr>
+<tr class="even">
+<td align="right">10</td>
+<td align="left">EWR</td>
+<td align="right">10104</td>
+</tr>
+<tr class="odd">
+<td align="right">10</td>
+<td align="left">JFK</td>
+<td align="right">9143</td>
+</tr>
+<tr class="even">
+<td align="right">10</td>
+<td align="left">LGA</td>
+<td align="right">9642</td>
+</tr>
+<tr class="odd">
+<td align="right">11</td>
+<td align="left">EWR</td>
+<td align="right">9707</td>
+</tr>
+<tr class="even">
+<td align="right">11</td>
+<td align="left">JFK</td>
+<td align="right">8710</td>
+</tr>
+<tr class="odd">
+<td align="right">11</td>
+<td align="left">LGA</td>
+<td align="right">8851</td>
+</tr>
+<tr class="even">
+<td align="right">12</td>
+<td align="left">EWR</td>
+<td align="right">9922</td>
+</tr>
+<tr class="odd">
+<td align="right">12</td>
+<td align="left">JFK</td>
+<td align="right">9146</td>
+</tr>
+<tr class="even">
+<td align="right">12</td>
+<td align="left">LGA</td>
+<td align="right">9067</td>
+</tr>
+</tbody>
+</table>
+<p>This grouping orders first by <code>month</code> and then by <code>origin</code> whereas the previous grouping orders by <code>origin</code> and then by <code>month</code>. This is a simple way to sort data but you should be careful to make sure you are grouping in the appropriate order.</p>
+</div>
+<div id="lc5.9" class="section level2">
+<h2>LC5.9</h2>
+<p>How does the <code>filter</code> operation differ from a <code>group_by</code> followed by a <code>summarize</code>?</p>
+<p><strong>Discussion</strong>:</p>
+<p><code>filter</code> only reduces the total number of rows in the original data frame to only choose those that match a given set of conditions. <code>group_by</code> with <code>summarize</code> creates an aggregated data frame that fundamentally is of a different size with different variables than the original data frame.</p>
+</div>
+<div id="lc5.10" class="section level2">
+<h2>LC5.10</h2>
+<p>What do positive values of the <code>gain</code> variable in <code>flights</code> correspond to? What about negative values? And what about a zero value?</p>
+<p><strong>Discussion</strong>:</p>
+<p>Observing how <code>gain</code> was defined will give us a better understanding:</p>
+<pre class="r"><code>flights &lt;- flights %&gt;% 
+  mutate(gain = arr_delay - dep_delay)</code></pre>
+<p>We can see that this value will be positive when <code>arr_delay</code> is larger than <code>dep_delay</code> and negative when <code>dep_delay</code> is larger than <code>arr_delay</code>. A zero value corresponds to no gain on the flight. This means that the pilot was not able to make up any time on the flight. A positive gain means that the pilot was NOT able to make up time during the flight since the arrival delay is more than the departure delay. A negative gain means that the pilot was able to make up time during the flight.</p>
+</div>
+<div id="lc5.11" class="section level2">
+<h2>LC5.11</h2>
+<p>Could we create the <code>dep_delay</code> and <code>arr_delay</code> columns by simply subtracting <code>dep_time</code> from <code>sched_dep_time</code> and similarly for arrivals? Try the code out and explain any differences between the result and what actually appears in <code>flights</code>.</p>
+<p><strong>Discussion</strong>:</p>
+<p>We use the <code>mutate()</code> function to create new variables. We will also <code>select</code> only the two newly created variables and <code>dep_delay</code> and <code>arr_delay</code>. Lastly, we include <code>dep_time</code> and <code>sched_dep_time</code> to see if the subtractions are correct and display the first 15 rows.</p>
+<pre class="r"><code>flights_new &lt;- flights %&gt;%
+  mutate(my_dep_delay = dep_time - sched_dep_time,
+         my_arr_delay = arr_time - sched_arr_time) %&gt;% 
+  select(dep_time, sched_dep_time, my_dep_delay, dep_delay, my_arr_delay, arr_delay)
+head(flights_new, 15)</code></pre>
+<pre><code>## # A tibble: 15 × 6
+##    dep_time sched_dep_time my_dep_delay dep_delay my_arr_delay arr_delay
+##       &lt;int&gt;          &lt;int&gt;        &lt;int&gt;     &lt;dbl&gt;        &lt;int&gt;     &lt;dbl&gt;
+## 1       517            515            2         2           11        11
+## 2       533            529            4         4           20        20
+## 3       542            540            2         2           73        33
+## 4       544            545           -1        -1          -18       -18
+## 5       554            600          -46        -6          -25       -25
+## 6       554            558           -4        -4           12        12
+## 7       555            600          -45        -5           59        19
+## 8       557            600          -43        -3          -14       -14
+## 9       557            600          -43        -3           -8        -8
+## 10      558            600          -42        -2            8         8
+## 11      558            600          -42        -2           -2        -2
+## 12      558            600          -42        -2           -3        -3
+## 13      558            600          -42        -2            7         7
+## 14      558            600          -42        -2          -14       -14
+## 15      559            600          -41        -1           31        31</code></pre>
+<p>We see that the first four rows look OK, but then some problems occur. <code>my_dep_delay</code> gives a value of <code>-46</code> when the true <code>dep_delay</code> is <code>-6</code>. You can see that this is due shifting to a new hour. Since <code>600 - 554 = -46</code>, it isn’t as simple as just subtracting the two rows to get the delay. You also need to account for their only being 60 minutes in an hour not 100.</p>
+</div>
+<div id="lc5.12" class="section level2">
+<h2>LC5.12</h2>
+<p>What can we say about the distribution of <code>gain</code>? Describe it in a few sentences using the plot and the <code>gain_summary</code> data frame values.</p>
+<p><strong>Discussion</strong>:</p>
+<p>Here are the plot and summary values:</p>
+<pre class="r"><code>library(ggplot2)
+ggplot(data = flights, mapping = aes(x = gain)) +
+  geom_histogram(color = &quot;white&quot;, bins = 20)</code></pre>
+<p><img src="#####content/problem-sets/ps-key_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
+<pre class="r"><code>gain_summary &lt;- flights %&gt;% 
+  summarize(
+    min = min(gain, na.rm = TRUE),
+    q1 = quantile(gain, 0.25, na.rm = TRUE),
+    median = quantile(gain, 0.5, na.rm = TRUE),
+    q3 = quantile(gain, 0.75, na.rm = TRUE),
+    max = max(gain, na.rm = TRUE),
+    mean = mean(gain, na.rm = TRUE),
+    sd = sd(gain, na.rm = TRUE),
+    missing = sum(is.na(gain))
+  )
+kable(gain_summary)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">min</th>
+<th align="right">q1</th>
+<th align="right">median</th>
+<th align="right">q3</th>
+<th align="right">max</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="right">missing</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">-109</td>
+<td align="right">-17</td>
+<td align="right">-7</td>
+<td align="right">3</td>
+<td align="right">196</td>
+<td align="right">-5.659779</td>
+<td align="right">18.04365</td>
+<td align="right">9430</td>
+</tr>
+</tbody>
+</table>
+<p>We see from the plot that the distribution of <code>gain</code> is roughly symmetric, but with some skew to the right for some very long delays. The mean and median values are both negative which means that we can expect to arrive a few minutes earlier than expected if our flight departs late from NYC. The standard deviation value tells us that we can expect any given flight to be about 18 minutes away from the mean value of -5.66 minutes.</p>
+</div>
+<div id="lc5.13" class="section level2">
+<h2>LC5.13</h2>
+<p>Looking at Figure <a href="https://ismayc.github.io/moderndiver-book/5-manip.html#fig:reldiagram">5.7</a>, when joining <code>flights</code> and <code>weather</code> (or, in other words, matching the hourly weather values with each flight), why do we need to join by all of <code>year</code>, <code>month</code>, <code>day</code>, <code>hour</code>, and <code>origin</code>, and not just <code>hour</code>?</p>
+<p><strong>Discussion</strong>:</p>
+<p>The <code>hour</code> variable does not contain enough information for any given row in <code>flights</code> or <code>weather</code>. It just gives a single numeric value. Flights depart during an <code>hour</code> of a <code>day</code> in a <code>month</code> in a <code>year</code> from an <code>origin</code> airport. Weather is also recorded at these same variables.</p>
+</div>
+<div id="lc5.14" class="section level2">
+<h2>LC5.14</h2>
+<p>What surprises you about the top 10 destinations from NYC in 2013?</p>
+<p><strong>Discussion</strong>:</p>
+<p>This is referring to</p>
+<pre class="r"><code>freq_dest &lt;- flights %&gt;% 
+  group_by(dest) %&gt;%  
+  summarize(num_flights = n()) %&gt;% 
+  arrange(desc(num_flights))
+freq_dest</code></pre>
+<pre><code>## # A tibble: 105 × 2
+##     dest num_flights
+##    &lt;chr&gt;       &lt;int&gt;
+## 1    ORD       17283
+## 2    ATL       17215
+## 3    LAX       16174
+## 4    BOS       15508
+## 5    MCO       14082
+## 6    CLT       14064
+## 7    SFO       13331
+## 8    FLL       12055
+## 9    MIA       11728
+## 10   DCA        9705
+## # ... with 95 more rows</code></pre>
+<p>Answers will vary here. One thing that stands out is that the most flights go to Chicago (ORD) and Atlanta (ATL). These airports are not very close to New York City. Both of these airports are major hubs for airlines though which is likely driving them being at the top of the list as well as Los Angeles (LAX) and Boston (BOS).</p>
 </div>
 </div>
 

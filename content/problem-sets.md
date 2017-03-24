@@ -5,6 +5,12 @@ title: Problem Sets
 
 This page will list the Problem Sets and when they will be turned in on paper throughout the course.  You will turn in one problem set per group.  You can find discussions about all of the Problem Sets [here](ps-key/index.html).  Links to specific Problem Set discussions will be posted after the Problem Set is turned in below the Problem Set assignment here.
 
+# PS 8 (Due Thurs, Mar 23 by 4:20 PM) {#ps8}
+
+- Complete the [Google Form](https://goo.gl/forms/tCBFF7cuMbYgPIyb2) providing a midterm course evaluation, a peer review, and an individual review of your group project.
+  - Please be candid and up-front about ways I can improve the course after spring break.  Remember that this course will challenge you and that won't be changing after break, but if I can fix the timing or the way content is covered it is much better that I hear about that NOW and not when the class is over.
+
+
 # PS 7 (Due Thurs, Mar 16 by 1:00 PM) {#ps7}
 
 - Write down on a piece of paper AT LEAST five multiple choice questions covering ONLY Chapter 5 of [ModernDive](http://moderndive.com) and the corresponding chapters on DataCamp.
@@ -14,7 +20,7 @@ This page will list the Problem Sets and when they will be turned in on paper th
     - Create a Google Doc with your questions and share with isma5720@pacificu.edu
     - Please follow the layout I have provided in the Sample Question Layout document [here](https://docs.google.com/a/pacificu.edu/document/d/1QrhQl_R5YrYSPNyx8WxTFesYZvSARN_TDGzmD6HeMvQ/edit?usp=sharing).  Copy over the content of this document into a new Google Doc and then enter your questions.
 
-# PS 6 (Due Tues, Mar 14 by 1:00 PM) {#ps6}
+# PS 6 {#ps6}
 
 - Read Chapter 5 of [ModernDive](https://ismayc.github.io/moderndiver-book/5-manip.html)
     - As you read, take careful notes of what you see as the key points conveyed and key things to remember about the R code.
@@ -22,6 +28,9 @@ This page will list the Problem Sets and when they will be turned in on paper th
     - We will be working on this in class on Tuesday and Thursday in groups, but you likely will need to work outside of class to complete it.
     - You should be using RStudio on your own machines to check for understanding of the material and the code.
     - You should write the code on your homework to answer the questions as needed and then put your discussion following the written code.
+
+- DISCUSSION [here](ps-key/index.html#ps6-key)
+
 
 # PS 5 (Due Tues, Feb 28 by 1:00 PM) {#ps5}
 
