@@ -6,8 +6,48 @@
     <description>Recent content on SOC 301 - Spring 2017</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Mar 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 03 Apr 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Final Group Projects</title>
+      <link>/group-projects/</link>
+      <pubDate>Mon, 03 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/group-projects/</guid>
+      <description>&lt;p&gt;This page provides the final revised &lt;code&gt;fivethirtyeight&lt;/code&gt; R package vignettes created as a Group Project by Chester Ismay&amp;rsquo;s Spring 2017 Social Statistics Course at Pacific University.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;../group_projects/group1.html&#34;&gt;Police Killings in Western U.S. During 2015&lt;/a&gt; - By Kelsey Graczyk, Cydni Mullikin, and Tia Kinilau&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;../group_projects/group2.html&#34;&gt;What Contributes to Bad Driving?&lt;/a&gt; - By Lina Kleinschmidt, Emily McLain, and Taylor Yoshiura&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Additional &lt;a href=&#34;../group_projects/data/groupings.csv&#34;&gt;CSV file&lt;/a&gt; included in analysis to create larger groupings of &lt;code&gt;division&lt;/code&gt; and &lt;code&gt;region&lt;/code&gt; for each &lt;code&gt;state&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Another &lt;a href=&#34;../group_projects/data/precip.csv&#34;&gt;CSV file&lt;/a&gt; providing the &lt;code&gt;precipitation&lt;/code&gt; for each state&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;../group_projects/group3.html&#34;&gt;The Demographics of 2015 Police Killing Victims&lt;/a&gt; - By
+Alicia Fox, Bree Malloy, and Jalaena DiPasquale]&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;../group_projects/group4.html&#34;&gt;How Many Fucks Does Tarantino Give?&lt;/a&gt; - By Olivia Barrows, Jojo Miller, and Jayla Nakayama&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;../group_projects/group5.html&#34;&gt;Comparison of Quentin Tarantino Movies by Box Office and the Bechdel Test&lt;/a&gt; - By Garrett Wedge, Natasha Halstvedt, and Micah Nakamoto&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;../group_projects/group6-1.html&#34;&gt;Drug of Choice Among Teens&lt;/a&gt; and &lt;a href=&#34;../group_projects/group6-2.html&#34;&gt;Beer &amp;amp; Wine Comparison among Canada, Mexico, and USA&lt;/a&gt; - By Jeremy Kaufman, Alicia Ortigoza, Alexandra Reyes, and Daisy Rizo&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;../group_projects/group7.html&#34;&gt;College Majors, Employment Rates, and Unemployment Rates&lt;/a&gt; - By Fernando Careaga and Hannah Kantor-O&amp;rsquo;Neil&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Additional &lt;a href=&#34;../group_projects/data/divisions.csv&#34;&gt;CSV file&lt;/a&gt; included in analysis to create larger grouping of &lt;code&gt;division&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;../group_projects/group8.html&#34;&gt;The Effects of Population on Murders in Big Cities&lt;/a&gt; - By Sarah Alanis, Rachel Carlson, and Ariel Rigwood&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;../group_projects/group9.html&#34;&gt;How Do Household Income and Race Contribute to the Number of Killings by Police?&lt;/a&gt; - By Karla Maldonado, Brady O&amp;rsquo;Keefe, and Jeriko Santos&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
     
     <item>
       <title>Week 08 - Tuesday</title>
@@ -524,7 +564,7 @@ if(length(new.pkgs)) {
 /BLOGDOWN-BODY-BEFORE --&gt;
 
 &lt;hr /&gt;
-&lt;p&gt;Page last updated at Tuesday, March 14, 2017 08:46:11 PDT&lt;/p&gt;
+&lt;p&gt;Page last updated at Monday, April 03, 2017 09:01:02 EDT&lt;/p&gt;
 &lt;div id=&#34;ps2-key&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Problem Set 2&lt;/h1&gt;
 &lt;p&gt;Learning Checks LC3.2-LC3.7, LC3.9-LC3.10 from &lt;a href=&#34;https://ismayc.github.io/moderndiver-book/3-tidy.html&#34;&gt;ModernDive&lt;/a&gt;&lt;/p&gt;
@@ -1785,34 +1825,6 @@ freq_dest&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;Complete &lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/applying-r-basics?ex=1&#34;&gt;Applying R Basics&lt;/a&gt; DataCamp chapter (Due on February 14 at 1 PM)&lt;/li&gt;
 &lt;li&gt;Begin &lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/tidy-data?ex=1&#34;&gt;Tidy Data&lt;/a&gt; DataCamp chapter (Due on February 16 at 1 PM)&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Advice from Former Students</title>
-      <link>/advice_from_former/</link>
-      <pubDate>Tue, 07 Feb 2017 12:46:16 -0800</pubDate>
-      
-      <guid>/advice_from_former/</guid>
-      <description>&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Read the freakin book. It might seem that you will do just fine and you could figure things out without reading the book. That may be the case BUT things would be so much easier if you just did the assigned readings. It will help you clarify any questions that you may have and it provides examples.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Don&amp;rsquo;t be afraid to ask questions. Clarification of any issues that you may encounter is always beneficial, especially since you usually want to resolve any issues before continuing.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Go to class - missing class can slow your learning process because you have to get caught back up. Attending every class also gives you the opportunity to get practice in R while having the professor there to answer questions.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;I would encourage that when doing the reading assignments you take notes. Sometimes the wording can be confusing - putting things in your own words helps. I would also encourage them to do google/youtube searches when having trouble understanding concepts.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Form a study group - working in groups is a great way to learn and can be fun!&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Ask for help - don&amp;rsquo;t be afraid to ask for help if you are struggling. The professor is there to support you and he is really good at responding in a timely manner.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Be willing to put work into this course and be as prepared as possible for each class. Always do the assigned reading, problem sets and labs prior to class. You will get more out of the lecture and practice done in class that way, and you will be able to get any questions you had from the reading answered then. It is a great chance to work though problems/confusing bits when Chester is there in person to help– but you must know which specific things you are hung up on instead of just general confusion because you did not read and haven&amp;rsquo;t ever seen the material.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Ask for help when you need it! Do not hesitate to contact Chester with problems you are having, just be sure to have at least tried to find the solution on your own. Still there is no point in spending hours getting the same error message when Chester is absurdly prompt in answering questions and always provides detailed explanations. On that note also go into office hours before class (and after having done the reading!) to work through issues.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Be ready to get incredibly frustrated at times. At first even the simplest task may take a whole lot of time and effort. It will also be irritating to find out the problem was quite simple, like too many quotes or brackets. If you keep trying eventually you will get the hang of it, you will learn what the error messages mean and how to fix them and you won&amp;rsquo;t have to spend as long to do even more complicated things. You can cut down on little mistakes that cause big problems, but are easy to miss by taking notes of these things from the reading. Then when nothing seems to be working and it so frustrating, you can refer to your notes and realize you forgot to specify something.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
 </description>
     </item>
     
