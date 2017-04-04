@@ -1,0 +1,132 @@
+\documentclass[11pt]{exam}
+\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\usepackage{alltt}
+%\usepackage{fullpage}
+\usepackage{amsmath,amssymb,array}
+\usepackage{color,graphics,epsfig, subfigure,comment,hhline}
+\usepackage{mathrsfs}
+\usepackage{enumerate}
+\usepackage{amsthm}
+\usepackage{cancel}
+%\usepackage{mathtools}
+%\usepackage{algorithmic}
+%\usepackage{algorithm}
+\usepackage{graphicx}
+\usepackage{fancyvrb}
+\usepackage[width=7in, paperheight=11.2in]{geometry}
+\usepackage{bigints}
+\usepackage{multicol}
+%\usepackage[framed,numbered, autolinebreaks,useliterate]{mcode}
+\usepackage{longtable,booktabs}
+
+\usepackage[formats]{listings}
+\lstdefineformat{R}{~=\( \sim \)}
+\lstset{basicstyle=\ttfamily,format=R}
+
+\newcommand{\mytilde}{$\sim$}
+
+\newcommand{\prob}[1]{\mathbb{P}(#1)}
+\newcommand{\E}[1]{\mathbb{E}(#1)}
+\newcommand{\V}[1]{\mathbb{V}(#1)}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\let\hlipl\hlkwb
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{}
+
+\begin{document}
+
+%\printanswers
+%\unframedsolutions
+\noprintanswers   %%NOT TO PRINT ANSWERS
+
+\header{\Large SOC 301 - Social Statistics \\ \large Sampling Matching \\ }{}{\Large Name: \underline{\hspace*{3in}}\\ 
+\large April 4, 2017 \\}
+
+\headrule
+\footer{}{}{}
+
+\renewcommand{\theenumi}{\Alph{enumi}}
+
+Match the term with its correct definition.
+
+\begin{enumerate}
+	\item bias
+	\item sampling
+	\item sample
+	\item generalizability
+	\item parameter
+	\item statistic
+	\item population
+	\item representative sample
+\end{enumerate}
+
+\begin{questions}
+
+\question The  \fillin is the (usually) large pool of observations (instances of observational units) that we are interested in.
+
+\question A  \fillin  is a smaller collection of observations (instances of observational units) that is selected from the larger pool.
+
+\question  \fillin  refers to the process of selecting observations from a population.  There are both random and non-random ways this can be done.
+
+\question A sample is said be a  \fillin  if the characteristics of observational units selected are a good approximation of the characteristics from the original population.
+
+\question \fillin corresponds to a favoring of one group in a population over another group.
+
+\question \fillin refers to the largest group in which it makes sense to make inferences about from the sample collected.  This is directly related to how the sample was selected.
+
+\question A 
+\fillin is a calculation based on one or more variables measured in the population.  Parameters are almost always denoted symbolically using Greek letters such as $\mu$, $\pi$, $\sigma$, $\rho$, and $\beta$.
+
+\question A \fillin is a calculated based on one or more variables measured in the sample.  Parameters are usually denoted by lower case Arabic letters with other symbols added sometimes.  These include $\bar{x}$, $\hat{p}$, $s$, $r$, and $b$. 
+
+\end{questions}
+
+\end{document}
+
+

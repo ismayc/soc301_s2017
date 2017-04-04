@@ -6,8 +6,39 @@
     <description>Recent content in Posts on SOC 301 - Spring 2017</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Mar 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 04 Apr 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Week 10 - Tuesday</title>
+      <link>/2017/04/04/week-10---tuesday/</link>
+      <pubDate>Tue, 04 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/04/04/week-10---tuesday/</guid>
+      <description>
+
+&lt;h3 id=&#34;covered-content&#34;&gt;Covered Content&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Reviewed terminology from Chapter 6 on sampling from &lt;a href=&#34;https://ismayc.github.io/moderndiver-book/6-sim.html&#34;&gt;ModernDive&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Went over &lt;code&gt;mosaic&lt;/code&gt; package functions we will use for statistical inference
+
+&lt;ul&gt;
+&lt;li&gt;Practiced in RStudio using these functions&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Began working on Problem Set 9&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;to-do-for-next-time&#34;&gt;To do for next time&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://ismayc.github.io/soc301_s2017/problem-sets/index.html#ps9&#34;&gt;Problem Set 9&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Work through Exam from last semester (skip the last problem)&lt;/li&gt;
+&lt;li&gt;Continue studying for the Midterm Exam, which will occur during class on Tuesday, April 11&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;For Practice&lt;/em&gt;: LC6.1-LC6.17 from &lt;a href=&#34;https://ismayc.github.io/moderndiver-book/6-sim.html&#34;&gt;ModernDive&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Week 08 - Tuesday</title>
@@ -550,34 +581,6 @@ DataCamp course.&lt;br /&gt;
 reach out for help.&lt;/li&gt;
 &lt;li&gt;If completed, start working on &lt;strong&gt;Applying R Basics&lt;/strong&gt; chapter in my &lt;strong&gt;Effective Data Storytelling via the &lt;code&gt;tidyverse&lt;/code&gt;&lt;/strong&gt; course (Due Tuesday, February 14)&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Week 01 - Tuesday</title>
-      <link>/2017/01/31/week-01---tuesday/</link>
-      <pubDate>Tue, 31 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/2017/01/31/week-01---tuesday/</guid>
-      <description>
-
-&lt;p&gt;Slides available &lt;a href=&#34;http://ismayc.github.io/soc301_s2017/slides/week01-tues.html&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;covered-content&#34;&gt;Covered Content&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Introduction to the course and to each other&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;to-do-for-next-time&#34;&gt;To do for next time&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Carefully read over the syllabus in entirety&lt;/li&gt;
-&lt;li&gt;Make note of important dates on the schedule&lt;/li&gt;
-&lt;li&gt;Read the first two chapters of &lt;a href=&#34;http://moderndive.com&#34;&gt;ModernDive&lt;/a&gt; for Thursday&lt;/li&gt;
-&lt;li&gt;Get signed up for Slack and download to your computer and/or mobile device&lt;/li&gt;
-&lt;li&gt;Start working on Introduction to R DataCamp course as soon as possible!&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
