@@ -6,6 +6,9 @@ categories: []
 tags: []
 ---
 
+Slides available [here](http://ismayc.github.io/soc301_s2017/slides/slide_deck.html#week10t)
+
+
 ### Covered Content
 - Reviewed terminology from Chapter 6 on sampling from [ModernDive](https://ismayc.github.io/moderndiver-book/6-sim.html)
 - Went over `mosaic` package functions we will use for statistical inference

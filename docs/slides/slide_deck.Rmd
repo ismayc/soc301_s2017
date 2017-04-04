@@ -30,7 +30,7 @@ layout: true
 
 
 
-name: week08t
+name: week10t
 class: center, middle
 
 # Week 10 - Tuesday
