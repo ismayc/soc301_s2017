@@ -6,7 +6,7 @@ title: Problem Sets
 This page will list the Problem Sets and when they will be turned in on paper throughout the course.  You will turn in one problem set per group.  You can find discussions about all of the Problem Sets [here](ps-key/index.html).  Links to specific Problem Set discussions will be posted after the Problem Set is turned in below the Problem Set assignment here.
 
 
-# PS 9 (Due Thurs, Apr 6 by 4:20 PM) {#ps9}
+# PS 9 (Due Thurs, Apr 6 by 11:59 PM) {#ps9}
 
 - Check your email for a link to your Google Drive folder containing the needed files
 - Complete the `ps9.Rmd` file with an updated `ggplot2` plot and creation of a `dplyr` summarization
