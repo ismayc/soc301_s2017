@@ -1,0 +1,184 @@
+---
+title: "College Majors, Employment Rates, and Unemployment Rates"
+author: "Fernando Careaga and Hannah Kantor-O'Neil"
+date: "`r Sys.Date()`"
+output: 
+  rmarkdown::html_vignette:
+    df_print: kable
+vignette: |
+  %\VignetteIndexEntry{College Majors, Employment Rates, and Unemployment Rates}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+# Introduction
+
+Ever wondered what type of majors are the most popular for undergraduates across America? Ever wondered how much more money a certain degree can help you earn? 
+Or ever thought about what the likelihood of finding employment after college with your degree is? Ever wondered if either male or female earn more?  This vignette is based on a collection of 173 majors in 16 different major categories and their employment, unemployment, and median salaries based on majors. The following information was gathered and compiled by the American Community Survey. In this vignette we take a look at several graphs that break down and answer the questions listed above. With each graph there will be a comprehensive discussion explaining why the graphs look the way that they look. 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning=FALSE, message=FALSE, 
+  fig.width=7.2, fig.height=6)
+```
+
+  
+This vignette is based on data collected for the 538 story entitled "This Economic Guide to Picking a College Major" by Ben Casselman available [here](https://fivethirtyeight.com/features/the-economic-guide-to-picking-a-college-major/).
+
+First, we loaded the required packages to reproduce the analysis. 
+
+```{r packages}
+library(fivethirtyeight)
+library(dplyr)
+library(ggplot2)
+library(readr) # Used for reading in from a spreadsheet
+library(knitr)
+library(forcats)
+```
+
+Next, we loaded data which categorizes different `major_category`'s into `division`s and then joined with this data.
+
+```{r externaldata}
+divisions <- read_csv("data/divisions.csv")
+college_with_divisions <- inner_join(x = college_all_ages,
+                                     y = divisions,
+                                     by = "major_category")
+```
+
+To avoid confusion, we also rename the `median` variable in `college_with_divisions` as `q2` since `median()` is a function in R:
+
+```{r}
+college_with_divisions <- college_with_divisions %>% 
+  rename(q2 = median)
+```
+
+
+# Total Number of Majors in Universities Across America
+
+In this first graph we are looking at the major categories within the `college_all_ages` data frame and how many majors are included in each grouping. We use the `fct_infreq()` and `fct_rev` functions in the `forcats` package to sort the bars in order of `count`.
+
+<!--CHESTER
+As I mentioned on my edit, this is not correct
+
+"This plot depicts the most common majors offered at most colleges and universities across America. From the plot we can concur that there are several `major_category`s more popular than others among university students. The least popular being Interdisciplinary, Communications & Journalism and Law & Public Policy to the most popular as Engineering, Biology & Science and Education just to name a few."
+
+I told you exactly what this gave you instead below and in the edit file.
+-->
+
+```{r}
+college_all_ages <- college_all_ages %>% 
+  mutate(major_category = major_category %>% fct_infreq() %>% fct_rev())
+ggplot(data = college_all_ages, 
+       mapping = aes(x = major_category)) + 
+  geom_bar(fill = "red", color = "black") + 
+  coord_flip() +
+  labs(x = "Major Category", y = "Number of Majors")
+```
+
+It is interesting to think about there being so many different kinds of engineering majors but not
+very many majors in the fields at the bottom.
+
+In the next graph, we are still looking at the `college_all_ages` data frame and taking an in depth look of the list of most popular majors to the least popular majors. Why might some majors be more popular than others? Let’s take a look at why engineering might be popular.  Based on the fivethirtyeight article, a reason why this major category might be so popular is due to the variety of majors offered within that major category itself. For example, Engineering is a major category that offers Petroleum Engineering, Mechanical Engineering, Mining & Mineral Engineering, and Nuclear Engineering just to name a few. Whereas, the least picked major category, Interdisciplinary has a low variety of majors that students can choose from. Therefore, we can guess that major categories which are the most popular tend to be the ones that have a variety of disciplines within the major to choose from.
+
+
+```{r}
+group_major <- college_all_ages %>% 
+  group_by(major_category) %>% 
+  summarize(total_num = sum(total) / 1000) %>% 
+  mutate(major_category = fct_reorder(major_category, total_num))
+ggplot(data = group_major, mapping = aes(x = major_category,
+                                         y = total_num)) + 
+  geom_col(fill = "red", color = "black") + 
+  coord_flip() +
+  labs(x = "Major Category", y = "Number of Students with Major (Thousands)")
+```
+
+
+
+# Median Employment Rates By Major Categories
+
+```{r}
+employment_rate <- college_with_divisions %>% 
+  mutate(employed_rate = employed/total) %>%
+  group_by(major_category) %>%
+  summarize(median_employment_rate = mean(employed_rate)) %>% 
+  mutate(major_category = fct_reorder(major_category, median_employment_rate))
+ggplot(data = employment_rate, 
+       mapping = aes(x = major_category, y = median_employment_rate)) + 
+  geom_col() + 
+  coord_flip() +
+  labs(x = "Major Category", y = "Median Percentage Employed")
+```
+
+This graph shows the mean rate of employment pertaining to each major category within the `college_with_divisions` data frame. Computers & Mathematics, Interdisciplinary Studies, Communications & Journalism, and Business major categories all represent the highest mean rate of employment across universities in America. It is interesting to see the link between some of the least chosen majors such as Communications & Journalism and  Interdisciplinary Studies, also have some of the highest rates of employment. 
+
+One may hypotheses that majors such as Journalism, Mass Media, Communications and Advertising and Public Relations, within the Communications & Journalism major category, lead to jobs that are highly useful in our society. Media and advertising are a part of our everyday lives, therefore creating more demand and job opportunities leading to higher rates of employment for those who graduate with degrees in Communications & Journalism. With media and advertising comes the demand of technology and mathematics that are used to create it. The use of technology is heavily integrated into our society today on a social level, as well as to create modern innovations with computers and mathematics. Skills from those who major in Computers & Mathematics such as Communication Technologies, Computer And Information Systems, Computer Programming And Data Processing, and Computer Networking and Telecommunications, are highly demanded and valued, creating more employment opportunities. 
+
+# Median Unemployment rates by major categories 
+
+Since the `college_with_divisions` data frame already includes an `unemployment_rate` variable, we need not create a new one using `mutate()` as we did with `employment_rate` above.
+
+```{r}
+unemployment_rate <- college_with_divisions %>% 
+#  mutate(unemployment_rate = unemployed/total) %>%
+  group_by(major_category) %>%
+  summarize(median_unemployment_rate = median(unemployment_rate))  %>% 
+  mutate(major_category = fct_reorder(major_category, median_unemployment_rate))
+ggplot(data = unemployment_rate, 
+       mapping = aes(x = major_category, y = median_unemployment_rate)) + 
+  geom_col() + 
+  coord_flip() +
+  labs(x = "Major Category", y = "Median Percentage Unemployed")
+```
+
+This graph depicts the mean unemployment rates by major category, using the `college_with_divisions` data frame again. The majors within the Art major category represent the highest rate of unemployment. Fine Arts, Drama And Theater Arts, Music, and Visual And Performing Arts represent some of the various majors within the Art major category. Some guesses as to potential factors as to why art has such a low mean unemployment rate are that it is often hard to find jobs and jobs that pay well in the art, theater, and music fields. Communications & Journalism, Psychology & Social work, and Humanities & Liberal Arts represent other major categories that have the highest mean of unemployment rates. These fields can often be very competitive which can create low employment rates for those who graduate with degrees in these majors. 
+
+
+# Summary tables of median salaries for STEM, humanities, and art majors 
+
+In the following table we have provided a table based on the `college_with_divisions` data frame in which we can see the breakdown of majors within `major_category` that are organized as a part of STEM or Humanities. The table is broken down from the highest median earnings to the lowest median earnings. 
+
+```{r}
+college_with_divisions %>%
+  filter(division %in% c("STEM", "Humanities", "Art")) %>%
+  mutate(median_salary = scales::dollar(q2)) %>% 
+  select(major, major_category, division, median_salary) %>% 
+  arrange(desc(median_salary))
+```
+
+<!-- CHESTER
+Not sure why you didn't include the tables I asked for here too?
+-->
+
+We can also break this down further to look at the median salary across `major_category`:
+
+```{r}
+college_with_divisions %>%
+  filter(division %in% c("STEM", "Humanities", "Art")) %>%
+  group_by(major_category, division) %>% 
+  summarize(median_salary = median(q2)) %>% 
+  mutate(median_salary = scales::dollar(median_salary)) %>% 
+  arrange(desc(median_salary))
+```
+
+And lastly we break this down to see the median salary across `division`:
+
+```{r}
+college_with_divisions %>%
+  filter(division %in% c("STEM", "Humanities", "Art")) %>%
+  group_by(division) %>% 
+  summarize(median_salary = median(q2)) %>% 
+  mutate(median_salary = scales::dollar(median_salary)) %>% 
+  arrange(desc(median_salary))
+```
+
+
+# Conclusion
+
+After analyzing the data which depicted the rates of employment, unemployment, and median earnings for STEM, Humanities, and Art majors, we can reason that earning a bachelor's degree in STEM majors (science, technology, engineering, and mathematics) likely increases the chances for employment and higher earnings. The `college_all_ages` and `college_with_divisions` data frames provided us with the statistical information for us to conclude what major categories in universities across America will have a higher rates of employment and median earnings. 
+
+
+<!-- CHESTER
+Your analysis so far has provided a good start.  I think with a few more additions and using my suggestions you'll have a really nice vignette.  Make sure to update your analysis after you make the new plots and tables too.  Please let me know if you have any questions.
+-->
+
+

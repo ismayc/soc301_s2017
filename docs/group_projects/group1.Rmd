@@ -1,0 +1,152 @@
+---
+title: "Police Killings in Western U.S. During 2015"
+author: "Kelsey Graczyk, Cydni Mullikin, and Tia Kinilau"
+date: "`r Sys.Date()`"
+output: 
+  rmarkdown::html_vignette:
+    df_print: kable
+vignette: |
+  %\VignetteIndexEntry{Police Killings in Western U.S. During 2015}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+This vignette is based on data collected for the 538 story entitled "Where Police Have Killed Americans in 2015" by Ben Casselman available [here](https://fivethirtyeight.com/features/where-police-have-killed-americans-in-2015/).
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning=FALSE, message=FALSE, fig.width=7.2)
+```
+
+
+First, we load the required packages to reproduce the analysis.  
+
+```{r packages, message=FALSE, warning=FALSE}
+library(fivethirtyeight)
+library(dplyr)
+library(ggplot2)
+library(readr) 
+library(knitr)
+library(ggthemes)
+
+```
+
+*It is important to note that the data used in our graphs come from the Western states, which include: Oregon, Washington, Idaho, Montana, Wyoming, California, Hawaii, Alaska, Colorado, New Mexico, Utah, Arizona, and Nevada. These graphs do not represent the entire United States. Our data only represents the population proportions of the people in the Western portion of the United States.*
+
+## Filter the data frame to only the Western U.S.
+
+The data frame shown comes from the `fivethirtyeight` package using the `police_killings` data set. This original data frame both includes and focuses on where-- state, city, longitude/latitude, and street address-- and how the killings occurred by police officers in the U.S. in the year 2015. The `police_killings_final` data frame that we created filters out only the western portion of the United States and specifies the variables of race/ethnicity, cause of death, armed, and age in order to focus on our interests.
+
+```{r wrangling}
+west_states <- c("OR", "WA", "ID", "MT", "WY", "CA", "HI", "AK", "CO", "NM", "UT", "AZ", "NV")
+police_killings_final <- police_killings %>%
+  filter(state %in% west_states) %>%
+  select(raceethnicity, cause, armed, age)
+```
+
+## Group by cause of death and armed
+
+This data frame takes the data from `police_killings_final` and summarizes the total count based off the cause of death as well as the type of weapon the victim was armed with, if any at all. The "count" in this data frame refers to the number of people that fit the specific criteria of each category. The inclusion of `tidyr::complete` was made in order to have the bars in the plot that follows be of the same width.
+
+```{r complete}
+police_complete <- police_killings_final %>% 
+  group_by(cause, armed) %>% 
+  summarize(count = n()) %>% 
+  ungroup() %>% 
+  tidyr::complete(cause, armed, fill = list(count = 0))
+police_complete
+```
+
+## Relationship between the cause of death and victims being armed
+
+For this plot we wondered what it would look like if we compared the causes of death from a police officer with the type of weapon the victims were armed with, if at all.
+
+```{r plot1-rev, fig.height=5}
+police_complete <- police_killings_final %>% 
+  group_by(cause, armed) %>% 
+  summarize(count = n()) %>% 
+  ungroup() %>% 
+  tidyr::complete(cause, armed, fill = list(count = 0))
+ggplot(data = police_complete,
+       mapping = aes(x = cause, y = count))+
+  geom_col(aes(fill = armed), position = "dodge", color = "white") +
+  labs(x = "Cause of Death", y = "Count", title = "Cause of Death vs Armed Victims")
+```
+
+
+ This plot shows the relationship between the cause of death and the type of weapon the victim was armed with, if any. From this graph we can see that those who were killed by a gunshot had a high count of having a firearm on them during the incident. Furthermore, in the gunshot category, nearly a quarter of the victims were unarmed in general. It is apparent that significantly more deaths occurred by gunshot than any other category-- death in custody, struck by vehicle, or by taser. In the instance of categories other than gunshot, it is interesting to note that the victims were only armed with a firearm, knife, or nothing at all. 
+
+### Now let's take a zoomed-in look at deaths caused by gunshot
+
+From the previous graph, it was apparent that the most prevalent cause of death was by gunshot. We decided to give you a better look at the people and what types of weapons they were armed with, if any.
+
+```{r graph, fig.height=5}
+police_zoom <- police_killings_final %>%
+  filter( cause == "Gunshot")
+ggplot(data = police_zoom, mapping = aes(x = armed)) +
+  geom_bar(position = "dodge", color = "white", aes(fill = armed))+
+  labs(x = "Armed?", y = "Count", title = "Death by Gunshot" )
+```
+
+This graph shows us that those who were killed by gunshot were mostly armed with a firearm. Although this graph serves as a visual representation, it does not give a numerical summary of the data. Below, we created a table that depicts this data more in depth.
+
+### Now let's take a look at the proportion of those killed by gunshot
+
+This data frame focuses on those who were killed by gunshot. It displays the actual proportions of the different weapons carried by those who were shot.
+
+```{r prop}
+police_proportion <- police_killings_final %>%
+  filter( cause == "Gunshot") %>%
+  group_by(armed) %>%
+  summarize( count = n()) %>%
+  mutate(prop = count / sum(count))
+police_proportion
+```  
+
+From this data frame, we can see that more than 50% of those who were killed by gunshot were also carrying a firearm, while about 20% were not armed at all.
+
+## Now let's see how race/ethnicity ties in with our previous findings
+
+For this plot, we wondered what it would look like if we compared the causes of death with the races/ethnicities of those who were killed by police officers.  We also used the `na.omit` function to exclude all rows that had entries with missing `NA` values.
+
+
+```{r plot2, fig.height=5}
+police_killings_omit <- police_killings_final %>%
+  na.omit() %>%
+  group_by(cause, raceethnicity) %>%
+  summarize(count = n()) %>%
+  ungroup() %>%
+  tidyr::complete(cause, raceethnicity, fill = list(count = 0))
+ggplot(data = police_killings_omit, 
+       mapping = aes(x = cause, y = count)) +
+  geom_col(aes(fill = raceethnicity), position = "dodge", color = "white") +
+  labs(x = "Cause of Death", y = "Count", title = "Cause of Death vs Race/Ethnicity")
+
+```
+  
+  This second plot shows the relationship between the causes of death and the races/ethnicities of those who were killed by police officers. It is clear that whites had the highest count of death by gunshot in the Western United States. However, this may be due to the fact that the Western U.S. is predominantly made up of the Caucasian race. It may be of importance to note that in today's media African Americans are suggested to be more susceptible to gunfire than whites-- something contested in our graph. It is also interesting to point out that only the white race was killed by being struck by a vehicle. In the case of being killed by a taser, the number of deaths were evenly distributed throughout all races and ethnicities. 
+  
+## Focus on race/ethnicity within the gunshot variable
+
+For this plot, we decided to focus on the races/ethnicities of the victims who were killed by gunshot because this category had the most prominent number of individuals.
+
+```{r zoomRE}
+police_zoom_RE <- police_killings_final %>%
+  na.omit() %>% 
+  filter(cause == "Gunshot")
+```
+
+```{r plot3, fig.height=5}
+ggplot(data = police_zoom_RE, mapping = aes(x = raceethnicity)) +
+  geom_bar(aes(fill = raceethnicity), position = "dodge", color = "white") +   
+  labs(x = "Race", y = "Count", title = "Death by Gunshot vs Race/Ethnicity")
+```
+
+This graphic displays that white people have the highest count of deaths by gunshot, followed by Hispanics/Latinos and then African Americans. The two lowest counts came from Asians/Pacific Islanders as well as Native Americans. While it shows that more white people were killed by gunshot in the U.S. in 2015, it is also the case that whites make up the vast majority of the Western Region of the United States.
+
+
+## Concluding thoughts
+
+Considering we have focused on data based on the Western region of the U.S., it's impossible to say that our information is representative of the entire country. When looking at cause of death and ethnicity, our graphs depict whites being killed by gunshot more than any other race which might not accurately portray the ethnicities and their proportions throughout the entire United States. We were interested in this data frame because of social media's portrayal of the discrimination against particular ethnicities throughout the country, yet it is clear from the data on the western region that the media has a skewed perspective. In order to have more accurate data and interpretations we would need the numbers from the rest of the U.S. and its parallel population ratios of ethnicities. On a side note, our graph depicting cause of death and armed victims has a value including "other" armed options. We assumed that these options included items such as bats, brass knuckles, crowbars, and other blunt objects able to inflict serious damage.
+
+*We also looked up the demographics of the Western U.S. in order to get a better understanding of the data being displayed. On the Kaiser Family Foundation [website](http://kff.org/other/state-indicator/distribution-by-raceethnicity/?currentTimeframe=0&selectedRows=%7B%22nested%22:%7B%22alaska%22:%7B%7D,%22california%22:%7B%7D,%22colorado%22:%7B%7D,%22arizona%22:%7B%7D,%22hawaii%22:%7B%7D,%22idaho%22:%7B%7D,%22montana%22:%7B%7D,%22nevada%22:%7B%7D,%22new-mexico%22:%7B%7D,%22oregon%22:%7B%7D,%22utah%22:%7B%7D,%22washington%22:%7B%7D,%22wyoming%22:%7B%7D%7D%7D&sortModel=%7B%22colId%22:%22Location%22,%22sort%22:%22asc%22%7D), we found proportions of races/ethnicities in the Western U.S. that corresponded to the information we mentioned earlier.*
+

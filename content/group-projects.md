@@ -15,7 +15,7 @@ This page provides the final revised `fivethirtyeight` R package vignettes creat
   - Another [CSV file](../group_projects/data/precip.csv) providing the `precipitation` for each state
 
 3. [The Demographics of 2015 Police Killing Victims](../group_projects/group3.html) - By
-Alicia Fox, Bree Malloy, and Jalaena DiPasquale]
+Alicia Fox, Bree Malloy, and Jalaena DiPasquale
 
 4. [How Many Fucks Does Tarantino Give?](../group_projects/group4.html) - By Olivia Barrows, Jojo Miller, and Jayla Nakayama
 

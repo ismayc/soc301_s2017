@@ -1,0 +1,92 @@
+---
+title:  Beer & Wine Comparison among Canada, Mexico, and USA 
+author: "Jeremy Kaufman, Alicia Ortigoza, Alexandra Reyes, and Daisy Rizo"
+date: "March 23, 2017"
+output:
+  rmarkdown::html_vignette:
+    df_print: kable
+vignette: |
+  %\VignetteIndexEntry{Beer & Wine Comparison among Canada, Mexico, and USA}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning=FALSE, message=FALSE, fig.width=7.2)
+```
+
+
+## This vignette is based on data collected from package fivethirtyeight named, "How Baby Boomers Get High" by Mona Chalabi available [here](http://fivethirtyeight.com/datalab/dear-mona-followup-where-do-people-drink-the-most-beer-wine-and-spirits/)
+
+First, we load the required packages to reproduce the analysis.  
+
+```{r packages, message=FALSE, warning=FALSE}
+library(fivethirtyeight)
+library(dplyr)
+library(ggplot2)
+library(readr) 
+library(knitr)
+library(tidyr)
+library(ggthemes)
+```
+
+```{r externaldata}
+drink_Tidy <- drinks %>% 
+  select(country, beer_servings, wine_servings) %>% 
+  gather(-country, key = "drinks", value = "servings") 
+```
+
+<!-- CHESTER
+Again, I'm not sure why my suggestions weren't included and I wasn't asked any questions.
+-->
+
+We first examined how many servings of wine and beer were consumed per person in each country, in the year 2010. During our analysis we focused on the consumption of alcohol by country, as well as the alcohol of choice between wine and beer. Our analysis only focuses on Canada, Mexico and the United States.
+
+Our second analysis compares the number of liters of pure alcohol consumed by the selected countries. In order to provide a thorough analysis, a tidy data set was created. 
+
+```{r }
+drink_UMC <- drink_Tidy %>% 
+  filter(country %in% c("USA","Mexico","Canada"))
+```
+
+## How many servings of beer and wine were consumed between Mexico, Canada, and the United States? 
+
+```{r fig.height=4, fig.align='center'}
+ggplot(data = drink_UMC, mapping = aes(x = country, y = servings))+
+  geom_col(aes(fill = drinks) ,position = "dodge") +
+  scale_fill_manual(values = c("blue", "red"))+
+  labs(x= "Countries", Y = "Servings ", title ="Country Comsumption Of Beer and Wine",caption = "Data from FiveThirtyEight")+
+  theme(legend.position = "none",
+        plot.title = element_text(face = "bold", size = 12),
+        plot.caption = element_text(hjust = 1, size = 10))
+```
+
+
+Our findings show beer is the favored alcoholic beverage amongst all three countries being observed. Canada and Mexico consume about the same amount of beer, while the U.S. consumes more. Wine is the least consumed alcohol type amongst all three countries. In addition, Mexico is the country that drinks wine the least. The variable `beer_servings` corresponds to the number of beer servings, based on a 12-ounce can, whereas `wine_servings` corresponds to a glass of wine valued at 3.4-5 ounces. These are on a "per person" scale.
+
+<!-- CHESTER
+These are per person values.  It really isn't clear without including that.
+-->
+
+This plot distinctly differentiates the most consumed alcohol types between wine and beer. Because the data is tidy, we can see the difference in alcohol consumption between all three countries. 
+
+## Total Liters of Pure Alcohol Consumed Per Continent 
+
+We want to figure out which country consumes the most liters of pure alcohol. We chose these three countries because they were the ones in our region. 
+
+<!-- CHESTER
+I'm really just not seeing significant revisions done on these two vignettes.  It seems my requests were ignored?
+-->
+
+```{r fig.height=4, fig.width = 6, fig.align= "center"}
+drink_tidy_con <- drinks %>%
+  filter(country %in% c("Australia", "Belize", "Ethiopia", "France", "Japan", "USA"))
+ggplot(data = drink_tidy_con, mapping = aes(x = country, y = total_litres_of_pure_alcohol)) +
+  geom_col(aes(fill = country)) +
+  labs(x = "Continents", y = "Liters", title="Liters Consumed By Contients",caption = "Data from FiveThirtyEight")+
+  theme(legend.position = "none",
+        plot.title = element_text(face = "bold", size = 16),
+        plot.caption = element_text(hjust = 1, size = 10))
+```
+
+Our data set utilized six continents, excluding Antarctica. France, Australia, and the United States are amongst the top three continents that consume the most liters of pure alcohol. Japan, Belize, and Ethiopia are amongst the lowest three continents that consume liters of pure alcohol. While Australia and the U.S are fairly similar in alcohol consumption, so are Belize and Japan. Ethiopia is by far the lowest in pure alcohol consumption among the six continents observed. The low number of recorded liters of pure alcohol consumed by Ethiopia stands out quite a bit. 

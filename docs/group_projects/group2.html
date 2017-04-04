@@ -12,7 +12,7 @@
 
 <meta name="author" content="Lina Kleinschmidt, Emily McLain, and Taylor Yoshiura" />
 
-<meta name="date" content="2017-04-03" />
+<meta name="date" content="2017-04-04" />
 
 <title>What Contributes to Bad Driving?</title>
 
@@ -70,7 +70,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title toc-ignore">What Contributes to Bad Driving?</h1>
 <h4 class="author"><em>Lina Kleinschmidt, Emily McLain, and Taylor Yoshiura</em></h4>
-<h4 class="date"><em>2017-04-03</em></h4>
+<h4 class="date"><em>2017-04-04</em></h4>
 
 
 
@@ -99,12 +99,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <span class="st">  </span><span class="kw">select</span>(state, num_drivers, speeding, alcohol, distracted) %&gt;%<span class="st"> </span>
 <span class="st">  </span><span class="kw">rename</span>(<span class="dt">collisions =</span> num_drivers)</code></pre></div>
 <p><em>Note here that the numbers derived in <code>speeding</code>, <code>alcohol</code>, and <code>distracted</code> aren’t exactly correct since the percentages reported were rounded to whole percentages.</em></p>
-<p>In addition to the contributors of speeding, distraction, and alcohol consumption, rainfall and snowfall can often be seen as hazardous to drivers. We were interested in seeing if the amount of precipitation had an effect on the cause and amount of collisions for each state and why there are more collisions in certain states than others. We also joined to include the precipitation totals for each state:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">precip &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;precip.csv&quot;</span>)
+<p>In addition to the contributors of speeding, distraction, and alcohol consumption, rainfall and snowfall can often be seen as hazardous to drivers. We were interested in seeing if the amount of precipitation had an effect on the cause and amount of collisions for each state and why there are more collisions in certain states than others. We also joined to include the precipitation totals for each state based on data provided by the <a href="https://www.ncdc.noaa.gov/temp-and-precip/climatological-rankings/index.php?periods%5B%5D=12&amp;parameter=pcp&amp;state=106&amp;div=0&amp;month=2&amp;year=2017#ranks-form">National Oceanic and Atmospheric Administration</a>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">precip &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;data/precip.csv&quot;</span>)
 bad_drivers_var &lt;-<span class="st"> </span>bad_drivers_var %&gt;%<span class="st"> </span>
 <span class="st">  </span><span class="kw">inner_join</span>(<span class="dt">y =</span> precip, <span class="dt">by =</span> <span class="st">&quot;state&quot;</span>)</code></pre></div>
 <p>Next, we joined with a data frame to bring in groupings of the <code>state</code> variable into <code>regions</code> and then <code>divisions</code> of our choosing.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">groupings &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;groupings.csv&quot;</span>)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">groupings &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;data/groupings.csv&quot;</span>)
 bad_drivers_var &lt;-<span class="st"> </span>bad_drivers_var %&gt;%<span class="st"> </span>
 <span class="st">  </span><span class="kw">inner_join</span>(<span class="dt">y =</span> groupings, <span class="dt">by =</span> <span class="st">&quot;state&quot;</span>)</code></pre></div>
 <p>We next tidied the data in order to produce graphs and perform data wrangling on the different types of causes using the <code>gather</code> function in the <code>tidyr</code> package.</p>

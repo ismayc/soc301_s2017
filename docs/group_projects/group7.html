@@ -12,7 +12,7 @@
 
 <meta name="author" content="Fernando Careaga and Hannah Kantor-O’Neil" />
 
-<meta name="date" content="2017-03-23" />
+<meta name="date" content="2017-04-04" />
 
 <title>College Majors, Employment Rates, and Unemployment Rates</title>
 
@@ -70,7 +70,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title toc-ignore">College Majors, Employment Rates, and Unemployment Rates</h1>
 <h4 class="author"><em>Fernando Careaga and Hannah Kantor-O’Neil</em></h4>
-<h4 class="date"><em>2017-03-23</em></h4>
+<h4 class="date"><em>2017-04-04</em></h4>
 
 
 
@@ -86,7 +86,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <span class="kw">library</span>(knitr)
 <span class="kw">library</span>(forcats)</code></pre></div>
 <p>Next, we loaded data which categorizes different <code>major_category</code>’s into <code>division</code>s and then joined with this data.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">divisions &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;divisions.csv&quot;</span>)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">divisions &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;data/divisions.csv&quot;</span>)
 college_with_divisions &lt;-<span class="st"> </span><span class="kw">inner_join</span>(<span class="dt">x =</span> college_all_ages,
                                      <span class="dt">y =</span> divisions,
                                      <span class="dt">by =</span> <span class="st">&quot;major_category&quot;</span>)</code></pre></div>

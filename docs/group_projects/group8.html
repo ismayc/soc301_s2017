@@ -10,9 +10,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta name="author" content="Sarah Alanis, Rachel Carlson, Ariel Rigwood" />
+<meta name="author" content="Sarah Alanis, Rachel Carlson, and Ariel Rigwood" />
 
-<meta name="date" content="2017-03-24" />
+<meta name="date" content="2017-04-04" />
 
 <title>The Effects of Population on Murders in Big Cities</title>
 
@@ -69,8 +69,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 
 <h1 class="title toc-ignore">The Effects of Population on Murders in Big Cities</h1>
-<h4 class="author"><em>Sarah Alanis, Rachel Carlson, Ariel Rigwood</em></h4>
-<h4 class="date"><em>2017-03-24</em></h4>
+<h4 class="author"><em>Sarah Alanis, Rachel Carlson, and Ariel Rigwood</em></h4>
+<h4 class="date"><em>2017-04-04</em></h4>
 
 
 
@@ -85,8 +85,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="the-relationship-between-population-and-murders" class="section level2">
 <h2>The relationship between population and murders</h2>
 <p>The <code>murder_2016_prelim</code> data frame has information on the number of murders that occurred across 79 cities in 2015 and 2016. In addition to the original data set the population and the percent increase or decrease in the number of murders was added to the data. We are interested in analyzing the relationship between the population of a city and the number of murders that took place there. Adding the additional information allows for a more in depth analysis of the murders and how the murders are affecting the city.</p>
-<p>The first file loaded was created using data from various websites to compile all the populations of the 79 cities. This is necessary in order to compare the statistics of the murders to the city’s specific population, to examine any relationships between populations and murders, and to discover any outliers or trends and how a population might affect those trends.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pop &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;population.csv&quot;</span>)</code></pre></div>
+<p>The first file loaded was created using data from <a href="https://suburbanstats.org/">suburbanstats.org</a> to compile all the populations of the 79 cities. This is necessary in order to compare the statistics of the murders to the city’s specific population, to examine any relationships between populations and murders, and to discover any outliers or trends and how a population might affect those trends.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pop &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;data/population.csv&quot;</span>)</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pop_murder_2016 &lt;-<span class="st"> </span><span class="kw">inner_join</span>(<span class="dt">x =</span> murder_2016_prelim, <span class="dt">y =</span> pop, <span class="dt">by =</span> <span class="st">&quot;city&quot;</span>) %&gt;%<span class="st"> </span>
 <span class="st">  </span><span class="kw">select</span>(-source)</code></pre></div>
 <p>Next, we use the <code>mutate()</code> function in the <code>dplyr</code> package to calculate the percentage of change in murders across the cities in order for the data to be interpreted in a more meaningful way.</p>

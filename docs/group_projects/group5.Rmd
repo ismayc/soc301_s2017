@@ -1,0 +1,131 @@
+---
+title: "Comparison of Quentin Tarantino Movies by Box Office and the Bechdel Test"
+author: "Garrett Wedge, Natasha Halstvedt, and Micah Nakamoto "
+date: "`r Sys.Date()`"
+output: 
+  rmarkdown::html_vignette:
+    df_print: kable
+vignette: |
+  %\VignetteIndexEntry{Comparison of Quentin Tarantino Movies by Box Office and the Bechdel Test}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning=FALSE, message=FALSE, fig.width=7.2)
+```
+
+
+### Data Sources
+  This vignette is based on data collected for the 538 story entitled "A Complete Catalog Of Every Time Someone Cursed Or Bled Out In A Quentin Tarantino Movie"  by  Oliver Roeder available [here](https://fivethirtyeight.com/features/complete-catalog-curses-deaths-quentin-tarantino-films/). Data was also drawn from another 538 article: "The Dollar-And-Cents Case Against Hollywood’s Exclusion of Women" by Walt Hickey, found [here](https://fivethirtyeight.com/features/the-dollar-and-cents-case-against-hollywoods-exclusion-of-women/).
+
+
+### Data Preparation
+First, we load the required packages to reproduce the analysis.  
+
+#### Packages
+```{r packages}
+library(fivethirtyeight)
+library(dplyr)
+library(ggplot2)
+library(knitr)
+library(stringr)
+```
+
+#### Contents of the Data Frames
+  The data in the Tarantino movie data set look at how many times characters swore or died in each of his movies from *Reservoir Dogs* in 1992 to *Django Unchained* in 2012. We were interested in how the number of curse words and the treatment of women in Tarantino's movies affect the films' respective box office incomes. Since the `tarantino` data frame lacked all of the necessary information to analyze these elements of his movies, we joined it with the `bechdel` data set, which includes international and domestic box office numbers, as well as the standing of the movie according to the Bechdel Test. In order to join the data, we had to rename the `title` variable in `bechdel` to match the `movie` variable in `tarantino`. The new data set we look at includes the box office and Bechdel Test information for all of Tarantino's movies except *Kill Bill Vol. 2*, which was unfortunately not included in the `bechdel` data set.  We also needed to change the spelling of "Inglorious Basterds" to "Inglourious Basterds" to match with how it was spelled in `bechdel`.
+  
+```{r wrangling}
+tarantino_curses <- tarantino %>% 
+  filter(profane == TRUE) %>% 
+  count(movie) %>%
+  rename(curse_count = n) %>% 
+  mutate(movie = str_replace_all(movie, "Inglorious", "Inglourious"))
+
+tarantino_bechdel_curses <- tarantino_curses %>% 
+  inner_join(y = bechdel, by = c('movie' = 'title'))
+```
+
+#### Table of Relevant Data
+Unfortunately, there is no information on *Kill Bill: Vol. 2* in the `bechdel` data set, so we will not be able to analyze it here.
+
+```{r out}
+tarantino_bechdel_curses %>%
+  select(movie, curse_count, clean_test, domgross_2013, intgross_2013) %>% 
+  mutate(domgross_2013 = scales::dollar(domgross_2013),
+         intgross_2013 = scales::dollar(intgross_2013))
+```
+
+
+## The Effect of Profanity on Tarantino's Box Office
+
+  The first question that we addressed in our analysis was how the amount of profanity in Tarantino movies affected their domestic and international box offices. Since we now have a data frame that contains these variables, we can plot for both domestic and international box offices to better understand the data.  We have also changed the scale of our gross variables here to be in the millions.
+
+### Domestic Box Office Income and Curse Count Per Movie
+
+```{r plot1, fig.height=5}
+tarantino_bechdel_curses <- tarantino_bechdel_curses %>%
+  mutate(domgross_millions = domgross_2013 / 1e6)
+
+ggplot(data = tarantino_bechdel_curses, 
+       mapping = aes(x = curse_count, 
+                     y = domgross_millions,
+                     color = movie)) +
+  geom_point(size = 3)
+```
+
+### International Box Office Income and Curse Count Per Movie
+
+```{r plot2, fig.height=5}
+tarantino_bechdel_curses <- tarantino_bechdel_curses %>% 
+  mutate(intgross_millions = intgross_2013 / 1e6)
+
+ggplot(data = tarantino_bechdel_curses, 
+       mapping = aes(color = movie, 
+                     x = curse_count,
+                     y = intgross_millions)) +
+  geom_point(size = 3)
+```
+  
+  These graphs measure the monetary success of Quentin Tarantino's movies both domestically and internationally in comparison to the films' curse counts. From our graphs, there does not appear to be a significant correlation between number of curses in the movie and box office numbers. *Kill Bill: Vol. 1* has the lowest number of curses at 57, yet saw moderate returns for both domestic and international gross box office haul. *Reservoir Dogs* had limited international release, and therefore its `intgross_2013` value reveals very little. Other than *Reservoir Dogs*'s failure abroad and *Pulp Fiction*'s slightly lesser international success, there seems to be very little difference between the effect of cursing on the international and domestic box offices. 
+  
+  Domestically, the graph shows that the amount of profanity has very little effect on the movies' incomes. If the amount of cursing in Tarantino movies had a negative impact on the box office, we would expect the points to form a negative regression line, where low curse count corresponds to high box office returns. It is likely that the small sample set of movies that resulted from joining the `tarantino` and `bechdel` data frames does not provide enough information to make large generalizations about the effect of cursing on a movie's profitability. If the data set were supplemented with the curse counts from more movies, it would be more valid and more likely to produce meaningful trends.
+
+## Effects of Bechdel Test Rating on Tarantino's Box Office
+
+  We were also curious how the role of women in Tarantino movies affected their domestic box office. We used the Bechdel Test results from the `bechdel` data frame as the metric for the treatment of women in the movies. `clean_test` is the variable from `bechdel` that splits the movies into the categories of "nowomen", "notalk" (women did not speak), "men" (women spoke to men), "dubious" (may or may not pass), and "ok". Since we are more interested in how domestic attitudes toward women are reflected in the box office outcome, we only plotted the domestic box office in relation to the Bechdel Test.  We used the `factor` function here to order the plot by domestic gross.
+
+### Tarantino Movies' Bechdel Ratings and Domestic Box Office
+
+```{r plot3, fig.height=6}
+tarantino_bechdel_curses <- tarantino_bechdel_curses %>%
+   mutate(movie = factor(movie, 
+     levels= c("Reservoir Dogs",
+               "Jackie Brown",
+               "Kill Bill: Vol. 1",
+               "Inglourious Basterds",
+               "Django Unchained",
+               "Pulp Fiction")))
+
+ggplot(data = tarantino_bechdel_curses,
+       mapping = aes(x = movie,
+                     y = domgross_millions,
+                     fill = clean_test)) +
+  geom_col() +
+  coord_flip()
+
+```
+
+  This plot measures the amount of money each Tarantino movie made the domestic box office and its rating according to the `clean_test` in the `bechdel` data set. The  movie *Reservoir Dogs* stands out because it had no women and was not as successful as other Tarantino films. It would seem to confirm that complex female characters have a positive impact on profit; however, this movie was also one of Tarantino’s first movies, so we can not  determine if the lack of women in the movie was the cause of its low returns. It may have also been a result of Tarantino's lower level of fame at the time of its release.  
+  
+  While the movies *Pulp Fiction* and *Django Unchained* were both widely successful, only the former passed the Bechdel Test. It should be noted that, even though this comparison seems to indicate that the role of women has little to do with the success of a Tarantino movie, most of his films do pass the Bechdel Test, and some of his movies (e.g. *Kill Bill: Vol. 1*) feature strong, independent female leads. It is also important to remember that the Bechdel Test is a flawed measure of female character depth in film, it is merely the most widely used and accepted. 
+  
+  In its analysis of thousands of movies, the `bechdel` data set demonstrated that movies with complex female characters often perform better monetarily. Our data likely did not reflect this trend due to the small size of our sample. We only examined five movies, which severely limits the external validity of our analysis. It is also a possibility that as Tarantino rose in fame, more people were willing to see his movies regardless of depth of female characters, thereby limiting the impact of the Bechdel Test rating on his profits.
+
+## Concluding Thoughts
+
+  Even though our two main questions have been answered in regards to Quentin Tarantino's films, the answers beg more questions. In our analysis of the financial impact of the amount of swearing in Tarantino movies, we found that Tarantino could feel comfortable only casting sailors and still not lose money on account of the verbiage domestically or internationally (although the acting might suffer). The data set we used for our analysis was small, however, and cannot be generalized to all movies. In order to examine the impact of swearing on the average movie's box office, we would need to count curses in a great many more movies and then compare their net profits. 
+  
+  When we tried to answer our second question regarding the impact of the complexity of women's roles on Tarantino's movies' profits, we discovered that our data were insufficient to completely depict the situation. Three of the five movies we used passed the Bechdel Test, but their financial success was varied. Meanwhile, neither *Django Unchained* nor *Reservoir Dogs* passed the test, yet the former was highly successful and the latter was not. Since our data was all over the place, it seems that a Tarantino movie's Bechdel rating has little to do with its financial success. 
+  
+  Notably, however, the answer to our second question suffers from the same external validity issue as the answer to our first. The 538 article ["The Dollar-and-Cents Case Againts Hollywood's Exclusion of Women"](https://fivethirtyeight.com/features/the-dollar-and-cents-case-against-hollywoods-exclusion-of-women/) clearly demonstrates that passing the Bechdel Test correlates to higher profitability of a film. Our data set may not reflect this because its diminutive size relative to the `bechdel` data frame prevents an accurate portrayal of the relationship. It may also be due to a failure of the Bechdel Test to predict complex female characters or a fluke in the Tarantino movies we examined. Perhaps taking into account the other Tarantino films that the joined `tarantino_bechdel` data frame missed would allow for more clarity into the relationship between developed female characters and the success of Tarantino's movies. 

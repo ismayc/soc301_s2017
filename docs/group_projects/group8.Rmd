@@ -1,0 +1,123 @@
+---
+title: "The Effects of Population on Murders in Big Cities"
+author: "Sarah Alanis, Rachel Carlson, and Ariel Rigwood"
+date: "`r Sys.Date()`"
+output: 
+  rmarkdown::html_vignette:
+    df_print: kable
+vignette: |
+  %\VignetteIndexEntry{The Effects of Population on Murders in Big Cities}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning=FALSE, message=FALSE, fig.width=7.2)
+```
+
+
+This vignette is based on data collected for the 538 story entitled "A Handful Of Cities Are Driving 2016's Rise In Murders"  by Jeff Asher available [here](https://fivethirtyeight.com/features/a-handful-of-cities-are-driving-2016s-rise-in-murders/).
+
+
+First, we load the required packages to reproduce the analysis.  
+
+```{r packages}
+library(fivethirtyeight)
+library(dplyr)
+library(ggplot2)
+library(readr) 
+library(knitr)
+library(forcats)
+```
+
+
+
+##  The relationship between population and murders 
+
+ The `murder_2016_prelim` data frame has information on the number of murders that occurred across 79 cities in 2015 and 2016. In addition to the original data set the population and the percent increase or decrease in the number of murders was added to the data. We are interested in analyzing the relationship between the population of a city and the number of murders that took place there. Adding the additional information allows for a more in depth analysis of the murders and how the murders are affecting the city.
+ 
+The first file loaded was created using data from [suburbanstats.org](https://suburbanstats.org/) to compile all the populations of the 79 cities. This is necessary in order to compare the statistics of the murders to the city's specific population, to examine any relationships between populations and murders, and to discover any outliers or trends and how a population might affect those trends. 
+
+ 
+```{r externaldata, message=FALSE}
+pop <- read_csv("data/population.csv")
+```
+
+```{r wrangling1a, message=FALSE, warning=FALSE}
+pop_murder_2016 <- inner_join(x = murder_2016_prelim, y = pop, by = "city") %>% 
+  select(-source)
+```
+
+Next, we use the `mutate()` function in the `dplyr` package to calculate the percentage of change in murders across the cities in order for the data to be interpreted in a more meaningful way.
+
+```{r percent}
+pop_murder_2016 <- pop_murder_2016 %>% 
+  mutate(perc_change = change / murders_2016 * 100)
+```
+
+
+## Does a larger population correspond to a higher number of murders?
+
+
+```{r plot1, fig.height=5}
+pop_murder_2016 %>% 
+  filter(Population < 5.0e+06) %>% 
+  ggplot(mapping = aes(x = Population, y = murders_2016)) +
+          geom_point(alpha = 0.2) +
+  labs(x = "Population", y = "murders_2016", 
+       title = "Figure 1. The Relationship Between Population and Murders in 2016")
+```
+
+We used a scatterplot that helped illustrate the relationship between population and murders. The consensus is that there is a somewhat strong correlation between higher populations and increased numbers of murders occurring. The smaller populations had lesser occurrences of murders. 
+
+There were about five outliers on the scatter plot; one outlier in particular suggested that even though there was a smaller population, the amount of deaths were still significantly high. The other four outliers had high populations and a lesser degree of murders. Although a majority of the data indicates a somewhat strong relationship between larger populations having greater amounts of murders, the outliers indicate a small exception. 
+
+## How does the percent of change in murders from 2015 to 2016 differ across the top 10 cities with the highest populations?
+
+
+```{r wrangling2 }
+top_cities_perc <- pop_murder_2016 %>% 
+  select(city, Population, perc_change) %>% 
+  top_n(10, wt = Population)
+```
+
+```{r plot2, fig.width=6, fig.height=6}
+ggplot(data= top_cities_perc, aes(x=city, y=perc_change))+
+       geom_col(color= "purple", fill= "lightblue")+
+       theme(axis.text.x = element_text(angle = 65, hjust = 1)) +
+  labs(x = "City", y = "Percent Change", 
+       title = "Figure 2. The Percent Change of Murders from 2015 to 2016
+                in the Top 10 Most Populated Cities")
+```
+
+This plot provides us with some very interesting information regarding the most densely populated cities and the percent of change in murders from 2015 to 2016. When looking at the graph, it becomes apparent that the two most heavily populated cities, Los Angeles and New York City, they actually had a negative percent of change in murders between 2015 and 2016. Most shocking is the huge decrease in the amount of murders in Honolulu. It would be interesting to see why that huge decrease occurred. A lot of this data is very surprising and seems counter-intuitive at first. Shouldn't the cities with the most people see an increase in the percent of change for murders?
+
+It is also interesting that San Antonio, the last city for the top ten list, has the second highest percent of change. This has implications that population may not play a large role in the number of murders that occur throughout the year. 
+
+## How does the murder rate in 2016 differ across the top 10 cities with the highest population?
+
+
+```{r wrangling3}
+top_cities_join <- pop_murder_2016 %>%
+  mutate(murder_rate = (murders_2016 / Population) * 100000) %>% 
+  top_n(n = 10, wt = Population)
+```
+
+We next use the `fct_rev` and `fct_reorder` functions in the `forcats` package to order the bars from highest (on the left) to lowest (on the right) based on population.
+
+```{r plot3, fig.height=6}
+ggplot(data = top_cities_join, 
+  mapping = aes(x = fct_rev(fct_reorder(city, Population)), y = murder_rate)) +
+  geom_col(fill = "salmon", color = "black") +
+  theme(axis.text.x = element_text(angle = 65, hjust = 1)) +
+  labs(x = "City", y = "Murder Rate", 
+       title = "Figure 3. Murder Rate in the Top 10 Most Populated Cities")
+```
+
+The graph above is arranged in descending order with LA on the left being the most populated city and Honolulu on the right with the smallest population. It is surprising that LA and New York have the lowest murder rates considering their large populations. From Figure 1, it is observed that an increased population has an increased number of murders. Understanding that trend, it is hypothesized that its murder rate would likely also be high. Chicago is smaller than LA and NY by about six million and has a strikingly high murder rate. All top ten cities have fairly large amounts of murders but Chicago has much higher rates compared to the other cities. This data should prompt further analysis of the data or further research into why Los Angeles and New York have such low murder rates while Chicago has such a high rate.
+
+
+# Summary
+
+
+Our analysis has provided some insight into the relationship between population and the amount of murders that occur. In regards to the first plot of population and the number of murders in 2016, the outcome was fairly straightforward and not surprising. The positive relationship shows what you would expect; as population increases, the number of murders also increases. In regards to the second plot of the 10 most populated cities and the percent of change in murders, the results are slightly more surprising. Population does not appear to be directly affecting the percent change of murders. This leads us to question what other factors could be at play. We also examined the murder rate for the top 10 cities with the largest populations to further our analysis. As we discovered, cities with the largest and smallest populations did not see very high murder rates. In fact, the two most densely populated cities saw some of the lowest murder rates. This is interesting and provides even further implications that more information is necessary for a proper analysis to uncover the underlying factors affecting the data.

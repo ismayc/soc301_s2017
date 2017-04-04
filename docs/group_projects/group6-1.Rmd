@@ -1,0 +1,99 @@
+---
+title: Drug of Choice Among Teens
+author: "Jeremy Kaufman, Alicia Ortigoza, Alexandra Reyes, and Daisy Rizo"
+date: "March 23, 2017"
+output:
+  rmarkdown::html_vignette:
+    df_print: kable
+vignette: |
+  %\VignetteIndexEntry{Drug of choice among teens}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning=FALSE, message=FALSE, fig.width=7.2)
+```
+
+
+### This vignette is based on data collected from the 538 story entitled "How Baby Boomers Get High" by Anna Maria, Barry-Jester, and Andrew Flowers available [here](http://fivethirtyeight.com/datalab/how-baby-boomers-get-high/).
+
+First, we load the required packages to reproduce the analysis.  
+
+```{r packages}
+library(fivethirtyeight)
+library(dplyr)
+library(ggplot2)
+library(readr) 
+library(knitr)
+library(tidyr)
+library(stringr)
+library(ggthemes)
+```
+
+The `drug_use` data was reconfigured in order to support our analysis targeting the age group of 12 through 21, specifically focusing on the usage of marijuana, crack and cocaine. Tidying the data is important because it allows one to clearly analyze the portion of the data being focused on, specifically, ensuring that each column represents exactly one variable.
+
+```{r externaldata}
+drug_tidy <- drug_use %>% 
+  select(age, marijuana_use, cocaine_use, crack_use) %>% 
+  gather(-age, key = "drug", value = "perc") %>% 
+  mutate(drug = str_replace_all(drug, "_use", "")) 
+```
+
+"Reports over the past decade have detailed higher rates of illicit drug use, drug-related hospital admissions and overdoses among baby boomers in their later years than previous generations" (Flowers & Barry-Jester, 2015). It is difficult to make a comparison on the different drugs being used because some are legal prescriptions that are being abused. The data represented is gathered by federal Substance Abuse and Mental Health Data Archive (SAMHDA).
+
+```{r drug_tidy}
+Drug_tidy_age <- drug_tidy %>% 
+  filter(age %in% c(12,13,14,15,16,17,18,19,20,21))
+```
+
+## Drug of Choice Between Marijuana, Crack, and Cocaine Amongst Teens and Young Adults Ages 12 to 21.
+
+```{r plot1, fig.height=5, fig.align='center' }
+ggplot(data = Drug_tidy_age, mapping = aes( x = age, y = perc)) +
+  geom_col( aes(fill = drug) , color = "black" ) +
+  facet_grid(scales = "free_y", drug ~ .) +
+  scale_fill_manual(values = c("goldenrod", "blue","dark green"))+
+  labs ( x = "Age", y = "Percent",  title = "Drug Use Amongst Age", subtitle="Comparing Ages 12 Through 21")+
+  theme(legend.position = "none",
+        plot.title = element_text(face = "bold", size = 20),
+        plot.subtitle = element_text(size = 12),
+        plot.caption = element_text(hjust = 0, size = 10))
+      
+```
+
+<!-- CHESTER
+I'm not sure why my some of my suggestions weren't included?
+-->
+
+>The findings show young adults between the ages of 12 through 21 are more likely to use marijuana as their drug of choice, compared to cocaine and crack usage.
+
+Based on the analysis, crack is the drug less likely to be used among young adults. However, there is a usage increase among young adults at the age of 20, as illustrated on the Figure 1. Cocaine usage on the other hand, tends to be lower between the ages of 12 through 14. Marijuana use on the other hand, is more common among young adults between the ages of 18 through 21. Ultimately, people between the ages of 18 through 21 tend to have a higher number of drug use overall.
+
+## Percentage of Drug Use Between Marijuana, Crack, and Cocaine by Age
+
+
+```{r table}
+drug_use_old <- drug_tidy %>% 
+  filter(age %in% c("18","65+"))
+```
+
+
+```{r fig.align='center'}
+drug_use_old <- drug_tidy %>%
+  filter(age %in% c("18", "65+"))
+ggplot(data = drug_use_old, mapping = aes(x = age, y = perc)) +
+  geom_col(aes(fill = drug), position = "fill") + 
+  scale_fill_manual(values = c("goldenrod", "blue", "dark green"))+
+  labs(x = "Age", y = "Percentage", title = "Drug Use In Ages 18 and 65+")
+```
+
+
+  Major findings include marijuana use amongst all ages 18 and 65 and older. Marijuana also seems to be the most used drug with cocaine in second and crack in last by a rather large amount. An important thing to note in the findings is that people age 65 and over only participate in marijuana use and no other drug.
+
+  Overall, there is a large marijuana use and a fairly small cocaine and crack use in comparison. People ages 65 and over do not use any other drug other than marijuana, and even the marijuana use is a very low number. 
+ 
+  One thing that clearly stands out is the lack of use of cocaine and crack in ages 65 and older. 18 year old's use marijuana as their drug of choice over crack and cocaine. In fact, crack and cocaine do not come anywhere near the amount of marijuana use. A question we could further answer is drug use in ages 22 to 64 to fill the age gap. As a result, this leads to finding the drug of choice in another large age group which would also lead to finding when the decline of drug use begins and what drug types are and are not being used in the process. 
+  
+  Ages 18 and 65 and older were chosen for comparison because they are at opposite ends of the age spectrum, allowing for analysis between two distinct generations. In addition, it was interesting to see the similarities in drug use amongst a wide range of ages. The data showed a consistent drug use amongst all three of the drugs, however, there was not any crack or cocaine use in people 65 and older. This data was collected in 2012, meaning that this information could now vary due to the legalization of marijuana in some states. At first glance, it seems that 18 year old's participate more in all around drug use than 65 year old's and older do. However, the data does not account for inappropriate prescription drug use, therefore people 65 and older could be abusing these drugs more than those younger than them.   

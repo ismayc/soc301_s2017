@@ -1,0 +1,242 @@
+---
+title: "What Contributes to Bad Driving?"
+author: "Lina Kleinschmidt, Emily McLain, and Taylor Yoshiura"
+date: "`r Sys.Date()`"
+output: 
+  rmarkdown::html_vignette:
+    df_print: kable
+vignette: |
+  %\VignetteIndexEntry{What Contributes to Bad Driving?}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+This vignette is based on data collected for the 538 story entitled "Dear Mona, Which State Has The Worst Drivers?"  by  Mona Chalabi available [here](http://fivethirtyeight.com/datalab/which-state-has-the-worst-drivers/).
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning=FALSE, message=FALSE, fig.width=7.2)
+```
+
+
+First, we load the required packages to reproduce the analysis.  
+
+```{r packages}
+library(fivethirtyeight)
+library(tidyverse)
+library(forcats)
+library(knitr)
+library(ggthemes)
+library(maps)
+```
+
+# Data preparation
+
+According to the U.S. Department of Transportation, there were more than 5.6 million police-reported motor vehicle accidents that occurred in the United States in 2012. Of those accidents, 29 percent resulted in an injury, and fewer than one percent resulted in death. The `bad_drivers` data frame features drivers within all 50 US states and the District of Columbia.  The variables we will base our analysis on in this `bad_drivers` data frame are 
+
+- `num_drivers`: the amount of collisions in 2012 per billion miles 
+- `perc_speeding`: the percentage of drivers in fatal collisions who were speeding
+- `perc_alcohol`: the percentage of drivers in fatal collisions who were alcohol-impaired
+- `perc_not_distracted`: the percentage of drivers in fatal collisions who were not distracted
+
+To get a better sense for the number of individuals instead of using percentages, we created the following variables, narrowed the variables of focus using `select()`, and `rename`d `num_drivers` to `collisions`:
+
+```{r bad_drivers_var}
+bad_drivers_var <- bad_drivers %>% 
+  mutate(speeding = num_drivers * perc_speeding / 100,
+         alcohol = num_drivers * perc_alcohol / 100,
+         distracted = num_drivers * (100 - perc_not_distracted) / 100) %>%
+  select(state, num_drivers, speeding, alcohol, distracted) %>% 
+  rename(collisions = num_drivers)
+```
+
+*Note here that the numbers derived in `speeding`, `alcohol`, and `distracted` aren't exactly correct since the percentages reported were rounded to whole percentages.*
+
+In addition to the contributors of speeding, distraction, and alcohol consumption, rainfall and snowfall can often be seen as hazardous to drivers. We were interested in seeing if the amount of precipitation had an effect on the cause and amount of collisions for each state and why there are more collisions in certain states than others. We also joined to include the precipitation totals for each state based on data provided by the [National Oceanic and Atmospheric Administration](https://www.ncdc.noaa.gov/temp-and-precip/climatological-rankings/index.php?periods%5B%5D=12&parameter=pcp&state=106&div=0&month=2&year=2017#ranks-form):
+
+```{r precip}
+precip <- read_csv("data/precip.csv")
+bad_drivers_var <- bad_drivers_var %>% 
+  inner_join(y = precip, by = "state")
+```
+
+Next, we joined with a data frame to bring in groupings of the `state` variable into `regions` and then `divisions` of our choosing.
+
+```{r groupings}
+groupings <- read_csv("data/groupings.csv")
+bad_drivers_var <- bad_drivers_var %>% 
+  inner_join(y = groupings, by = "state")
+```
+
+We next tidied the data in order to produce graphs and perform data wrangling on the different types of causes using the `gather` function in the `tidyr` package. 
+
+```{r regmap}
+bad_tidy <- bad_drivers_var %>% 
+  gather(speeding:distracted, key = "cause", value = "num")
+states_map <- map_data("state")
+ggplot(bad_tidy, aes(map_id = tolower(state))) +
+  geom_map(aes(fill = region), map = states_map) +
+  expand_limits(x = states_map$long, y = states_map$lat) +
+  coord_map(projection = "albers", lat0 = 30, lat1 = 40) +
+  theme_void()
+```
+
+These can then be further separated into nine divisions based on location:
+
+- `Pacific`
+- `Mountain`
+- `West_South_Central`
+- `East_South_Central`
+- `West_North_Central`
+- `East_North_Central`
+- `Mid_Atlantic`
+- `New_England`
+- `South_Atlantic`
+
+
+```{r divmap}
+ggplot(bad_tidy, aes(map_id = tolower(state))) +
+  geom_map(aes(fill = division), map = states_map) +
+  expand_limits(x = states_map$long, y = states_map$lat) +
+  coord_map(projection = "albers", lat0 = 30, lat1 = 40) +
+  theme_void()
+```
+
+# Which region has the most accidents?
+
+To help us first get a general idea of the types of drivers in the United States, we looked at the four different regions:  `West`, `Mid_West`, `Northeast`, and `South`. Then for each region, we looked at the contributing factors that resulted in accidents: `speeding`, `alcohol`, and `distracted`.
+
+```{r most_plot, fig.height = 4}
+ggplot(data = bad_tidy, 
+       mapping = aes(x = region, y = num, fill = cause)) +  
+  geom_col() + 
+  labs(x = "Region", y = "Number of Collisions", title = "Accidents by Region") +
+  scale_fill_manual(values = c("#82F3FF", "#12D0E6", "#218691"))
+```
+
+When looking at the four regions, the `South` on average had the greatest amount of collisions in the 2012 year. However, the `Midwest` and `West` had a few states with more collisions that surpassed those of the states in the `South`:
+
+```{r top}
+bad_drivers_var %>% 
+  select(state, region, collisions) %>% 
+  top_n(n = 13, wt = collisions) %>% 
+  arrange(desc(collisions))
+```
+
+Also, it is noteworthy to mention that some states in the `South` had significantly less accidents than the other states in the regions:
+
+```{r bottom}
+bad_drivers_var %>% 
+  select(state, region, collisions) %>% 
+  top_n(n = -13, wt = collisions) %>% 
+  arrange(collisions)
+```
+
+# So what about each of the divisions? 
+
+We were interested in seeing how states within each division were similar or different from each other within their own region. Let's look at which divisions had the highest number of accidents based off the following contributing factors: `speeding`, `alcohol`, `precipitation`, and `distraction`. To do so, we used four faceted scatterplots separated by `division`. 
+
+```{r facetplots, fig.height=6}
+ggplot(data = bad_drivers_var, 
+    mapping = aes(x = collisions, y = speeding, color = region)) +
+  geom_point() + 
+  facet_wrap(facets = ~ division) +
+  labs(title = "Speeding")
+ggplot(data = bad_drivers_var, 
+    mapping = aes(x = collisions, y = alcohol, color = region)) + 
+  geom_point() + 
+  facet_wrap(facets = ~ division) +
+  labs(title = "Alcohol Consumption")
+ggplot(data = bad_drivers_var, 
+    mapping = aes(x = collisions, y = precipitation, color = region)) +
+  geom_point() + 
+  facet_wrap(facets = ~ division) +
+  labs(title = "Precipitation")
+ggplot(data = bad_drivers_var, 
+    mapping = aes(x = collisions, y = distracted, color = region)) +
+  geom_point() + 
+  facet_wrap(facets = ~ division) +
+  labs(title = "Distracted")
+```
+
+From these scatterplots, we can see that the `West` and `South` regions typically had the highest amount of collisions caused by speeding. For alcohol, the `West_North Central`, `South_Atlantic`, and `Mountain` divisions had on average more accidents.The `South` and `Northeast` regions typically had the greatest amount of precipitation in the 2012 year, potentially a factor affecting the higher number in collisions, as well as `North_East_Central` from the `Midwest` region. For collisions based on level of `distracted`, all divisions throughout the four regions had generally equal numbers in collision, except for an outlier in the `East_South_Central` division of the `South` region. 
+
+```{r most_div_plot, fig.height=4}
+ggplot(data = bad_tidy, 
+       mapping = aes(x = division, y = num, fill = cause)) +  
+  geom_col() + 
+  labs(x = "Region", y = "Number of Collisions", title = "Accidents by Division") +
+  coord_flip() +
+  scale_fill_manual(values = c("#82F3FF", "#12D0E6", "#218691"))
+```
+ 
+# How do states near North Dakota fare?
+ 
+We identified earlier that North Dakota had the highest number of collisions per billion miles traveled. Let's look at the `West_North_Central` division and see how the other states there compared to North Dakota in terms of accidents in the 2012 year. 
+
+```{r wnc, fig.height=4}
+W_N_Central <- bad_tidy %>% filter(division == "West North Central") 
+ggplot(data = W_N_Central, 
+       mapping = aes(x = state, y = num, fill = cause)) +  
+  geom_col(color = "white")  + 
+  labs(x = "State", y = "Number of Collisions", 
+    title = "Accidents in the West North Central Division") +
+  scale_fill_manual(values = c("#AC11FA", "#7F0DB8", "#460B63"))
+```
+
+```{r collision_map}
+ggplot(bad_tidy, aes(map_id = tolower(state))) +
+  geom_map(aes(fill = collisions), map = states_map) +
+  expand_limits(x = states_map$long, y = states_map$lat) +
+  coord_map(projection = "albers", lat0 = 30, lat1 = 40) +
+  theme_void()
+```
+
+# What types of accidents happen in North Dakota?
+
+While North Dakota had the largest amount of accidents (23.9 collisions per billion miles), the precipitation levels are in the bottom 25% as seen below. In 2012, North Dakota had 20.81 inches of precipitation:
+
+```{r summary_table}
+bad_tidy %>% 
+  summarize(
+    min = min(precipitation, na.rm = TRUE),
+    q1 = quantile(precipitation, 0.25, na.rm = TRUE),
+    median = quantile(precipitation, 0.5, na.rm = TRUE),
+    q3 = quantile(precipitation, 0.75, na.rm = TRUE),
+    max = max(precipitation, na.rm = TRUE),
+    mean = mean(precipitation, na.rm = TRUE),
+    sd = sd(precipitation, na.rm = TRUE)
+  )
+```
+
+
+Let's take a look at the different causes of the collisions.
+
+```{r fig.height=4, message=FALSE}
+North_Dakota <- bad_drivers_var %>% 
+  filter (state %in% "North Dakota") %>% 
+  gather(speeding:distracted, key = "causes", value = "number")
+North_Dakota_No <- bad_drivers_var %>% filter (state %in% "North Dakota")
+ggplot(data = North_Dakota, mapping = aes(x = causes, y = number)) +
+  geom_col(fill = "#637cb7") + 
+  labs(x = "Causes of Collisions", y = "Number of Collisions", 
+    title = "Accidents North Dakota")
+```
+
+
+# Major findings 
+
+```{r scatter, fig.height=7.2}
+ggplot(data = bad_drivers_var, 
+  mapping = aes(x = precipitation, y = collisions)) +
+  geom_point(aes(color = division)) +
+  labs(x = "Inches of Precipitation", y = "Number of Collisions per Billion Miles")
+```
+
+The levels of precipitation do not correlate with the amount of accidents, as seen above in North Dakota. The state with the highest levels of precipitation, Kentucky, had 65.98 inches of rain, but only 21.4 billions accidents, which was tied at fifth with Montana. The data that stands out the most in this analysis is the amount of accidents there are within each region of the United States, despite the weather and amount of precipitation that occurs per year. 
+
+# Conclusion
+
+Many citizens in the United States spend a decent amount of their day in a car; whether it be commuting to work, dropping off their children at school, running errands, etc. Every time you get on the road, you increase the likelihood of getting into a car accident. Our data provides information that can increase driver awareness and safety. Hopefully by knowing which states have a higher incidence of car accidents, drivers will be more cautious when entering the roadways. 
+
+Although the age/experience of a driver was not a factor in this given data, this would be noteworthy to look into and see if it correlates with the number of accidents per state. Another interesting factor could be the time of the day at which the accidents occur, or the amount of visibility on the road at the time of the accident. 

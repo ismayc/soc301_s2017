@@ -1,0 +1,202 @@
+---
+title: "The Demographics of 2015 Police Killing Victims"
+author: "Alicia Fox, Bree Malloy, and Jalaena DiPasquale"
+date: "March 23, 2017"
+output: 
+  rmarkdown::html_vignette:
+    df_print: kable
+vignette: |
+  %\VignetteIndexEntry{"The Demographics of 2015 Police Killing Victims"}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning=FALSE, message=FALSE, fig.width=7.2)
+```
+
+
+# INTRODUCTION
+
+  This vignette is based on the data collected for the 538 story titled, "Where Police Have Killed Americans in 2015" by Ben Casselman. More information about this story can be found [here](https://fivethirtyeight.com/features/where-police-have-killed-americans-in-2015/). If you want to examine the raw data, visit  [here](https://github.com/fivethirtyeight/data/blob/master/police-killings/police_killings.csv). It's important to note that the data we're using is **not** an accurate portrayal of the information since we're basing our information solely on the number of people who were killed by the police, and have not adjusted for population. 
+  
+  All data tells a story. Our goal is to understand the story between the race and ethnicity of a civilian and their cause of death. As we visualized the data, we noticed a disproportionate response in certain variables. Therefore, we fine-tuned our questions and our data to get a better understanding. We were able to do this in a three step process: setting up the necessary components, organizing the data, and then analyzing the data.  
+  
+### QUESTIONS
+* **How does race and ethnicity of the civilian correspond with the cause of death by police?**
+
+From there we noticed that gunshots disproportionately accounted for the cause of deaths across all races. So we then examined: 
+
+* **What is the relationship between gunshot deaths and whether or not the civilian was armed?**
+
+Because the majority of those killed by gunshots also had firearms in their possession, we looked at the relationship between age and carrying firearms. 
+
+* **How does age correspond with whether or not a civilian is in possession of a firearm?**
+
+Lastly, we wanted to examine what this looked like across the various races and ethnicities. 
+
+* **How does the relationship between age and carrying a firearm correspond with race and ethnicity?**
+    
+# SETTING IT UP
+We first need to gather and load all of the necessary packages.
+
+### Loading Packages
+
+First, we load the necessary packages: 
+
+```{r packages}
+  library(dplyr)
+  library(fivethirtyeight)
+  library(ggplot2)
+  library(knitr)
+```
+
+# UNDERSTANDING THE DATA
+Now that everything is gathered, we move on to organizing the data in the `police_killings` data frame in the `fivethirtyeight` package.
+
+### Understanding Variables
+Some of the variables in the `police_killings` data set are:
+
+* **cause** - *Nominal categorical variable*
+  
+    Consists of the cause of death of civilian by the police 
+  
+    [Potential responses are: Gunshot, Death in Custody, Struck by Vehicle, Taser, and NA]
+  
+* **raceethnicity** - *Nominal categorical variable* 
+  
+    Consists of the race and ethnicity of the civilian 
+  
+    [Potential responses are: Asian/Pacific Islander, Black, Hispanic/Latino, Native American, White, and NA]
+  
+* **age** - *Discrete numerical variable* 
+  
+    Consists of the age of the civilian. 
+  
+    [Potential responses are: 0-10, 11-20, 21-30, 31-40, 41-50, 51-60, 61-70, 71-80]
+  
+* **armed** - *Nominal categorical variable* 
+  
+    In the raw data set, this variable consists of what the civilian was armed with. For our purposes, we only looked at whether or not the civilian had a (lethal) firearm.
+  
+    [Potential responses are: Firearm, Knife, Non-lethal Firearm, Vehicle, Other, and No]
+  
+### Arranging the Data
+Using the variables above, we now organize the data. As we just mentioned, we will be looking at whether the civilian had a lethal firearm. This filtered data will come in handy later on when we look at the information with more specificity. 
+
+```{r armed_k}
+  armed_killings <- police_killings %>% 
+    filter(armed =="Firearm")
+```
+
+# ANALYZING THE DATA
+Lastly, we want to analyze the data. We visually interpret the data, which will then allow us to infer meaning. 
+
+## **How does race and ethnicity of the subject correspond with the cause of death by police? (Subject corresponds with civilians who have been killed by the police.)**
+
+```{r plot1, fig.height=8}
+ggplot(data = police_killings, mapping = aes(x = raceethnicity, fill = cause)) + 
+    geom_bar(color = "white", lwd = .2) + 
+    theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1)) + 
+    scale_fill_manual(values = c("#88A45A", "#5E7F2A", "#3F6114", "#304F0E", "#38442C"))
+```
+
+There is an obvious trend between police killings by gunshot across all race and ethnicities. This graph makes it difficult to distinguish the variance between each race and ethnicity by cause of death. If we want to examine the data further we can create a graph that displays the percentages of the same data.
+
+```{r plot1b, fig.height=8}
+ggplot(data = police_killings, mapping = aes(x = raceethnicity, fill = cause)) + 
+    geom_bar(position = "fill", color = "white", lwd = .2) + 
+    theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1)) + 
+    scale_fill_manual(values = c("#88A45A", "#5E7F2A", "#3F6114", "#304F0E", "#38442C"))
+```
+
+This graph enables us to see the comparisons of the causes of death by police officers across each race and ethnicity. Hispanic/Latino civilians are killed most frequently by gunshot, followed by white civilians and then black civilians. When looking at this data it is important to consider that this graph does not account for the ratio of race and ethnicity of total civilians in the U.S. Instead it strictly represents the amount of civilians across race and ethnicity who have been killed by the police. Another thing to consider when looking at this graph is the proportion of civilians who died in custody of the police. When observing this variable we can see that Native American civilians suffer the most deaths in custody, followed by black civilians.
+
+##**What is the relationship between gunshot deaths and whether or not the subject was armed? (Subject corresponds with civilians who have been killed by the police.)**
+
+```{r plot2, fig.height=8}
+our_colors <-  c("#6CBEBF", "#16898E", "#157486", "#1A627B", "#1E5671", "#2E4B59", "#414244")
+ggplot(data = police_killings, mapping = aes(x = cause, fill = armed)) + 
+   geom_bar(color = "white", lwd = .2) +
+   scale_fill_manual(values = our_colors)
+```
+
+Here we see another trend of a majority of deaths by gunshot being correlated with a civilian carrying a firearm. It is difficult to distinguish between the "cause" in this graph, so we want to examine the percentages of the same data and to get a better visual for each "cause" variable.
+
+```{r plot2b, fig.height=8}
+our_colors2 <- c("#6CBEBF", "#16898E", "#157486", "#1A627B", "#1E5671", "#2E4B59", "#414244")
+ggplot(data=police_killings, mapping = aes(x=cause, fill=armed)) + 
+   geom_bar(position = "fill", color = "white", lwd = .2) +
+   scale_fill_manual(values = our_colors2)
+```
+
+This graph better represents the percentages of civilians who were armed (or not armed) and their cause of death by police. Civilians that were killed by taser were most frequently armed with a firearm. When we look at death by gunshot we can see that just under 50% of those civilians were armed with a firearm. In other words, there is a larger percentage of civilians who were armed with a firearm that were killed by use of taser by police. There were about 25% of civilians who were not armed but had a death in custody of police, and about 35% of civilians killed by police who were not armed and were struck by a vehicle.
+
+##**How does age correspond with whether or not a civilian is in possession of a firearm? (Subject corresponds with civilians who have been killed by the police.)**
+
+*It's important to note that we use the filtered data set here to examine the relationship between age and civilians who were carrying a firearm and killed by the police.*
+
+*The following five number summary gives us a rough outline of the data. To examine this, we've inputted the following code:*
+
+```{r age_summary}
+age_summary <- armed_killings %>%
+  summarize(
+    min = min(age, na.rm = TRUE), 
+    q1 = quantile(age, 0.25, na.rm = TRUE),
+    median = quantile(age, 0.5, na.rm = TRUE),
+    q3 = quantile(age, 0.75, na.rm = TRUE),
+    max = max(age, na.rm = TRUE),
+    mean = mean(age, na.rm = TRUE),
+    sd = sd(age, na.rm = TRUE),
+    missing = sum(is.na(age))
+  )
+age_summary
+```
+
+We're examining the age of civilians killed by police who were in possession of a firearm. While the median age is 36, the mean age is 37.44. This demonstrates a skew to the right because of an outlier. Therefore, the median is a better representation of the age of individuals who are most frequently armed. The standard deviation is 12.56 years; this shows the average civilian who is armed and killed by the police is between the ages of 25 and 50. 
+
+```{r hist}
+ggplot(data = armed_killings, mapping = aes(x = age)) + 
+  geom_histogram(bins = 20, color = "white", fill = "#851A52")
+```
+
+Between the ages of 20-50, civilians were most likely to be armed and killed by the police. At the ages of 17 and 18, there is a steep increase in armed civilians who were killed by the  police. There is also a steady decrease in armed civilians that were killed by police after the age of 50.  We wanted to bring it full circle and examine the relationship between race and ethnicity, now that we've accounted for the common variables of dying by gunshot and carrying a firearm.
+
+##**How does the relationship between age and carrying a firearm correspond with race and ethnicity of the subject? (Subject corresponds with civilians who have been killed by the police.)**
+
+*It's important to note that we are continuing to use the aforementioned filtered data set.*
+
+*The following five number summary gives us a rough outline of the data.* 
+
+```{r summary2}
+armed_killings %>%
+  group_by(raceethnicity) %>%
+  summarize(
+    min = min(age, na.rm = TRUE), 
+    q1 = quantile(age, 0.25, na.rm = TRUE),
+    median = quantile(age, 0.5, na.rm = TRUE),
+    q3 = quantile(age, 0.75, na.rm = TRUE),
+    max = max(age, na.rm = TRUE),
+    mean = mean(age, na.rm = TRUE),
+    sd = sd(age, na.rm = TRUE),
+    missing = sum(is.na(age))
+  )
+```
+
+We're examining the age of subjects according to their race and ethnicity. The median age of Asian/Pacific Islander and White individuals was the highest of the racial categories - 39 years old. The lowest median age is Native American - 26 years old. The standard deviation was lowest for Native Americans as well, with a response of 2.83. The largest of the racial categories was White, with a standard deviation of 12.68. This is a similar value to the standard deviation we saw overall. 
+
+```{r faceted, fig.height=6}
+ggplot(data = armed_killings, mapping = aes(x = age)) + 
+    geom_histogram(bins = 10, color = "white", fill = "#691353") +
+    facet_wrap(~raceethnicity, nrow = 3)
+```  
+
+This graph gives us a visual of the age of civilians that are armed and killed by police, across race and ethnicity. When we look at this graph, it shows us that white civilians are armed more frequently than other races and ethnicities, at a later age. It also shows that young white civilians who are carrying firearms are killed by the police most frequently, with young black civilians who are carrying firearms, and young Hispanic civilians carrying firearms following in number respectively. Lastly it is interesting to see that black civilians that are armed and killed by police are armed more frequently at a young age, and Hispanic/Latino civilians proportions follow a similar trend on a smaller scale.
+
+# CONCLUSION
+
+Examining these graphs, one might conclude that a disproportionate number of white people are killed by the police. While our graphs certainly demonstrate that information, it's important to remember that there are a lot more white people in our population than any of the other racial or ethnic categories. (In fact, there are approximately five times as many white people as there are black people in the U.S.) Therefore, these are not accurate portrayals of the racial and ethnic proportion of civilians who have been killed by the police. Future research on this topic would benefit by examining the subjects' racial and ethnic identity according to their percentages in the U.S. population.
+
+It's evident that the cause of death by police killings is almost always by gunshot; this is true across all races and ethnicities. Of those killed by gunshots, about 50% of subjects had a firearm, about 13% had a knife, and about 25% had no weapon at all. Those that did have a firearm were most likely between the ages of 20 and 50. When examining this across race and ethnicity (without adjusting for population), we found that white civilians were armed and killed most frequently, with black civilians and Hispanic/Latino civilians following respectively. It's valuable to note that black civilians who were killed by police were typically younger than any of the other races that were killed by police.
+
+  At this point in time, there is a growing concern about police abusing their power. Within the past few years, there has been a spike in the number of recordings of minorities who have been unjustly killed. This is especially true for young, nonviolent, innocent civilians. Therefore, this data tells a crucial story. Significant inferences can be made to better understand why civilians are killed by police; this understanding can then shape preventative measures. The purpose should be to ensure civilians' safety and contribute to the well-being of our society at large.

@@ -1,0 +1,118 @@
+---
+title: "How Do Household Income and Race Contribute to the Number of Killings by Police"
+author: "Karla Maldonado, Brady O'Keefe, and Jeriko Santos"
+date: "March 23, 2017"
+output:
+  rmarkdown::html_vignette:
+    df_print: kable 
+vignette: |
+  %\VignetteIndexEntry{How Do Household Income and Race Contribute to the Number of Killings by Police}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+  
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning=FALSE, message=FALSE, fig.width=7.2)
+```
+  
+This vignette is based on data collected for the fivethirtyeight story entitled "Where Police Have Killed Americans in 2015" by Ben Casselman available  [here](https://fivethirtyeight.com/features/where-police-have-killed-americans-in-2015/)
+
+First, we load the required packages to reproduce the analysis.
+
+```{r, message = FALSE, warning = FALSE}
+library(fivethirtyeight)
+library(ggplot2)
+library(ggthemes)
+library(dplyr)
+library(knitr)
+library(scales)
+# Turn off scientific notation
+options(scipen = 99)
+```
+
+# Group the Mean Household Income by Race
+
+The `police_killings` data frame features the names of 467 people killed by police in 2015. In addition to their names, the data frame also includes age, gender, demographic, and financial factors. In this analysis, we are mainly interested in the `race` and `h_income` variables. The `race` variable corresponds to the race of the victim while `h_income` corresponds to tract-level median household income. 
+
+We are interested in analyzing any trends that may appear within these variables. The article where this information is derived from gathered information from media coverage, reader submissions, and open-sourced efforts, because, as mentioned in the 538 article, official statistics have been shown to be very flawed. This information has shown itself to be more reliable than other sources. 
+
+```{r data_income}
+police_killings <- police_killings %>% 
+  na.omit() %>% 
+  mutate(h_income = as.numeric(h_income)) %>% 
+  mutate(urate = as.numeric(urate))
+
+killings_income <- police_killings %>%
+  na.omit() %>% 
+  group_by(raceethnicity) %>%
+  summarize(mean_h_income = mean(h_income)) %>% 
+  mutate(mean_h_income = dollar(mean_h_income)) 
+killings_income
+```
+
+# Graph It!
+Now that we have calculated the mean incomes for each race and the actual number of people killed in each race, we can plot it to give us a visual understanding of how each race was affected by police killings. 
+
+```{r graph1, fig.height=5}
+ggplot(data = police_killings,
+      mapping = aes(x = raceethnicity)) +
+  geom_bar(color = "red", fill = "navy") +
+  labs(title = "Who is killed the most by police?",
+       subtitle = "As measured by race of the victims.",
+       caption = "Data from FiveThirtyEight") +
+  theme(legend.position = "none",
+        plot.title = element_text(face = "bold", size = 20),
+        plot.subtitle = element_text(size = 12),
+        plot.caption = element_text(hjust = 0, size = 10))
+```
+
+Based on the graph this produced, it shows that the two races killed most by police are white and black, but white is killed at a much higher number than any of the other races. (It's important to note that whites make up the vast majority of the population as well though so a more complete analysis would adjust for this fact.) 
+
+With some of the victims in this data set, their race/ethnicity is not identified. When this is the case, we use the `na.omit` function to remove any rows with missing values in any variable as seen above in the cleaning up of the `police_killings` data frame. This data set shows us that there were 236 people killed by police in 2016 that were white, and the closest number of killings by race was 135 with black. Media tends to shape the picture to show that police target certain races, usually minorities, but this data shows just the opposite.
+
+  
+```{r graph2, fig.height=5}
+ggplot(data = police_killings,
+       mapping = aes(x = raceethnicity, y = h_income)) +
+  geom_boxplot() +
+  labs(title = "Mean Household Income by Race",
+       caption = "Data from FiveThirtyEight") +
+  theme(legend.position = "none", 
+        plot.title = element_text(face = "bold", size = 20),
+        plot.subtitle = element_text(size = 12),
+        plot.caption = element_text(hjust = 0, size = 10))
+```
+
+Based on the plot, on average whites have a higher tract-level household income than the other races and ethnicities while the Native American populations have the lowest household income overall as well as the least amount of police killings. The two races that have the most outliers are whites and blacks. This plot also shows the socioeconomic disparities between the different races. 
+
+```{r graph3, fig.height=5}
+ggplot(data = police_killings,
+       mapping = aes(x = raceethnicity, y = urate)) +
+  geom_boxplot() +
+  labs(title = "Unemployment Rate by Race",
+       caption = "Data from FiveThirtyEight") +
+  theme(legend.position = "none", 
+        plot.title = element_text(face = "bold", size = 20),
+        plot.subtitle = element_text(size = 12),
+        plot.caption = element_text(hjust = 0, size = 10))
+```
+
+Based on this plot, minorities seem to have the largest rate of unemployment compared to whites. However, whites do have the highest amount of outliers. At the same time, blacks have the outliers that are much higher than the other races. 
+
+
+```{r graph4, fig.height=5}
+ggplot(data = police_killings, mapping = aes(x = armed)) + 
+  geom_bar(aes(fill = raceethnicity)) + 
+  theme_fivethirtyeight() + 
+  coord_flip() +
+  labs(title = "Were the victims armed?",
+       caption = "Data from FiveThirtyEight") +
+  theme(legend.position = "bottom",
+        legend.text=element_text(size = 8),
+        plot.title = element_text(face = "bold", size = 20),
+        plot.subtitle = element_text(size = 12),
+        plot.caption = element_text(hjust = 0, size = 10))
+```
+
+With this final plot, we also looked at whether or not each person was armed or not, and what they were armed with. The data stays consistent as it shows that the majority of the victims were armed, with very few actually being unarmed. Most of the victims were armed with a firearm, and many of those were white and black. At the same time, many of the victims who were unarmed were also black or white.
