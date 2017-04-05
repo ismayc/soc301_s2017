@@ -3,7 +3,7 @@ date: 2017-01-30T20:05:05-08:00
 title: Problem Sets
 ---
 
-This page will list the Problem Sets and when they will be turned in on paper throughout the course.  You will turn in one problem set per group.  You can find discussions about all of the Problem Sets [here](ps-key/index.html).  Links to specific Problem Set discussions will be posted after the Problem Set is turned in below the Problem Set assignment here.
+This page will list the Problem Sets and when they will be turned in on paper throughout the course.  You will usually turn in one problem set per group though some assignments will be turned in individually.  You can find discussions about many of the Problem Sets [here](ps-key/index.html).  Links to specific Problem Set discussions from ModernDive will be posted after the Problem Set is turned in below the Problem Set assignment here.
 
 
 # PS 9 (Due Thurs, Apr 6 by 11:59 PM) {#ps9}
@@ -11,7 +11,7 @@ This page will list the Problem Sets and when they will be turned in on paper th
 - Check your email for a link to your Google Drive folder containing the needed files
 - Complete the `ps9.Rmd` file with an updated `ggplot2` plot and creation of a `dplyr` summarization
   - You'll need to copy over relevant chunks from the group `.Rmd` file to reproduce and add to their analysis
-- Also provide a summary of the vignette you've been assigned and a short discussion on how your plot better adds
+- Also provide a summary of the vignette you've been assigned and a short discussion on how your plot and summarization better adds
 to the overall message of the vignette
   - Focus on improving the social perspective of the vignette
 - You'll knit the `ps9.Rmd` file to create a `ps9.html` file that exists in your Google Drive folder.
