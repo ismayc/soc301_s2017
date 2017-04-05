@@ -23,21 +23,28 @@
 
 &lt;ul&gt;
 &lt;li&gt;Reviewed terminology from Chapter 6 on sampling from &lt;a href=&#34;https://ismayc.github.io/moderndiver-book/6-sim.html&#34;&gt;ModernDive&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Went over &lt;code&gt;mosaic&lt;/code&gt; package functions we will use for statistical inference
-
-&lt;ul&gt;
-&lt;li&gt;Practiced in RStudio using these functions&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Began working on Problem Set 9&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;to-do-for-next-time&#34;&gt;To do for next time&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://ismayc.github.io/soc301_s2017/problem-sets/index.html#ps9&#34;&gt;Problem Set 9&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Work through Exam from last semester (skip the last problem)&lt;/li&gt;
-&lt;li&gt;Continue studying for the Midterm Exam, which will occur during class on Tuesday, April 11&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;For Practice&lt;/em&gt;: LC6.1-LC6.17 from &lt;a href=&#34;https://ismayc.github.io/moderndiver-book/6-sim.html&#34;&gt;ModernDive&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Work through &lt;a href=&#34;http://ismayc.github.io/soc301_s2017/Exam1R.html&#34;&gt;Exam 1&lt;/a&gt; and &lt;a href=&#34;http://ismayc.github.io/soc301_s2017/Exam2R.html&#34;&gt;Exam 2&lt;/a&gt; from last semester for practice
+
+&lt;ul&gt;
+&lt;li&gt;You should skip Problem 4 on Exam 2 as we will be covering that content later in our course&lt;/li&gt;
+&lt;li&gt;Note that Exam 1 last semester was a Take Home Exam so the questions are a little more challenging at times than what I would ask you for an in-class 100 minute exam.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Continue studying for the Midterm Exam, which will occur during class on Tuesday, April 11
+
+&lt;ul&gt;
+&lt;li&gt;The exam will cover Chapters 3, 4, and 5 and Section 6.1 of &lt;a href=&#34;http://moderndive.com&#34;&gt;ModernDive&lt;/a&gt; and the content covered on the slides from &lt;a href=&#34;http://ismayc.github.io/soc301_s2017/slides/slide_deck.html#week10t&#34;&gt;here&lt;/a&gt; on&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;For Practice on understanding of Chapter 6 material&lt;/em&gt;: LC6.1-LC6.17 from &lt;a href=&#34;https://ismayc.github.io/moderndiver-book/6-sim.html&#34;&gt;ModernDive&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In particular focus on LC6.1-LC6.7 for the exam&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
