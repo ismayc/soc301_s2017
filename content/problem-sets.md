@@ -3,7 +3,7 @@ date: 2017-01-30T20:05:05-08:00
 title: Problem Sets
 ---
 
-This page will list the Problem Sets and when they will be turned in on paper throughout the course.  You will usually turn in one problem set per group though some assignments will be turned in individually.  You can find discussions about many of the Problem Sets [here](ps-key/index.html).  Links to specific Problem Set discussions from ModernDive will be posted after the Problem Set is turned in below the Problem Set assignment here.
+This page will list the Problem Sets and when they will usually be turned in on paper throughout the course (unless otherwise noted below).  You will usually turn in one problem set per group though some assignments will be turned in individually.  You can find discussions about many of the Problem Sets [here](ps-key/index.html).  Links to specific Problem Set discussions from ModernDive will be posted after the Problem Set is turned in below the Problem Set assignment here.
 
 
 # PS 9 (Due Thurs, Apr 6 by 11:59 PM) {#ps9}
