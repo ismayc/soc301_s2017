@@ -25,9 +25,11 @@ tags: []
         - [Chapter 4](https://ismayc.github.io/moderndiver-book/4-viz.html)
         - [Chapter 5](https://ismayc.github.io/moderndiver-book/5-manip.html)
         - [Section 6.1](https://ismayc.github.io/moderndiver-book/6-sim.html)
-
-
 - Write some sample problems yourself and try to solve them.  You can easily do this by modifying the DataCamp assignments and the learning checks as needed.  There is a strong positive correlation between students that show me the quizzing they did and good grades on exams.
+- Work through the exams from last semester
+    - [Exam 1](../Exam1R.html)
+    - [Exam 2](../Exam2R.pdf)
+    - The solutions to both are in the #general channel in Slack.  You should check your work there AFTER you have tried the problems yourself.
 - If you perform poorly on the exam and we meet to talk about it, I will ask you to show me exactly how you studied for the exam.  If you tell me, "I read over the notes many times." I'm going to tell you that I told you that wasn't an effective strategy.  I want you all to succeed and get better and the best way to do that is for you to take ownership on what you know and to quiz yourselves often.
 - Remember that you shouldn't just be reading over the answers and the book over and over again.  Once is fine, but after that you should be quizzing yourself for understanding.  If you don't know what you know when you are studying, you will be surprised when you take the exam.  Don't do that!    
 
