@@ -6,8 +6,181 @@
     <description>Recent content on SOC 301 - Spring 2017</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Apr 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 06 Apr 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Midterm Review</title>
+      <link>/midterm_review/</link>
+      <pubDate>Thu, 06 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/midterm_review/</guid>
+      <description>
+
+&lt;h2 id=&#34;tips&#34;&gt;Tips&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Be sure to review and constantly check for understanding of&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://ismayc.github.io/soc301_s2017/problem-sets/ps-key/index.html&#34;&gt;problem set discussions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;DataCamp Assignments, in particular
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/tidy-data?ex=1&#34;&gt;Tidy Data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/scatter-plots-line-graphs?ex=1&#34;&gt;Scatter-plots &amp;amp; Line-graphs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/histograms-boxplots?ex=1&#34;&gt;Histograms &amp;amp; Boxplots&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/barplots?ex=1&#34;&gt;Barplots&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/ggplot2-review?ex=1&#34;&gt;ggplot2 Review&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/filtering-grouping-summarizing?ex=1&#34;&gt;Filtering, Grouping, &amp;amp; Summarizing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/dplyr-review-8?ex=1&#34;&gt;dplyr Review&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ismayc.github.io/soc301_s2017/slides/slide_deck.html#1&#34;&gt;slides from class&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ModernDive
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://ismayc.github.io/moderndiver-book/3-tidy.html&#34;&gt;Chapter 3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ismayc.github.io/moderndiver-book/4-viz.html&#34;&gt;Chapter 4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ismayc.github.io/moderndiver-book/5-manip.html&#34;&gt;Chapter 5&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ismayc.github.io/moderndiver-book/6-sim.html&#34;&gt;Section 6.1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Write some sample problems yourself and try to solve them.  You can easily do this by modifying the DataCamp assignments and the learning checks as needed.  There is a strong positive correlation between students that show me the quizzing they did and good grades on exams.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;If you perform poorly on the exam and we meet to talk about it, I will ask you to show me exactly how you studied for the exam.  If you tell me, &amp;ldquo;I read over the notes many times.&amp;rdquo; I&amp;rsquo;m going to tell you that I told you that wasn&amp;rsquo;t an effective strategy.  I want you all to succeed and get better and the best way to do that is for you to take ownership on what you know and to quiz yourselves often.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Remember that you shouldn&amp;rsquo;t just be reading over the answers and the book over and over again.  Once is fine, but after that you should be quizzing yourself for understanding.  If you don&amp;rsquo;t know what you know when you are studying, you will be surprised when you take the exam.  Don&amp;rsquo;t do that!&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To perform well on the Midterm Exam, you should be fluent in the following tasks:&lt;/p&gt;
+
+&lt;h2 id=&#34;chapter-3-tidy-data-https-ismayc-github-io-moderndiver-book-3-tidy-html&#34;&gt;&lt;a href=&#34;https://ismayc.github.io/moderndiver-book/3-tidy.html&#34;&gt;Chapter 3 (Tidy Data)&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Give the definition of &lt;strong&gt;tidy data&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Identify whether a data set follows the &lt;strong&gt;tidy&lt;/strong&gt; guidelines and explain why or why not using the definition.&lt;/li&gt;
+&lt;li&gt;Identify the &lt;strong&gt;observation unit&lt;/strong&gt;, &lt;strong&gt;variables&lt;/strong&gt;, and &lt;strong&gt;variable types&lt;/strong&gt; (numerical/categorical) from a problem statement / data set&lt;/li&gt;
+&lt;li&gt;Explain how normal forms of data can be used to assist with data analysis&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;chapter-4-data-visualization-via-ggplot2-https-ismayc-github-io-moderndiver-book-4-viz-html&#34;&gt;&lt;a href=&#34;https://ismayc.github.io/moderndiver-book/4-viz.html&#34;&gt;Chapter 4 (Data Visualization via ggplot2)&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Clarify what makes up a statistical graphic&lt;/li&gt;
+&lt;li&gt;Describe what &lt;code&gt;aes&lt;/code&gt;, &lt;code&gt;geom_&lt;/code&gt;, &lt;code&gt;facet&lt;/code&gt;, and &lt;code&gt;position&lt;/code&gt; correspond to in a &lt;code&gt;ggplot&lt;/code&gt; function call&lt;/li&gt;
+&lt;li&gt;Be able to identify which plot(s) are most appropriate from a problem statement / variable types in a data set.&lt;/li&gt;
+&lt;li&gt;Explain the differences between the Five Named Graphs&lt;/li&gt;
+&lt;li&gt;Explain how &lt;code&gt;jitter&lt;/code&gt; and/or &lt;code&gt;alpha&lt;/code&gt; can be applied to a plot to help the reader understand the relationship between two variables&lt;/li&gt;
+&lt;li&gt;Create the following in R using &lt;code&gt;ggplot2&lt;/code&gt; from appropriate variable(s) in a data set
+
+&lt;ul&gt;
+&lt;li&gt;Scatter-plot&lt;/li&gt;
+&lt;li&gt;Line-graph&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Give a scenario where a line-graph is more appropriate than a scatter-plot&lt;/li&gt;
+&lt;li&gt;Explain the components of a &lt;strong&gt;histogram&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;What makes up the vertical axis?&lt;/li&gt;
+&lt;li&gt;What makes up the horizontal axis?&lt;/li&gt;
+&lt;li&gt;Do the bars touch?&lt;/li&gt;
+&lt;li&gt;How does changing the binwidth / number of bins change a histogram?&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Create a histogram in R using &lt;code&gt;ggplot2&lt;/code&gt; from an appropriate variable in a data set&lt;/li&gt;
+&lt;li&gt;Interpret what the histogram tells you about the distribution of the variable
+
+&lt;ul&gt;
+&lt;li&gt;Is it symmetric or skewed?&lt;/li&gt;
+&lt;li&gt;Where do most values fall?&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Explain why a faceted histogram is useful in comparing the distribution of a numeric variable across the groups of a categorical variable.&lt;/li&gt;
+&lt;li&gt;Create a faceted histogram in R using &lt;code&gt;ggplot2&lt;/code&gt; from appropriate variables in a data set&lt;/li&gt;
+&lt;li&gt;Compare and contrast the usefulness and differences between faceted histograms and boxplots.&lt;/li&gt;
+&lt;li&gt;Describe the components of a boxplot&lt;/li&gt;
+&lt;li&gt;Use a boxplot to compare two distributions&lt;/li&gt;
+&lt;li&gt;Explain the components of a &lt;strong&gt;boxplot&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;What makes up the vertical axis?&lt;/li&gt;
+&lt;li&gt;What makes up the horizontal axis?&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Explain the components of a &lt;strong&gt;barplot&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;What makes up the vertical axis?&lt;/li&gt;
+&lt;li&gt;What makes up the horizontal axis?&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Describe why pie charts should be replaced with barplots from a visual perception perspective&lt;/li&gt;
+&lt;li&gt;Explain the differences between stacked, side-by-side, and faceted barplots&lt;/li&gt;
+&lt;li&gt;Create the following in R using &lt;code&gt;ggplot2&lt;/code&gt; from appropriate variable(s) in a data set
+
+&lt;ul&gt;
+&lt;li&gt;Barplot&lt;/li&gt;
+&lt;li&gt;Stacked barplot&lt;/li&gt;
+&lt;li&gt;Side-by-side barplot&lt;/li&gt;
+&lt;li&gt;Faceted barplot&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;chapter-5-data-manipulation-via-dplyr-https-ismayc-github-io-moderndiver-book-5-manip-html&#34;&gt;&lt;a href=&#34;https://ismayc.github.io/moderndiver-book/5-manip.html&#34;&gt;Chapter 5 (Data Manipulation via dplyr)&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Discuss how the pipe &lt;code&gt;%&amp;gt;%&lt;/code&gt; is used in data wrangling analyses&lt;/li&gt;
+&lt;li&gt;Give a brief statement as to what each of the Five Main Verbs does&lt;/li&gt;
+&lt;li&gt;Explain why the &lt;code&gt;filter&lt;/code&gt; function (if needed) must be used before doing any of the other Main Verbs&lt;/li&gt;
+&lt;li&gt;Write R code using &lt;code&gt;filter&lt;/code&gt; function to choose specific rows from a
+data frame that match certain criterion
+
+&lt;ul&gt;
+&lt;li&gt;Understand when you should use &lt;code&gt;|&lt;/code&gt;, &lt;code&gt;&amp;amp;&lt;/code&gt;/&lt;code&gt;,&lt;/code&gt;, &lt;code&gt;&amp;lt;&lt;/code&gt;, &lt;code&gt;&amp;lt;=&lt;/code&gt;, &lt;code&gt;==&lt;/code&gt;, &lt;code&gt;!=&lt;/code&gt;, &lt;code&gt;&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;gt;=&lt;/code&gt;, and &lt;code&gt;%in%&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Discuss how to use the &lt;code&gt;summarize&lt;/code&gt; function to calculate a numerical summary of a column. You should know the code to produce
+
+&lt;ul&gt;
+&lt;li&gt;Minimum&lt;/li&gt;
+&lt;li&gt;Maximum&lt;/li&gt;
+&lt;li&gt;Mean&lt;/li&gt;
+&lt;li&gt;Median&lt;/li&gt;
+&lt;li&gt;Proportion matching using &lt;code&gt;mean(  ==  )&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Explain how &lt;code&gt;group_by&lt;/code&gt; can be used in combination with &lt;code&gt;summarize&lt;/code&gt; to get aggregated data across the levels of one or more categorical variables&lt;/li&gt;
+&lt;li&gt;Discuss what standard deviation gives you for a variable
+
+&lt;ul&gt;
+&lt;li&gt;You may want to review &lt;a href=&#34;https://ismayc.github.io/moderndiver-book/A-appendixA.html&#34;&gt;Appendix A&lt;/a&gt; of ModernDive&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Write R code to sort data in both ascending and descending order based on a variable&lt;/li&gt;
+&lt;li&gt;Write R code to create a new variable based on the values of one or more variables in a data frame&lt;/li&gt;
+&lt;li&gt;Reverse engineer by providing the R code to produce an aggregated table
+
+&lt;ul&gt;
+&lt;li&gt;The warmups from the slides and DataCamp provide examples of doing this.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;section-6-1-random-sampling-https-ismayc-github-io-moderndiver-book-6-sim-html-random-sampling&#34;&gt;&lt;a href=&#34;https://ismayc.github.io/moderndiver-book/6-sim.html#random-sampling&#34;&gt;Section 6.1 (Random Sampling)&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Match each of the &amp;ldquo;Common terms&amp;rdquo; given in Subsection 6.1.2 with their correct definition&lt;/li&gt;
+&lt;li&gt;Identify what each of the &amp;ldquo;Common terms&amp;rdquo; would represent for a given scenario&lt;/li&gt;
+&lt;li&gt;Discuss why representative sampling is necessary&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;extensions&#34;&gt;Extensions&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Explain how you could make a &lt;strong&gt;messy&lt;/strong&gt; data set into a &lt;strong&gt;tidy&lt;/strong&gt; data set by hand.
+
+&lt;ul&gt;
+&lt;li&gt;What would the variables be and what would a couple of rows in the new &lt;strong&gt;tidy&lt;/strong&gt; data set look like?&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Clarify why R code produces an error and fix the code to produce the correct result.&lt;/li&gt;
+&lt;li&gt;Describe how you could use &lt;code&gt;color&lt;/code&gt; to look at the relationship between three continuous variables.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Describe how one can use &lt;code&gt;color&lt;/code&gt;, &lt;code&gt;fill&lt;/code&gt;, &lt;code&gt;size&lt;/code&gt;, and/or &lt;code&gt;shape&lt;/code&gt; to show other multivariate (more than two variables) relationships&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Week 10 - Tuesday</title>
@@ -582,1259 +755,6 @@ if(length(new.pkgs)) {
 &lt;li&gt;Complete  &lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/tidy-data?ex=1&#34;&gt;Tidy Data&lt;/a&gt; DataCamp chapter (Due on February 16 at 1 PM)&lt;/li&gt;
 &lt;li&gt;Begin &lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/scatter-plots-line-graphs?ex=1&#34;&gt;Scatter-plots &amp;amp; Line-graphs&lt;/a&gt; DataCamp chapter (Due on February 21 at 1 PM)&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Problem Sets Discussion</title>
-      <link>/problem-sets/ps-key/</link>
-      <pubDate>Thu, 09 Feb 2017 13:14:16 -0800</pubDate>
-      
-      <guid>/problem-sets/ps-key/</guid>
-      <description>&lt;!-- BLOGDOWN-BODY-BEFORE
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#ps2-key&#34;&gt;Problem Set 2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#ps3-key&#34;&gt;Problem Set 3&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#ps4-key&#34;&gt;Problem Set 4&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#ps6-key&#34;&gt;Problem Set 6&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-/BLOGDOWN-BODY-BEFORE --&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;Page last updated at Monday, April 03, 2017 09:01:02 EDT&lt;/p&gt;
-&lt;div id=&#34;ps2-key&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Problem Set 2&lt;/h1&gt;
-&lt;p&gt;Learning Checks LC3.2-LC3.7, LC3.9-LC3.10 from &lt;a href=&#34;https://ismayc.github.io/moderndiver-book/3-tidy.html&#34;&gt;ModernDive&lt;/a&gt;&lt;/p&gt;
-&lt;div id=&#34;lc3.2&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC3.2&lt;/h2&gt;
-&lt;p&gt;Say the following table are stock prices, how would you make this tidy?&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr class=&#34;header&#34;&gt;
-&lt;th align=&#34;left&#34;&gt;time&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;Boeing&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;Amazon&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;Google&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2009-01-01&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;$173.55&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;$174.90&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;$174.34&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2009-01-02&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;$172.61&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;$171.42&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;$170.04&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2009-01-03&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;$173.86&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;$171.58&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;$173.65&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2009-01-04&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;$170.77&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;$173.89&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;$174.87&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2009-01-05&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;$174.29&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;$170.16&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;$172.19&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;: &lt;code&gt;Boeing&lt;/code&gt;, &lt;code&gt;Amazon&lt;/code&gt;, and &lt;code&gt;Google&lt;/code&gt; are not variables by themselves, but rather levels of another variable &lt;code&gt;stock&lt;/code&gt;. The numbers inside the table themselves are prices. Therefore, in its current form, &lt;code&gt;Google&lt;/code&gt; corresponds both to the “name of a stock” and the “price of a stock” which violates the rules of tidy data. We can transform the data to make it &lt;strong&gt;tidy&lt;/strong&gt;:&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr class=&#34;header&#34;&gt;
-&lt;th align=&#34;left&#34;&gt;time&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;stock&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;price&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2009-01-01&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Boeing&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;$173.55&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2009-01-02&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Boeing&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;$172.61&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2009-01-03&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Boeing&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;$173.86&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2009-01-04&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Boeing&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;$170.77&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2009-01-05&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Boeing&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;$174.29&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2009-01-01&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Amazon&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;$174.90&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2009-01-02&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Amazon&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;$171.42&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2009-01-03&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Amazon&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;$171.58&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2009-01-04&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Amazon&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;$173.89&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2009-01-05&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Amazon&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;$170.16&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2009-01-01&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Google&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;$174.34&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2009-01-02&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Google&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;$170.04&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2009-01-03&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Google&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;$173.65&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2009-01-04&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Google&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;$174.87&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2009-01-05&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;Google&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;$172.19&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc3.3&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC3.3&lt;/h2&gt;
-&lt;p&gt;What does any &lt;em&gt;ONE&lt;/em&gt; row in this &lt;code&gt;flights&lt;/code&gt; dataset refer to?&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;A. Data on an airline&lt;/li&gt;
-&lt;li&gt;B. Data on a flight&lt;/li&gt;
-&lt;li&gt;C. Data on an airport&lt;/li&gt;
-&lt;li&gt;D. Data on multiple flights&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;: The correct answer is B here. The observational unit is flight. All of the variables are measurements/characteristics of a given flight. Each row is an observation of one flight containing data about that flight.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc3.4&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC3.4&lt;/h2&gt;
-&lt;p&gt;What are some examples in this dataset of &lt;strong&gt;categorical&lt;/strong&gt; variables? What makes them different than &lt;strong&gt;quantitative&lt;/strong&gt; variables?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;: The &lt;strong&gt;categorical&lt;/strong&gt; variables are &lt;code&gt;carrier&lt;/code&gt;, &lt;code&gt;tailnum&lt;/code&gt;, &lt;code&gt;origin&lt;/code&gt;, and &lt;code&gt;dest&lt;/code&gt;. The &lt;strong&gt;quantitative&lt;/strong&gt; variables are all of the &lt;code&gt;&amp;lt;int&lt;/code&gt;&amp;gt; and &lt;code&gt;&amp;lt;dbl&amp;gt;&lt;/code&gt; class variables: &lt;code&gt;year&lt;/code&gt;, &lt;code&gt;month&lt;/code&gt;, &lt;code&gt;day&lt;/code&gt;, &lt;code&gt;dep_time&lt;/code&gt;, &lt;code&gt;sched_dep_time&lt;/code&gt;, &lt;code&gt;arr_time&lt;/code&gt;, &lt;code&gt;sched_arr_time&lt;/code&gt;, &lt;code&gt;arr_delay&lt;/code&gt;, &lt;code&gt;flight&lt;/code&gt;, &lt;code&gt;air_time&lt;/code&gt;, &lt;code&gt;distance&lt;/code&gt;, &lt;code&gt;hour&lt;/code&gt;, and &lt;code&gt;minute&lt;/code&gt;. Note that &lt;code&gt;time_hour&lt;/code&gt; is labeled as &lt;code&gt;&amp;lt;dttm&amp;gt;&lt;/code&gt; corresponding to date-time. This is a special format in R for handling the oddities of dates and times. Note also that &lt;code&gt;dep_time&lt;/code&gt; and other similar variables are not labeled as &lt;code&gt;&amp;lt;dttm&amp;gt;&lt;/code&gt;, but rather as a number. Think about what problems this might cause in your analyses.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc3.5&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC3.5&lt;/h2&gt;
-&lt;p&gt;What does &lt;code&gt;int&lt;/code&gt;, &lt;code&gt;dbl&lt;/code&gt;, and &lt;code&gt;chr&lt;/code&gt; mean in the output above? If you need a hint, you might want to run &lt;code&gt;str(flights)&lt;/code&gt; instead.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;: These correspond to the &lt;code&gt;class&lt;/code&gt; of each variable in R. &lt;code&gt;dbl&lt;/code&gt; is the same thing as &lt;code&gt;num&lt;/code&gt; and represents numbers with decimal values. &lt;code&gt;int&lt;/code&gt; corresponds to integers (whole numbers and their negative opposites (-5, 4, 79, 0, 12342, etc.)). &lt;code&gt;chr&lt;/code&gt; corresponds to character values/strings and these are almost always categorical variables. The output of the similar &lt;code&gt;str(flights)&lt;/code&gt; is below.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(nycflights13)
-str(flights)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Classes &amp;#39;tbl_df&amp;#39;, &amp;#39;tbl&amp;#39; and &amp;#39;data.frame&amp;#39;:    336776 obs. of  19 variables:
-##  $ year          : int  2013 2013 2013 2013 2013 2013 2013 2013 2013 2013 ...
-##  $ month         : int  1 1 1 1 1 1 1 1 1 1 ...
-##  $ day           : int  1 1 1 1 1 1 1 1 1 1 ...
-##  $ dep_time      : int  517 533 542 544 554 554 555 557 557 558 ...
-##  $ sched_dep_time: int  515 529 540 545 600 558 600 600 600 600 ...
-##  $ dep_delay     : num  2 4 2 -1 -6 -4 -5 -3 -3 -2 ...
-##  $ arr_time      : int  830 850 923 1004 812 740 913 709 838 753 ...
-##  $ sched_arr_time: int  819 830 850 1022 837 728 854 723 846 745 ...
-##  $ arr_delay     : num  11 20 33 -18 -25 12 19 -14 -8 8 ...
-##  $ carrier       : chr  &amp;quot;UA&amp;quot; &amp;quot;UA&amp;quot; &amp;quot;AA&amp;quot; &amp;quot;B6&amp;quot; ...
-##  $ flight        : int  1545 1714 1141 725 461 1696 507 5708 79 301 ...
-##  $ tailnum       : chr  &amp;quot;N14228&amp;quot; &amp;quot;N24211&amp;quot; &amp;quot;N619AA&amp;quot; &amp;quot;N804JB&amp;quot; ...
-##  $ origin        : chr  &amp;quot;EWR&amp;quot; &amp;quot;LGA&amp;quot; &amp;quot;JFK&amp;quot; &amp;quot;JFK&amp;quot; ...
-##  $ dest          : chr  &amp;quot;IAH&amp;quot; &amp;quot;IAH&amp;quot; &amp;quot;MIA&amp;quot; &amp;quot;BQN&amp;quot; ...
-##  $ air_time      : num  227 227 160 183 116 150 158 53 140 138 ...
-##  $ distance      : num  1400 1416 1089 1576 762 ...
-##  $ hour          : num  5 5 5 5 6 5 6 6 6 6 ...
-##  $ minute        : num  15 29 40 45 0 58 0 0 0 0 ...
-##  $ time_hour     : POSIXct, format: &amp;quot;2013-01-01 05:00:00&amp;quot; &amp;quot;2013-01-01 05:00:00&amp;quot; ...&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc3.6&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC3.6&lt;/h2&gt;
-&lt;p&gt;How many different columns are in this dataset?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(nycflights13)
-glimpse(flights)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Observations: 336,776
-## Variables: 19
-## $ year           &amp;lt;int&amp;gt; 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013,...
-## $ month          &amp;lt;int&amp;gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,...
-## $ day            &amp;lt;int&amp;gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,...
-## $ dep_time       &amp;lt;int&amp;gt; 517, 533, 542, 544, 554, 554, 555, 557, 557, 55...
-## $ sched_dep_time &amp;lt;int&amp;gt; 515, 529, 540, 545, 600, 558, 600, 600, 600, 60...
-## $ dep_delay      &amp;lt;dbl&amp;gt; 2, 4, 2, -1, -6, -4, -5, -3, -3, -2, -2, -2, -2...
-## $ arr_time       &amp;lt;int&amp;gt; 830, 850, 923, 1004, 812, 740, 913, 709, 838, 7...
-## $ sched_arr_time &amp;lt;int&amp;gt; 819, 830, 850, 1022, 837, 728, 854, 723, 846, 7...
-## $ arr_delay      &amp;lt;dbl&amp;gt; 11, 20, 33, -18, -25, 12, 19, -14, -8, 8, -2, -...
-## $ carrier        &amp;lt;chr&amp;gt; &amp;quot;UA&amp;quot;, &amp;quot;UA&amp;quot;, &amp;quot;AA&amp;quot;, &amp;quot;B6&amp;quot;, &amp;quot;DL&amp;quot;, &amp;quot;UA&amp;quot;, &amp;quot;B6&amp;quot;, &amp;quot;EV&amp;quot;,...
-## $ flight         &amp;lt;int&amp;gt; 1545, 1714, 1141, 725, 461, 1696, 507, 5708, 79...
-## $ tailnum        &amp;lt;chr&amp;gt; &amp;quot;N14228&amp;quot;, &amp;quot;N24211&amp;quot;, &amp;quot;N619AA&amp;quot;, &amp;quot;N804JB&amp;quot;, &amp;quot;N668DN...
-## $ origin         &amp;lt;chr&amp;gt; &amp;quot;EWR&amp;quot;, &amp;quot;LGA&amp;quot;, &amp;quot;JFK&amp;quot;, &amp;quot;JFK&amp;quot;, &amp;quot;LGA&amp;quot;, &amp;quot;EWR&amp;quot;, &amp;quot;EWR&amp;quot;...
-## $ dest           &amp;lt;chr&amp;gt; &amp;quot;IAH&amp;quot;, &amp;quot;IAH&amp;quot;, &amp;quot;MIA&amp;quot;, &amp;quot;BQN&amp;quot;, &amp;quot;ATL&amp;quot;, &amp;quot;ORD&amp;quot;, &amp;quot;FLL&amp;quot;...
-## $ air_time       &amp;lt;dbl&amp;gt; 227, 227, 160, 183, 116, 150, 158, 53, 140, 138...
-## $ distance       &amp;lt;dbl&amp;gt; 1400, 1416, 1089, 1576, 762, 719, 1065, 229, 94...
-## $ hour           &amp;lt;dbl&amp;gt; 5, 5, 5, 5, 6, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 5,...
-## $ minute         &amp;lt;dbl&amp;gt; 15, 29, 40, 45, 0, 58, 0, 0, 0, 0, 0, 0, 0, 0, ...
-## $ time_hour      &amp;lt;dttm&amp;gt; 2013-01-01 05:00:00, 2013-01-01 05:00:00, 2013...&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;We see above from running &lt;code&gt;glimpse(flights)&lt;/code&gt; that the number of variables is 19. In a tidy data frame such as &lt;code&gt;flights&lt;/code&gt;, the number of columns corresponds directly to the number of variables so the number of columns is 19. This can also be obtained using the &lt;code&gt;ncol&lt;/code&gt; function via &lt;code&gt;ncol(flights)&lt;/code&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc3.7&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC3.7&lt;/h2&gt;
-&lt;p&gt;How many different rows are in this dataset?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;We see above from running &lt;code&gt;glimpse(flights)&lt;/code&gt; that the number of observations is 336,776. In a tidy data frame such as &lt;code&gt;flights&lt;/code&gt;, the number of rows corresponds directly to the number of observations/cases so the number of rows is also 336,776. This can also be obtained using the &lt;code&gt;nrow&lt;/code&gt; function via &lt;code&gt;nrow(flights)&lt;/code&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc3.9&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC3.9&lt;/h2&gt;
-&lt;p&gt;What properties of the observational unit do each of &lt;code&gt;lat&lt;/code&gt;, &lt;code&gt;lon&lt;/code&gt;, &lt;code&gt;alt&lt;/code&gt;, &lt;code&gt;tz&lt;/code&gt;, &lt;code&gt;dst&lt;/code&gt;, and &lt;code&gt;tzone&lt;/code&gt; describe for the &lt;code&gt;airports&lt;/code&gt; data frame? Note that you may want to use &lt;code&gt;?airports&lt;/code&gt; to get more information or go to the reference manual for the &lt;code&gt;nycflights13&lt;/code&gt; package &lt;a href=&#34;https://cran.r-project.org/web/packages/nycflights13/nycflights13.pdf&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;Using &lt;code&gt;?airports&lt;/code&gt;, we see that &lt;code&gt;lat&lt;/code&gt; and &lt;code&gt;lon&lt;/code&gt; correspond to the latitude and longitude of the location of the airport. &lt;code&gt;alt&lt;/code&gt; is the altitude of the airport in feet. &lt;code&gt;tz&lt;/code&gt; is the offset of the airport’s time zone from Greenwich Mean Time. &lt;code&gt;dst&lt;/code&gt; corresponds to “Daylight savings time zone” with values of &lt;code&gt;&amp;quot;A&amp;quot;&lt;/code&gt; for US DST, &lt;code&gt;&amp;quot;U&amp;quot;&lt;/code&gt; for unknown, and &lt;code&gt;&amp;quot;N&amp;quot;&lt;/code&gt; for no DST. Lastly, &lt;code&gt;tzone&lt;/code&gt; is the name of the time zone in which the airport is located.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc3.10&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC3.10&lt;/h2&gt;
-&lt;p&gt;Provide the names of variables in a data frame with at least three variables in which one of them is an identification variable and the other two are not.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;: Many answers are appropriate here. The identification variable should correspond to the observational unit of the data frame. Here is one example:&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr class=&#34;header&#34;&gt;
-&lt;th&gt;Student ID&lt;/th&gt;
-&lt;th&gt;Major&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;Percentage&lt;/th&gt;
-&lt;th&gt;Grade&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td&gt;1000&lt;/td&gt;
-&lt;td&gt;Sociology&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;95&lt;/td&gt;
-&lt;td&gt;A&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td&gt;1001&lt;/td&gt;
-&lt;td&gt;Biology&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;50&lt;/td&gt;
-&lt;td&gt;F&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td&gt;1002&lt;/td&gt;
-&lt;td&gt;History&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;76&lt;/td&gt;
-&lt;td&gt;C&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ps3-key&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Problem Set 3&lt;/h1&gt;
-&lt;p&gt;Learning Checks &lt;a href=&#34;https://ismayc.github.io/moderndiver-book/3-tidy.html&#34;&gt;LC3.11-LC3.13 and LC3.15&lt;/a&gt; AND &lt;a href=&#34;https://ismayc.github.io/moderndiver-book/4-viz.html&#34;&gt;LC4.1-LC4.2, LC4.4, LC4.6-LC4.7, and LC4.10-LC4.13&lt;/a&gt;&lt;/p&gt;
-&lt;div id=&#34;lc3.11&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC3.11&lt;/h2&gt;
-&lt;p&gt;What are common characteristics of “tidy” datasets?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;: Tidy data sets tend to be in a narrow, long format since they list all possible values of each combination of the different variables. They have one observation per row, one variable per column, one observational unit per data frame, and the entries on the inside of the table are values, each representing the intersection of a particular observation and a particular variable.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc3.12&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC3.12&lt;/h2&gt;
-&lt;p&gt;What makes “tidy” datasets useful for organizing data?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;: They allow you to easily summarize data across a variable or to plot data and show different relationships across other variables. They are incredibly useful in looking for multivariate relationships (more than two variables) in data. You’ll see more of this as the semester goes along.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc3.13&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC3.13&lt;/h2&gt;
-&lt;p&gt;How many variables are presented in the table below? What does each row correspond to? (&lt;strong&gt;Hint:&lt;/strong&gt; You may not be able to answer both of these questions immediately but take your best guess.)&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr class=&#34;header&#34;&gt;
-&lt;th align=&#34;right&#34;&gt;students&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;faculty&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;4&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;6&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;3&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;: This is an incredibly difficult problem to figure out. You can guess that &lt;code&gt;students&lt;/code&gt; and &lt;code&gt;faculty&lt;/code&gt; should actually be levels of a variable called something like &lt;code&gt;type&lt;/code&gt; or &lt;code&gt;role&lt;/code&gt;. The numbers inside the table represent counts of some sort, so there may be at least two other variables floating around in there.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc3.15&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC3.15&lt;/h2&gt;
-&lt;p&gt;The actual data presented in LC3.13 is given below in tidy data format:&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr class=&#34;header&#34;&gt;
-&lt;th align=&#34;left&#34;&gt;role&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;Sociology?&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;Type of School&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;student&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;TRUE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Public&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;student&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;TRUE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Public&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;student&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;TRUE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Public&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;student&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;TRUE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Public&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;student&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Public&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;student&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Public&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;student&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Private&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;student&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Private&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;student&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Private&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;student&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Private&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;faculty&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;TRUE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Public&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;faculty&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;TRUE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Public&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;faculty&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Public&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;faculty&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Private&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;faculty&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;FALSE&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Private&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;ul&gt;
-&lt;li&gt;What does each row correspond to?&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;What are the different variables in this data frame?&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;The &lt;code&gt;Sociology?&lt;/code&gt; variable is known as a logical variable. What types of values does a logical variable take on?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Each row corresponds to a particular observation (an instance of the observational unit). In this case, each row corresponds to a particular person, either a faculty member or a student.&lt;/li&gt;
-&lt;li&gt;The different variables are &lt;code&gt;role&lt;/code&gt;, &lt;code&gt;Sociology?&lt;/code&gt;, and &lt;code&gt;Type of School&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Logical variables take on the values of &lt;code&gt;TRUE&lt;/code&gt; or &lt;code&gt;FALSE&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc4.1&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC4.1&lt;/h2&gt;
-&lt;p&gt;Take a look at both the &lt;code&gt;flights&lt;/code&gt; and &lt;code&gt;all_alaska_flights&lt;/code&gt; data frames by running &lt;code&gt;View(flights)&lt;/code&gt; and &lt;code&gt;View(all_alaska_flights)&lt;/code&gt; in the console. In what respect do these data frames differ?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;: Recall that you don’t have the ability to run &lt;code&gt;View&lt;/code&gt; in DataCamp and we aren’t using RStudio just yet. You can find interactive versions of both data frames &lt;a href=&#34;https://ismayc.github.io/Effective-Data-Storytelling-using-the-tidyverse/moderndive.html&#34;&gt;here&lt;/a&gt; though.&lt;/p&gt;
-&lt;p&gt;The only difference between these data frames is that &lt;code&gt;flights&lt;/code&gt; contains information about 2013 NYC flights from all carriers and &lt;code&gt;all_alaska_flights&lt;/code&gt; only contains information about flights using Alaskan Airlines.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc4.2&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC4.2&lt;/h2&gt;
-&lt;p&gt;What are some practical reasons why &lt;code&gt;dep_delay&lt;/code&gt; and &lt;code&gt;arr_delay&lt;/code&gt; have a positive relationship?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;Flights that are late in leaving the origin airport will almost surely be late in arriving at the destination airport. Further, a flight that is delayed 15 minutes on departure will probably be delayed around 15 minutes on arrival. Pilots are able to make up some time in the air sometimes, but a positive relationship is clear here. As &lt;code&gt;dep_delay&lt;/code&gt; increases, &lt;code&gt;arr_delay&lt;/code&gt; also increases.&lt;/p&gt;
-&lt;div id=&#34;section&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;&lt;/h3&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc4.6&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC4.6&lt;/h2&gt;
-&lt;p&gt;Create a new scatter-plot using different variables in the &lt;code&gt;all_alaska_flights&lt;/code&gt; data frame by modifying the example above. (Run your code in the sandbox in DataCamp and then write your code on your paper. Discuss what findings you have when looking at the plot. Remember that scatter-plots only work when analyzing the relationship between two &lt;strong&gt;numerical&lt;/strong&gt; variables!)&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;There are many potential plots you could create here. Here is one example:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(nycflights13)
-library(ggplot2)
-all_alaska_flights &amp;lt;- flights %&amp;gt;% filter(carrier == &amp;quot;AS&amp;quot;)
-ggplot(data = all_alaska_flights, mapping = aes(x = air_time, y = distance)) +
-  geom_point()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/problem-sets/ps-key/figures/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;This might initially look like an error but Alaskan Airlines online flies to Seattle from New York City. Therefore, all of the &lt;code&gt;distance&lt;/code&gt; values are 2402. We can see that there was quite a bit of variability in terms of &lt;code&gt;air_time&lt;/code&gt; though.&lt;/p&gt;
-&lt;!-- --&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc4.7&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC4.7&lt;/h2&gt;
-&lt;p&gt;Why is setting the &lt;code&gt;alpha&lt;/code&gt; argument value useful with scatter-plots? What further information does it give you that a regular scatter-plot cannot?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;The &lt;code&gt;alpha&lt;/code&gt; argument allows for the setting of the transparency of the points. This allows you to see when many points are over-lapping and to identify over-plotting in your scatter-plot.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc4.10&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC4.10&lt;/h2&gt;
-&lt;p&gt;The weather data is recorded hourly. Why does the &lt;code&gt;time_hour&lt;/code&gt; variable correctly identify the hour of the measurement whereas the &lt;code&gt;hour&lt;/code&gt; variable does not?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;The &lt;code&gt;time_hour&lt;/code&gt; variable gives the precise hour on a given day. The &lt;code&gt;hour&lt;/code&gt; variable is just an integer value from 0 to 23 so without other information, &lt;code&gt;hour&lt;/code&gt; only gives the hour of a particular day.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc4.11&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC4.11&lt;/h2&gt;
-&lt;p&gt;Why should line-graphs be avoided when there is not a clear ordering of the horizontal axis?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;Line-graphs only show trends in the data and are best used with time as the explanatory variable on the horizontal axis. When there is no clear ordering of the horizontal axis, one could deceive the reader into thinking a pattern/trend exists when, in fact, one does not.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc4.12&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC4.12&lt;/h2&gt;
-&lt;p&gt;Why are line-graphs frequently used when time is the explanatory variable?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;Time on the horizontal axis and a single value for each time point provides a simple way to identify a trend in the variable. It allows for one to easily answer questions such as “Is the response variable increasing over time?”, “Where are there peaks and valleys in the response variable?”, etc.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc4.13&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC4.13&lt;/h2&gt;
-&lt;p&gt;Plot a time series of a variable other than &lt;code&gt;temp&lt;/code&gt; for Newark Airport in the first 15 days of January 2013. (Run your code in the sandbox in DataCamp and then write your code on your paper. Discuss what findings you have when looking at the plot. Remember that scatter-plots only work when analyzing the relationship between two &lt;strong&gt;numerical&lt;/strong&gt; variables!)&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;There are many potential answers for this question. Here is one answer:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(nycflights13)
-library(ggplot2)
-early_january_weather &amp;lt;- weather %&amp;gt;% 
-  filter(origin == &amp;quot;EWR&amp;quot; &amp;amp; month == 1 &amp;amp; day &amp;lt;= 15)
-ggplot(data = early_january_weather, mapping = aes(x = time_hour, y = wind_gust)) +
-  geom_line()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/problem-sets/ps-key/figures/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;What immediately stands out in this plot are the days with no wind gusts at all and values of 0. There appears to be only one wind gust over 25 mpg around January 2nd or 3rd.&lt;/p&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ps4-key&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Problem Set 4&lt;/h1&gt;
-&lt;p&gt;Learning Checks &lt;a href=&#34;https://ismayc.github.io/moderndiver-book/4-viz.html&#34;&gt;LC4.14, LC4.16, LC4.18, LC4.19, LC4.21-LC4.28, LC4.30, LC4.33-LC4.34, LC4.36-LC4.37&lt;/a&gt;&lt;/p&gt;
-&lt;div id=&#34;lc4.14&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC4.14&lt;/h2&gt;
-&lt;p&gt;What does changing the number of bins from 30 to 60 tell us about the distribution of temperatures?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;Increasing the number of bins allows for us to see the distribution of temperatures in finer detail.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc4.16&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC4.16&lt;/h2&gt;
-&lt;p&gt;What would you guess is the “center” value in this distribution? Why did you make that choice?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;There is no exact answer here at this point in the course. I wanted you to think about what the balancing point would be having half the values before it and half after it. This falls somewhere between 50 and 55.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc4.18&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC4.18&lt;/h2&gt;
-&lt;p&gt;What other things do you notice about the faceted plot above? How does a faceted plot help us see relationships between two variables?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;The faceted plot allows us to better see the range of temperatures for each month. In general, a faceted plot can be helpful in seeing trends in one variable compared to another.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc4.19&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC4.19&lt;/h2&gt;
-&lt;p&gt;What do the numbers 1-12 correspond to in the plot above? What about 25, 50, 75, 100?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;The numbers 1-12 correspond to months in the year 2013. The nubmers 25, 50, 75, and 100 correspond to Fahrenheit temperatures.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc4.21&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC4.21&lt;/h2&gt;
-&lt;p&gt;Does the &lt;code&gt;temp&lt;/code&gt; variable in the &lt;code&gt;weather&lt;/code&gt; data set have a lot of variability? Why do you say that?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;New York City does have a broad range of temperatures throughout the year. We see that summer months tend to be much warmer than winter months, so, yes, &lt;code&gt;temp&lt;/code&gt; in &lt;code&gt;weather&lt;/code&gt; does have a lot of variability.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc4.22&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC4.22&lt;/h2&gt;
-&lt;p&gt;What does the dot at the bottom of the plot for May correspond to? Explain what might have occurred in May to produce this point.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;The dot at the bottom of the plot for May corresponds to a low outlier. This could have been a very cold hour, but since no other hours have that cold of a temperature it is more than likely a measurement error.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc4.23&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC4.23&lt;/h2&gt;
-&lt;p&gt;Which months have the highest variability in temperature? What reasons do you think this is?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;The spring and fall months have the highest variability in temperature. These months tend to have cold mornings and warmer high temperatures.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc4.24&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC4.24&lt;/h2&gt;
-&lt;p&gt;We looked at the distribution of a continuous variable over a categorical variable here with this boxplot. Why can’t we look at the distribution of one continuous variable over the distribution of another continuous variable? Say, temperature across pressure, for example?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;A boxplot works well because you can look at the distribution of the continuous variable across the different (often only a few) levels of the categorical variable. A continuous explanatory variable will have many, many levels making the boxplot very hard to read and interpret.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc4.25&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC4.25&lt;/h2&gt;
-&lt;p&gt;Boxplots provide a simple way to identify outliers. Why may outliers be easier to identify when looking at a boxplot instead of a faceted histogram?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;A faceted histogram shows the height of the bin and if outliers are all alone they will appear as having a bin of height close to zero, which is almost indistinguishable from zero. Therefore, they are more likely to be missed when looking at a faceted histogram. A boxplot will clearly show them.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc4.26&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC4.26&lt;/h2&gt;
-&lt;p&gt;Why are histograms inappropriate for visualizing categorical variables?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;Histograms show how many values fall into different bins of a numerical variable that falls on a continuum. (This is one reason why the bins are touching.) Since a categorical variable does not fall on a continuum, histograms are inappropriate.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc4.27&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC4.27&lt;/h2&gt;
-&lt;p&gt;What is the difference between histograms and barplots?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;The bins touch on a histogram and the bars/bins on a barplot do not. Histograms show the distribution of a continuous variable whereas barplots show the distribution of a categorical variable.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc4.28&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC4.28&lt;/h2&gt;
-&lt;p&gt;How many Envoy Air flights departed NYC in 2013?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;Since Envoy Air corresponds to &lt;code&gt;carrier&lt;/code&gt; code &lt;code&gt;MQ&lt;/code&gt; via the &lt;code&gt;airports&lt;/code&gt; data frame, we see that 26,397 flights departed New York City in 2013.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc4.30&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC4.30&lt;/h2&gt;
-&lt;p&gt;Why should pie charts be avoided and replaced by barplots?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;Pie charts rely on us being able to tell the different between different slices of the pie in terms of the percentage of area covered. Our eyes and brains are not naturally good at this task. We are extremely good at determining the height of bars and comparing them across different groups as a barplot shows.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc4.33&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC4.33&lt;/h2&gt;
-&lt;p&gt;What can you say, if anything, about the relationship between airline and airport in NYC in 2013 in regards to the number of departing flights?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;Certain airlines tend to depart from one airport far more than the other two airports. For example, ExpressJet Airlines has nearly all of its flights from Newark.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc4.34&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC4.34&lt;/h2&gt;
-&lt;p&gt;Why might the side-by-side barplot be preferable to a stacked barplot in this case?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;It is harder to compare the frequency of flights for LaGuardia or JFK when looking at a stacked barplot since they are already stacked on top of Newark.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc4.36&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC4.36&lt;/h2&gt;
-&lt;p&gt;Why is the faceted barplot preferred to the side-by-side and stacked barplots in this case?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;A faceted barplot allows for comparisons to be made more easily across both airports AND airlines.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc4.37&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC4.37&lt;/h2&gt;
-&lt;p&gt;What information about the different carriers at different airports is more easily seen in the faceted barplot?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;The faceted barplot provides an easier way to see the airlines that have no departing flights and also many flights from each airport.&lt;/p&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ps6-key&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Problem Set 6&lt;/h1&gt;
-&lt;p&gt;Learning Checks &lt;a href=&#34;https://ismayc.github.io/moderndiver-book/5-manip.html&#34;&gt;LC5.1-LC5.2, LC5.4-LC5.5, LC5.7, LC5.9-LC5.14&lt;/a&gt;&lt;/p&gt;
-&lt;div id=&#34;lc5.1&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC5.1&lt;/h2&gt;
-&lt;p&gt;What’s another way using &lt;code&gt;!&lt;/code&gt; we could filter only the rows that are not going to Burlington, VT nor Seattle, WA in the &lt;code&gt;flights&lt;/code&gt; data frame? Test this out using the code above.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;This question refers to&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)
-library(nycflights13)
-not_BTV_SEA &amp;lt;- flights %&amp;gt;% 
-  filter(!(dest == &amp;quot;BTV&amp;quot; | dest == &amp;quot;SEA&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;in choosing only the rows of flights that don’t go to Burlington, Vermont or Seattle, Washington. Another way to do this is to choose those that don’t go to Burlington AND those that don’t go to Seattle:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;not_BTV_SEA2 &amp;lt;- flights %&amp;gt;% 
-  filter(!(dest == &amp;quot;BTV&amp;quot;), !(dest == &amp;quot;SEA&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;We can use the &lt;code&gt;identical&lt;/code&gt; function to show that these objects are the same:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;identical(not_BTV_SEA, not_BTV_SEA2)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc5.2&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC5.2&lt;/h2&gt;
-&lt;p&gt;Say a doctor is studying the effect of smoking on lung cancer of a large number of patients who have records measured at five year intervals. He notices that a large number of patients have missing data points because the patient has died, so he chooses to ignore these patients in his analysis. What is wrong with this doctor’s approach?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;By ignoring these data points, he is creating bias in the data. One of the major things the study is probably trying to determine is the role of smoking on lung cancer and whether or not patients had died. The point of this exercise is to understand that just applying &lt;code&gt;na.rm = TRUE&lt;/code&gt; into your analysis to remove missing values and warnings should only be done with caution.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc5.4&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC5.4&lt;/h2&gt;
-&lt;p&gt;Why doesn’t the following code work? You may want to run the code line by line instead of all at once. In other words, run &lt;code&gt;summary_temp &amp;lt;- weather %&amp;gt;% summarize(mean = mean(temp, na.rm = TRUE))&lt;/code&gt; first.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary_temp &amp;lt;- weather %&amp;gt;%   
-  summarize(mean = mean(temp, na.rm = TRUE)) %&amp;gt;% 
-  summarize(std_dev = sd(temp, na.rm = TRUE))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;The data frame created via &lt;code&gt;summary_temp &amp;lt;- weather %&amp;gt;% summarize(mean = mean(temp, na.rm = TRUE))&lt;/code&gt; will only contain one column with one value corresponding to the overall mean temperature. Thus, we can’t also calculate the standard deviation of &lt;code&gt;temp&lt;/code&gt; since &lt;code&gt;temp&lt;/code&gt; no longer exists in this aggregated data frame. The correct code to calculate the mean and standard deviation is&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary_temp &amp;lt;- weather %&amp;gt;%   
-  summarize(mean = mean(temp, na.rm = TRUE),
-            std_dev = sd(temp, na.rm = TRUE))
-summary_temp&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 1 × 2
-##       mean  std_dev
-##      &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;
-## 1 55.20351 17.78212&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc5.5&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC5.5&lt;/h2&gt;
-&lt;p&gt;Recall from Chapter &lt;a href=&#34;https://ismayc.github.io/moderndiver-book/4-viz.html&#34;&gt;4&lt;/a&gt; when we looked at plots of temperatures by months in NYC. What does the standard deviation column in the &lt;code&gt;summary_monthly_temp&lt;/code&gt; data frame tell us about temperatures in New York City throughout the year?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;This is referencing&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(knitr) # for kable function
-summary_monthly_temp &amp;lt;- weather %&amp;gt;% 
-  group_by(month) %&amp;gt;% 
-  summarize(mean = mean(temp, na.rm = TRUE), 
-            std_dev = sd(temp, na.rm = TRUE))
-kable(summary_monthly_temp)&lt;/code&gt;&lt;/pre&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr class=&#34;header&#34;&gt;
-&lt;th align=&#34;right&#34;&gt;month&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;mean&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;std_dev&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;35.64127&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;10.185459&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;34.15454&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;6.940228&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;3&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;39.81404&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;6.224948&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;4&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;51.67094&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;8.785250&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;61.59185&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9.608687&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;6&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;72.14500&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;7.603357&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;7&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;80.00967&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;7.147631&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;8&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;74.40495&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;5.171365&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;9&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;67.42582&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;8.475824&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;10&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;60.03305&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;8.829652&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;11&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;45.10893&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;10.502249&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;12&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;38.36811&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9.940822&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;We can see that the variability in temperature is highest in January and November since the standard deviation is highest in those months. June, July, and August have the lowest variability followed by February and March. This corresponds to temperature being roughly the same value all throughout those months whereas there is a lot of variability in the temperature in January and November.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc5.7&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC5.7&lt;/h2&gt;
-&lt;p&gt;Recreate &lt;code&gt;by_monthly_origin&lt;/code&gt;, but instead of grouping via &lt;code&gt;group_by(origin, month)&lt;/code&gt;, group variables in a different order &lt;code&gt;group_by(month, origin)&lt;/code&gt;. What differs in the resulting data set?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;This is referencing&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;by_monthly_origin &amp;lt;- flights %&amp;gt;% 
-  group_by(origin, month) %&amp;gt;% 
-  summarize(count = n())
-kable(by_monthly_origin)&lt;/code&gt;&lt;/pre&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr class=&#34;header&#34;&gt;
-&lt;th align=&#34;left&#34;&gt;origin&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;month&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;count&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;EWR&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9893&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;EWR&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9107&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;EWR&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;3&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;10420&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;EWR&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;4&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;10531&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;EWR&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;10592&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;EWR&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;6&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;10175&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;EWR&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;7&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;10475&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;EWR&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;8&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;10359&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;EWR&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9550&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;EWR&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;10&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;10104&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;EWR&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;11&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9707&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;EWR&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;12&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9922&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;JFK&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9161&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;JFK&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;8421&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;JFK&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;3&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9697&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;JFK&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;4&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9218&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;JFK&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9397&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;JFK&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;6&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9472&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;JFK&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;7&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;10023&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;JFK&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;8&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9983&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;JFK&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;8908&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;JFK&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;10&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9143&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;JFK&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;11&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;8710&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;JFK&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;12&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9146&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;LGA&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;7950&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;LGA&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;7423&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;LGA&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;3&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;8717&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;LGA&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;4&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;8581&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;LGA&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;8807&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;LGA&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;6&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;8596&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;LGA&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;7&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;8927&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;LGA&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;8&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;8985&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;LGA&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9116&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;LGA&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;10&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9642&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;LGA&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;11&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;8851&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;LGA&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;12&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9067&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;by_origin_month &amp;lt;- flights %&amp;gt;% 
-  group_by(month, origin) %&amp;gt;% 
-  summarize(count = n())
-kable(by_origin_month)&lt;/code&gt;&lt;/pre&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr class=&#34;header&#34;&gt;
-&lt;th align=&#34;right&#34;&gt;month&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;origin&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;count&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;EWR&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9893&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;JFK&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9161&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;LGA&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;7950&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;EWR&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9107&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;JFK&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;8421&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;LGA&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;7423&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;3&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;EWR&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;10420&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;3&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;JFK&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9697&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;3&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;LGA&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;8717&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;4&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;EWR&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;10531&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;4&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;JFK&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9218&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;4&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;LGA&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;8581&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;EWR&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;10592&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;JFK&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9397&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;LGA&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;8807&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;6&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;EWR&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;10175&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;6&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;JFK&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9472&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;6&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;LGA&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;8596&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;7&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;EWR&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;10475&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;7&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;JFK&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;10023&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;7&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;LGA&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;8927&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;8&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;EWR&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;10359&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;8&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;JFK&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9983&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;8&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;LGA&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;8985&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;9&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;EWR&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9550&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;9&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;JFK&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;8908&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;9&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;LGA&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9116&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;10&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;EWR&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;10104&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;10&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;JFK&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9143&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;10&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;LGA&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9642&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;11&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;EWR&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9707&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;11&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;JFK&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;8710&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;11&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;LGA&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;8851&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;12&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;EWR&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9922&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;12&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;JFK&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9146&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;12&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;LGA&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9067&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;This grouping orders first by &lt;code&gt;month&lt;/code&gt; and then by &lt;code&gt;origin&lt;/code&gt; whereas the previous grouping orders by &lt;code&gt;origin&lt;/code&gt; and then by &lt;code&gt;month&lt;/code&gt;. This is a simple way to sort data but you should be careful to make sure you are grouping in the appropriate order.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc5.9&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC5.9&lt;/h2&gt;
-&lt;p&gt;How does the &lt;code&gt;filter&lt;/code&gt; operation differ from a &lt;code&gt;group_by&lt;/code&gt; followed by a &lt;code&gt;summarize&lt;/code&gt;?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;filter&lt;/code&gt; only reduces the total number of rows in the original data frame to only choose those that match a given set of conditions. &lt;code&gt;group_by&lt;/code&gt; with &lt;code&gt;summarize&lt;/code&gt; creates an aggregated data frame that fundamentally is of a different size with different variables than the original data frame.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc5.10&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC5.10&lt;/h2&gt;
-&lt;p&gt;What do positive values of the &lt;code&gt;gain&lt;/code&gt; variable in &lt;code&gt;flights&lt;/code&gt; correspond to? What about negative values? And what about a zero value?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;Observing how &lt;code&gt;gain&lt;/code&gt; was defined will give us a better understanding:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;flights &amp;lt;- flights %&amp;gt;% 
-  mutate(gain = arr_delay - dep_delay)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;We can see that this value will be positive when &lt;code&gt;arr_delay&lt;/code&gt; is larger than &lt;code&gt;dep_delay&lt;/code&gt; and negative when &lt;code&gt;dep_delay&lt;/code&gt; is larger than &lt;code&gt;arr_delay&lt;/code&gt;. A zero value corresponds to no gain on the flight. This means that the pilot was not able to make up any time on the flight. A positive gain means that the pilot was NOT able to make up time during the flight since the arrival delay is more than the departure delay. A negative gain means that the pilot was able to make up time during the flight.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc5.11&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC5.11&lt;/h2&gt;
-&lt;p&gt;Could we create the &lt;code&gt;dep_delay&lt;/code&gt; and &lt;code&gt;arr_delay&lt;/code&gt; columns by simply subtracting &lt;code&gt;dep_time&lt;/code&gt; from &lt;code&gt;sched_dep_time&lt;/code&gt; and similarly for arrivals? Try the code out and explain any differences between the result and what actually appears in &lt;code&gt;flights&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;We use the &lt;code&gt;mutate()&lt;/code&gt; function to create new variables. We will also &lt;code&gt;select&lt;/code&gt; only the two newly created variables and &lt;code&gt;dep_delay&lt;/code&gt; and &lt;code&gt;arr_delay&lt;/code&gt;. Lastly, we include &lt;code&gt;dep_time&lt;/code&gt; and &lt;code&gt;sched_dep_time&lt;/code&gt; to see if the subtractions are correct and display the first 15 rows.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;flights_new &amp;lt;- flights %&amp;gt;%
-  mutate(my_dep_delay = dep_time - sched_dep_time,
-         my_arr_delay = arr_time - sched_arr_time) %&amp;gt;% 
-  select(dep_time, sched_dep_time, my_dep_delay, dep_delay, my_arr_delay, arr_delay)
-head(flights_new, 15)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 15 × 6
-##    dep_time sched_dep_time my_dep_delay dep_delay my_arr_delay arr_delay
-##       &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;        &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;        &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;
-## 1       517            515            2         2           11        11
-## 2       533            529            4         4           20        20
-## 3       542            540            2         2           73        33
-## 4       544            545           -1        -1          -18       -18
-## 5       554            600          -46        -6          -25       -25
-## 6       554            558           -4        -4           12        12
-## 7       555            600          -45        -5           59        19
-## 8       557            600          -43        -3          -14       -14
-## 9       557            600          -43        -3           -8        -8
-## 10      558            600          -42        -2            8         8
-## 11      558            600          -42        -2           -2        -2
-## 12      558            600          -42        -2           -3        -3
-## 13      558            600          -42        -2            7         7
-## 14      558            600          -42        -2          -14       -14
-## 15      559            600          -41        -1           31        31&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;We see that the first four rows look OK, but then some problems occur. &lt;code&gt;my_dep_delay&lt;/code&gt; gives a value of &lt;code&gt;-46&lt;/code&gt; when the true &lt;code&gt;dep_delay&lt;/code&gt; is &lt;code&gt;-6&lt;/code&gt;. You can see that this is due shifting to a new hour. Since &lt;code&gt;600 - 554 = -46&lt;/code&gt;, it isn’t as simple as just subtracting the two rows to get the delay. You also need to account for their only being 60 minutes in an hour not 100.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc5.12&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC5.12&lt;/h2&gt;
-&lt;p&gt;What can we say about the distribution of &lt;code&gt;gain&lt;/code&gt;? Describe it in a few sentences using the plot and the &lt;code&gt;gain_summary&lt;/code&gt; data frame values.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;Here are the plot and summary values:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)
-ggplot(data = flights, mapping = aes(x = gain)) +
-  geom_histogram(color = &amp;quot;white&amp;quot;, bins = 20)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/problem-sets/ps-key/figures/unnamed-chunk-20-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gain_summary &amp;lt;- flights %&amp;gt;% 
-  summarize(
-    min = min(gain, na.rm = TRUE),
-    q1 = quantile(gain, 0.25, na.rm = TRUE),
-    median = quantile(gain, 0.5, na.rm = TRUE),
-    q3 = quantile(gain, 0.75, na.rm = TRUE),
-    max = max(gain, na.rm = TRUE),
-    mean = mean(gain, na.rm = TRUE),
-    sd = sd(gain, na.rm = TRUE),
-    missing = sum(is.na(gain))
-  )
-kable(gain_summary)&lt;/code&gt;&lt;/pre&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr class=&#34;header&#34;&gt;
-&lt;th align=&#34;right&#34;&gt;min&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;q1&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;median&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;q3&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;max&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;mean&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;sd&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;missing&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;right&#34;&gt;-109&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;-17&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;-7&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;3&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;196&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;-5.659779&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;18.04365&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9430&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;We see from the plot that the distribution of &lt;code&gt;gain&lt;/code&gt; is roughly symmetric, but with some skew to the right for some very long delays. The mean and median values are both negative which means that we can expect to arrive a few minutes earlier than expected if our flight departs late from NYC. The standard deviation value tells us that we can expect any given flight to be about 18 minutes away from the mean value of -5.66 minutes.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc5.13&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC5.13&lt;/h2&gt;
-&lt;p&gt;Looking at Figure &lt;a href=&#34;https://ismayc.github.io/moderndiver-book/5-manip.html#fig:reldiagram&#34;&gt;5.7&lt;/a&gt;, when joining &lt;code&gt;flights&lt;/code&gt; and &lt;code&gt;weather&lt;/code&gt; (or, in other words, matching the hourly weather values with each flight), why do we need to join by all of &lt;code&gt;year&lt;/code&gt;, &lt;code&gt;month&lt;/code&gt;, &lt;code&gt;day&lt;/code&gt;, &lt;code&gt;hour&lt;/code&gt;, and &lt;code&gt;origin&lt;/code&gt;, and not just &lt;code&gt;hour&lt;/code&gt;?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;The &lt;code&gt;hour&lt;/code&gt; variable does not contain enough information for any given row in &lt;code&gt;flights&lt;/code&gt; or &lt;code&gt;weather&lt;/code&gt;. It just gives a single numeric value. Flights depart during an &lt;code&gt;hour&lt;/code&gt; of a &lt;code&gt;day&lt;/code&gt; in a &lt;code&gt;month&lt;/code&gt; in a &lt;code&gt;year&lt;/code&gt; from an &lt;code&gt;origin&lt;/code&gt; airport. Weather is also recorded at these same variables.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lc5.14&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;LC5.14&lt;/h2&gt;
-&lt;p&gt;What surprises you about the top 10 destinations from NYC in 2013?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;This is referring to&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;freq_dest &amp;lt;- flights %&amp;gt;% 
-  group_by(dest) %&amp;gt;%  
-  summarize(num_flights = n()) %&amp;gt;% 
-  arrange(desc(num_flights))
-freq_dest&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 105 × 2
-##     dest num_flights
-##    &amp;lt;chr&amp;gt;       &amp;lt;int&amp;gt;
-## 1    ORD       17283
-## 2    ATL       17215
-## 3    LAX       16174
-## 4    BOS       15508
-## 5    MCO       14082
-## 6    CLT       14064
-## 7    SFO       13331
-## 8    FLL       12055
-## 9    MIA       11728
-## 10   DCA        9705
-## # ... with 95 more rows&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Answers will vary here. One thing that stands out is that the most flights go to Chicago (ORD) and Atlanta (ATL). These airports are not very close to New York City. Both of these airports are major hubs for airlines though which is likely driving them being at the top of the list as well as Los Angeles (LAX) and Boston (BOS).&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-
-&lt;!-- BLOGDOWN-HEAD
-
-
-
-
-/BLOGDOWN-HEAD --&gt;
 </description>
     </item>
     
