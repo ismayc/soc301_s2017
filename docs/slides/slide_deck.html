@@ -22,11 +22,848 @@ class: center, middle, inverse, title-slide
 
 layout: true
 
-.footer[[Week 10 - Tuesday](https://ismayc.github.io/soc301_s2017/2017/04/04/week-10---tuesday/)]
+.footer[[Week 11 - Thursday](https://ismayc.github.io/soc301_s2017/2017/04/21/week-11---thursday/)]
 
 ---
 
 
+name: week11th
+class: center, middle
+
+# Week 11 - Thursday
+
+# April 13, 2017
+---
+
+
+# Review Midterm Exam
+
+- Here are the [solutions](Midterm_ExamKey.pdf)
+
+---
+
+# RStudio Tools
+
+### All hail the &lt;small&gt;`mosaic`&lt;/small&gt; package. Load as usual: &lt;small&gt;`library(mosaic)`&lt;/small&gt;
+
+### The following four functions will give us (most of) the random simulation tools we need:
+
+1. `rflip()`: Flip a coin
+1. `shuffle()`: Shuffle a set of values (akin to cards)
+1. `do()`: Do the same thing many, many, many times
+1. `resample()`: the swiss army knife of functions
+
+---
+
+## R Simulations Example
+
+### First load up RStudio
+
+- Create new R script file, type the following commands (not the comments), and run them in your R Console
+
+
+```r
+# Load packages, including mosaic package
+library(dplyr)
+library(ggplot2)
+library(mosaic)
+
+# Flip a coin once. Try this multiple times:
+rflip()
+```
+
+```
+## 
+## Flipping 1 coin [ Prob(Heads) = 0.5 ] ...
+## 
+## H
+## 
+## Number of Heads: 1 [Proportion Heads: 1]
+```
+
+---
+
+## R Simulations Example
+
+
+```r
+# Flip a coin 10 times. Try this multiple times:
+rflip(10)
+```
+
+```
+## 
+## Flipping 10 coins [ Prob(Heads) = 0.5 ] ...
+## 
+## H T T H H H T T T T
+## 
+## Number of Heads: 4 [Proportion Heads: 0.4]
+```
+
+---
+
+## R Simulations Example
+
+
+```r
+# Flip a coin 10 times, but do this 5 times. Try this multiple times
+do(5) * rflip(10)
+```
+
+```
+##    n heads tails prop
+## 1 10     6     4  0.6
+## 2 10     5     5  0.5
+## 3 10     6     4  0.6
+## 4 10     6     4  0.6
+## 5 10     6     4  0.6
+```
+
+---
+
+## R Simulations Example
+
+
+```r
+# Flip a coin 10 times, but do this 500 times
+do(500) * rflip(10)
+```
+
+```
+##      n heads tails prop
+## 1   10     6     4  0.6
+## 2   10     7     3  0.7
+## 3   10     4     6  0.4
+## 4   10     6     4  0.6
+## 5   10     7     3  0.7
+## 6   10     7     3  0.7
+## 7   10     7     3  0.7
+## 8   10     9     1  0.9
+## 9   10     3     7  0.3
+## 10  10     6     4  0.6
+## 11  10     2     8  0.2
+## 12  10     5     5  0.5
+## 13  10     6     4  0.6
+## 14  10     5     5  0.5
+## 15  10     7     3  0.7
+## 16  10     2     8  0.2
+## 17  10     7     3  0.7
+## 18  10     6     4  0.6
+## 19  10     3     7  0.3
+## 20  10     6     4  0.6
+## 21  10     5     5  0.5
+## 22  10     3     7  0.3
+## 23  10     3     7  0.3
+## 24  10     8     2  0.8
+## 25  10     6     4  0.6
+## 26  10     5     5  0.5
+## 27  10     6     4  0.6
+## 28  10     6     4  0.6
+## 29  10     8     2  0.8
+## 30  10     7     3  0.7
+## 31  10     6     4  0.6
+## 32  10     3     7  0.3
+## 33  10     5     5  0.5
+## 34  10     3     7  0.3
+## 35  10     3     7  0.3
+## 36  10     3     7  0.3
+## 37  10     5     5  0.5
+## 38  10     6     4  0.6
+## 39  10     4     6  0.4
+## 40  10     4     6  0.4
+## 41  10     2     8  0.2
+## 42  10     3     7  0.3
+## 43  10     6     4  0.6
+## 44  10     7     3  0.7
+## 45  10     3     7  0.3
+## 46  10     5     5  0.5
+## 47  10     7     3  0.7
+## 48  10     3     7  0.3
+## 49  10     3     7  0.3
+## 50  10     3     7  0.3
+## 51  10     7     3  0.7
+## 52  10     5     5  0.5
+## 53  10     3     7  0.3
+## 54  10     5     5  0.5
+## 55  10     5     5  0.5
+## 56  10     5     5  0.5
+## 57  10     6     4  0.6
+## 58  10     7     3  0.7
+## 59  10     3     7  0.3
+## 60  10     6     4  0.6
+## 61  10     4     6  0.4
+## 62  10     7     3  0.7
+## 63  10     4     6  0.4
+## 64  10     9     1  0.9
+## 65  10     5     5  0.5
+## 66  10     5     5  0.5
+## 67  10     7     3  0.7
+## 68  10     6     4  0.6
+## 69  10     5     5  0.5
+## 70  10     2     8  0.2
+## 71  10     3     7  0.3
+## 72  10     5     5  0.5
+## 73  10     4     6  0.4
+## 74  10     5     5  0.5
+## 75  10     5     5  0.5
+## 76  10     4     6  0.4
+## 77  10     5     5  0.5
+## 78  10     4     6  0.4
+## 79  10     8     2  0.8
+## 80  10     3     7  0.3
+## 81  10     5     5  0.5
+## 82  10     5     5  0.5
+## 83  10     5     5  0.5
+## 84  10     4     6  0.4
+## 85  10     5     5  0.5
+## 86  10     2     8  0.2
+## 87  10     4     6  0.4
+## 88  10     6     4  0.6
+## 89  10     3     7  0.3
+## 90  10     5     5  0.5
+## 91  10     3     7  0.3
+## 92  10     7     3  0.7
+## 93  10     6     4  0.6
+## 94  10     4     6  0.4
+## 95  10     6     4  0.6
+## 96  10     7     3  0.7
+## 97  10     6     4  0.6
+## 98  10     6     4  0.6
+## 99  10     6     4  0.6
+## 100 10     6     4  0.6
+## 101 10     4     6  0.4
+## 102 10     5     5  0.5
+## 103 10     5     5  0.5
+## 104 10     3     7  0.3
+## 105 10     7     3  0.7
+## 106 10     2     8  0.2
+## 107 10     4     6  0.4
+## 108 10     4     6  0.4
+## 109 10     8     2  0.8
+## 110 10     5     5  0.5
+## 111 10     6     4  0.6
+## 112 10     6     4  0.6
+## 113 10     6     4  0.6
+## 114 10     5     5  0.5
+## 115 10     5     5  0.5
+## 116 10     6     4  0.6
+## 117 10     4     6  0.4
+## 118 10     6     4  0.6
+## 119 10     6     4  0.6
+## 120 10     4     6  0.4
+## 121 10     5     5  0.5
+## 122 10     7     3  0.7
+## 123 10     2     8  0.2
+## 124 10     2     8  0.2
+## 125 10     6     4  0.6
+## 126 10     3     7  0.3
+## 127 10     5     5  0.5
+## 128 10     2     8  0.2
+## 129 10     6     4  0.6
+## 130 10     2     8  0.2
+## 131 10     6     4  0.6
+## 132 10     3     7  0.3
+## 133 10     7     3  0.7
+## 134 10     4     6  0.4
+## 135 10     3     7  0.3
+## 136 10     5     5  0.5
+## 137 10     5     5  0.5
+## 138 10     8     2  0.8
+## 139 10     7     3  0.7
+## 140 10     3     7  0.3
+## 141 10     2     8  0.2
+## 142 10     3     7  0.3
+## 143 10     5     5  0.5
+## 144 10     8     2  0.8
+## 145 10     4     6  0.4
+## 146 10     3     7  0.3
+## 147 10     4     6  0.4
+## 148 10     5     5  0.5
+## 149 10     5     5  0.5
+## 150 10     6     4  0.6
+## 151 10     9     1  0.9
+## 152 10     4     6  0.4
+## 153 10     4     6  0.4
+## 154 10     3     7  0.3
+## 155 10     8     2  0.8
+## 156 10     4     6  0.4
+## 157 10     5     5  0.5
+## 158 10     6     4  0.6
+## 159 10     6     4  0.6
+## 160 10     3     7  0.3
+## 161 10     5     5  0.5
+## 162 10     4     6  0.4
+## 163 10     6     4  0.6
+## 164 10     6     4  0.6
+## 165 10     4     6  0.4
+## 166 10     5     5  0.5
+## 167 10     5     5  0.5
+## 168 10     6     4  0.6
+## 169 10     7     3  0.7
+## 170 10     6     4  0.6
+## 171 10     4     6  0.4
+## 172 10     3     7  0.3
+## 173 10     4     6  0.4
+## 174 10     8     2  0.8
+## 175 10     4     6  0.4
+## 176 10     4     6  0.4
+## 177 10     4     6  0.4
+## 178 10     7     3  0.7
+## 179 10     5     5  0.5
+## 180 10     6     4  0.6
+## 181 10     6     4  0.6
+## 182 10     6     4  0.6
+## 183 10     5     5  0.5
+## 184 10     4     6  0.4
+## 185 10     9     1  0.9
+## 186 10     7     3  0.7
+## 187 10     7     3  0.7
+## 188 10     5     5  0.5
+## 189 10    10     0  1.0
+## 190 10     6     4  0.6
+## 191 10     5     5  0.5
+## 192 10     5     5  0.5
+## 193 10     6     4  0.6
+## 194 10     5     5  0.5
+## 195 10     3     7  0.3
+## 196 10     6     4  0.6
+## 197 10     7     3  0.7
+## 198 10     5     5  0.5
+## 199 10     6     4  0.6
+## 200 10     5     5  0.5
+## 201 10     5     5  0.5
+## 202 10     5     5  0.5
+## 203 10     5     5  0.5
+## 204 10     4     6  0.4
+## 205 10     6     4  0.6
+## 206 10     5     5  0.5
+## 207 10     3     7  0.3
+## 208 10     6     4  0.6
+## 209 10     3     7  0.3
+## 210 10     3     7  0.3
+## 211 10     3     7  0.3
+## 212 10     6     4  0.6
+## 213 10     5     5  0.5
+## 214 10     4     6  0.4
+## 215 10     6     4  0.6
+## 216 10     4     6  0.4
+## 217 10     5     5  0.5
+## 218 10     4     6  0.4
+## 219 10     5     5  0.5
+## 220 10     7     3  0.7
+## 221 10     3     7  0.3
+## 222 10     3     7  0.3
+## 223 10     5     5  0.5
+## 224 10     2     8  0.2
+## 225 10     5     5  0.5
+## 226 10     4     6  0.4
+## 227 10     4     6  0.4
+## 228 10     1     9  0.1
+## 229 10     4     6  0.4
+## 230 10     6     4  0.6
+## 231 10     4     6  0.4
+## 232 10     2     8  0.2
+## 233 10     3     7  0.3
+## 234 10     5     5  0.5
+## 235 10     4     6  0.4
+## 236 10     7     3  0.7
+## 237 10     6     4  0.6
+## 238 10     2     8  0.2
+## 239 10     6     4  0.6
+## 240 10     2     8  0.2
+## 241 10     5     5  0.5
+## 242 10     7     3  0.7
+## 243 10     6     4  0.6
+## 244 10     3     7  0.3
+## 245 10     7     3  0.7
+## 246 10     5     5  0.5
+## 247 10     6     4  0.6
+## 248 10     3     7  0.3
+## 249 10     6     4  0.6
+## 250 10     5     5  0.5
+## 251 10     2     8  0.2
+## 252 10     6     4  0.6
+## 253 10     5     5  0.5
+## 254 10     7     3  0.7
+## 255 10     4     6  0.4
+## 256 10     5     5  0.5
+## 257 10     6     4  0.6
+## 258 10     5     5  0.5
+## 259 10     6     4  0.6
+## 260 10     5     5  0.5
+## 261 10     7     3  0.7
+## 262 10     7     3  0.7
+## 263 10     6     4  0.6
+## 264 10     5     5  0.5
+## 265 10     6     4  0.6
+## 266 10     1     9  0.1
+## 267 10     5     5  0.5
+## 268 10     4     6  0.4
+## 269 10     8     2  0.8
+## 270 10     6     4  0.6
+## 271 10     4     6  0.4
+## 272 10     5     5  0.5
+## 273 10     4     6  0.4
+## 274 10     5     5  0.5
+## 275 10     3     7  0.3
+## 276 10     4     6  0.4
+## 277 10     5     5  0.5
+## 278 10     4     6  0.4
+## 279 10     4     6  0.4
+## 280 10     2     8  0.2
+## 281 10     3     7  0.3
+## 282 10     7     3  0.7
+## 283 10     7     3  0.7
+## 284 10     8     2  0.8
+## 285 10     8     2  0.8
+## 286 10     3     7  0.3
+## 287 10     3     7  0.3
+## 288 10     7     3  0.7
+## 289 10     3     7  0.3
+## 290 10     5     5  0.5
+## 291 10     5     5  0.5
+## 292 10     4     6  0.4
+## 293 10     4     6  0.4
+## 294 10     8     2  0.8
+## 295 10     2     8  0.2
+## 296 10     7     3  0.7
+## 297 10     4     6  0.4
+## 298 10     7     3  0.7
+## 299 10     5     5  0.5
+## 300 10     5     5  0.5
+## 301 10     4     6  0.4
+## 302 10     6     4  0.6
+## 303 10     7     3  0.7
+## 304 10     7     3  0.7
+## 305 10     5     5  0.5
+## 306 10     6     4  0.6
+## 307 10     4     6  0.4
+## 308 10     4     6  0.4
+## 309 10     5     5  0.5
+## 310 10     3     7  0.3
+## 311 10     7     3  0.7
+## 312 10     7     3  0.7
+## 313 10     2     8  0.2
+## 314 10     5     5  0.5
+## 315 10     9     1  0.9
+## 316 10     5     5  0.5
+## 317 10     7     3  0.7
+## 318 10     7     3  0.7
+## 319 10     5     5  0.5
+## 320 10     6     4  0.6
+## 321 10     7     3  0.7
+## 322 10     6     4  0.6
+## 323 10     3     7  0.3
+## 324 10     6     4  0.6
+## 325 10     4     6  0.4
+## 326 10     5     5  0.5
+## 327 10     8     2  0.8
+## 328 10     2     8  0.2
+## 329 10     6     4  0.6
+## 330 10     5     5  0.5
+## 331 10     5     5  0.5
+## 332 10     4     6  0.4
+## 333 10     4     6  0.4
+## 334 10     4     6  0.4
+## 335 10     7     3  0.7
+## 336 10     4     6  0.4
+## 337 10     6     4  0.6
+## 338 10     4     6  0.4
+## 339 10     6     4  0.6
+## 340 10     2     8  0.2
+## 341 10     7     3  0.7
+## 342 10     3     7  0.3
+## 343 10     5     5  0.5
+## 344 10     7     3  0.7
+## 345 10     5     5  0.5
+## 346 10     7     3  0.7
+## 347 10     6     4  0.6
+## 348 10     6     4  0.6
+## 349 10     4     6  0.4
+## 350 10     4     6  0.4
+## 351 10     3     7  0.3
+## 352 10     5     5  0.5
+## 353 10     6     4  0.6
+## 354 10     4     6  0.4
+## 355 10     4     6  0.4
+## 356 10     6     4  0.6
+## 357 10     4     6  0.4
+## 358 10     5     5  0.5
+## 359 10     6     4  0.6
+## 360 10     5     5  0.5
+## 361 10     8     2  0.8
+## 362 10     9     1  0.9
+## 363 10     7     3  0.7
+## 364 10     7     3  0.7
+## 365 10     5     5  0.5
+## 366 10     4     6  0.4
+## 367 10     5     5  0.5
+## 368 10     4     6  0.4
+## 369 10     6     4  0.6
+## 370 10     6     4  0.6
+## 371 10     7     3  0.7
+## 372 10     4     6  0.4
+## 373 10     8     2  0.8
+## 374 10     2     8  0.2
+## 375 10     4     6  0.4
+## 376 10     1     9  0.1
+## 377 10     5     5  0.5
+## 378 10     3     7  0.3
+## 379 10     6     4  0.6
+## 380 10     6     4  0.6
+## 381 10     5     5  0.5
+## 382 10     4     6  0.4
+## 383 10     6     4  0.6
+## 384 10     4     6  0.4
+## 385 10     6     4  0.6
+## 386 10     5     5  0.5
+## 387 10     5     5  0.5
+## 388 10     6     4  0.6
+## 389 10     3     7  0.3
+## 390 10     4     6  0.4
+## 391 10     2     8  0.2
+## 392 10     4     6  0.4
+## 393 10     5     5  0.5
+## 394 10     3     7  0.3
+## 395 10     4     6  0.4
+## 396 10     5     5  0.5
+## 397 10     5     5  0.5
+## 398 10     6     4  0.6
+## 399 10     3     7  0.3
+## 400 10     5     5  0.5
+## 401 10     4     6  0.4
+## 402 10     5     5  0.5
+## 403 10     5     5  0.5
+## 404 10     4     6  0.4
+## 405 10     4     6  0.4
+## 406 10     7     3  0.7
+## 407 10     7     3  0.7
+## 408 10     4     6  0.4
+## 409 10     6     4  0.6
+## 410 10     7     3  0.7
+## 411 10     4     6  0.4
+## 412 10     4     6  0.4
+## 413 10     6     4  0.6
+## 414 10     6     4  0.6
+## 415 10     6     4  0.6
+## 416 10     7     3  0.7
+## 417 10     7     3  0.7
+## 418 10     5     5  0.5
+## 419 10     4     6  0.4
+## 420 10     4     6  0.4
+## 421 10     4     6  0.4
+## 422 10     3     7  0.3
+## 423 10     6     4  0.6
+## 424 10     4     6  0.4
+## 425 10     5     5  0.5
+## 426 10     6     4  0.6
+## 427 10     6     4  0.6
+## 428 10     3     7  0.3
+## 429 10     3     7  0.3
+## 430 10     6     4  0.6
+## 431 10     1     9  0.1
+## 432 10     8     2  0.8
+## 433 10     5     5  0.5
+## 434 10     7     3  0.7
+## 435 10     4     6  0.4
+## 436 10     5     5  0.5
+## 437 10     1     9  0.1
+## 438 10     3     7  0.3
+## 439 10     4     6  0.4
+## 440 10     5     5  0.5
+## 441 10     1     9  0.1
+## 442 10     4     6  0.4
+## 443 10     5     5  0.5
+## 444 10     4     6  0.4
+## 445 10     5     5  0.5
+## 446 10     4     6  0.4
+## 447 10     4     6  0.4
+## 448 10     5     5  0.5
+## 449 10     3     7  0.3
+## 450 10     8     2  0.8
+## 451 10     6     4  0.6
+## 452 10     5     5  0.5
+## 453 10     2     8  0.2
+## 454 10     4     6  0.4
+## 455 10     3     7  0.3
+## 456 10     5     5  0.5
+## 457 10     3     7  0.3
+## 458 10     3     7  0.3
+## 459 10     3     7  0.3
+## 460 10     6     4  0.6
+## 461 10     6     4  0.6
+## 462 10     7     3  0.7
+## 463 10     4     6  0.4
+## 464 10     4     6  0.4
+## 465 10     7     3  0.7
+## 466 10     6     4  0.6
+## 467 10     2     8  0.2
+## 468 10     5     5  0.5
+## 469 10     3     7  0.3
+## 470 10     3     7  0.3
+## 471 10     4     6  0.4
+## 472 10     6     4  0.6
+## 473 10     6     4  0.6
+## 474 10     4     6  0.4
+## 475 10     3     7  0.3
+## 476 10     3     7  0.3
+## 477 10     4     6  0.4
+## 478 10     5     5  0.5
+## 479 10    10     0  1.0
+## 480 10     6     4  0.6
+## 481 10     4     6  0.4
+## 482 10     4     6  0.4
+## 483 10     3     7  0.3
+## 484 10     7     3  0.7
+## 485 10     4     6  0.4
+## 486 10     4     6  0.4
+## 487 10     7     3  0.7
+## 488 10     6     4  0.6
+## 489 10     6     4  0.6
+## 490 10     7     3  0.7
+## 491 10     4     6  0.4
+## 492 10     5     5  0.5
+## 493 10     5     5  0.5
+## 494 10     5     5  0.5
+## 495 10     6     4  0.6
+## 496 10     3     7  0.3
+## 497 10     5     5  0.5
+## 498 10     4     6  0.4
+## 499 10     3     7  0.3
+## 500 10     7     3  0.7
+```
+
+---
+
+## R Simulations Example
+
+
+```r
+# Gah! There are too many rows!
+simulations &lt;- do(500) * rflip(10)
+```
+
+```r
+# We could also View() it
+View(simulations)
+```
+
+---
+
+## R Simulations Example
+
+
+```r
+# Plot our resulting proportions
+ggplot(data = simulations, aes(x = prop)) +
+  geom_histogram(binwidth = 0.1, color = "white")
+```
+
+![](slide_deck_files/figure-html/unnamed-chunk-8-1.png)&lt;!-- --&gt;
+
+---
+
+## R Simulations Example
+
+
+```r
+# Plot our resulting proportions
+ggplot(data = simulations, mapping = aes(x = factor(prop))) +
+  geom_bar()
+```
+
+![](slide_deck_files/figure-html/unnamed-chunk-9-1.png)&lt;!-- --&gt;
+
+
+---
+
+
+## Shuffling AKA Permuting
+
+Shuffling AKA re-ordering AKA **permuting** are all synonyms. I'm going to use
+all three terms interchangeably. 
+
+Type the following code into your R script:
+
+
+```r
+library(mosaic)
+# Define a vector fruit
+fruit &lt;- c("apple", "orange", "mango")
+
+# Do this multiple times:
+shuffle(fruit)
+```
+
+---
+
+
+## Shuffling AKA Permuting
+
+This works with the `do()` operator...
+
+
+```r
+do(5) * shuffle(fruit)
+```
+
+... as well as within a `mutate()`
+
+
+
+
+```r
+example_data &lt;- data_frame(
+  name = c("Ilana", "Abbi", "Hannibal"),
+  fruit = c("apple", "orange", "mango")
+)
+
+# Run this multiple times: 
+example_data %&gt;% mutate(fruit = shuffle(fruit))
+```
+
+---
+
+## Key Distinction
+
+### A *huge* distinction in types of sampling:
+
+1. Sampling **with** replacement
+1. Sampling **without** replacement
+
+---
+
+## Resampling
+
+### At its most basic, `resample()` resamples the input vector **with** replacement. Run this in the console multiple times from your R script:
+
+
+```r
+resample(fruit)
+```
+
+* You can get the same fruit all three times i.e. sampling with replacement
+* `resample()` has default settings that we can set to fit our needs; it is a swiss army knife.
+* Let's unpack the defaults:
+
+---
+
+
+## Resampling
+
+
+```r
+resample(x = fruit, size = length(x), replace = TRUE, 
+         prob = rep(1 / length(x), times = length(x)) )
+```
+
+* &lt;small&gt;`x`&lt;/small&gt; is the input. In this case &lt;small&gt;`fruit`&lt;/small&gt;.
+* &lt;small&gt;`size`&lt;/small&gt;: size of output vector. By default the same size as &lt;small&gt;`x`&lt;/small&gt;.
+* &lt;small&gt;`replace`&lt;/small&gt;: Sample **with** or **without** replacement. By default with replacement.
+* &lt;small&gt;`prob`&lt;/small&gt;: Probability of sampling each input value. By default, equal probability
+* Run the following.  What does it do?
+
+
+```r
+rep(1/length(fruit), times = length(fruit))
+```
+
+---
+
+## Scenario for Today
+
+* Say you are a statistician and you meet someone called the "Lady Tasting Tea."
+* She claims she can tell by tasting whether the tea or the milk was added first to a cup.
+--
+
+* You want to test whether
+    + She can actually tell which came first **OR**
+    + She's lying and is only guessing at random
+--
+* Say you have just enough tea/milk to pour into 10 cups.
+
+---
+
+## Lady Tasting Tea
+
+* Lady Tasting Tea claims she can tell if tea or milk was poured first into a cup
+* You run an experiment with 10 cups if she can tell or if she is bullshitting
+* Let's _assume a hypothetical world where she is guessing at random_.
+
+---
+
+## Lady Tasting Tea
+
+### If guessing at random, here are the *hypothetical* outcomes:
+
+![](slide_deck_files/figure-html/unnamed-chunk-16-1.png)&lt;!-- --&gt;
+
+---
+
+## Lady Tasting Tea
+
+She got 9/10 right!
+
+
+```r
+ggplot(simulation, aes(x = n_correct)) + 
+  geom_bar() +
+  labs(x="Number of Guesses Correct") +
+  geom_vline(xintercept = 9, color = "red")
+```
+
+![](slide_deck_files/figure-html/unnamed-chunk-17-1.png)&lt;!-- --&gt;
+
+---
+
+## Lady Tasting Tea
+
+She got 9/10 right!
+
+
+```r
+ggplot(simulation, aes(x = n_correct)) + 
+  geom_bar() +
+  labs(x = "Number of Guesses Correct") +
+  geom_vline(xintercept = 9, color = "red") +
+  scale_x_continuous(breaks = 0:10)
+```
+
+![](slide_deck_files/figure-html/unnamed-chunk-18-1.png)&lt;!-- --&gt;
+
+---
+
+## Lady Tasting Tea
+
+* In our hypothetical world of guessing at random, 9/10 OR MORE occured 
+116 times out of 10000. i.e. &lt;br&gt;
+1.16% of the time. 
+* Can she tell, or is she bullshitting?
+
+---
+
+## Problem Set 10
+
+- Due by end of class today
+- Turn in individually via pencil-and-paper
+
+### [Learning Checks](https://ismayc.github.io/moderndiver-book/6-sim.html)
+
+- LC6.1
+- LC6.3
+- LC6.9
+- LC6.11
+- LC6.13
+- LC6.15
+
+---
+
+
+layout: true
+
+.footer[[Week 10 - Tuesday](https://ismayc.github.io/soc301_s2017/2017/04/04/week-10---tuesday/)]
+
+---
 
 
 name: week10t
@@ -42,7 +879,7 @@ class: center, middle
 
 What `dplyr` and `ggplot2` code is needed to produce the following plot using the `gapminder` data set?  (You can assume `library()` has already been run on all needed packages.) *Hint*:  You should use the `%in%` operator.
 
-![](slide_deck_files/figure-html/unnamed-chunk-2-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-19-1.png)&lt;!-- --&gt;
 
 What stands out to you from a social perspective as you observe this graph?
 
@@ -178,9 +1015,6 @@ Doing this repeatedly by hand is tiring:
 ensuring that you can perform the tasks asked of you in the group project individually.
 
 ---
-
-
-
 
 
 layout: true
@@ -1156,7 +1990,7 @@ class: center, middle
 
 What code is needed to produce this plot using the `na.omit(flying)` data frame derived from the `fivethirtyeight` package?  Make sure to load all needed libraries.
 
-&lt;img src="slide_deck_files/figure-html/unnamed-chunk-35-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="slide_deck_files/figure-html/unnamed-chunk-52-1.png" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -1185,7 +2019,7 @@ ggplot(data = bechdel, mapping = aes(x = five_year)) +
   geom_bar(position = "fill")
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-37-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-54-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -1198,7 +2032,7 @@ ggplot(data = bechdel, mapping = aes(x = five_year,
   geom_bar(position = "fill")
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-38-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-55-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -1211,7 +2045,7 @@ ggplot(data = bechdel, mapping = aes(x = five_year,
   geom_bar(position = "fill", color = "white")
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-39-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-56-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -1224,7 +2058,7 @@ ggplot(data = bechdel, mapping = aes(x = five_year,
       c("#FF2603", "#FF937F", "#FEC9C3", "#6AB4DA", "#018ED5"))
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-40-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-57-1.png)&lt;!-- --&gt;
 
 Identified colors from the `bechdel` 538 [image](https://espnfivethirtyeight.files.wordpress.com/2014/04/hickey-bechdel-11.png?quality=90&amp;strip=all&amp;w=1150&amp;ssl=1) at http://imagecolorpicker.com/
 
@@ -1241,7 +2075,7 @@ ggplot(data = bechdel, mapping = aes(x = five_year,
       c("navy", "blanchedalmond", "brown", "gray87", "lawngreen"))
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-41-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-58-1.png)&lt;!-- --&gt;
 
 
 ---
@@ -1427,7 +2261,7 @@ ggplot(data = hist_example, mapping = aes(x = numeric_var)) +
   geom_histogram(binwidth = 6, color = "black", fill = "white")
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-44-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-61-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -1481,7 +2315,7 @@ ggplot(data = class_df, mapping = aes(x = class)) +
   geom_bar(fill = "lightgreen", color = "black")
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-46-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-63-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -1516,7 +2350,7 @@ ggplot(data = class_freq, mapping = aes(x = class, y = count)) +
   geom_col(fill = "lightgreen", color = "black")
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-48-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-65-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -1540,7 +2374,7 @@ ggplot(data = class_freq, mapping = aes(x = class, y = count)) +
 
 - This is using the `profiles` data frame in the `okcupiddata` package.
 
-![](slide_deck_files/figure-html/unnamed-chunk-49-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-66-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -1551,7 +2385,7 @@ ggplot(data = class_freq, mapping = aes(x = class, y = count)) +
 
 - What code is needed to produce this plot?
 
-![](slide_deck_files/figure-html/unnamed-chunk-50-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-67-1.png)&lt;!-- --&gt;
 
 
 ---
@@ -1563,7 +2397,7 @@ ggplot(data = class_freq, mapping = aes(x = class, y = count)) +
 
 - What code is needed to produce this plot?
 
-![](slide_deck_files/figure-html/unnamed-chunk-51-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-68-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -1574,7 +2408,7 @@ ggplot(data = class_freq, mapping = aes(x = class, y = count)) +
 
 - What code is needed to produce this plot?
 
-![](slide_deck_files/figure-html/unnamed-chunk-52-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-69-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -1585,7 +2419,7 @@ ggplot(data = class_freq, mapping = aes(x = class, y = count)) +
 
 - What code is needed to produce this plot?
 
-![](slide_deck_files/figure-html/unnamed-chunk-53-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-70-1.png)&lt;!-- --&gt;
 
 
 ---
@@ -1661,7 +2495,7 @@ class: center, middle
 Write the code necessary to produce the last plot using the `US_births_2014` data frame from the [Scatter-plots and Line-graphs](https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/scatter-plots-line-graphs?ex=4) chapter of DataCamp:
 
 
-![](slide_deck_files/figure-html/unnamed-chunk-54-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-71-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -1669,7 +2503,7 @@ Write the code necessary to produce the last plot using the `US_births_2014` dat
 
 - What stands out to you when you look at this plot?  In other words, what stories could be told by observing this data?
 
-![](slide_deck_files/figure-html/unnamed-chunk-55-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-72-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -1726,7 +2560,7 @@ ggplot(data = hist_example, mapping = aes(x = numeric_var)) +
   geom_histogram(binwidth = 6, color = "black", fill = "white")
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-58-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-75-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -1779,7 +2613,7 @@ class: center, middle
 
 - Write the code to produce the plot below
 
-![](slide_deck_files/figure-html/unnamed-chunk-61-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-78-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -1793,7 +2627,7 @@ ggplot(data = weather, mapping = aes(x = humid, fill = origin)) +
   facet_grid(facets = origin ~ .)
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-62-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-79-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -1811,7 +2645,7 @@ ggplot(data = weather, mapping = aes(x = humid, fill = origin)) +
 
 - Another way to view the relationship between a categorical explanatory variable and a numerical response variable is via a boxplot.  Think about how we might write the code to produce the boxplot for humidity across airports.
 
-![](slide_deck_files/figure-html/unnamed-chunk-63-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-80-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -1866,7 +2700,7 @@ class: center, middle
 - &lt;small&gt;Make sure to load all needed packages!&lt;/small&gt;
 
 
-![](slide_deck_files/figure-html/unnamed-chunk-64-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-81-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -2087,7 +2921,7 @@ ggplot(data = simple_ex, mapping = aes(x = A, y = B)) +
 ```
 --
 
-![](slide_deck_files/figure-html/unnamed-chunk-70-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-87-1.png)&lt;!-- --&gt;
 
 
 ---
@@ -2105,7 +2939,7 @@ ggplot(data = simple_ex, mapping = aes(x = A, y = B)) +
 ```
 --
 
-![](slide_deck_files/figure-html/unnamed-chunk-72-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-89-1.png)&lt;!-- --&gt;
 
 
 ---
@@ -2122,7 +2956,7 @@ ggplot(data = simple_ex, mapping = aes(x = A, y = B, size = C)) +
 ```
 --
 
-![](slide_deck_files/figure-html/unnamed-chunk-74-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-91-1.png)&lt;!-- --&gt;
 
 
 ---
@@ -2139,7 +2973,7 @@ ggplot(data = simple_ex, mapping = aes(x = A, y = B)) +
 ```
 --
 
-![](slide_deck_files/figure-html/unnamed-chunk-76-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-93-1.png)&lt;!-- --&gt;
 
 
 ---
@@ -2156,7 +2990,7 @@ ggplot(data = simple_ex, mapping = aes(x = A, y = B, color = D)) +
 ```
 --
 
-![](slide_deck_files/figure-html/unnamed-chunk-78-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-95-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -2222,14 +3056,14 @@ ggplot(data = total_fert_tidy, mapping = aes(x = year, y = fert)) +
   geom_point()
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-80-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-97-1.png)&lt;!-- --&gt;
 
 
 ---
 
 ## Discussing the scatterplot
 
-![](slide_deck_files/figure-html/unnamed-chunk-81-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-98-1.png)&lt;!-- --&gt;
 
 - What stands out to you as you look at this plot?
 - What other information would be useful here?
@@ -2286,7 +3120,7 @@ ggplot(data = total_fert_tidy,
   geom_point()
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-83-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-100-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -2300,7 +3134,7 @@ ggplot(data = total_fert_tidy,
   geom_point()
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-84-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-101-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -2315,7 +3149,7 @@ ggplot(data = total_fert_tidy,
   geom_point()
 ```
 
-![](slide_deck_files/figure-html/unnamed-chunk-85-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-102-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -2431,7 +3265,7 @@ head(gap2007, n = 10)
 
 - Write the code on paper and then discuss in groups of 3.
 
-![](slide_deck_files/figure-html/unnamed-chunk-89-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-106-1.png)&lt;!-- --&gt;
 
 --
 
@@ -2444,7 +3278,7 @@ that would be of interest here?
 
 - Write the code on paper and then discuss in groups of 3.
 
-![](slide_deck_files/figure-html/unnamed-chunk-90-1.png)&lt;!-- --&gt;
+![](slide_deck_files/figure-html/unnamed-chunk-107-1.png)&lt;!-- --&gt;
 --
 
 - What information is added by the coloring here?
@@ -2516,7 +3350,7 @@ What `ggplot2` code is needed to produce this plot? The `simple_ex` data frame i
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;img src="slide_deck_files/figure-html/unnamed-chunk-91-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="slide_deck_files/figure-html/unnamed-chunk-108-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 

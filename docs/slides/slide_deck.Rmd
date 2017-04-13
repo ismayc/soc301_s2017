@@ -23,174 +23,294 @@ theme_set(theme_gray(base_size = 26))
 
 layout: true
 
-.footer[[Week 10 - Tuesday](https://ismayc.github.io/soc301_s2017/2017/04/04/week-10---tuesday/)]
+.footer[[Week 11 - Thursday](https://ismayc.github.io/soc301_s2017/2017/04/21/week-11---thursday/)]
 
 ---
 
 
-
-
-name: week10t
+name: week11th
 class: center, middle
 
-# Week 10 - Tuesday
+# Week 11 - Thursday
 
-# April 4, 2017
+# April 13, 2017
 ---
 
 
-# Warmup - Similar to Old Exam Question
+# Review Midterm Exam
 
-What `dplyr` and `ggplot2` code is needed to produce the following plot using the `gapminder` data set?  (You can assume `library()` has already been run on all needed packages.) *Hint*:  You should use the `%in%` operator.
+- Here are the [solutions](Midterm_ExamKey.pdf)
 
-```{r echo=FALSE, fig.width=11, fig.height=5}
-library(gapminder)
-library(ggplot2)
+---
+
+# RStudio Tools
+
+### All hail the <small>`mosaic`</small> package. Load as usual: <small>`library(mosaic)`</small>
+
+### The following four functions will give us (most of) the random simulation tools we need:
+
+1. `rflip()`: Flip a coin
+1. `shuffle()`: Shuffle a set of values (akin to cards)
+1. `do()`: Do the same thing many, many, many times
+1. `resample()`: the swiss army knife of functions
+
+---
+
+## R Simulations Example
+
+### First load up RStudio
+
+- Create new R script file, type the following commands (not the comments), and run them in your R Console
+
+```{r, message=FALSE, echo=TRUE}
+# Load packages, including mosaic package
 library(dplyr)
-country_list <- c("Guatemala", "Uganda", "Ethiopia", "Bangladesh")
-six_countries <- gapminder %>% dplyr::filter(country %in% country_list)
-ggplot(data = six_countries, 
-  aes(x = year, y = lifeExp, color = country)) +
-  geom_line() +
-  geom_point()
+library(ggplot2)
+library(mosaic)
+
+# Flip a coin once. Try this multiple times:
+rflip()
 ```
 
-What stands out to you from a social perspective as you observe this graph?
+---
+
+## R Simulations Example
+
+```{r echo=TRUE}
+# Flip a coin 10 times. Try this multiple times:
+rflip(10)
+```
 
 ---
 
-## Goals for the course going forward
+## R Simulations Example
 
-- Focus on understanding how data visualization and data wrangling play a role in inference
-- Discuss FiveThirtyEight articles from a social perspective while also relating back to statistical content
-- Work on summarizing important content and giving you a better sense of what to expect
-- What I need from you
-  - More questions!  I can't know what you don't understand unless you ask.
-  - Focus on testing for your own understanding and speaking up when something needs more explanation
+```{r echo=TRUE}
+# Flip a coin 10 times, but do this 5 times. Try this multiple times
+do(5) * rflip(10)
+```
 
 ---
 
-## Today: Switching Gears
+## R Simulations Example
 
-* We've covered **Tidy**, **Visualize**, and **Transform** 
-* Start with **Model**
-* The focus throughout is on **Communicate**.
-
-<img src="figure/pipeline.png" alt="Drawing" style="width: 700px;" border="1"/>
-
----
-
-## Key Definitions
-
-### Let's ask our favorite search engine:
-
-* Define inference
-* Define **statistical** inference
+```{r echo=TRUE}
+# Flip a coin 10 times, but do this 500 times
+do(500) * rflip(10)
+```
 
 ---
 
-# Sampling
+## R Simulations Example
 
-## Match the term to its correct definition
+```{r echo=TRUE}
+# Gah! There are too many rows!
+simulations <- do(500) * rflip(10)
+```
+```{r eval=FALSE, echo=TRUE}
+# We could also View() it
+View(simulations)
+```
 
-- Carefully read over the [worksheet](sampling.pdf) individually
-- Complete the [worksheet](sampling.pdf) individually
-- Then pair up with two or three new people from class that you haven't worked with before to
-go over your answers
+---
+
+## R Simulations Example
+
+```{r echo=TRUE, fig.height=5}
+# Plot our resulting proportions
+ggplot(data = simulations, aes(x = prop)) +
+  geom_histogram(binwidth = 0.1, color = "white")
+```
+
+---
+
+## R Simulations Example
+
+```{r echo=TRUE, fig.height=5}
+# Plot our resulting proportions
+ggplot(data = simulations, mapping = aes(x = factor(prop))) +
+  geom_bar()
+```
 
 
 ---
 
-## The Paradigm for the Rest of the Class
 
-<img src="figure/target-population.jpg" alt="Drawing" style="width: 700px;" border="1"/>
+## Shuffling AKA Permuting
 
----
+Shuffling AKA re-ordering AKA **permuting** are all synonyms. I'm going to use
+all three terms interchangeably. 
 
-- <small><small>Identify the **population** of interest and the **population parameter**</small></small>
-- <small><small>Identify the **sample** used and the **statistic**</small></small>
-- <small><small>Comment on the **generalizability** of the results of the sample to the population.</small></small>
+Type the following code into your R script:
 
-***
+```{r, eval=FALSE}
+library(mosaic)
+# Define a vector fruit
+fruit <- c("apple", "orange", "mango")
 
-- <small><small>You want to understand the income of Pacific University graduates in the last 10 years.  You get the records of 10 randomly chosen Pacific graduates.  You take the median of their answers.</small></small>
-- <small><small>Imagine it's 1993 i.e. almost all households have landlines.  You want to know the average number of people in each household in Forest Grove.  You randomly pick out 500 numbers from the phone book & conduct a phone survey.</small></small>
-- <small><small>You want to know the prevalence (i.e. proportion) of illegal downloading of TV shows among Pacific University students.  You get the emails of 100 randomly chosen Pacific University students and ask them "How many times did you download a pirated TV show last week?"</small></small>
-
----
-
-## Visualizing Sampling
-
-### OkCupid Self-reported Heights from [ModernDive](https://ismayc.github.io/moderndiver-book/6-sim.html#visualizing-sampling)
-
-
-- [Shiny app to better understand the role of sampling](https://ismay.shinyapps.io/okcupidheights/)
+# Do this multiple times:
+shuffle(fruit)
+```
 
 ---
 
-## Recall
 
-* **Random** sampling: where we select the sample from the population in an unbiased fashion
-* Bias: A sample is biased if some observations have a higher **probability** of being
-included in the sample. 
+## Shuffling AKA Permuting
 
-> * Keywords: **random** and **probability**
+This works with the `do()` operator...
 
+```{r, eval=FALSE}
+do(5) * shuffle(fruit)
+```
+
+... as well as within a `mutate()`
+
+
+
+```{r, eval=FALSE}
+example_data <- data_frame(
+  name = c("Ilana", "Abbi", "Hannibal"),
+  fruit = c("apple", "orange", "mango")
+)
+
+# Run this multiple times: 
+example_data %>% mutate(fruit = shuffle(fruit))
+```
+
+---
+
+## Key Distinction
+
+### A *huge* distinction in types of sampling:
+
+1. Sampling **with** replacement
+1. Sampling **without** replacement
+
+---
+
+## Resampling
+
+### At its most basic, `resample()` resamples the input vector **with** replacement. Run this in the console multiple times from your R script:
+
+```{r, eval=FALSE}
+resample(fruit)
+```
+
+* You can get the same fruit all three times i.e. sampling with replacement
+* `resample()` has default settings that we can set to fit our needs; it is a swiss army knife.
+* Let's unpack the defaults:
+
+---
+
+
+## Resampling
+
+```{r, eval=FALSE}
+resample(x = fruit, size = length(x), replace = TRUE, 
+         prob = rep(1 / length(x), times = length(x)) )
+```
+
+* <small>`x`</small> is the input. In this case <small>`fruit`</small>.
+* <small>`size`</small>: size of output vector. By default the same size as <small>`x`</small>.
+* <small>`replace`</small>: Sample **with** or **without** replacement. By default with replacement.
+* <small>`prob`</small>: Probability of sampling each input value. By default, equal probability
+* Run the following.  What does it do?
+
+```{r eval=FALSE}
+rep(1/length(fruit), times = length(fruit))
+```
+
+---
+
+## Scenario for Today
+
+* Say you are a statistician and you meet someone called the "Lady Tasting Tea."
+* She claims she can tell by tasting whether the tea or the milk was added first to a cup.
 --
 
-* In short: Probability is the study of randomness.
-* Its roots lie in one [historical constant](https://www.google.com/search?q=probability&newwindow=1&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjnvJG7_oTQAhVIQiYKHSQ7CnoQ_AUICSgC&biw=2559&bih=1316&dpr=2#newwindow=1&tbm=isch&q=history+of+gambling).
-
----
-
-
-## Two Approaches to Probability
-
-There are two approaches to studying probability:
-
-Mathematically             |  Simulations
-:-------------------------:|:-------------------------:
-<img src="figure/pdf.png" alt="Drawing" style="width: 300px;"/>  |  <img src="figure/coin.jpg" alt="Drawing" style="width: 300px;"/>
-
-> * **Note**: The "random simulation" in question is not limited to coin flips.
-
----
-
-
-## Two Approaches to Probability
-
-- The mathematical approach to studying probability requires more mathematical background: set theory, discrete math, calculus, and later on measure theory.
+* You want to test whether
+    + She can actually tell which came first **OR**
+    + She's lying and is only guessing at random
 --
-
-- The simulation approach does not.
---
-
-- Instead we require a computer's **random number generator** to generate simulations. Why?
+* Say you have just enough tea/milk to pour into 10 cups.
 
 ---
 
+## Lady Tasting Tea
 
-## Simulations via Computer
-
-Doing this repeatedly by hand is tiring:
-
-<img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/>
-
----
-
-# [Problem Set 9 Assignment for Thursday](http://ismayc.github.io/soc301_s2017/problem-sets/index.html#ps9)
-
-- Due at the end of the day (11:59 PM on Thursday)
-- You will be peer reviewing a Group Project assigned to you
-- You'll also be including (Helpful for Midterm Exam)
-  - an updated plot using `ggplot2`
-  - a `dplyr` wrangling task to summarize the `fivethirtyeight` data frame used in the vignette
-- This will give you practive with `dplyr`, `ggplot2`, and `rmarkdown` while (hopefully)
-ensuring that you can perform the tasks asked of you in the group project individually.
+* Lady Tasting Tea claims she can tell if tea or milk was poured first into a cup
+* You run an experiment with 10 cups if she can tell or if she is bullshitting
+* Let's _assume a hypothetical world where she is guessing at random_.
 
 ---
 
+## Lady Tasting Tea
 
+### If guessing at random, here are the *hypothetical* outcomes:
+
+```{r, echo=FALSE, cache=TRUE, fig.height=5.5}
+single_cup_outcome <- c(1, 0)
+simulation <- do(10000) * resample(single_cup_outcome, size=10)
+simulation <- simulation %>% 
+  mutate(n_correct = V1 + V2 + V3 + V4 + V5 + V6 + V7 + V8 + V9 + V10) 
+ggplot(simulation, aes(x=factor(n_correct))) + 
+  geom_bar() +
+  labs(x="Number of Guesses Correct")
+```
+
+---
+
+## Lady Tasting Tea
+
+She got 9/10 right!
+
+```{r, cache=TRUE}
+ggplot(simulation, aes(x = n_correct)) + 
+  geom_bar() +
+  labs(x="Number of Guesses Correct") +
+  geom_vline(xintercept = 9, color = "red")
+```
+
+---
+
+## Lady Tasting Tea
+
+She got 9/10 right!
+
+```{r, cache=TRUE}
+ggplot(simulation, aes(x = n_correct)) + 
+  geom_bar() +
+  labs(x = "Number of Guesses Correct") +
+  geom_vline(xintercept = 9, color = "red") +
+  scale_x_continuous(breaks = 0:10)
+```
+
+---
+
+## Lady Tasting Tea
+
+* In our hypothetical world of guessing at random, 9/10 OR MORE occured 
+`r sum(simulation$n_correct == 9) + sum(simulation$n_correct == 10)` times out of `r nrow(simulation)`. i.e. <br>
+`r round(100*(sum(simulation$n_correct == 9) + sum(simulation$n_correct == 10))/nrow(simulation), 3)`% of the time. 
+* Can she tell, or is she bullshitting?
+
+---
+
+## Problem Set 10
+
+- Due by end of class today
+- Turn in individually via pencil-and-paper
+
+### [Learning Checks](https://ismayc.github.io/moderndiver-book/6-sim.html)
+
+- LC6.1
+- LC6.3
+- LC6.9
+- LC6.11
+- LC6.13
+- LC6.15
+
+---
 
 ```{r old, child='temp_deck.Rmd'}
 ```

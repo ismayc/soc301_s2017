@@ -1,3 +1,170 @@
+layout: true
+
+.footer[[Week 10 - Tuesday](https://ismayc.github.io/soc301_s2017/2017/04/04/week-10---tuesday/)]
+
+---
+
+
+name: week10t
+class: center, middle
+
+# Week 10 - Tuesday
+
+# April 4, 2017
+---
+
+
+# Warmup - Similar to Old Exam Question
+
+What `dplyr` and `ggplot2` code is needed to produce the following plot using the `gapminder` data set?  (You can assume `library()` has already been run on all needed packages.) *Hint*:  You should use the `%in%` operator.
+
+```{r echo=FALSE, fig.width=11, fig.height=5}
+library(gapminder)
+library(ggplot2)
+library(dplyr)
+country_list <- c("Guatemala", "Uganda", "Ethiopia", "Bangladesh")
+six_countries <- gapminder %>% dplyr::filter(country %in% country_list)
+ggplot(data = six_countries, 
+  aes(x = year, y = lifeExp, color = country)) +
+  geom_line() +
+  geom_point()
+```
+
+What stands out to you from a social perspective as you observe this graph?
+
+---
+
+## Goals for the course going forward
+
+- Focus on understanding how data visualization and data wrangling play a role in inference
+- Discuss FiveThirtyEight articles from a social perspective while also relating back to statistical content
+- Work on summarizing important content and giving you a better sense of what to expect
+- What I need from you
+  - More questions!  I can't know what you don't understand unless you ask.
+  - Focus on testing for your own understanding and speaking up when something needs more explanation
+
+---
+
+## Today: Switching Gears
+
+* We've covered **Tidy**, **Visualize**, and **Transform** 
+* Start with **Model**
+* The focus throughout is on **Communicate**.
+
+<img src="figure/pipeline.png" alt="Drawing" style="width: 700px;" border="1"/>
+
+---
+
+## Key Definitions
+
+### Let's ask our favorite search engine:
+
+* Define inference
+* Define **statistical** inference
+
+---
+
+# Sampling
+
+## Match the term to its correct definition
+
+- Carefully read over the [worksheet](sampling.pdf) individually
+- Complete the [worksheet](sampling.pdf) individually
+- Then pair up with two or three new people from class that you haven't worked with before to
+go over your answers
+
+
+---
+
+## The Paradigm for the Rest of the Class
+
+<img src="figure/target-population.jpg" alt="Drawing" style="width: 700px;" border="1"/>
+
+---
+
+- <small><small>Identify the **population** of interest and the **population parameter**</small></small>
+- <small><small>Identify the **sample** used and the **statistic**</small></small>
+- <small><small>Comment on the **generalizability** of the results of the sample to the population.</small></small>
+
+***
+
+- <small><small>You want to understand the income of Pacific University graduates in the last 10 years.  You get the records of 10 randomly chosen Pacific graduates.  You take the median of their answers.</small></small>
+- <small><small>Imagine it's 1993 i.e. almost all households have landlines.  You want to know the average number of people in each household in Forest Grove.  You randomly pick out 500 numbers from the phone book & conduct a phone survey.</small></small>
+- <small><small>You want to know the prevalence (i.e. proportion) of illegal downloading of TV shows among Pacific University students.  You get the emails of 100 randomly chosen Pacific University students and ask them "How many times did you download a pirated TV show last week?"</small></small>
+
+---
+
+## Visualizing Sampling
+
+### OkCupid Self-reported Heights from [ModernDive](https://ismayc.github.io/moderndiver-book/6-sim.html#visualizing-sampling)
+
+
+- [Shiny app to better understand the role of sampling](https://ismay.shinyapps.io/okcupidheights/)
+
+---
+
+## Recall
+
+* **Random** sampling: where we select the sample from the population in an unbiased fashion
+* Bias: A sample is biased if some observations have a higher **probability** of being
+included in the sample. 
+
+> * Keywords: **random** and **probability**
+
+--
+
+* In short: Probability is the study of randomness.
+* Its roots lie in one [historical constant](https://www.google.com/search?q=probability&newwindow=1&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjnvJG7_oTQAhVIQiYKHSQ7CnoQ_AUICSgC&biw=2559&bih=1316&dpr=2#newwindow=1&tbm=isch&q=history+of+gambling).
+
+---
+
+
+## Two Approaches to Probability
+
+There are two approaches to studying probability:
+
+Mathematically             |  Simulations
+:-------------------------:|:-------------------------:
+<img src="figure/pdf.png" alt="Drawing" style="width: 300px;"/>  |  <img src="figure/coin.jpg" alt="Drawing" style="width: 300px;"/>
+
+> * **Note**: The "random simulation" in question is not limited to coin flips.
+
+---
+
+
+## Two Approaches to Probability
+
+- The mathematical approach to studying probability requires more mathematical background: set theory, discrete math, calculus, and later on measure theory.
+--
+
+- The simulation approach does not.
+--
+
+- Instead we require a computer's **random number generator** to generate simulations. Why?
+
+---
+
+
+## Simulations via Computer
+
+Doing this repeatedly by hand is tiring:
+
+<img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/><img src="figure/coin.jpg" alt="Drawing" style="width: 100px;"/>
+
+---
+
+# [Problem Set 9 Assignment for Thursday](http://ismayc.github.io/soc301_s2017/problem-sets/index.html#ps9)
+
+- Due at the end of the day (11:59 PM on Thursday)
+- You will be peer reviewing a Group Project assigned to you
+- You'll also be including (Helpful for Midterm Exam)
+  - an updated plot using `ggplot2`
+  - a `dplyr` wrangling task to summarize the `fivethirtyeight` data frame used in the vignette
+- This will give you practive with `dplyr`, `ggplot2`, and `rmarkdown` while (hopefully)
+ensuring that you can perform the tasks asked of you in the group project individually.
+
+---
+
 
 layout: true
 
