@@ -20,5 +20,5 @@ Slides available [here](http://ismayc.github.io/soc301_s2017/slides/slide_deck.h
 ### To do for next time
 
 - Read [Sections 7.1 - 7.5](https://ismayc.github.io/moderndiver-book/7-hypo.html) of ModernDive
-- Work through LC7.1-7.5
+- Work through LC7.1-LC7.5
 - (NOT READY YET) Complete [Simulating Randomness ](https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/simulating-randomness-9?ex=1) DataCamp chapter (Due on April 20 at 11:59 PM)
