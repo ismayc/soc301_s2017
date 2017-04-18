@@ -628,3 +628,77 @@ freq_dest
 
 Answers will vary here.  One thing that stands out is that the most flights go to Chicago (ORD) and Atlanta (ATL).  These airports are not very close to New York City.  Both of these airports are major hubs for airlines though which is likely driving them being at the top of the list as well as Los Angeles (LAX) and Boston (BOS).
 
+***
+
+# Problem Set 10 {#ps10-key}
+
+Learning Checks [LC6.1, LC6.3, LC6.9, LC6.11, LC6.13, LC6.15](https://ismayc.github.io/moderndiver-book/6-sim.html)
+
+
+## LC6.1
+
+Explain in your own words how tasting soup relates to the concepts of sampling covered here.
+
+**Discussion**:
+
+The entire pot of soup is the population.  A sample would be a bowl of soup from that pot.  Sampling is the process of selecting a bowl from the pot of soup.  If the pot is stirred and the scoop is done at random, we can generalize to the entire pot of soup any characteristics we notice in the bowl of soup.  If the pot is not stirred and there is bias in the selection of the sample (say if all carrots are chosen), we cannot generalize to the whole pot of soup but only to the sample selected.
+
+## LC6.3
+
+Why isn’t our population all bowls of soup? All bowls of Indian chicken soup?
+
+**Discussion**:
+
+All bowls of Indian chicken soup (and thus all bowls of soup) may not have the same characteristics as this particular bowl of soup.
+
+## LC6.9
+
+Does this random sample of `height` represent the population height variable well? Explain why or why not in a couple of sentences.
+
+**Discussion**:
+
+This question is referring to the following population plot and sample plot (with red fill):
+
+```{r}
+library(okcupiddata)
+library(dplyr)
+library(ggplot2)
+library(mosaic)
+profiles_subset <- profiles %>% filter(between(height, 55, 85))
+ggplot(data = profiles_subset, mapping = aes(x = height)) +
+  geom_histogram(bins = 20, color = "white")
+set.seed(2017)
+profiles_sample1 <- profiles_subset %>% 
+  resample(size = 100, replace = FALSE)
+ggplot(data = profiles_sample1, mapping = aes(x = height)) +
+  geom_histogram(bins = 20, color = "white", fill = "red") +
+  coord_cartesian(xlim = c(55, 85))
+```
+
+The overall shape of the sample is similar to the overall shape of the population.  It also covers roughly the same values as the population covers in its histogram.
+
+## LC6.11
+
+Why is random sampling so important here to create a distribution of sample means that provide a range of plausible values for the population mean height?
+
+**Discussion**:
+
+Without random sampling we have the potential for bias in our samples.  If these samples are biased, when we calculate the mean of each sample we will have biased mean readings that will deviate far from what the actual population mean is.  Random sampling ensures that bias is as close to eliminated as possible so we can be confident that our process would lead to a better estimation procedures of the population parameter.
+
+## LC6.13
+
+What is our observed statistic?
+
+**Discussion**:
+
+This question refers to the "Lady Tasting Tea" experiment.  Here it is the proportion of times the woman was able to correctly identify whether the tea or the milk was added first.  The value here is 9/10 = 0.9.
+
+## LC6.15
+
+How could we test to see whether the person is just guessing or if they have some special talent of identifying milk before tea or vice-versa?
+
+**Discussion**:
+
+We would begin by setting out 10 cups.  We then use a coin to randomly assign to each cup whether we will add milk first or second.  For our purposes, we will say that "heads" corresponds to milk first.  We then ask the lady to taste each cup and identify whether or not milk was added first or second.  It is important between each cup tasting for her to cleanse her palette so that each trial is independent of the others.  If she correctly identifies a large proportion of the 10 cups correctly, we have reason to believe she may have a special talent.  
+
+This can be verified by performing many different coin flip simulations assuming a fair coin in sets of 10 and counting the number of heads.  We can then see where the number we observed her getting correct falls on this distribution.  If it falls out in the right tail, we can assume our initial assumption that she was just guessing may not be correct.  If the observed number falls closer to the center of the distribution, we do not have evidence to go against or original assumption that she is just guessing.

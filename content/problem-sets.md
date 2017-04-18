@@ -5,13 +5,26 @@ title: Problem Sets
 
 This page will list the Problem Sets and when they will usually be turned in on paper throughout the course (unless otherwise noted below).  You will usually turn in one problem set per group though some assignments will be turned in individually.  You can find discussions about many of the Problem Sets [here](ps-key/index.html).  Links to specific Problem Set discussions from ModernDive will be posted after the Problem Set is turned in below the Problem Set assignment here.
 
-# PS 10 {#ps10}
+# PS 11 (Due Thurs, April 20 by 2:45 PM) {#ps11}
+
+- Read Chapter 7 of [ModernDive](https://ismayc.github.io/moderndiver-book/7-hypo.html)
+    - As you read, take careful notes of what you see as the key points conveyed and key things to remember about the R code.
+- Learning Checks [LC7.1 - LC7.5](https://ismayc.github.io/moderndiver-book/7-hypo.html)
+- Read the two articles from 538 and play with the interactives on the second one
+  - [Statisticians Found One Thing They Can Agree On: It’s Time To Stop Misusing P-Values](http://fivethirtyeight.com/features/statisticians-found-one-thing-they-can-agree-on-its-time-to-stop-misusing-p-values/)
+  - [Science Isn't Broken](https://fivethirtyeight.com/features/science-isnt-broken/?ex_cid=endlink#part4)
+  - Answer the questions in regards to the articles
+    1. Why is it difficult for scientists to quantify in simple terms what a *p*-value is?
+    2. What is p-hacking and why is it dangerous?
+    3. What is meant by "Instead, you can think of the p-value as an index of surprise."?
+
+# PS 10 (Due Thurs, April 13 by 4:20 PM) {#ps10}
 
 - Read Chapter 6 of [ModernDive](https://ismayc.github.io/moderndiver-book/6-sim.html)
     - As you read, take careful notes of what you see as the key points conveyed and key things to remember about the R code.
 - Learning Checks [LC6.1, LC6.3, LC6.9, LC6.11, LC6.13, LC6.15](https://ismayc.github.io/moderndiver-book/6-sim.html)
 
-- DISCUSSION [here](ps-key/index.html#ps6-key)
+- DISCUSSION [here](ps-key/index.html#ps10-key)
 
 
 

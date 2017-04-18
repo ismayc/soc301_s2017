@@ -27,11 +27,9 @@ a, a > code {
 }
 /* Two-column layout */
 .left-column {
-  color: #777;
   width: 47%;
   height: 100%;
   float: left;
-  padding-top: 2em;
 }
 /*.left-column h2:last-of-type, .left-column h3:last-child {
   color: #000;
@@ -39,7 +37,6 @@ a, a > code {
 .right-column {
   width: 47%;
   float: right;
-  padding-top: -20em;
 }
 .pull-left {
   float: left;
