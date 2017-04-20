@@ -210,4 +210,5 @@ ggplot(simulation, aes(x = heads)) +
 ---
 
 
-{r old, child='temp_deck.Rmd'}
+```{r old, child='temp_deck.Rmd'}
+```
