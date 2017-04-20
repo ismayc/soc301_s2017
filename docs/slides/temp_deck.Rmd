@@ -311,7 +311,7 @@ cc_full %>% filter(state %in% c("Oregon", "Washington")) %>%
 - Do problems LC7.1 - LC7.5
 - Read the two articles from 538
   - [Statisticians Found One Thing They Can Agree On: It’s Time To Stop Misusing P-Values](http://fivethirtyeight.com/features/statisticians-found-one-thing-they-can-agree-on-its-time-to-stop-misusing-p-values/)
-  - [Science Isn't Broken](https://fivethirtyeight.com/features/science-isnt-broken/?ex_cid=endlink#part4)
+  - [Science Isn't Broken](https://fivethirtyeight.com/features/science-isnt-broken/)
   - Answer the questions corresponding [here](https://ismayc.github.io/soc301_s2017/problem-sets/index.html#ps11)
 ---
 

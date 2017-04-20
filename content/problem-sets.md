@@ -23,7 +23,7 @@ This page will list the Problem Sets and when they will usually be turned in on 
 - Learning Checks [LC7.1 - LC7.5](https://ismayc.github.io/moderndiver-book/7-hypo.html)
 - Read the two articles from 538 and play with the interactives on the second one
   - [Statisticians Found One Thing They Can Agree On: It’s Time To Stop Misusing P-Values](http://fivethirtyeight.com/features/statisticians-found-one-thing-they-can-agree-on-its-time-to-stop-misusing-p-values/)
-  - [Science Isn't Broken](https://fivethirtyeight.com/features/science-isnt-broken/?ex_cid=endlink#part4)
+  - [Science Isn't Broken](https://fivethirtyeight.com/features/science-isnt-broken)
   - Answer the questions in regards to the articles
     1. Why is it difficult for scientists to quantify in simple terms what a *p*-value is?
     2. What is p-hacking and why is it dangerous?
