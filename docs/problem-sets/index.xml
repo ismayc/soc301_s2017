@@ -451,7 +451,7 @@ library(ggplot2)
 all_alaska_flights &amp;lt;- flights %&amp;gt;% filter(carrier == &amp;quot;AS&amp;quot;)
 ggplot(data = all_alaska_flights, mapping = aes(x = air_time, y = distance)) +
   geom_point()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/problem-sets/ps-key/figures/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;#####content/problem-sets/ps-key_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;This might initially look like an error but Alaskan Airlines online flies to Seattle from New York City. Therefore, all of the &lt;code&gt;distance&lt;/code&gt; values are 2402. We can see that there was quite a bit of variability in terms of &lt;code&gt;air_time&lt;/code&gt; though.&lt;/p&gt;
 &lt;!-- --&gt;
 &lt;/div&gt;
@@ -490,7 +490,7 @@ early_january_weather &amp;lt;- weather %&amp;gt;%
   filter(origin == &amp;quot;EWR&amp;quot; &amp;amp; month == 1 &amp;amp; day &amp;lt;= 15)
 ggplot(data = early_january_weather, mapping = aes(x = time_hour, y = wind_gust)) +
   geom_line()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/problem-sets/ps-key/figures/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;#####content/problem-sets/ps-key_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;What immediately stands out in this plot are the days with no wind gusts at all and values of 0. There appears to be only one wind gust over 25 mpg around January 2nd or 3rd.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;/div&gt;
@@ -1178,7 +1178,7 @@ head(flights_new, 15)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)
 ggplot(data = flights, mapping = aes(x = gain)) +
   geom_histogram(color = &amp;quot;white&amp;quot;, bins = 20)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/problem-sets/ps-key/figures/unnamed-chunk-20-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;#####content/problem-sets/ps-key_files/figure-html/unnamed-chunk-20-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gain_summary &amp;lt;- flights %&amp;gt;% 
   summarize(
     min = min(gain, na.rm = TRUE),
@@ -1280,14 +1280,14 @@ library(mosaic)
 profiles_subset &amp;lt;- profiles %&amp;gt;% filter(between(height, 55, 85))
 ggplot(data = profiles_subset, mapping = aes(x = height)) +
   geom_histogram(bins = 20, color = &amp;quot;white&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/problem-sets/ps-key/figures/unnamed-chunk-23-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;#####content/problem-sets/ps-key_files/figure-html/unnamed-chunk-23-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;set.seed(2017)
 profiles_sample1 &amp;lt;- profiles_subset %&amp;gt;% 
   resample(size = 100, replace = FALSE)
 ggplot(data = profiles_sample1, mapping = aes(x = height)) +
   geom_histogram(bins = 20, color = &amp;quot;white&amp;quot;, fill = &amp;quot;red&amp;quot;) +
   coord_cartesian(xlim = c(55, 85))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/problem-sets/ps-key/figures/unnamed-chunk-23-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;#####content/problem-sets/ps-key_files/figure-html/unnamed-chunk-23-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;The overall shape of the sample is similar to the overall shape of the population. It also covers roughly the same values as the population covers in its histogram.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;lc6.11&#34; class=&#34;section level2&#34;&gt;

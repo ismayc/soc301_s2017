@@ -5,6 +5,17 @@ title: Problem Sets
 
 This page will list the Problem Sets and when they will usually be turned in on paper throughout the course (unless otherwise noted below).  You will usually turn in one problem set per group though some assignments will be turned in individually.  You can find discussions about many of the Problem Sets [here](ps-key/index.html).  Links to specific Problem Set discussions from ModernDive will be posted after the Problem Set is turned in below the Problem Set assignment here.
 
+# PS 12 (Due Tues, April 25 by 1:00 PM) {#ps12}
+
+- Read [this article](http://fivethirtyeight.com/features/you-cant-trust-what-you-read-about-nutrition/) about _p_-hacking from 538
+  - Summarize the main findings from the article and how it relates to the content in Chapter 7 of ModernDive in 3-5 paragraphs
+- Create AT LEAST five multiple choice questions covering Chapters 6 and 7 of [ModernDive](http://moderndive.com).
+    - Create a Google Doc with your questions and share with isma5720@pacificu.edu
+    - Please follow the layout I have provided in the Sample Question Layout document [here](https://docs.google.com/a/pacificu.edu/document/d/1QrhQl_R5YrYSPNyx8WxTFesYZvSARN_TDGzmD6HeMvQ/edit?usp=sharing).  Copy over the content of this document into a new Google Doc and then enter your questions.    
+    - Each question should have four possible answers.
+    - Don't mark what you choose to be the correct answer on what you turn in, but make note of your choice elsewhere to facilitate your learning.
+    - **Please use Courier New font for all pieces of R code.**
+
 # PS 11 (Due Thurs, April 20 by 2:45 PM) {#ps11}
 
 - Read Chapter 7 of [ModernDive](https://ismayc.github.io/moderndiver-book/7-hypo.html)
