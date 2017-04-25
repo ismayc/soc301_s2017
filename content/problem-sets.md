@@ -29,6 +29,8 @@ This page will list the Problem Sets and when they will usually be turned in on 
     2. What is p-hacking and why is it dangerous?
     3. What is meant by "Instead, you can think of the p-value as an index of surprise."?
 
+- DISCUSSION [here](ps-key/index.html#ps11-key)
+
 # PS 10 (Due Thurs, April 13 by 4:20 PM) {#ps10}
 
 - Read Chapter 6 of [ModernDive](https://ismayc.github.io/moderndiver-book/6-sim.html)
