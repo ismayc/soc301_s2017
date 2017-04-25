@@ -702,3 +702,57 @@ How could we test to see whether the person is just guessing or if they have som
 We would begin by setting out 10 cups.  We then use a coin to randomly assign to each cup whether we will add milk first or second.  For our purposes, we will say that "heads" corresponds to milk first.  We then ask the lady to taste each cup and identify whether or not milk was added first or second.  It is important between each cup tasting for her to cleanse her palette so that each trial is independent of the others.  If she correctly identifies a large proportion of the 10 cups correctly, we have reason to believe she may have a special talent.  
 
 This can be verified by performing many different coin flip simulations assuming a fair coin in sets of 10 and counting the number of heads.  We can then see where the number we observed her getting correct falls on this distribution.  If it falls out in the right tail, we can assume our initial assumption that she was just guessing may not be correct.  If the observed number falls closer to the center of the distribution, we do not have evidence to go against or original assumption that she is just guessing.
+
+***
+
+# Problem Set 11 {#ps11-key}
+
+Learning Checks [LC7.1 - LC7.5](https://ismayc.github.io/moderndiver-book/7-hypo.html)
+
+
+## LC7.1
+
+Could we make the same type of immediate conclusion that SFO had a statistically greater `air_time` if, say, its corresponding standard deviation was 200 minutes? What about 100 minutes? Explain.
+
+**Discussion**:
+
+If SFO had a standard deviation of 100 minutes, the boxplots would likely still not overlap so we could have the same immediate conclusion.  With a standard deviation of 200 minutes though, the data would be much more variable and likely there would be some overlap between the boxplot for SFO and BOS.
+
+
+## LC7.2
+
+Reproduce the table above about errors, but for a hypothesis test, instead of the one provided for a criminal trial.
+
+**Discussion**:
+
+The original table for a criminal trial is below.
+
+![](https://ismayc.github.io/moderndiver-book/images/errors.png)
+
+The corresponding table for a hypothesis test follows.
+
+![](http://vignette3.wikia.nocookie.net/whatilearned/images/4/45/Type_I_and_Type_II_Error_Table.jpg/revision/latest?cb=20110522022621)
+
+## LC7.3
+
+What is wrong about saying "The defendant is innocent." based on the US system of criminal trials?
+
+**Discussion**:
+
+You can never prove non-existence.  You can only have evidence for or against a claim.  Therefore, it is more appropriate and correct to say "The defendant is not guilty." or better yet "There is not evidence to conclude that the defendant is guilty."
+
+## LC7.4
+
+What is the purpose of hypothesis testing?
+
+**Discussion**:
+
+Much like a criminal trial, hypothesis testing is used to see if the sample collected brings evidence forth against or in favor of the null hypothesis.  If the sample and its observed statistic deviates far from what we expect to be true in the null hypothesis, we reject the original assumption in favor of the alternative hypothesis.  The alternative hypothesis usually represents what the researchers are interested in testing or a claim that has been made.
+
+## LC7.5
+
+What are some flaws with hypothesis testing? How could we alleviate them?
+
+**Discussion**:
+
+The biggest flaw with hypothesis testing is the fact that it only has two competing hypothesis and a choice must be made one way or the other based on the data.  When we reject the null hypothesis, we often want to also know "But how far away might we expect the mean of one group to be from the other?" or similar questions.  Much like a criminal trial, we aren't necessarily sure of just "how guilty" a person may be and type I and type II errors can be made in criminal trials and hypothesis tests.  Unfortunately, this is something built in to the process of both.  The dichotomy is alleviated some by using confidence intervals to estimate the difference as is discussed in Chapter 8 of ModernDive.

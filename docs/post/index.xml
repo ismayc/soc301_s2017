@@ -6,8 +6,42 @@
     <description>Recent content in Posts on SOC 301 - Spring 2017</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 20 Apr 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 25 Apr 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Week 13 - Tuesday</title>
+      <link>/2017/04/25/week-13---tuesday/</link>
+      <pubDate>Tue, 25 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/04/25/week-13---tuesday/</guid>
+      <description>
+
+&lt;p&gt;Slides available &lt;a href=&#34;http://ismayc.github.io/soc301_s2017/slides/slide_deck.html#week13t&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;covered-content&#34;&gt;Covered Content&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Converse about the 538 articles from PS10 and PS11 in groups and as a class&lt;/li&gt;
+&lt;li&gt;Go over laying out the &amp;ldquo;There is Only One Test&amp;rdquo; hypothesis testing framework for a Two Sample Independent Means problem&lt;/li&gt;
+&lt;li&gt;Briefly talk about traditional hypothesis testing and the assumptions required&lt;/li&gt;
+&lt;li&gt;Discuss ANOVA and its similarities to a Two-Sample Independent t-test&lt;/li&gt;
+&lt;li&gt;Discuss Chi-square and its similarities to a Two-Sample Proportions test&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;to-do-for-next-time&#34;&gt;To do for next time&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Work on completing the &amp;ldquo;There is Only One Test&amp;rdquo; diagram for all of the five problems we discussed in class on Thursday&lt;/li&gt;
+&lt;li&gt;Study for Quiz 4 on Thursday over Chapters 6-7 of ModernDive
+
+&lt;ul&gt;
+&lt;li&gt;Work through the &lt;a href=&#34;https://docs.google.com/a/pacificu.edu/document/d/14XJgCJOt-F1LAxmG2PPeJJ0G5nzSWJ4ead-V76EvoNw/edit?usp=sharing&#34;&gt;Practice Problems for Quiz 4&lt;/a&gt;.  You can enter your answers &lt;a href=&#34;https://docs.google.com/forms/d/e/1FAIpQLSc_T347p5TTXoitdVU74Vf56JfEjPN-42EC2vqnWxBVFmW0BA/viewform?usp=sf_link&#34;&gt;here&lt;/a&gt; and you can check your answers as many times as you like.&lt;/li&gt;
+&lt;li&gt;The quiz will be ten questions long and will be a subset of the questions in the Practice Problems for Quiz 4&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Week 12 - Thursday</title>
@@ -539,46 +573,6 @@ if(length(new.pkgs)) {
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;Complete &lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/histograms-boxplots?ex=1&#34;&gt;Histograms &amp;amp; Boxplots&lt;/a&gt; DataCamp chapter (Due on February 23 at 1 PM)&lt;/li&gt;
 &lt;li&gt;Begin &lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/barplots?ex=1&#34;&gt;Barplots&lt;/a&gt; DataCamp chapter (Due on February 28 at 1 PM)&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Week 03 - Thursday</title>
-      <link>/2017/02/16/week-03---thursday/</link>
-      <pubDate>Thu, 16 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/2017/02/16/week-03---thursday/</guid>
-      <description>
-
-&lt;p&gt;Slides available &lt;a href=&#34;http://ismayc.github.io/soc301_s2017/slides/slide_deck.html#week03th&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;covered-content&#34;&gt;Covered Content&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Review the concept of joining data frames&lt;/li&gt;
-&lt;li&gt;Go over Grammar of Graphics with scatter-plot and line-graph examples&lt;/li&gt;
-&lt;li&gt;Work on and finish &lt;a href=&#34;https://ismayc.github.io/soc301_s2017/problem-sets/#ps3&#34;&gt;Problem Set 3&lt;/a&gt; in groups&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;to-do-for-next-time&#34;&gt;To do for next time&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Complete DataCamp profile
-
-&lt;ul&gt;
-&lt;li&gt;Click on your user ID in the top right of the screen when you first open DataCamp.&lt;/li&gt;
-&lt;li&gt;Click on My Profile.&lt;/li&gt;
-&lt;li&gt;Select Edit Account Settings.&lt;/li&gt;
-&lt;li&gt;Input at the very least your first and last name.  More helpful if you include a picture.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Take notes on Sections 4.5 to 4.7 of &lt;a href=&#34;http://moderndive.com&#34;&gt;ModernDive&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Work on &lt;a href=&#34;http://ismayc.github.io/soc301_s2017/problem-sets/index.html#ps4&#34;&gt;Problem Set 4&lt;/a&gt; corresponding to those sections.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Complete  &lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/scatter-plots-line-graphs?ex=1&#34;&gt;Scatter-plots &amp;amp; Line-graphs&lt;/a&gt; DataCamp chapter (Due on February 21 at 1 PM)&lt;/li&gt;
-&lt;li&gt;Begin &lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/histograms-boxplots?ex=1&#34;&gt;Histograms &amp;amp; Boxplots&lt;/a&gt; DataCamp chapter (Due on February 23 at 1 PM)&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

@@ -16,199 +16,220 @@ output:
 ```{r include=FALSE}
 #options(servr.daemon = TRUE)
 library(ggplot2)
+library(dplyr)
+library(tidyr)
 do <- mosaic::do
 filter <- dplyr::filter
 knitr::opts_chunk$set(warning=FALSE, message=FALSE, fig.width=9.5, fig.height=4.5)
 theme_set(theme_gray(base_size = 26))
 ```
 
+
 layout: true
 
-.footer[[Week 12 - Thursday](https://ismayc.github.io/soc301_s2017/2017/04/20/week-12---thursday/)]
+.footer[[Week 13 - Tuesday](https://ismayc.github.io/soc301_s2017/2017/04/25/week-13---tuesday/)]
 
 ---
 
 
-name: week12th
+name: week13t
 class: center, middle
 
-# Week 12 - Thursday
+# Week 13 - Tuesday
 
-# April 20, 2017
----
-
-# Warmup
-
-- Give the definition of _p_-value
-
-- Summarize the lecture from Tuesday in 3-5 sentences
-
+# April 25, 2017
 ---
 
 class: center, middle
 
-# [Adjusted class schedule](https://ismayc.github.io/soc301_s2017/schedule/)
+## Warmup - Your answer should be 3-6 sentences.
 
+### Discuss the importance of the "simulated data" step in the "There is Only One Test" framework.  Why is it needed?  What does it accomplish?  
 
----
-
-## There is Only One Test
-
-<img src="figure/ht.png" alt="Drawing" style="width: 800px;"/>
-
-Image source [here](http://allendowney.blogspot.com/2016/06/there-is-still-only-one-test.html)
-
----
-
-## Hypothesis Testing in General
-
-### The **how** of these 3 points may change, but the **what** doesn't:
-
-1. Identify the test statistic
---
-
-2. Construct the null distribution of the test statistic based on the null hypothesis
---
-
-3. Compare the observed test statistic to the null distribution to compute the **p-value**
-
----
-
-## Specifics 1: Test Statistic
-
-We can do hypothesis testing for lots of different scenarios
-
-Type  | Population Parameter | Test Statistic
-------------- | ------------- | -------------
-One-Sample  | Mean <br> $\mu$ | Sample Mean <br> $\overline{x}$
-One-Sample  | Proportion <br> $\pi$ | Sample Proportion <br> $\widehat{p}$
-Two-Sample (Independent) &nbsp; | Diff of Population Means <br> $\mu_1 - \mu_2$ | Diff of Sample Means <br> $\overline{x}_1 - \overline{x}_2$
-Two-Sample (Paired) | Mean Population Difference <br> $\mu_{diff}$ | Mean Sample Difference <br> $\overline{x}_{diff}$
-Two-Sample  | Diff of Population Proportions <br> $\pi_1 - \pi_2$ | Diff of Sample Proportions <br> $\widehat{p}_1 - \widehat{p}_2$
-
-We'll discuss more advanced procedures (ANOVA and Chi-Square) on Tuesday.
-
----
-
-## Specifics 2: Null Distribution
-
-### We can construct the null distribution of the test statistic either
-
-* Via computation i.e. simulation/shuffling
-    - Ex: We used the **Permutation Test** i.e. we permuted things
-* Via mathematics i.e. analytically
-    - Ex: Traditionally via Probability using the **Central Limit Theorem**: $\overline{X}$ is Normally distributed as $n \rightarrow \infty$
-- **Note**: the null distribution isn't always bell shaped! i.e. not always Normal
-
----
-
-## Specifics 3: _p_-value
-
-### For Two-Sample Independent tests, we have either
-
-### Two-sided _p_-values
-
-+ Two-tailed: $H_A: \mu_{1} - \mu_{2} \neq 0$
-
---
-
-### One-sided _p_-values
---
-
-+ Left-tailed: $H_A: \mu_{1} - \mu_{2} < 0$
---
-
-+ Right-tailed: $H_A: \mu_{1} - \mu_{2} > 0$
----
-
-## Moral of the Story
-
-### If you forget what hypothesis testing and/or _p_-values are remember:
-
-```{r, echo=FALSE, fig.width=16/2, fig.height=3.5}
-library(mosaic)
-simulation <- do(10000) * rflip(10)
-ggplot(simulation, aes(x = heads)) + 
-  geom_bar() +
-  labs(x = "Number of Guesses Correct") +
-  geom_vline(xintercept = 9, color = "red") +
-  scale_x_continuous(breaks = 0:10)
+```{r echo=FALSE, fig.height=5}
+knitr::include_graphics("figure/ht.png")
 ```
 
-- For this example (from this plot), since our observed results are far from what we expect, we reject our original "by chance" assumption in favor of the research hypothesis.
+---
+
+# Go over the "There is Only One Test" for Two Sample Independent problem
+
+### Average income varies from one region of the country to another, and it often reflects both lifestyles and regional living expenses. Suppose a new graduate is considering a job in two locations, Cleveland, OH and Sacramento, CA, and he wants to see whether the average income in one of these cities is higher than the other. He would like to conduct a hypothesis test based on two randomly selected samples from the 2000 Census.
 
 ---
 
-# Split into groups of 3-4
+class: center, middle
 
-### For each of the following five problems BEFORE trying to identify which type of problem it is, identify 
-
-- the variables of interest,
-- the types of variables they are,
-- and the observational units
-
-### AFTER identifying the problem type for each of the five problems, start to layout what the null and alternative hypotheses are in symbols.
+# [Inference Mind-map](https://coggle.it/diagram/Vxlydu1akQFeqo6-)
 
 ---
 
-## Identify the type of problem:
+# Work through the problem in [R via R Markdown](http://ismayc.github.io/teaching/sample_problems/two-means-indep.html)
 
-### **Types**:  One Mean, One Proportion, Two Means (Independent), Two Means (Paired), Two Proportions
-
-###  **Problem 1**:  Average income varies from one region of the country to another, and it often reflects both lifestyles and regional living expenses. Suppose a new graduate is considering a job in two locations, Cleveland, OH and Sacramento, CA, and he wants to see whether the average income in one of these cities is higher than the other. He would like to conduct a hypothesis test based on two randomly selected samples from the 2000 Census.
+- Skip the Confidence Interval parts (that's Chapter 8)
 
 ---
 
-## Identify the type of problem:
+### How would this change if we were looking to potentially move to Seattle and Boston as well as Sacramento and Cleveland?
 
-### **Types**:  One Mean, One Proportion, Two Means (Independent), Two Means (Paired), Two Proportions
+<center>
+<img src="figure/ht.png" alt="Drawing" style="width: 580px;" />
+</center>
+--
 
-### **Problem 2**:  A 2010 survey asked 827 randomly sampled registered voters in California "Do you support? Or do you oppose? Drilling for oil and natural gas off the Coast of California? Or do you not know enough to say?" Conduct a hypothesis test to determine if the data provide strong evidence that the proportion of college graduates who do not have an opinion on this issue is different than that of non-college graduates.
+### This is called an ANOVA (Analysis of Variance) test
 
----
-
-## Identify the type of problem:
-
-### **Types**:  One Mean, One Proportion, Two Means (Independent), Two Means (Paired), Two Proportions
-
-### **Problem 3**: The CEO of a large electric utility claims that 80 percent of his 1,000,000 customers are satisfied with the service they receive. To test this claim, the local newspaper surveyed 100 customers, using simple random sampling. 73 were satisfied and the remaining were unsatisfied.  Based on these findings from the sample, can we reject the CEO's hypothesis that 80% of the customers are satisfied?
+- It compares the variability in the sample means to the variability in the samples (Analyzes the variance)
 
 ---
 
-## Identify the type of problem:
+## Chi-square test
 
-### **Types**:  One Mean, One Proportion, Two Means (Independent), Two Means (Paired), Two Proportions
+- The extension of a two sample proportion test is a chi-square test
 
-### **Problem 4**: The National Survey of Family Growth conducted by the Centers for Disease Control gathers information on family life, marriage and divorce, pregnancy, infertility, use of contraception, and men's and women's health. One of the variables collected on this survey is the age at first marriage. 5,534 randomly sampled US women between 2006 and 2010 completed the survey. The women sampled here had been married at least once.  Do we have evidence that the mean age of first marriage for all US women from 2006 to 2010 is greater than 23 years?
+### A random sample of 500 U.S. adults were questioned regarding their political affiliation (Democrat or Republican) and opinion on a tax reform bill (favor, indifferent, opposed). Based on this sample, do we have reason to believe that opinion on the bill can predict whether or not a respondent is a Democrat?
 
----
-
-## Identify the type of problem:
-
-### **Types**:  One Mean, One Proportion, Two Means (Independent), Two Means (Paired), Two Proportions
-
-### **Problem 5**: Trace metals in drinking water affect the flavor and an unusually high concentration can pose a health hazard. Ten pairs of data were taken measuring zinc concentration in bottom water and surface water at 10 randomly selected locations on a stretch of river. Do the data suggest that the true average concentration in the surface water is smaller than that of bottom water? (Note that units are not given.)
+- Here a success is "being a Democrat"
+- We want to test <small> $H_0: \pi_{favor} = \pi_{indiff} = \pi_{opp}$ </small> versus <small> $H_A:$ </small> at least one of the proportions is different
 
 ---
 
-## Walk through paired example
+Type  | Test Statistic
+------------- | ------------- | -------------
+One-Sample   | Sample Mean <br> $\overline{x}$
+One-Sample  | Sample Proportion <br> $\widehat{p}$
+Two-Sample (Independent) &nbsp; |  Diff of Sample Means <br> $\overline{x}_1 - \overline{x}_2$
+Two-Sample (Paired) | Mean Sample Difference <br> $\overline{x}_{diff}$
+Two-Sample Proportions | Diff of Sample Proportions <br> $\widehat{p}_1 - \widehat{p}_2$
+Multiple Sample (Independent) &nbsp; | MAD of Sample Means <br> $\text{Mean}_{i \ne j} \, ABS(\, \overline{x}_i - \overline{x}_j \, )$
+Multiple Sample Proportions |  MAD of Sample Proportions <br> $\text{Mean}_{i \ne j} \, ABS(\, \hat{p}_i - \hat{p}_j \,)$ 
 
-- Let's take notes on the printed out "There is Only One Test" diagram
-- The full worked-out R Markdown example is [here](http://ismayc.github.io/teaching/sample_problems/two-means-paired.html)
-***
-- Many other examples are worked out in <br> [Appendix B of ModernDive](https://ismayc.github.io/moderndiver-book/B-appendixB.html)
-
----
-
-## To do for next time (individually)
-
-- Read [this article](http://fivethirtyeight.com/features/you-cant-trust-what-you-read-about-nutrition/) about _p_-hacking from 538
-  - Summarize the main findings from the article and how it relates to the content in Chapter 7 of ModernDive in 3-5 paragraphs
-- Work on completing the "There is Only One Test" diagram for all of the five problems we discussed in class today
-- Create AT LEAST five multiple choice questions covering Chapters 6 and 7 of [ModernDive](http://moderndive.com).  More directions [here](https://ismayc.github.io/soc301_s2017/problem-sets/index.html#ps11).
 
 ---
 
+class: center, middle
+
+# So when are the assumptions violated for traditional tests?
+
+# Why should we use randomization methods instead?
+
+---
+
+### Suppose we have the following two populations and we want to look for a difference in means
+
+```{r echo=FALSE}
+library(mosaic)
+sd2 <- 10
+x1 <- c(11.87,14.04,11.86,179.88,13.09,14.68,13.54,32.25,54.52,66.28,15.16,39.83,89.81,116.87,298.94,427,6249.42,3334.9,4503.93,4933.9,15.72,12.33,13.64,15.12,47.86,12.3,12.79,12.34,14.44,12.17,120.17,12.82,13.07,47.48,13.72,12.19,30.48,129.16,191.41,282.96,1076.53,4354.01,7882.12,12.45,13.9,12.12,16.63,12.26,12.01,17.87,12.62,11.81,12.68,12.33,12.04,15.64,12,13.1,62.44,13.21,13.28,12.99,13.52,23.47,13.36,11.81,11.86,13.74,58.72,12.72,12.02,11.92,44.75,77.96,23.53,11.81,23.46,12.52,29.47,12.31,12.54,11.86,12.42,11.89,11.94,12.44,13.48,12.37,16.3,11.93,28.1,18.85,11.96,11.94,18.64,11.79,12.1,13.82,29.8,19.6,11.79,12.77,11.77,14.92,20.59,12.24,19.39,12.79,20.97,13.01,32.79,12.73,24.56,11.92,13.08,12.41,14.46,27.26,25.51,13.8,32.35,15.32,27.82,15.26,13.71,29.8,12.72,14.7,12.28,14.55,12.13,12.86,18.36,36.18,12.1,14.56,29.34,11.82,12,12.21,27.98,17.86,14.13,13.45,17.53,14,13.08,12.23,14.94,14.12,13.19,20.14,40.22,21.19,14.46,35.38,14.89,31.77,3057.58,12.86,12.15,20.52,132.7,17.5,31.34,15.27,13.45,15.32,24.75,12.45,13.45,29.4,13.82,13.48,83.84,100.4,12.78,31.58,16.59,12.51,59.34,66.09,232.43,12.74,12.21,73.53,109.48,13.53,17.65,87.09,18.93,12.43,12.32,15.55,14.1,12.15,12.43,11.82,12.87,12.28,140,240.49,12.76,25.97,13.6,18.32,117.4,242.05,13.94,111,161.53,247.33,13.51,15.49,65.64,14.27,35.17,11.83,30.21,29.14,12.53,11.76,14.08,49.06,212.09,258.35,13,13.74,29.08,60.23,12.16,142.66,202.93,74.79,12.88,27.48,48.91,64.79,49.25,224.59,299.4,29.24,68.88,15.12,34.8,23.68,43.55,12.4,17.61,18.1,15.15,11.92,14.17,13.45,14.51,44.46,14.24,34.15,258.84,12.75,12.77,34.44,13.12,22.49,53.46,14.96,13.75,11.77,16.2,12.52,12.19,17.69,34.83,13.25,12.39,29.59,56.69,82.38,12.13,27.69,15.12,50.21,68.42,16.84,14.96,11.81,15.53,168.74,797.01,52.84,67.02,15.83,167.27,240.05,12.03,48.64,30.45,28.81,54.1,17.73,33.99,19.93,37.21,35.3,122.36,44.94,15.2,26.46,217.48,257.06,14.69,13.22,55.8,26.95,55.05,16.71,44.58,20.71,14.24,41.69,58.3,108.43,137.71,13.89,19.53,46.72,22.45,36.93,20.72,17.39,15.32,28.83,16.34,26.04,44.12,17.84,14.23,14.17,13.63,13.12,12.91,12.72,36.33,18.25,14.06,14.67,27.51,18.38,12.69,14.14,16.19,11.87,12.26,31.92,14.09,19.07,32.24,19.29,34.24,21.39,13.05,17.57,5651.61,6635.33,1666.81,6692.4,2161.37,15.63,37.85,61.85,68.92,252.31,16.45,28.21,57.45,93.8,70.53,178.19,239.22,270.67,419.6,11.93,11.88,14.38,51.44,54.91,81.9,112.63,3911.01,8625.72,9144.85,11.9,19.59,39.06,3153.42,8628.67,17.58,12.7,11.91,17.08,11.92,18.83,12.09,13.19,14.02,11.74,42.91,225.66,257.56,18.97,58.93,150.21,249.29,262.74,20.67,48.07,239.44,283.07,777.53,866.46,2570.59,5306.95,7773.85,8706.43,8730.16,21.43,86.28,12.22,103.45,120.04,197.63,502.12,580.07,19.02,18.98,12.3,13.49,50.26,76.13,14.69,44.07,73.74,180.95,13.37,15.37,58.62,60.12,228.92,251.56,268.03,11.77,16.83,50.36,63.02,107.3,234.99,261.7,18.09,58.17,75.96,220.08,250.4,16.36,14.1,61.36,140.59,278.06,417.68,797.12,1633.51,3911.59,3463.77,32.29,59.93,17.8,70.88,88.52,244.83,282.94,312.01,658.95,828.67,15.23)
+x2 <- (900 - x1) * sd2 + 80000
+
+x1[length(x1) - 1] <- 68828.67
+x1[length(x1)] <- 50015.23
+skewed <- data_frame(x1, x2) %>%
+  rename(`1` = x1, `2` = x2) %>%
+  gather(key = "group", value = "value")
+```
+
+```{r fig.height=5.3}
+ggplot(data = skewed, mapping = aes(x = group, y = value)) +
+  geom_boxplot()
+```
+
+---
+
+### We collect a sample of 20 from each
+
+```{r}
+set.seed(2017)
+my_sample <- skewed %>%
+  group_by(group) %>%
+  sample_n(20) %>%
+  ungroup()
+ggplot(data = my_sample, mapping = aes(x = value)) +
+  geom_histogram(color = "white", bins = 10) +
+  facet_wrap(~group, scales = "free_x")
+```
+
+---
+
+### A different plot
+
+```{r fig.height=5.5}
+ggplot(data = my_sample, mapping = aes(x = group, y = value)) +
+  geom_boxplot()
+```
+
+---
+
+### We calculate the observed sample mean
+
+```{r}
+(my_means <- my_sample %>% group_by(group) %>% 
+  summarize(my_mean = mean(value)))
+(obs_diff <- diff(my_means$my_mean))
+```
+
+---
+
+### But what if we had collected a different sample instead <br> (assuming <small> $H_0$ </small> is true)
+
+```{r}
+library(mosaic)
+(shuffled_my_means <- my_sample %>%
+     mutate(value = shuffle(value)) %>% 
+     group_by(group) %>%
+     summarize(my_mean_shuf = mean(value)))
+(obs_shuf_diff <- diff(shuffled_my_means$my_mean_shuf))
+```
+
+---
+
+### And repeated this many times
+
+```{r eval=FALSE}
+many_shuffles <- do(5000) *
+(shuffled_my_means <- my_sample %>%
+     mutate(value = shuffle(value)) %>% 
+     group_by(group) %>%
+     summarize(my_mean_shuf = mean(value)))
+rand_distn <- many_shuffles %>% 
+  group_by(.index) %>% 
+  summarize(diffmean = diff(my_mean_shuf))
+```
+
+---
+
+### And plotted the null distribution
+
+```{r fig.height=5, eval=FALSE}
+ggplot(rand_distn, aes(x = diffmean)) +
+  geom_histogram(color = "white", bins = 20)
+```
+
+<center>
+<img src="figure/Rplot.png" alt="Drawing" style="width: 330px;" />
+</center>
+
+- This is not represented well by a bell-shaped curve
+
+---
+
+# Moral of the story
+
+- Randomization methods will always work
+- Traditional methods will usually work, but with skewed distributions they can produce invalid/questionable results
+- It's usually good to run both types and compare them
+
+---
+
+class: center, middle
+
+# Work on [Potential Problems for Quiz #4](https://docs.google.com/a/pacificu.edu/document/d/14XJgCJOt-F1LAxmG2PPeJJ0G5nzSWJ4ead-V76EvoNw/edit?usp=sharing)
+
+
+- Quiz 4 is only over Chapters 6 and 7 of ModernDive
+
+---
 
 ```{r old, child='temp_deck.Rmd'}
 ```

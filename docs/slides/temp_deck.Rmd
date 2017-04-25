@@ -1,6 +1,186 @@
 
 layout: true
 
+.footer[[Week 12 - Thursday](https://ismayc.github.io/soc301_s2017/2017/04/20/week-12---thursday/)]
+
+---
+
+
+name: week12th
+class: center, middle
+
+# Week 12 - Thursday
+
+# April 20, 2017
+---
+
+# Warmup
+
+- Give the definition of _p_-value
+
+- Summarize the lecture from Tuesday in 3-5 sentences
+
+---
+
+class: center, middle
+
+# [Adjusted class schedule](https://ismayc.github.io/soc301_s2017/schedule/)
+
+
+---
+
+## There is Only One Test
+
+<img src="figure/ht.png" alt="Drawing" style="width: 800px;"/>
+
+Image source [here](http://allendowney.blogspot.com/2016/06/there-is-still-only-one-test.html)
+
+---
+
+## Hypothesis Testing in General
+
+### The **how** of these 3 points may change, but the **what** doesn't:
+
+1. Identify the test statistic
+--
+
+2. Construct the null distribution of the test statistic based on the null hypothesis
+--
+
+3. Compare the observed test statistic to the null distribution to compute the **p-value**
+
+---
+
+## Specifics 1: Test Statistic
+
+We can do hypothesis testing for lots of different scenarios
+
+Type  | Population Parameter | Test Statistic
+------------- | ------------- | -------------
+One-Sample  | Mean <br> $\mu$ | Sample Mean <br> $\overline{x}$
+One-Sample  | Proportion <br> $\pi$ | Sample Proportion <br> $\widehat{p}$
+Two-Sample (Independent) &nbsp; | Diff of Population Means <br> $\mu_1 - \mu_2$ | Diff of Sample Means <br> $\overline{x}_1 - \overline{x}_2$
+Two-Sample (Paired) | Mean Population Difference <br> $\mu_{diff}$ | Mean Sample Difference <br> $\overline{x}_{diff}$
+Two-Sample  | Diff of Population Proportions <br> $\pi_1 - \pi_2$ | Diff of Sample Proportions <br> $\widehat{p}_1 - \widehat{p}_2$
+
+We'll discuss more advanced procedures (ANOVA and Chi-Square) on Tuesday.
+
+---
+
+## Specifics 2: Null Distribution
+
+### We can construct the null distribution of the test statistic either
+
+* Via computation i.e. simulation/shuffling
+    - Ex: We used the **Permutation Test** i.e. we permuted things
+* Via mathematics i.e. analytically
+    - Ex: Traditionally via Probability using the **Central Limit Theorem**: $\overline{X}$ is Normally distributed as $n \rightarrow \infty$
+- **Note**: the null distribution isn't always bell shaped! i.e. not always Normal
+
+---
+
+## Specifics 3: _p_-value
+
+### For Two-Sample Independent tests, we have either
+
+### Two-sided _p_-values
+
++ Two-tailed: $H_A: \mu_{1} - \mu_{2} \neq 0$
+
+--
+
+### One-sided _p_-values
+--
+
++ Left-tailed: $H_A: \mu_{1} - \mu_{2} < 0$
+--
+
++ Right-tailed: $H_A: \mu_{1} - \mu_{2} > 0$
+---
+
+## Moral of the Story
+
+### If you forget what hypothesis testing and/or _p_-values are remember:
+
+```{r, echo=FALSE, fig.width=16/2, fig.height=3.5}
+library(mosaic)
+simulation <- do(10000) * rflip(10)
+ggplot(simulation, aes(x = heads)) + 
+  geom_bar() +
+  labs(x = "Number of Guesses Correct") +
+  geom_vline(xintercept = 9, color = "red") +
+  scale_x_continuous(breaks = 0:10)
+```
+
+- For this example (from this plot), since our observed results are far from what we expect, we reject our original "by chance" assumption in favor of the research hypothesis.
+
+---
+
+# Split into groups of 3-4
+
+### For each of the following five problems BEFORE trying to identify which type of problem it is, identify 
+
+- the variables of interest,
+- the types of variables they are,
+- and the observational units
+
+### AFTER identifying the problem type for each of the five problems, start to layout what the null and alternative hypotheses are in symbols.
+
+---
+
+## Identify the type of problem:
+
+### **Types**:  One Mean, One Proportion, Two Means (Independent), Two Means (Paired), Two Proportions
+
+###  **Problem 1**:  Average income varies from one region of the country to another, and it often reflects both lifestyles and regional living expenses. Suppose a new graduate is considering a job in two locations, Cleveland, OH and Sacramento, CA, and he wants to see whether the average income in one of these cities is higher than the other. He would like to conduct a hypothesis test based on two randomly selected samples from the 2000 Census.
+
+---
+
+## Identify the type of problem:
+
+### **Types**:  One Mean, One Proportion, Two Means (Independent), Two Means (Paired), Two Proportions
+
+### **Problem 2**:  A 2010 survey asked 827 randomly sampled registered voters in California "Do you support? Or do you oppose? Drilling for oil and natural gas off the Coast of California? Or do you not know enough to say?" Conduct a hypothesis test to determine if the data provide strong evidence that the proportion of college graduates who do not have an opinion on this issue is different than that of non-college graduates.
+
+---
+
+## Identify the type of problem:
+
+### **Types**:  One Mean, One Proportion, Two Means (Independent), Two Means (Paired), Two Proportions
+
+### **Problem 3**: The CEO of a large electric utility claims that 80 percent of his 1,000,000 customers are satisfied with the service they receive. To test this claim, the local newspaper surveyed 100 customers, using simple random sampling. 73 were satisfied and the remaining were unsatisfied.  Based on these findings from the sample, can we reject the CEO's hypothesis that 80% of the customers are satisfied?
+
+---
+
+## Identify the type of problem:
+
+### **Types**:  One Mean, One Proportion, Two Means (Independent), Two Means (Paired), Two Proportions
+
+### **Problem 4**: The National Survey of Family Growth conducted by the Centers for Disease Control gathers information on family life, marriage and divorce, pregnancy, infertility, use of contraception, and men's and women's health. One of the variables collected on this survey is the age at first marriage. 5,534 randomly sampled US women between 2006 and 2010 completed the survey. The women sampled here had been married at least once.  Do we have evidence that the mean age of first marriage for all US women from 2006 to 2010 is greater than 23 years?
+
+---
+
+## Identify the type of problem:
+
+### **Types**:  One Mean, One Proportion, Two Means (Independent), Two Means (Paired), Two Proportions
+
+### **Problem 5**: Trace metals in drinking water affect the flavor and an unusually high concentration can pose a health hazard. Ten pairs of data were taken measuring zinc concentration in bottom water and surface water at 10 randomly selected locations on a stretch of river. Do the data suggest that the true average concentration in the surface water is smaller than that of bottom water? (Note that units are not given.)
+
+
+---
+
+## To do for next time (individually)
+
+- Read [this article](http://fivethirtyeight.com/features/you-cant-trust-what-you-read-about-nutrition/) about _p_-hacking from 538
+  - Summarize the main findings from the article and how it relates to the content in Chapter 7 of ModernDive in 3-5 paragraphs
+- Create AT LEAST five multiple choice questions covering Chapters 6 and 7 of [ModernDive](http://moderndive.com).  More directions [here](https://ismayc.github.io/soc301_s2017/problem-sets/index.html#ps11).
+
+---
+
+
+
+layout: true
+
 .footer[[Week 12 - Tuesday](https://ismayc.github.io/soc301_s2017/2017/04/18/week-12---tuesday/)]
 
 ---

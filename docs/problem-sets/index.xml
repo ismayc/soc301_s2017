@@ -24,12 +24,13 @@
 &lt;li&gt;&lt;a href=&#34;#ps4-key&#34;&gt;Problem Set 4&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#ps6-key&#34;&gt;Problem Set 6&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#ps10-key&#34;&gt;Problem Set 10&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#ps11-key&#34;&gt;Problem Set 11&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 /BLOGDOWN-BODY-BEFORE --&gt;
 
 &lt;hr /&gt;
-&lt;p&gt;Page last updated at Tuesday, April 18, 2017 13:29:13 PDT&lt;/p&gt;
+&lt;p&gt;Page last updated at Tuesday, April 25, 2017 10:02:31 PDT&lt;/p&gt;
 &lt;div id=&#34;ps2-key&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Problem Set 2&lt;/h1&gt;
 &lt;p&gt;Learning Checks LC3.2-LC3.7, LC3.9-LC3.10 from &lt;a href=&#34;https://ismayc.github.io/moderndiver-book/3-tidy.html&#34;&gt;ModernDive&lt;/a&gt;&lt;/p&gt;
@@ -1308,6 +1309,50 @@ ggplot(data = profiles_sample1, mapping = aes(x = height)) +
 &lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
 &lt;p&gt;We would begin by setting out 10 cups. We then use a coin to randomly assign to each cup whether we will add milk first or second. For our purposes, we will say that “heads” corresponds to milk first. We then ask the lady to taste each cup and identify whether or not milk was added first or second. It is important between each cup tasting for her to cleanse her palette so that each trial is independent of the others. If she correctly identifies a large proportion of the 10 cups correctly, we have reason to believe she may have a special talent.&lt;/p&gt;
 &lt;p&gt;This can be verified by performing many different coin flip simulations assuming a fair coin in sets of 10 and counting the number of heads. We can then see where the number we observed her getting correct falls on this distribution. If it falls out in the right tail, we can assume our initial assumption that she was just guessing may not be correct. If the observed number falls closer to the center of the distribution, we do not have evidence to go against or original assumption that she is just guessing.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ps11-key&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Problem Set 11&lt;/h1&gt;
+&lt;p&gt;Learning Checks &lt;a href=&#34;https://ismayc.github.io/moderndiver-book/7-hypo.html&#34;&gt;LC7.1 - LC7.5&lt;/a&gt;&lt;/p&gt;
+&lt;div id=&#34;lc7.1&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;LC7.1&lt;/h2&gt;
+&lt;p&gt;Could we make the same type of immediate conclusion that SFO had a statistically greater &lt;code&gt;air_time&lt;/code&gt; if, say, its corresponding standard deviation was 200 minutes? What about 100 minutes? Explain.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;If SFO had a standard deviation of 100 minutes, the boxplots would likely still not overlap so we could have the same immediate conclusion. With a standard deviation of 200 minutes though, the data would be much more variable and likely there would be some overlap between the boxplot for SFO and BOS.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;lc7.2&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;LC7.2&lt;/h2&gt;
+&lt;p&gt;Reproduce the table above about errors, but for a hypothesis test, instead of the one provided for a criminal trial.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;The original table for a criminal trial is below.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://ismayc.github.io/moderndiver-book/images/errors.png&#34; /&gt;
+
+&lt;/div&gt;
+&lt;p&gt;The corresponding table for a hypothesis test follows.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;http://vignette3.wikia.nocookie.net/whatilearned/images/4/45/Type_I_and_Type_II_Error_Table.jpg/revision/latest?cb=20110522022621&#34; /&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;lc7.3&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;LC7.3&lt;/h2&gt;
+&lt;p&gt;What is wrong about saying “The defendant is innocent.” based on the US system of criminal trials?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;You can never prove non-existence. You can only have evidence for or against a claim. Therefore, it is more appropriate and correct to say “The defendant is not guilty.” or better yet “There is not evidence to conclude that the defendant is guilty.”&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;lc7.4&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;LC7.4&lt;/h2&gt;
+&lt;p&gt;What is the purpose of hypothesis testing?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;Much like a criminal trial, hypothesis testing is used to see if the sample collected brings evidence forth against or in favor of the null hypothesis. If the sample and its observed statistic deviates far from what we expect to be true in the null hypothesis, we reject the original assumption in favor of the alternative hypothesis. The alternative hypothesis usually represents what the researchers are interested in testing or a claim that has been made.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;lc7.5&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;LC7.5&lt;/h2&gt;
+&lt;p&gt;What are some flaws with hypothesis testing? How could we alleviate them?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;The biggest flaw with hypothesis testing is the fact that it only has two competing hypothesis and a choice must be made one way or the other based on the data. When we reject the null hypothesis, we often want to also know “But how far away might we expect the mean of one group to be from the other?” or similar questions. Much like a criminal trial, we aren’t necessarily sure of just “how guilty” a person may be and type I and type II errors can be made in criminal trials and hypothesis tests. Unfortunately, this is something built in to the process of both. The dichotomy is alleviated some by using confidence intervals to estimate the difference as is discussed in Chapter 8 of ModernDive.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 

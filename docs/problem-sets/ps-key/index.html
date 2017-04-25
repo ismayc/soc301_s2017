@@ -75,11 +75,12 @@
 <li><a href="#ps4-key">Problem Set 4</a></li>
 <li><a href="#ps6-key">Problem Set 6</a></li>
 <li><a href="#ps10-key">Problem Set 10</a></li>
+<li><a href="#ps11-key">Problem Set 11</a></li>
 </ul>
 </div>
 
 <hr />
-<p>Page last updated at Tuesday, April 18, 2017 13:29:13 PDT</p>
+<p>Page last updated at Tuesday, April 25, 2017 10:02:31 PDT</p>
 <div id="ps2-key" class="section level1">
 <h1>Problem Set 2</h1>
 <p>Learning Checks LC3.2-LC3.7, LC3.9-LC3.10 from <a href="https://ismayc.github.io/moderndiver-book/3-tidy.html">ModernDive</a></p>
@@ -1358,6 +1359,50 @@ ggplot(data = profiles_sample1, mapping = aes(x = height)) +
 <p><strong>Discussion</strong>:</p>
 <p>We would begin by setting out 10 cups. We then use a coin to randomly assign to each cup whether we will add milk first or second. For our purposes, we will say that “heads” corresponds to milk first. We then ask the lady to taste each cup and identify whether or not milk was added first or second. It is important between each cup tasting for her to cleanse her palette so that each trial is independent of the others. If she correctly identifies a large proportion of the 10 cups correctly, we have reason to believe she may have a special talent.</p>
 <p>This can be verified by performing many different coin flip simulations assuming a fair coin in sets of 10 and counting the number of heads. We can then see where the number we observed her getting correct falls on this distribution. If it falls out in the right tail, we can assume our initial assumption that she was just guessing may not be correct. If the observed number falls closer to the center of the distribution, we do not have evidence to go against or original assumption that she is just guessing.</p>
+<hr />
+</div>
+</div>
+<div id="ps11-key" class="section level1">
+<h1>Problem Set 11</h1>
+<p>Learning Checks <a href="https://ismayc.github.io/moderndiver-book/7-hypo.html">LC7.1 - LC7.5</a></p>
+<div id="lc7.1" class="section level2">
+<h2>LC7.1</h2>
+<p>Could we make the same type of immediate conclusion that SFO had a statistically greater <code>air_time</code> if, say, its corresponding standard deviation was 200 minutes? What about 100 minutes? Explain.</p>
+<p><strong>Discussion</strong>:</p>
+<p>If SFO had a standard deviation of 100 minutes, the boxplots would likely still not overlap so we could have the same immediate conclusion. With a standard deviation of 200 minutes though, the data would be much more variable and likely there would be some overlap between the boxplot for SFO and BOS.</p>
+</div>
+<div id="lc7.2" class="section level2">
+<h2>LC7.2</h2>
+<p>Reproduce the table above about errors, but for a hypothesis test, instead of the one provided for a criminal trial.</p>
+<p><strong>Discussion</strong>:</p>
+<p>The original table for a criminal trial is below.</p>
+<div class="figure">
+<img src="https://ismayc.github.io/moderndiver-book/images/errors.png" />
+
+</div>
+<p>The corresponding table for a hypothesis test follows.</p>
+<div class="figure">
+<img src="http://vignette3.wikia.nocookie.net/whatilearned/images/4/45/Type_I_and_Type_II_Error_Table.jpg/revision/latest?cb=20110522022621" />
+
+</div>
+</div>
+<div id="lc7.3" class="section level2">
+<h2>LC7.3</h2>
+<p>What is wrong about saying “The defendant is innocent.” based on the US system of criminal trials?</p>
+<p><strong>Discussion</strong>:</p>
+<p>You can never prove non-existence. You can only have evidence for or against a claim. Therefore, it is more appropriate and correct to say “The defendant is not guilty.” or better yet “There is not evidence to conclude that the defendant is guilty.”</p>
+</div>
+<div id="lc7.4" class="section level2">
+<h2>LC7.4</h2>
+<p>What is the purpose of hypothesis testing?</p>
+<p><strong>Discussion</strong>:</p>
+<p>Much like a criminal trial, hypothesis testing is used to see if the sample collected brings evidence forth against or in favor of the null hypothesis. If the sample and its observed statistic deviates far from what we expect to be true in the null hypothesis, we reject the original assumption in favor of the alternative hypothesis. The alternative hypothesis usually represents what the researchers are interested in testing or a claim that has been made.</p>
+</div>
+<div id="lc7.5" class="section level2">
+<h2>LC7.5</h2>
+<p>What are some flaws with hypothesis testing? How could we alleviate them?</p>
+<p><strong>Discussion</strong>:</p>
+<p>The biggest flaw with hypothesis testing is the fact that it only has two competing hypothesis and a choice must be made one way or the other based on the data. When we reject the null hypothesis, we often want to also know “But how far away might we expect the mean of one group to be from the other?” or similar questions. Much like a criminal trial, we aren’t necessarily sure of just “how guilty” a person may be and type I and type II errors can be made in criminal trials and hypothesis tests. Unfortunately, this is something built in to the process of both. The dichotomy is alleviated some by using confidence intervals to estimate the difference as is discussed in Chapter 8 of ModernDive.</p>
 </div>
 </div>
 
