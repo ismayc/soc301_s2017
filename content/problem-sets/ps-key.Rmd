@@ -728,7 +728,7 @@ Reproduce the table above about errors, but for a hypothesis test, instead of th
 The original table for a criminal trial is below.
 
 
-<img src="https://ismayc.github.io/moderndiver-book/images/errors.png" alt="Drawing" style="width: 800px;"/>
+<img src="https://ismayc.github.io/moderndiver-book/images/errors.png" alt="Drawing" style="width: 400px;"/>
 
 
 The corresponding table for a hypothesis test follows.
