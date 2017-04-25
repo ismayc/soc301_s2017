@@ -30,7 +30,7 @@
 /BLOGDOWN-BODY-BEFORE --&gt;
 
 &lt;hr /&gt;
-&lt;p&gt;Page last updated at Tuesday, April 25, 2017 10:02:31 PDT&lt;/p&gt;
+&lt;p&gt;Page last updated at Tuesday, April 25, 2017 14:31:27 PDT&lt;/p&gt;
 &lt;div id=&#34;ps2-key&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Problem Set 2&lt;/h1&gt;
 &lt;p&gt;Learning Checks LC3.2-LC3.7, LC3.9-LC3.10 from &lt;a href=&#34;https://ismayc.github.io/moderndiver-book/3-tidy.html&#34;&gt;ModernDive&lt;/a&gt;&lt;/p&gt;
@@ -1326,10 +1326,7 @@ ggplot(data = profiles_sample1, mapping = aes(x = height)) +
 &lt;p&gt;Reproduce the table above about errors, but for a hypothesis test, instead of the one provided for a criminal trial.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
 &lt;p&gt;The original table for a criminal trial is below.&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://ismayc.github.io/moderndiver-book/images/errors.png&#34; /&gt;
-
-&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://ismayc.github.io/moderndiver-book/images/errors.png&#34; alt=&#34;Drawing&#34; style=&#34;width: 800px;&#34;/&gt;&lt;/p&gt;
 &lt;p&gt;The corresponding table for a hypothesis test follows.&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
 &lt;img src=&#34;http://vignette3.wikia.nocookie.net/whatilearned/images/4/45/Type_I_and_Type_II_Error_Table.jpg/revision/latest?cb=20110522022621&#34; /&gt;
