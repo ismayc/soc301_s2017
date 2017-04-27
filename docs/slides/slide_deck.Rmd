@@ -20,216 +20,304 @@ library(dplyr)
 library(tidyr)
 do <- mosaic::do
 filter <- dplyr::filter
-knitr::opts_chunk$set(warning=FALSE, message=FALSE, fig.width=9.5, fig.height=4.5)
+knitr::opts_chunk$set(warning=FALSE, message=FALSE, fig.width=9.5, fig.height=4.5, comment = NA)
 theme_set(theme_gray(base_size = 26))
 ```
 
 
+
 layout: true
 
-.footer[[Week 13 - Tuesday](https://ismayc.github.io/soc301_s2017/2017/04/25/week-13---tuesday/)]
+.footer[[Week 13 - Thursday](https://ismayc.github.io/soc301_s2017/2017/04/27/week-13---thursday/)]
 
 ---
 
 
-name: week13t
+name: week13th
 class: center, middle
 
-# Week 13 - Tuesday
+# Week 13 - Thursday
 
-# April 25, 2017
+# April 27, 2017
 ---
 
-class: center, middle
+# Chatting about *p*-values and *p*-hacking
 
-## Warmup - Your answer should be 3-6 sentences.
+- Discuss the big ideas from the 538 articles you have read with ONE other person you haven't paired with before in this class
+   - [You Can’t Trust What You Read About Nutrition](http://fivethirtyeight.com/features/you-cant-trust-what-you-read-about-nutrition/)
+   - [Statisticians Found One Thing They Can Agree On: It’s Time To Stop Misusing P-Values](http://fivethirtyeight.com/features/statisticians-found-one-thing-they-can-agree-on-its-time-to-stop-misusing-p-values/)
+   - [Science Isn’t Broken](https://fivethirtyeight.com/features/science-isnt-broken/)
+- How do these articles relate to the content covered in class/ModernDive?
 
-### Discuss the importance of the "simulated data" step in the "There is Only One Test" framework.  Why is it needed?  What does it accomplish?  
 
-```{r echo=FALSE, fig.height=5}
-knitr::include_graphics("figure/ht.png")
+---
+
+
+## Global Social Data
+
+### Includes data from including the CIA World Factbook, the World Bank, the Association of Religion Data Archives, the United Nations Office on Drugs and Crime, the International Centre for Prison Studies, and the Stockholm International Peace Research Institute.
+
+- Let's imagine this data represents our population
+- We want to identify the mean percentage of women holding national office.
+
+```{r}
+#install.packages(haven)
+library(haven); library(dplyr)
+url <- "https://ismayc.github.io/global13sdss_0.sav"
+global13_full <- read_sav(url)
+global13 <- global13_full %>% select(country, FEMALEOFFICE)
 ```
 
 ---
 
-# Go over the "There is Only One Test" for Two Sample Independent problem
+## Plotting the population data
 
-### Average income varies from one region of the country to another, and it often reflects both lifestyles and regional living expenses. Suppose a new graduate is considering a job in two locations, Cleveland, OH and Sacramento, CA, and he wants to see whether the average income in one of these cities is higher than the other. He would like to conduct a hypothesis test based on two randomly selected samples from the 2000 Census.
-
----
-
-class: center, middle
-
-# [Inference Mind-map](https://coggle.it/diagram/Vxlydu1akQFeqo6-)
+```{r fig.height=5.5}
+library(ggplot2)
+ggplot(data = global13, mapping = aes(x = FEMALEOFFICE)) +
+  geom_histogram(color = "white", bins = 15)
+```
 
 ---
 
-# Work through the problem in [R via R Markdown](http://ismayc.github.io/teaching/sample_problems/two-means-indep.html)
 
-- Skip the Confidence Interval parts (that's Chapter 8)
+## Sampling
 
----
+- Let's use **sampling** to produce an estimate of the population mean
+- Let's choose a sample of size 25
 
-### How would this change if we were looking to potentially move to Seattle and Boston as well as Sacramento and Cleveland?
+```{r}
+library(mosaic); set.seed(2017)
+sample1 <- global13 %>% resample(size = 25, replace = FALSE)
+(mean_s1_f <- sample1 %>% summarize(mean_f = mean(FEMALEOFFICE)))
+```
 
-<center>
-<img src="figure/ht.png" alt="Drawing" style="width: 580px;" />
-</center>
 --
 
-### This is called an ANOVA (Analysis of Variance) test
-
-- It compares the variability in the sample means to the variability in the samples (Analyzes the variance)
+- But this is just one sample?  We could produce many samples with different means.  Which one is correct?
 
 ---
 
-## Chi-square test
+## Sampling distribution
 
-- The extension of a two sample proportion test is a chi-square test
-
-### A random sample of 500 U.S. adults were questioned regarding their political affiliation (Democrat or Republican) and opinion on a tax reform bill (favor, indifferent, opposed). Based on this sample, do we have reason to believe that opinion on the bill can predict whether or not a respondent is a Democrat?
-
-- Here a success is "being a Democrat"
-- We want to test <small> $H_0: \pi_{favor} = \pi_{indiff} = \pi_{opp}$ </small> versus <small> $H_A:$ </small> at least one of the proportions is different
-
----
-
-Type  | Test Statistic
-------------- | ------------- | -------------
-One-Sample   | Sample Mean <br> $\overline{x}$
-One-Sample  | Sample Proportion <br> $\widehat{p}$
-Two-Sample (Independent) &nbsp; |  Diff of Sample Means <br> $\overline{x}_1 - \overline{x}_2$
-Two-Sample (Paired) | Mean Sample Difference <br> $\overline{x}_{diff}$
-Two-Sample Proportions | Diff of Sample Proportions <br> $\widehat{p}_1 - \widehat{p}_2$
-Multiple Sample (Independent) &nbsp; | MAD of Sample Means <br> $\text{Mean}_{i \ne j} \, ABS(\, \overline{x}_i - \overline{x}_j \, )$
-Multiple Sample Proportions |  MAD of Sample Proportions <br> $\text{Mean}_{i \ne j} \, ABS(\, \hat{p}_i - \hat{p}_j \,)$ 
-
-
----
-
-class: center, middle
-
-# So when are the assumptions violated for traditional tests?
-
-# Why should we use randomization methods instead?
-
----
-
-### Suppose we have the following two populations and we want to look for a difference in means
-
-```{r echo=FALSE}
-library(mosaic)
-sd2 <- 10
-x1 <- c(11.87,14.04,11.86,179.88,13.09,14.68,13.54,32.25,54.52,66.28,15.16,39.83,89.81,116.87,298.94,427,6249.42,3334.9,4503.93,4933.9,15.72,12.33,13.64,15.12,47.86,12.3,12.79,12.34,14.44,12.17,120.17,12.82,13.07,47.48,13.72,12.19,30.48,129.16,191.41,282.96,1076.53,4354.01,7882.12,12.45,13.9,12.12,16.63,12.26,12.01,17.87,12.62,11.81,12.68,12.33,12.04,15.64,12,13.1,62.44,13.21,13.28,12.99,13.52,23.47,13.36,11.81,11.86,13.74,58.72,12.72,12.02,11.92,44.75,77.96,23.53,11.81,23.46,12.52,29.47,12.31,12.54,11.86,12.42,11.89,11.94,12.44,13.48,12.37,16.3,11.93,28.1,18.85,11.96,11.94,18.64,11.79,12.1,13.82,29.8,19.6,11.79,12.77,11.77,14.92,20.59,12.24,19.39,12.79,20.97,13.01,32.79,12.73,24.56,11.92,13.08,12.41,14.46,27.26,25.51,13.8,32.35,15.32,27.82,15.26,13.71,29.8,12.72,14.7,12.28,14.55,12.13,12.86,18.36,36.18,12.1,14.56,29.34,11.82,12,12.21,27.98,17.86,14.13,13.45,17.53,14,13.08,12.23,14.94,14.12,13.19,20.14,40.22,21.19,14.46,35.38,14.89,31.77,3057.58,12.86,12.15,20.52,132.7,17.5,31.34,15.27,13.45,15.32,24.75,12.45,13.45,29.4,13.82,13.48,83.84,100.4,12.78,31.58,16.59,12.51,59.34,66.09,232.43,12.74,12.21,73.53,109.48,13.53,17.65,87.09,18.93,12.43,12.32,15.55,14.1,12.15,12.43,11.82,12.87,12.28,140,240.49,12.76,25.97,13.6,18.32,117.4,242.05,13.94,111,161.53,247.33,13.51,15.49,65.64,14.27,35.17,11.83,30.21,29.14,12.53,11.76,14.08,49.06,212.09,258.35,13,13.74,29.08,60.23,12.16,142.66,202.93,74.79,12.88,27.48,48.91,64.79,49.25,224.59,299.4,29.24,68.88,15.12,34.8,23.68,43.55,12.4,17.61,18.1,15.15,11.92,14.17,13.45,14.51,44.46,14.24,34.15,258.84,12.75,12.77,34.44,13.12,22.49,53.46,14.96,13.75,11.77,16.2,12.52,12.19,17.69,34.83,13.25,12.39,29.59,56.69,82.38,12.13,27.69,15.12,50.21,68.42,16.84,14.96,11.81,15.53,168.74,797.01,52.84,67.02,15.83,167.27,240.05,12.03,48.64,30.45,28.81,54.1,17.73,33.99,19.93,37.21,35.3,122.36,44.94,15.2,26.46,217.48,257.06,14.69,13.22,55.8,26.95,55.05,16.71,44.58,20.71,14.24,41.69,58.3,108.43,137.71,13.89,19.53,46.72,22.45,36.93,20.72,17.39,15.32,28.83,16.34,26.04,44.12,17.84,14.23,14.17,13.63,13.12,12.91,12.72,36.33,18.25,14.06,14.67,27.51,18.38,12.69,14.14,16.19,11.87,12.26,31.92,14.09,19.07,32.24,19.29,34.24,21.39,13.05,17.57,5651.61,6635.33,1666.81,6692.4,2161.37,15.63,37.85,61.85,68.92,252.31,16.45,28.21,57.45,93.8,70.53,178.19,239.22,270.67,419.6,11.93,11.88,14.38,51.44,54.91,81.9,112.63,3911.01,8625.72,9144.85,11.9,19.59,39.06,3153.42,8628.67,17.58,12.7,11.91,17.08,11.92,18.83,12.09,13.19,14.02,11.74,42.91,225.66,257.56,18.97,58.93,150.21,249.29,262.74,20.67,48.07,239.44,283.07,777.53,866.46,2570.59,5306.95,7773.85,8706.43,8730.16,21.43,86.28,12.22,103.45,120.04,197.63,502.12,580.07,19.02,18.98,12.3,13.49,50.26,76.13,14.69,44.07,73.74,180.95,13.37,15.37,58.62,60.12,228.92,251.56,268.03,11.77,16.83,50.36,63.02,107.3,234.99,261.7,18.09,58.17,75.96,220.08,250.4,16.36,14.1,61.36,140.59,278.06,417.68,797.12,1633.51,3911.59,3463.77,32.29,59.93,17.8,70.88,88.52,244.83,282.94,312.01,658.95,828.67,15.23)
-x2 <- (900 - x1) * sd2 + 80000
-
-x1[length(x1) - 1] <- 68828.67
-x1[length(x1)] <- 50015.23
-skewed <- data_frame(x1, x2) %>%
-  rename(`1` = x1, `2` = x2) %>%
-  gather(key = "group", value = "value")
-```
-
-```{r fig.height=5.3}
-ggplot(data = skewed, mapping = aes(x = group, y = value)) +
-  geom_boxplot()
+```{r cache=TRUE}
+sample_means <- do(5000) * 
+  global13 %>% resample(size = 25, replace = FALSE) %>% 
+  summarize(mean_f = mean(FEMALEOFFICE))
+sample_means
 ```
 
 ---
 
-### We collect a sample of 20 from each
+## Plot of sampling distribution
+
+```{r fig.height=5.5}
+library(ggplot2)
+ggplot(data = sample_means, mapping = aes(x = mean_f)) +
+  geom_histogram(color = "white", bins = 15)
+```
+
+---
+
+## Mean of the sampling distribution
+
+### The mean of the sampling distribution of means (where the sampling distribution is centered) provides an estimate for our population mean:
+
+```{r}
+sample_means %>% summarize(mean_samp_dist = mean(mean_f))
+```
+
+--
+
+### Population mean
+
+```{r}
+global13 %>% summarize(pop_mean = mean(FEMALEOFFICE))
+```
+
+---
+
+## Standard deviation of the sampling distribution
+
+### The standard deviation of the sampling distribution of means (also known as the <u>standard error</u>) provides an estimate of how much variability we can expect in the means as we go from one sample to another.
+
+```{r}
+sample_means %>% summarize(std_error = sd(mean_f))
+```
+
+---
+
+## How could we improve our estimate of the population mean?
+
+--
+- Increase the sample size
+--
+
+- Run more simulations (Instead of `do()`ing 5000 we could `do()` 100,000, for example)
+
+---
+
+## What if we didn't have the whole population?
+
+--
+
+### We could <u>resample</u> one randomly selected sample multiple times to create a guess to what the sampling distribution might look like.
+--
+
+### Important note:  This "guess" is called the <u>bootstrap distribution</u> and it is an approximation of the sampling distribution.
+--
+
+### The <u>bootstrap distribution</u> will always be centered near the original sample statistic so it is better used as an estimate of the shape of the sampling distribution and as an estimate of the standard error, but NOT as an estimate for the population center.
+
+---
+
+## Bootstrap our original sample
+
+- Let's use our original sample from `global13` which we called `sample1`.
+- Let's look to see what one such `resample()` of `sample1` gives us:
 
 ```{r}
 set.seed(2017)
-my_sample <- skewed %>%
-  group_by(group) %>%
-  sample_n(20) %>%
-  ungroup()
-ggplot(data = my_sample, mapping = aes(x = value)) +
-  geom_histogram(color = "white", bins = 10) +
-  facet_wrap(~group, scales = "free_x")
+(boot1 <- sample1 %>% resample(orig.id = TRUE))
 ```
 
 ---
 
-### A different plot
+## Computing the bootstrap mean
+
+```{r}
+boot1 %>% summarize(boot_mean = mean(FEMALEOFFICE))
+```
+
+---
+
+## Repeating this process
+
+### Repeating this process over and over again, we can create a <u>bootstrap distribution</u> from the means of the <u>bootstrap samples</u>.
+
+```{r cache=TRUE}
+boot_means <- do(5000) * 
+  sample1 %>% resample(orig.id = TRUE) %>% 
+  summarize(boot_mean = mean(FEMALEOFFICE))
+```
+
+---
+
+## Plotting the bootstrap distribution
 
 ```{r fig.height=5.5}
-ggplot(data = my_sample, mapping = aes(x = group, y = value)) +
-  geom_boxplot()
+ggplot(data = boot_means, mapping = aes(x = boot_mean)) +
+  geom_histogram(color = "white", bins = 15)
 ```
 
 ---
 
-### We calculate the observed sample mean
+## Using the bootstrap distribution 
+
+### To estimate the <u>standard error</u>
 
 ```{r}
-(my_means <- my_sample %>% group_by(group) %>% 
-  summarize(my_mean = mean(value)))
-(obs_diff <- diff(my_means$my_mean))
+boot_means %>% summarize(sd_boot_dist = sd(boot_mean))
 ```
 
 ---
 
-### But what if we had collected a different sample instead <br> (assuming <small> $H_0$ </small> is true)
+## Using the bootstrap distribution
+
+### To estimate the population mean
 
 ```{r}
-library(mosaic)
-(shuffled_my_means <- my_sample %>%
-     mutate(value = shuffle(value)) %>% 
-     group_by(group) %>%
-     summarize(my_mean_shuf = mean(value)))
-(obs_shuf_diff <- diff(shuffled_my_means$my_mean_shuf))
+boot_means %>% summarize(mean_boot_dist = mean(boot_mean))
+```
+--
+
+- Hmm, that number looks familiar
+
+```{r}
+sample1 %>% summarize(sample_mean = mean(FEMALEOFFICE))
 ```
 
+- What potential problems do we have with this estimate?
+
+
 ---
 
-### And repeated this many times
+# Providing a better estimate
 
-```{r eval=FALSE}
-many_shuffles <- do(5000) *
-(shuffled_my_means <- my_sample %>%
-     mutate(value = shuffle(value)) %>% 
-     group_by(group) %>%
-     summarize(my_mean_shuf = mean(value)))
-rand_distn <- many_shuffles %>% 
-  group_by(.index) %>% 
-  summarize(diffmean = diff(my_mean_shuf))
+Point Estimate            |  Confidence Interval
+:-------------------------:|:-------------------------:
+<img src="figure/spear.jpg" alt="Drawing" style="width: 370px;"/>  |  <img src="figure/net.jpg" alt="Drawing" style="width: 370px;"/>
+
+---
+
+## Confidence Interval
+
+- A range of plausible values for a population parameter
+- Built using bootstrapping and percentiles of the bootstrap distribution
+
+```{r}
+( ciq_mean <- confint(boot_means, level = 0.95, method = "quantile") )
 ```
 
+### What does this mean?
+--
+
+- Using a method that is 95% reliable, our range of plausible values for the true mean percentage of women holding national office is between around 14.6% to 24.8%. 
 ---
 
-### And plotted the null distribution
+## How did we fair using this sample?
 
-```{r fig.height=5, eval=FALSE}
-ggplot(rand_distn, aes(x = diffmean)) +
-  geom_histogram(color = "white", bins = 20)
+#### True population mean
+
+```{r}
+global13 %>% summarize(pop_mean = mean(FEMALEOFFICE))
 ```
 
-<center>
-<img src="figure/Rplot.png" alt="Drawing" style="width: 330px;" />
-</center>
+#### Confidence interval
 
-- This is not represented well by a bell-shaped curve
-
----
-
-# Moral of the story
-
-- Randomization methods will always work
-- Traditional methods will usually work, but with skewed distributions they can produce invalid/questionable results
-- It's usually good to run both types and compare them
-
----
-
-class: center, middle
-
-# Work on [Potential Problems for Quiz #4](https://docs.google.com/a/pacificu.edu/document/d/14XJgCJOt-F1LAxmG2PPeJJ0G5nzSWJ4ead-V76EvoNw/edit?usp=sharing)
-
-
-- Quiz 4 is only over Chapters 6 and 7 of ModernDive
-
----
-
-```{r old, child='temp_deck.Rmd'}
+```{r}
+ciq_mean
 ```
+--
+
+- Would all random samples produce confidence intervals that include the population mean?  If not, what percentage would you expect to?
+
+---
+
+## Summary
+
+- This activity was meant to show you how the concepts of **sampling** and **resampling** interact
+--
+
+- Bootstrapping works by allowing us to create a guess as to what the sampling distribution looks like.
+    - This allows us to test hypotheses and create confidence intervals on unknown population values.
+    - It also allows us to not necessarily worry about formulas and mathematical probability.
+--
+- It does still require us to have a random sample from our population as our **original sample** though.  *Why is that?*
+
+---
+
+name: ciprob
+
+## Reason to be concerned
+
+- Remember that the original population distribution was right-skewed.  Therefore, the mean doesn't make sense as a measure and may be causing some problems.
+
+- <u>Problem</u>:  Repeat the **sampling**, **bootstrapping**, and **confidence interval** R code steps above, but this time using the median and the IQR instead of the mean and standard deviation.
+
+---
+
+## For PS13 (Due at the beginning of class on Tuesday)
+
+- Can be hand-written or shared as a Google Doc
+- Run the necessary code in an R script and explain your results from the Problem on the last slide.
+    - Provide your modified code and explain what each line of code is doing.
+    - What changes in the results of the analysis?  
+    - Do we get the same result as with the mean and standard deviation?
+- Read the article about [Margin of Errors and Polling](http://www.pewresearch.org/fact-tank/2016/09/08/understanding-the-margin-of-error-in-election-polls/) from Pew
+    - In two to three paragraphs, summarize the article and discuss how confidence intervals are useful in polling.
+
+
+---
+
+{r old, child='temp_deck.Rmd'}
