@@ -9,6 +9,7 @@ This page will list the Problem Sets and when they will usually be turned in on 
 # PS 13 (Due Tues, May 2 by 2:45 PM) {#ps13}
 
 - Can be hand-written or shared as a Google Doc
+- Turned in individually
 - Modify the code I provided in the slides in an R script and explain your results from the [Problem](https://ismayc.github.io/soc301_s2017/slides/slide_deck.html#ciprob) in the slides.
     - Provide your modified code and explain what each line of code is doing.
     - What changes in the results of the analysis?  
