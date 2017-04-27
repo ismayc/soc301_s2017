@@ -10,6 +10,37 @@
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Week 13 - Thursday</title>
+      <link>/2017/04/25/week-13---thursday/</link>
+      <pubDate>Tue, 25 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/04/25/week-13---thursday/</guid>
+      <description>
+
+&lt;p&gt;Slides available &lt;a href=&#34;http://ismayc.github.io/soc301_s2017/slides/slide_deck.html#week13th&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;covered-content&#34;&gt;Covered Content&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Quiz #4 over Chapters 6 and 7 of ModernDive&lt;/li&gt;
+&lt;li&gt;Discuss 538 articles on &lt;em&gt;p&lt;/em&gt;-hacking and &lt;em&gt;p&lt;/em&gt;-values&lt;/li&gt;
+&lt;li&gt;Talk about bootstrapping and confidence intervals&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;to-do-for-next-time&#34;&gt;To do for next time&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Read all of Chapter 8 of &lt;a href=&#34;https://ismayc.github.io/moderndiver-book/8-ci.html&#34;&gt;ModernDive&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I will ask you at the beginning of class on Tuesday to provide the definition of &lt;em&gt;confidence interval&lt;/em&gt; and &lt;em&gt;standard error&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Work on &lt;a href=&#34;https://ismayc.github.io/soc301_s2017/problem-sets/index.html#ps13&#34;&gt;PS13&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Week 13 - Tuesday</title>
       <link>/2017/04/25/week-13---tuesday/</link>
       <pubDate>Tue, 25 Apr 2017 00:00:00 +0000</pubDate>
@@ -676,38 +707,6 @@ if(length(new.pkgs)) {
 
 &lt;ul&gt;
 &lt;li&gt;Begin &lt;a href=&#34;https://www.datacamp.com/courses/reporting-with-r-markdown&#34;&gt;Reporting with R Markdown&lt;/a&gt; DataCamp course (Due on March 9 at 1 PM)&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Week 05 - Tuesday</title>
-      <link>/2017/02/28/week-05---tuesday/</link>
-      <pubDate>Tue, 28 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/2017/02/28/week-05---tuesday/</guid>
-      <description>
-
-&lt;p&gt;Slides available &lt;a href=&#34;http://ismayc.github.io/soc301_s2017/slides/slide_deck.html#week05t&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;covered-content&#34;&gt;Covered Content&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Take Quiz #2 from last semester as a class using Plickers&lt;/li&gt;
-&lt;li&gt;Review Chapters 3 and 4 of &lt;a href=&#34;http://moderndive.com&#34;&gt;ModernDive&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Work on &lt;a href=&#34;https://docs.google.com/a/pacificu.edu/document/d/1uNEM3zOidLbsfTYcYVc78jxNB6DwfjI7ZGgeDSxCvAI/edit?usp=sharing&#34;&gt;Practice Problems for Quiz #2&lt;/a&gt; in groups&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;to-do-for-next-time&#34;&gt;To do for next time&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Study for Quiz #2 covering Chapters 3 and 4 of &lt;a href=&#34;http://moderndive.com&#34;&gt;ModernDive&lt;/a&gt; and the corresponding chapters on DataCamp (&lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/tidy-data&#34;&gt;Tidy Data&lt;/a&gt; through &lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/ggplot2-review?ex=1&#34;&gt;ggplot2 Review&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Complete &lt;a href=&#34;https://campus.datacamp.com/courses/effective-data-storytelling-using-the-tidyverse/ggplot2-review?ex=1&#34;&gt;ggplot2 Review&lt;/a&gt; DataCamp chapter (Due on March 2 at 1 PM)&lt;/li&gt;
-&lt;li&gt;Begin &lt;a href=&#34;https://campus.datacamp.com/courses/working-with-the-rstudio-ide-part-1/orientation?ex=1&#34;&gt;Working with the RStudio IDE (Part 1) - Orientation chapter&lt;/a&gt; on DataCamp (Due on March 7 at 1 PM)
-
-&lt;ul&gt;
-&lt;li&gt;This will require you to download R and RStudio Desktop to your laptop computer.  The sooner you do this the better.  If you have issues, please reach out to me AS SOON AS POSSIBLE!&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
