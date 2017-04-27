@@ -49,6 +49,12 @@ class: center, middle
    - [Science Isn’t Broken](https://fivethirtyeight.com/features/science-isnt-broken/)
 - How do these articles relate to the content covered in class/ModernDive?
 
+---
+
+class: center, middle
+
+# Turn in your paragraphs from the nutrition article for PS12 
+
 
 ---
 
@@ -320,4 +326,5 @@ name: ciprob
 
 ---
 
-{r old, child='temp_deck.Rmd'}
+```{r old, child='temp_deck.Rmd'}
+```
