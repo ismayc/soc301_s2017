@@ -1,7 +1,7 @@
 ---
 title: Week 13 - Thursday
 author: ~
-date: '2017-04-25'
+date: '2017-04-27'
 categories: []
 tags: []
 ---
