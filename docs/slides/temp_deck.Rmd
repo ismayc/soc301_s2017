@@ -1,6 +1,315 @@
 
 layout: true
 
+.footer[[Week 13 - Thursday](https://ismayc.github.io/soc301_s2017/2017/04/27/week-13---thursday/)]
+
+---
+
+
+name: week13th
+class: center, middle
+
+# Week 13 - Thursday
+
+# April 27, 2017
+---
+
+# Chatting about *p*-values and *p*-hacking
+
+- Discuss the big ideas from the 538 articles you have read with ONE other person you haven't paired with before in this class
+   - [You Can’t Trust What You Read About Nutrition](http://fivethirtyeight.com/features/you-cant-trust-what-you-read-about-nutrition/)
+   - [Statisticians Found One Thing They Can Agree On: It’s Time To Stop Misusing P-Values](http://fivethirtyeight.com/features/statisticians-found-one-thing-they-can-agree-on-its-time-to-stop-misusing-p-values/)
+   - [Science Isn’t Broken](https://fivethirtyeight.com/features/science-isnt-broken/)
+- How do these articles relate to the content covered in class/ModernDive?
+
+---
+
+class: center, middle
+
+# Turn in your paragraphs from the nutrition article for PS12 
+
+
+---
+
+
+## Global Social Data
+
+### Includes data from including the CIA World Factbook, the World Bank, the Association of Religion Data Archives, the United Nations Office on Drugs and Crime, the International Centre for Prison Studies, and the Stockholm International Peace Research Institute.
+
+- Let's imagine this data represents our population
+- We want to identify the mean percentage of women holding national office.
+
+```{r eval=FALSE}
+install.packages("haven")
+library(haven); library(dplyr)
+url <- "https://ismayc.github.io/global13sdss_0.sav"
+global13_full <- read_sav(url)
+global13 <- global13_full %>% select(country, FEMALEOFFICE)
+```
+
+```{r include=FALSE}
+#install.packages(haven)
+library(haven); library(dplyr)
+url <- "https://ismayc.github.io/global13sdss_0.sav"
+global13_full <- read_sav(url)
+global13 <- global13_full %>% select(country, FEMALEOFFICE)
+```
+
+
+---
+
+## Plotting the population data
+
+```{r fig.height=5.5}
+library(ggplot2)
+ggplot(data = global13, mapping = aes(x = FEMALEOFFICE)) +
+  geom_histogram(color = "white", bins = 15)
+```
+
+---
+
+
+## Sampling
+
+- Let's use **sampling** to produce an estimate of the population mean
+- Let's choose a sample of size 25
+
+```{r}
+library(mosaic); set.seed(2017)
+sample1 <- global13 %>% resample(size = 25, replace = FALSE)
+(mean_s1_f <- sample1 %>% summarize(mean_f = mean(FEMALEOFFICE)))
+```
+
+--
+
+- But this is just one sample?  We could produce many samples with different means.  Which one is correct?
+
+---
+
+## Sampling distribution
+
+```{r cache=TRUE}
+sample_means <- do(5000) * 
+  global13 %>% resample(size = 25, replace = FALSE) %>% 
+  summarize(mean_f = mean(FEMALEOFFICE))
+sample_means
+```
+
+---
+
+## Plot of sampling distribution
+
+```{r fig.height=5.5}
+library(ggplot2)
+ggplot(data = sample_means, mapping = aes(x = mean_f)) +
+  geom_histogram(color = "white", bins = 15)
+```
+
+---
+
+## Mean of the sampling distribution
+
+### The mean of the sampling distribution of means (where the sampling distribution is centered) provides an estimate for our population mean:
+
+```{r}
+sample_means %>% summarize(mean_samp_dist = mean(mean_f))
+```
+
+--
+
+### Population mean
+
+```{r}
+global13 %>% summarize(pop_mean = mean(FEMALEOFFICE))
+```
+
+---
+
+## Standard deviation of the sampling distribution
+
+### The standard deviation of the sampling distribution of means (also known as the <u>standard error</u>) provides an estimate of how much variability we can expect in the means as we go from one sample to another.
+
+```{r}
+sample_means %>% summarize(std_error = sd(mean_f))
+```
+
+---
+
+## How could we improve our estimate of the population mean?
+
+--
+- Increase the sample size
+--
+
+- Run more simulations (Instead of `do()`ing 5000 we could `do()` 100,000, for example)
+
+---
+
+## What if we didn't have the whole population?
+
+--
+
+### We could <u>resample</u> one randomly selected sample multiple times to create a guess to what the sampling distribution might look like.
+--
+
+### Important note:  This "guess" is called the <u>bootstrap distribution</u> and it is an approximation of the sampling distribution.
+--
+
+### The <u>bootstrap distribution</u> will always be centered near the original sample statistic so it is better used as an estimate of the shape of the sampling distribution and as an estimate of the standard error, but NOT as an estimate for the population center.
+
+---
+
+## Bootstrap our original sample
+
+- Let's use our original sample from `global13` which we called `sample1`.
+- Let's look to see what one such `resample()` of `sample1` gives us:
+
+```{r}
+set.seed(2017)
+(boot1 <- sample1 %>% resample(orig.id = TRUE))
+```
+
+---
+
+## Computing the bootstrap mean
+
+```{r}
+boot1 %>% summarize(boot_mean = mean(FEMALEOFFICE))
+```
+
+---
+
+## Repeating this process
+
+### Repeating this process over and over again, we can create a <u>bootstrap distribution</u> from the means of the <u>bootstrap samples</u>.
+
+```{r cache=TRUE}
+boot_means <- do(5000) * 
+  sample1 %>% resample(orig.id = TRUE) %>% 
+  summarize(boot_mean = mean(FEMALEOFFICE))
+```
+
+---
+
+## Plotting the bootstrap distribution
+
+```{r fig.height=5.5}
+ggplot(data = boot_means, mapping = aes(x = boot_mean)) +
+  geom_histogram(color = "white", bins = 15)
+```
+
+---
+
+## Using the bootstrap distribution 
+
+### To estimate the <u>standard error</u>
+
+```{r}
+boot_means %>% summarize(sd_boot_dist = sd(boot_mean))
+```
+
+---
+
+## Using the bootstrap distribution
+
+### To estimate the population mean
+
+```{r}
+boot_means %>% summarize(mean_boot_dist = mean(boot_mean))
+```
+--
+
+- Hmm, that number looks familiar
+
+```{r}
+sample1 %>% summarize(sample_mean = mean(FEMALEOFFICE))
+```
+
+- What potential problems do we have with this estimate?
+
+
+---
+
+# Providing a better estimate
+
+Point Estimate            |  Confidence Interval
+:-------------------------:|:-------------------------:
+<img src="figure/spear.jpg" alt="Drawing" style="width: 370px;"/>  |  <img src="figure/net.jpg" alt="Drawing" style="width: 370px;"/>
+
+---
+
+## Confidence Interval
+
+- A range of plausible values for a population parameter
+- Built using bootstrapping and percentiles of the bootstrap distribution
+
+```{r}
+( ciq_mean <- confint(boot_means, level = 0.95, method = "quantile") )
+```
+
+### What does this mean?
+--
+
+- Using a method that is 95% reliable, our range of plausible values for the true mean percentage of women holding national office is between around 14.6% to 24.8%. 
+---
+
+## How did we fair using this sample?
+
+#### True population mean
+
+```{r}
+global13 %>% summarize(pop_mean = mean(FEMALEOFFICE))
+```
+
+#### Confidence interval
+
+```{r}
+ciq_mean
+```
+--
+
+- Would all random samples produce confidence intervals that include the population mean?  If not, what percentage would you expect to?
+
+---
+
+## Summary
+
+- This activity was meant to show you how the concepts of **sampling** and **resampling** interact
+--
+
+- Bootstrapping works by allowing us to create a guess as to what the sampling distribution looks like.
+    - This allows us to test hypotheses and create confidence intervals on unknown population values.
+    - It also allows us to not necessarily worry about formulas and mathematical probability.
+--
+- It does still require us to have a random sample from our population as our **original sample** though.  *Why is that?*
+
+---
+
+name: ciprob
+
+## Reason to be concerned
+
+- Remember that the original population distribution was right-skewed.  Therefore, the mean doesn't make sense as a measure and may be causing some problems.
+
+- <u>Problem</u>:  Repeat the **sampling**, **bootstrapping**, and **confidence interval** R code steps above, but this time using the median and the IQR instead of the mean and standard deviation.
+
+---
+
+## For PS13 (Due at the beginning of class on Tuesday)
+
+- Can be hand-written or shared as a Google Doc
+- Run the necessary code in an R script and explain your results from the Problem on the last slide.
+    - Provide your modified code and explain what each line of code is doing.
+    - What changes in the results of the analysis?  
+    - Do we get the same result as with the mean and standard deviation?
+- Read the article about [Margin of Errors and Polling](http://www.pewresearch.org/fact-tank/2016/09/08/understanding-the-margin-of-error-in-election-polls/) from Pew
+    - In two to three paragraphs, summarize the article and discuss how confidence intervals are useful in polling.
+
+---
+
+
+layout: true
+
 .footer[[Week 13 - Tuesday](https://ismayc.github.io/soc301_s2017/2017/04/25/week-13---tuesday/)]
 
 ---

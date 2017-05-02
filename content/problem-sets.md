@@ -17,9 +17,8 @@ This page will list the Problem Sets and when they will usually be turned in on 
 - Read the article about [Margin of Errors and Polling](http://www.pewresearch.org/fact-tank/2016/09/08/understanding-the-margin-of-error-in-election-polls/) from Pew Research
     - In two to three paragraphs, summarize the article and discuss how confidence intervals are useful in polling.
 
-<!--
+
 - DISCUSSION [here](ps-key/index.html#ps13-key)
--->
 
 # PS 12 (Due Tues, April 25 by 1:00 PM) {#ps12}
 
