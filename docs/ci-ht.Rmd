@@ -1,0 +1,109 @@
+---
+title: "SOC 301 - Relating Confidence Intervals and \\newline  Hypothesis Tests"
+#author: "Chester Ismay"
+#date: "5/2/2017"
+output:
+  pdf_document: default
+header-includes:
+- \usepackage{enumerate}
+---
+
+In one experiment, 14 researchers trained a random sample of male US liberal arts
+college students to tap their fingers at a rapid rate. The sample was then divided
+at random into two groups of 10 students each. Each student drank the
+equivalent of about two cups of coffee, which included about 200 mg of caffeine
+for the students in one group but was decaffeinated coffee for the second group.
+After a 2-hour period, each student was tested to measure finger tapping rate
+(taps per minute). The students did not know whether or not their drinks
+included caffeine and the person measuring the tap rates was also unaware of
+the groups. The goal of the experiment was to determine whether caffeine produces an increase in the average tap rate.
+
+### 1. What is the response variable for this problem?
+
+  \begin{enumerate}[(A)]
+     \item Whether or not caffeine was included
+     \item Whether or not there was a high tap rate
+     \item Number of cups of coffee
+     \item Number of students in each group
+     \item None of the above %Correct (Tap rate)
+  \end{enumerate}
+
+### 2. What is the explanatory variable?
+
+  \begin{enumerate}[(A)]
+     \item Type of coffee given %Correct
+     \item Number of hours after drinking coffee
+     \item Whether or not caffeine impacts tap rate
+     \item Increases in the average tap rate
+     \item None of the above.
+  \end{enumerate}
+
+### 3. What is the population in this problem?
+
+  \begin{enumerate}[(A)]
+  	\item All students at colleges in the US
+      \item Students at liberal arts colleges in the US
+%      \item All Americans
+      \item All coffee drinkers
+      \item None of the above %Correct (All male US liberal arts college students)
+  \end{enumerate}
+
+### 4.  Why was random sampling used to select the observational units?
+
+  \begin{enumerate}[(A)]
+     \item Random sampling lets us make inferences to all male US liberal arts college students.
+     \item Random sampling lets us make strong conclusions about only the sample selected.
+     \item Random sampling ensures that all members of the population are equally likely to be selected in the sample.
+     \item Two of the above are correct. %Correct
+  \end{enumerate}
+
+
+### 5. Denote $\mu_c$ as the mean tap rate for the population of male students with caffeine and $\mu_n$ as the similar rate without caffeine. Identify the correct alternative hypothesis.
+
+  \begin{enumerate}[(A)]
+  	\item $\mu_c - \mu_n = 0$ 
+  	\item $\mu_n < \mu_c$ %Correct (Need to tell them they could switch these as long as they are consistent)
+      \item The mean tap rates are the same with or without caffeine.
+  	\item $\mu_c - \mu_n \ne 0$
+      \item None of the above
+  \end{enumerate} 
+
+### 6. For this problem, we have an observed difference in sample means of $\bar{x}_c - \bar{x}_n$ of 3.5.  Based on the picture, is there evidence that caffeine increases tap rate?
+
+  \begin{enumerate}[(A)]
+  	\item Yes, the $p$-value is large.
+  	\item No, the $p$-value is small.
+  	\item No, the $p$-value is large. 
+  	\item Yes, the $p$-value is small. %Correct
+  \end{enumerate}
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, fig.height=3.3}
+library(mosaic)
+library(ggplot2)
+library(Lock5Data)
+data("CaffeineTaps")
+set.seed(2017)
+many_shuffles <- do(5000) * 
+  (CaffeineTaps %>% 
+     mutate(Taps = shuffle(Taps)) %>% 
+     group_by(Group) %>%
+     summarize(mean = mean(Taps))
+   )
+rand_distn <- many_shuffles %>%
+  group_by(.index) %>%
+  summarize(diffmean = diff(mean))
+ggplot(data = rand_distn, aes(x = diffmean)) +
+  geom_histogram(color = "white", bins = 20) +
+  scale_x_continuous(breaks = seq(from = -4, to = 4, by = 0.5))
+```
+
+
+### 7. Suppose that the goal of the experiment was to determine whether caffeine produces an EFFECT in the average tap rate.  What could we say about the corresponding confidence interval for $\mu_c - \mu_n$ based on the size of the $p$-value?
+
+\begin{enumerate}[(A)]
+	\item It will be entirely positive.
+	\item It will include 0. 
+	\item It will include 3.5.
+    \item Two of the above are true. %Correct (A and C)
+    \item None of the above.
+\end{enumerate}

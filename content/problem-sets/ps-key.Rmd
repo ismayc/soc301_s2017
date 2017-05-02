@@ -12,7 +12,7 @@ output:
 Page last updated at `r format(Sys.time(), "%A, %B %d, %Y %X %Z")`
 
 ```{r echo=FALSE}
-knitr::opts_chunk$set(message=FALSE, warning=FALSE)
+knitr::opts_chunk$set(message=FALSE, warning=FALSE, comment = NA)
 ```
 
 
@@ -758,3 +758,127 @@ What are some flaws with hypothesis testing? How could we alleviate them?
 **Discussion**:
 
 The biggest flaw with hypothesis testing is the fact that it only has two competing hypothesis and a choice must be made one way or the other based on the data.  When we reject the null hypothesis, we often want to also know "But how far away might we expect the mean of one group to be from the other?" or similar questions.  Much like a criminal trial, we aren't necessarily sure of just "how guilty" a person may be and type I and type II errors can be made in criminal trials and hypothesis tests.  Unfortunately, this is something built in to the process of both.  The dichotomy is alleviated some by using confidence intervals to estimate the difference as is discussed in Chapter 8 of ModernDive.
+
+***
+
+# Problem Set 13 {#ps13-key}
+
+- Modify the code I provided in the [slides](https://ismayc.github.io/soc301_s2017/slides/slide_deck.html#haven) in an R script and explain your results to the following problem:
+
+Repeat the sampling, bootstrapping, and confidence interval R code steps above, but this time using the median and the IQR instead of the mean and standard deviation.
+
+- Provide your modified code and explain what each line of code is doing.
+- What changes in the results of the analysis?  
+- Do we get the same result as with the mean and standard deviation?
+
+**Discussion**:
+
+Copying the code from the slides, we begin with installing the `haven` package as shown on the slide [here](https://ismayc.github.io/soc301_s2017/slides/slide_deck.html#haven).  
+
+```{r eval=FALSE}
+install.packages("haven")
+```
+
+We then load the package via the `library` function:
+
+```{r}
+library(haven)
+```
+
+We can now read in the data as a data frame with the name `global13_full` stored in the SPSS file format downloaded from my webpage:
+
+```{r}
+url <- "https://ismayc.github.io/global13sdss_0.sav"
+global13_full <- read_sav(url)
+```
+
+Next, we choose only a couple columns of interest to us:
+
+```{r}
+global13 <- global13_full %>% select(country, FEMALEOFFICE)
+```
+
+We proceed to plot the distribution of all percentage of females in national office after loading the `ggplot2` package.  (Note that nothing has changed yet in terms of <u>mean</u> and <u>standard deviation</u> being replaced with <u>median</u> and <u>interquartile range</u> yet.  This code is exactly the same so far as what was done in class.)
+
+```{r}
+library(ggplot2)
+ggplot(data = global13, mapping = aes(x = FEMALEOFFICE)) +
+  geom_histogram(color = "white", bins = 15)
+```
+
+We begin by selecting a single sample of size 25 from the population and calculating its median.  We will set the seed to the random number generator to be `2017`.  (If you didn't choose this same initial seed, you will obtain slightly different results in what follows.)
+
+
+```{r}
+sample1 <- global13 %>% resample(size = 25, replace = FALSE)
+(median_s1_f <- sample1 %>% summarize(median_f = median(FEMALEOFFICE)))
+```
+
+
+Here we create a sample of size 25 without replacement to simulate the process of selecting 25 countries at random from the pool of all countries in our population.  Then we calculate the median of the percentage of females in national office for those 25 selected countries and repeat this process 5000 times.  The `sample_medians` data frame stores these 5000 sample medians.
+
+```{r cache=TRUE}
+sample_medians <- do(5000) * 
+  global13 %>% resample(size = 25, replace = FALSE) %>% 
+  summarize(median_f = median(FEMALEOFFICE))
+```
+
+We next use `ggplot2` to plot a histogram of the distribution of sample medians.  This is also known of the <u>sampling distribution of the median</u>.
+
+```{r}
+ggplot(data = sample_medians, mapping = aes(x = median_f)) +
+  geom_histogram(color = "white", bins = 15)
+```
+
+**Note**: We see that the distribution of the sample medians looks much different than the nice bell-shaped pattern we saw with the sampling distribution of the means as seen below:
+
+```{r echo=FALSE}
+knitr::include_graphics("https://ismayc.github.io/soc301_s2017/slides/slide_deck_files/figure-html/unnamed-chunk-7-1.png")
+```
+
+The median of the sample medians provides a good estimate for the population median as seen below by computing both:
+
+```{r}
+sample_medians %>% summarize(median_samp_dist = median(median_f))
+global13 %>% summarize(pop_median = median(FEMALEOFFICE))
+```
+
+We next calculate the interquartile range (IQR) of the sampling distribution of the sample median:
+
+```{r}
+sample_medians %>% summarize(iqr_medians = iqr(median_f))
+```
+
+
+We can compare this IQR value to the standard deviation of the sampling distribution of the statistic (previously, this was the mean) is known as the <u>standard error</u>.  It was calculated to be 1.83049 [here](https://ismayc.github.io/soc301_s2017/slides/slide_deck.html#stderror).  Recall that this standard error can be interpreted as saying that we expect a sample selected at random from the population to produce a sample mean value about 1.8 percentage points away from the mean value of ALL the sample means of 20.43005 that was calculated [here](https://ismayc.github.io/soc301_s2017/slides/slide_deck.html#meanofmeans).  The IQR values and standard error values are similar.
+
+## Bootstrapping
+
+We now shift towards using the single sample we selected above with name `sample1` to create a guess as to what the shape of the sampling distribution may look like.  We will then use this bootstrap distribution to create a confidence interval that will give us a range of plausible values for the population median. We begin by observing what a single bootstrap sample statistic/median may look like:
+
+```{r}
+set.seed(2017)
+(boot1 <- sample1 %>% resample(orig.id = TRUE))
+```
+
+
+```{r cache=TRUE}
+bootstrap_medians <- do(5000) * 
+  sample1 %>% resample(replace = TRUE) %>% 
+  summarize(boot_median = median(FEMALEOFFICE))
+```
+
+We can then plot the <u>bootstrap distribution</u> which should give us an approximation for the sampling distribution we calculated above:
+
+```{r}
+ggplot(data = bootstrap_medians, mapping = aes(x = boot_median)) +
+  geom_histogram(color = "white", bins = 15)
+```
+
+We see that the overall shape is similar compared to the sampling distribution shown above.
+
+```{r}
+( ciq_median <- confint(bootstrap_medians, level = 0.95, method = "quantile") )
+```
+
+This confidence interval is a bit wider than the $(14.62, 24.76)$ confidence interval that was given for the population mean in the slides.  This makes sense since the median appears to have more variability going from one sample to another than the mean does.  The small sample size here of 25 could also be contributing to this.

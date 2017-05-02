@@ -24,7 +24,64 @@ knitr::opts_chunk$set(warning=FALSE, message=FALSE, fig.width=9.5, fig.height=4.
 theme_set(theme_gray(base_size = 26))
 ```
 
+layout: true
 
+.footer[[Week 14 - Tuesday](https://ismayc.github.io/soc301_s2017/2017/05/02/week-15---tuesday/)]
+
+---
+
+
+name: week14t
+class: center, middle
+
+# Week 14 - Tuesday
+
+# May 2, 2017
+---
+
+class: center, middle
+
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics("figure/toldyouso.png")
+```
+
+
+---
+
+## Warmup
+
+### Provide the definitions of 
+
+- <u>confidence interval</u> and 
+- <u>standard error</u> 
+
+### as given in class and in the textbook.
+
+---
+
+class: center, middle
+
+# Work through R problem from PS13
+
+--
+
+- Discussion [here](https://ismayc.github.io/soc301_s2017/problem-sets/ps-key/index.html#ps13-key)
+
+---
+
+## Relating hypothesis testing and confidence intervals
+
+- Worksheet [here](ci-ht.pdf)
+
+---
+
+class: center, middle
+
+# Check Slack for practice problems for you to try for Quiz #5
+
+- Remember to check the post from [today](https://ismayc.github.io/soc301_s2017/2017/05/02/week-14---tuesday/) too
+
+---
 
 ```{r old, child='temp_deck.Rmd'}
 ```

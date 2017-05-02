@@ -25,12 +25,13 @@
 &lt;li&gt;&lt;a href=&#34;#ps6-key&#34;&gt;Problem Set 6&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#ps10-key&#34;&gt;Problem Set 10&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#ps11-key&#34;&gt;Problem Set 11&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#ps13-key&#34;&gt;Problem Set 13&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 /BLOGDOWN-BODY-BEFORE --&gt;
 
 &lt;hr /&gt;
-&lt;p&gt;Page last updated at Tuesday, April 25, 2017 14:32:29 PDT&lt;/p&gt;
+&lt;p&gt;Page last updated at Tuesday, May 02, 2017 12:06:56 PDT&lt;/p&gt;
 &lt;div id=&#34;ps2-key&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Problem Set 2&lt;/h1&gt;
 &lt;p&gt;Learning Checks LC3.2-LC3.7, LC3.9-LC3.10 from &lt;a href=&#34;https://ismayc.github.io/moderndiver-book/3-tidy.html&#34;&gt;ModernDive&lt;/a&gt;&lt;/p&gt;
@@ -189,26 +190,26 @@
 &lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;: These correspond to the &lt;code&gt;class&lt;/code&gt; of each variable in R. &lt;code&gt;dbl&lt;/code&gt; is the same thing as &lt;code&gt;num&lt;/code&gt; and represents numbers with decimal values. &lt;code&gt;int&lt;/code&gt; corresponds to integers (whole numbers and their negative opposites (-5, 4, 79, 0, 12342, etc.)). &lt;code&gt;chr&lt;/code&gt; corresponds to character values/strings and these are almost always categorical variables. The output of the similar &lt;code&gt;str(flights)&lt;/code&gt; is below.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(nycflights13)
 str(flights)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Classes &amp;#39;tbl_df&amp;#39;, &amp;#39;tbl&amp;#39; and &amp;#39;data.frame&amp;#39;:    336776 obs. of  19 variables:
-##  $ year          : int  2013 2013 2013 2013 2013 2013 2013 2013 2013 2013 ...
-##  $ month         : int  1 1 1 1 1 1 1 1 1 1 ...
-##  $ day           : int  1 1 1 1 1 1 1 1 1 1 ...
-##  $ dep_time      : int  517 533 542 544 554 554 555 557 557 558 ...
-##  $ sched_dep_time: int  515 529 540 545 600 558 600 600 600 600 ...
-##  $ dep_delay     : num  2 4 2 -1 -6 -4 -5 -3 -3 -2 ...
-##  $ arr_time      : int  830 850 923 1004 812 740 913 709 838 753 ...
-##  $ sched_arr_time: int  819 830 850 1022 837 728 854 723 846 745 ...
-##  $ arr_delay     : num  11 20 33 -18 -25 12 19 -14 -8 8 ...
-##  $ carrier       : chr  &amp;quot;UA&amp;quot; &amp;quot;UA&amp;quot; &amp;quot;AA&amp;quot; &amp;quot;B6&amp;quot; ...
-##  $ flight        : int  1545 1714 1141 725 461 1696 507 5708 79 301 ...
-##  $ tailnum       : chr  &amp;quot;N14228&amp;quot; &amp;quot;N24211&amp;quot; &amp;quot;N619AA&amp;quot; &amp;quot;N804JB&amp;quot; ...
-##  $ origin        : chr  &amp;quot;EWR&amp;quot; &amp;quot;LGA&amp;quot; &amp;quot;JFK&amp;quot; &amp;quot;JFK&amp;quot; ...
-##  $ dest          : chr  &amp;quot;IAH&amp;quot; &amp;quot;IAH&amp;quot; &amp;quot;MIA&amp;quot; &amp;quot;BQN&amp;quot; ...
-##  $ air_time      : num  227 227 160 183 116 150 158 53 140 138 ...
-##  $ distance      : num  1400 1416 1089 1576 762 ...
-##  $ hour          : num  5 5 5 5 6 5 6 6 6 6 ...
-##  $ minute        : num  15 29 40 45 0 58 0 0 0 0 ...
-##  $ time_hour     : POSIXct, format: &amp;quot;2013-01-01 05:00:00&amp;quot; &amp;quot;2013-01-01 05:00:00&amp;quot; ...&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;Classes &amp;#39;tbl_df&amp;#39;, &amp;#39;tbl&amp;#39; and &amp;#39;data.frame&amp;#39;:   336776 obs. of  19 variables:
+ $ year          : int  2013 2013 2013 2013 2013 2013 2013 2013 2013 2013 ...
+ $ month         : int  1 1 1 1 1 1 1 1 1 1 ...
+ $ day           : int  1 1 1 1 1 1 1 1 1 1 ...
+ $ dep_time      : int  517 533 542 544 554 554 555 557 557 558 ...
+ $ sched_dep_time: int  515 529 540 545 600 558 600 600 600 600 ...
+ $ dep_delay     : num  2 4 2 -1 -6 -4 -5 -3 -3 -2 ...
+ $ arr_time      : int  830 850 923 1004 812 740 913 709 838 753 ...
+ $ sched_arr_time: int  819 830 850 1022 837 728 854 723 846 745 ...
+ $ arr_delay     : num  11 20 33 -18 -25 12 19 -14 -8 8 ...
+ $ carrier       : chr  &amp;quot;UA&amp;quot; &amp;quot;UA&amp;quot; &amp;quot;AA&amp;quot; &amp;quot;B6&amp;quot; ...
+ $ flight        : int  1545 1714 1141 725 461 1696 507 5708 79 301 ...
+ $ tailnum       : chr  &amp;quot;N14228&amp;quot; &amp;quot;N24211&amp;quot; &amp;quot;N619AA&amp;quot; &amp;quot;N804JB&amp;quot; ...
+ $ origin        : chr  &amp;quot;EWR&amp;quot; &amp;quot;LGA&amp;quot; &amp;quot;JFK&amp;quot; &amp;quot;JFK&amp;quot; ...
+ $ dest          : chr  &amp;quot;IAH&amp;quot; &amp;quot;IAH&amp;quot; &amp;quot;MIA&amp;quot; &amp;quot;BQN&amp;quot; ...
+ $ air_time      : num  227 227 160 183 116 150 158 53 140 138 ...
+ $ distance      : num  1400 1416 1089 1576 762 ...
+ $ hour          : num  5 5 5 5 6 5 6 6 6 6 ...
+ $ minute        : num  15 29 40 45 0 58 0 0 0 0 ...
+ $ time_hour     : POSIXct, format: &amp;quot;2013-01-01 05:00:00&amp;quot; &amp;quot;2013-01-01 05:00:00&amp;quot; ...&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;lc3.6&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;LC3.6&lt;/h2&gt;
@@ -216,27 +217,27 @@ str(flights)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(nycflights13)
 glimpse(flights)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Observations: 336,776
-## Variables: 19
-## $ year           &amp;lt;int&amp;gt; 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013,...
-## $ month          &amp;lt;int&amp;gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,...
-## $ day            &amp;lt;int&amp;gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,...
-## $ dep_time       &amp;lt;int&amp;gt; 517, 533, 542, 544, 554, 554, 555, 557, 557, 55...
-## $ sched_dep_time &amp;lt;int&amp;gt; 515, 529, 540, 545, 600, 558, 600, 600, 600, 60...
-## $ dep_delay      &amp;lt;dbl&amp;gt; 2, 4, 2, -1, -6, -4, -5, -3, -3, -2, -2, -2, -2...
-## $ arr_time       &amp;lt;int&amp;gt; 830, 850, 923, 1004, 812, 740, 913, 709, 838, 7...
-## $ sched_arr_time &amp;lt;int&amp;gt; 819, 830, 850, 1022, 837, 728, 854, 723, 846, 7...
-## $ arr_delay      &amp;lt;dbl&amp;gt; 11, 20, 33, -18, -25, 12, 19, -14, -8, 8, -2, -...
-## $ carrier        &amp;lt;chr&amp;gt; &amp;quot;UA&amp;quot;, &amp;quot;UA&amp;quot;, &amp;quot;AA&amp;quot;, &amp;quot;B6&amp;quot;, &amp;quot;DL&amp;quot;, &amp;quot;UA&amp;quot;, &amp;quot;B6&amp;quot;, &amp;quot;EV&amp;quot;,...
-## $ flight         &amp;lt;int&amp;gt; 1545, 1714, 1141, 725, 461, 1696, 507, 5708, 79...
-## $ tailnum        &amp;lt;chr&amp;gt; &amp;quot;N14228&amp;quot;, &amp;quot;N24211&amp;quot;, &amp;quot;N619AA&amp;quot;, &amp;quot;N804JB&amp;quot;, &amp;quot;N668DN...
-## $ origin         &amp;lt;chr&amp;gt; &amp;quot;EWR&amp;quot;, &amp;quot;LGA&amp;quot;, &amp;quot;JFK&amp;quot;, &amp;quot;JFK&amp;quot;, &amp;quot;LGA&amp;quot;, &amp;quot;EWR&amp;quot;, &amp;quot;EWR&amp;quot;...
-## $ dest           &amp;lt;chr&amp;gt; &amp;quot;IAH&amp;quot;, &amp;quot;IAH&amp;quot;, &amp;quot;MIA&amp;quot;, &amp;quot;BQN&amp;quot;, &amp;quot;ATL&amp;quot;, &amp;quot;ORD&amp;quot;, &amp;quot;FLL&amp;quot;...
-## $ air_time       &amp;lt;dbl&amp;gt; 227, 227, 160, 183, 116, 150, 158, 53, 140, 138...
-## $ distance       &amp;lt;dbl&amp;gt; 1400, 1416, 1089, 1576, 762, 719, 1065, 229, 94...
-## $ hour           &amp;lt;dbl&amp;gt; 5, 5, 5, 5, 6, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 5,...
-## $ minute         &amp;lt;dbl&amp;gt; 15, 29, 40, 45, 0, 58, 0, 0, 0, 0, 0, 0, 0, 0, ...
-## $ time_hour      &amp;lt;dttm&amp;gt; 2013-01-01 05:00:00, 2013-01-01 05:00:00, 2013...&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;Observations: 336,776
+Variables: 19
+$ year           &amp;lt;int&amp;gt; 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013,...
+$ month          &amp;lt;int&amp;gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,...
+$ day            &amp;lt;int&amp;gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,...
+$ dep_time       &amp;lt;int&amp;gt; 517, 533, 542, 544, 554, 554, 555, 557, 557, 55...
+$ sched_dep_time &amp;lt;int&amp;gt; 515, 529, 540, 545, 600, 558, 600, 600, 600, 60...
+$ dep_delay      &amp;lt;dbl&amp;gt; 2, 4, 2, -1, -6, -4, -5, -3, -3, -2, -2, -2, -2...
+$ arr_time       &amp;lt;int&amp;gt; 830, 850, 923, 1004, 812, 740, 913, 709, 838, 7...
+$ sched_arr_time &amp;lt;int&amp;gt; 819, 830, 850, 1022, 837, 728, 854, 723, 846, 7...
+$ arr_delay      &amp;lt;dbl&amp;gt; 11, 20, 33, -18, -25, 12, 19, -14, -8, 8, -2, -...
+$ carrier        &amp;lt;chr&amp;gt; &amp;quot;UA&amp;quot;, &amp;quot;UA&amp;quot;, &amp;quot;AA&amp;quot;, &amp;quot;B6&amp;quot;, &amp;quot;DL&amp;quot;, &amp;quot;UA&amp;quot;, &amp;quot;B6&amp;quot;, &amp;quot;EV&amp;quot;,...
+$ flight         &amp;lt;int&amp;gt; 1545, 1714, 1141, 725, 461, 1696, 507, 5708, 79...
+$ tailnum        &amp;lt;chr&amp;gt; &amp;quot;N14228&amp;quot;, &amp;quot;N24211&amp;quot;, &amp;quot;N619AA&amp;quot;, &amp;quot;N804JB&amp;quot;, &amp;quot;N668DN...
+$ origin         &amp;lt;chr&amp;gt; &amp;quot;EWR&amp;quot;, &amp;quot;LGA&amp;quot;, &amp;quot;JFK&amp;quot;, &amp;quot;JFK&amp;quot;, &amp;quot;LGA&amp;quot;, &amp;quot;EWR&amp;quot;, &amp;quot;EWR&amp;quot;...
+$ dest           &amp;lt;chr&amp;gt; &amp;quot;IAH&amp;quot;, &amp;quot;IAH&amp;quot;, &amp;quot;MIA&amp;quot;, &amp;quot;BQN&amp;quot;, &amp;quot;ATL&amp;quot;, &amp;quot;ORD&amp;quot;, &amp;quot;FLL&amp;quot;...
+$ air_time       &amp;lt;dbl&amp;gt; 227, 227, 160, 183, 116, 150, 158, 53, 140, 138...
+$ distance       &amp;lt;dbl&amp;gt; 1400, 1416, 1089, 1576, 762, 719, 1065, 229, 94...
+$ hour           &amp;lt;dbl&amp;gt; 5, 5, 5, 5, 6, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 5,...
+$ minute         &amp;lt;dbl&amp;gt; 15, 29, 40, 45, 0, 58, 0, 0, 0, 0, 0, 0, 0, 0, ...
+$ time_hour      &amp;lt;dttm&amp;gt; 2013-01-01 05:00:00, 2013-01-01 05:00:00, 2013...&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;We see above from running &lt;code&gt;glimpse(flights)&lt;/code&gt; that the number of variables is 19. In a tidy data frame such as &lt;code&gt;flights&lt;/code&gt;, the number of columns corresponds directly to the number of variables so the number of columns is 19. This can also be obtained using the &lt;code&gt;ncol&lt;/code&gt; function via &lt;code&gt;ncol(flights)&lt;/code&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;lc3.7&#34; class=&#34;section level2&#34;&gt;
@@ -452,7 +453,7 @@ library(ggplot2)
 all_alaska_flights &amp;lt;- flights %&amp;gt;% filter(carrier == &amp;quot;AS&amp;quot;)
 ggplot(data = all_alaska_flights, mapping = aes(x = air_time, y = distance)) +
   geom_point()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;#####content/problem-sets/ps-key_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/problem-sets/ps-key/figures/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;This might initially look like an error but Alaskan Airlines online flies to Seattle from New York City. Therefore, all of the &lt;code&gt;distance&lt;/code&gt; values are 2402. We can see that there was quite a bit of variability in terms of &lt;code&gt;air_time&lt;/code&gt; though.&lt;/p&gt;
 &lt;!-- --&gt;
 &lt;/div&gt;
@@ -491,7 +492,7 @@ early_january_weather &amp;lt;- weather %&amp;gt;%
   filter(origin == &amp;quot;EWR&amp;quot; &amp;amp; month == 1 &amp;amp; day &amp;lt;= 15)
 ggplot(data = early_january_weather, mapping = aes(x = time_hour, y = wind_gust)) +
   geom_line()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;#####content/problem-sets/ps-key_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/problem-sets/ps-key/figures/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;What immediately stands out in this plot are the days with no wind gusts at all and values of 0. There appears to be only one wind gust over 25 mpg around January 2nd or 3rd.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;/div&gt;
@@ -620,7 +621,7 @@ not_BTV_SEA &amp;lt;- flights %&amp;gt;%
   filter(!(dest == &amp;quot;BTV&amp;quot;), !(dest == &amp;quot;SEA&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;We can use the &lt;code&gt;identical&lt;/code&gt; function to show that these objects are the same:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;identical(not_BTV_SEA, not_BTV_SEA2)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[1] TRUE&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;lc5.2&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;LC5.2&lt;/h2&gt;
@@ -640,10 +641,10 @@ not_BTV_SEA &amp;lt;- flights %&amp;gt;%
   summarize(mean = mean(temp, na.rm = TRUE),
             std_dev = sd(temp, na.rm = TRUE))
 summary_temp&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 1 × 2
-##       mean  std_dev
-##      &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;
-## 1 55.20351 17.78212&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;# A tibble: 1 × 2
+      mean  std_dev
+     &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;
+1 55.20351 17.78212&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;lc5.5&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;LC5.5&lt;/h2&gt;
@@ -1151,24 +1152,24 @@ kable(by_origin_month)&lt;/code&gt;&lt;/pre&gt;
          my_arr_delay = arr_time - sched_arr_time) %&amp;gt;% 
   select(dep_time, sched_dep_time, my_dep_delay, dep_delay, my_arr_delay, arr_delay)
 head(flights_new, 15)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 15 × 6
-##    dep_time sched_dep_time my_dep_delay dep_delay my_arr_delay arr_delay
-##       &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;        &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;        &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;
-## 1       517            515            2         2           11        11
-## 2       533            529            4         4           20        20
-## 3       542            540            2         2           73        33
-## 4       544            545           -1        -1          -18       -18
-## 5       554            600          -46        -6          -25       -25
-## 6       554            558           -4        -4           12        12
-## 7       555            600          -45        -5           59        19
-## 8       557            600          -43        -3          -14       -14
-## 9       557            600          -43        -3           -8        -8
-## 10      558            600          -42        -2            8         8
-## 11      558            600          -42        -2           -2        -2
-## 12      558            600          -42        -2           -3        -3
-## 13      558            600          -42        -2            7         7
-## 14      558            600          -42        -2          -14       -14
-## 15      559            600          -41        -1           31        31&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;# A tibble: 15 × 6
+   dep_time sched_dep_time my_dep_delay dep_delay my_arr_delay arr_delay
+      &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;        &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;        &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;
+1       517            515            2         2           11        11
+2       533            529            4         4           20        20
+3       542            540            2         2           73        33
+4       544            545           -1        -1          -18       -18
+5       554            600          -46        -6          -25       -25
+6       554            558           -4        -4           12        12
+7       555            600          -45        -5           59        19
+8       557            600          -43        -3          -14       -14
+9       557            600          -43        -3           -8        -8
+10      558            600          -42        -2            8         8
+11      558            600          -42        -2           -2        -2
+12      558            600          -42        -2           -3        -3
+13      558            600          -42        -2            7         7
+14      558            600          -42        -2          -14       -14
+15      559            600          -41        -1           31        31&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;We see that the first four rows look OK, but then some problems occur. &lt;code&gt;my_dep_delay&lt;/code&gt; gives a value of &lt;code&gt;-46&lt;/code&gt; when the true &lt;code&gt;dep_delay&lt;/code&gt; is &lt;code&gt;-6&lt;/code&gt;. You can see that this is due shifting to a new hour. Since &lt;code&gt;600 - 554 = -46&lt;/code&gt;, it isn’t as simple as just subtracting the two rows to get the delay. You also need to account for their only being 60 minutes in an hour not 100.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;lc5.12&#34; class=&#34;section level2&#34;&gt;
@@ -1179,7 +1180,7 @@ head(flights_new, 15)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)
 ggplot(data = flights, mapping = aes(x = gain)) +
   geom_histogram(color = &amp;quot;white&amp;quot;, bins = 20)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;#####content/problem-sets/ps-key_files/figure-html/unnamed-chunk-20-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/problem-sets/ps-key/figures/unnamed-chunk-20-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gain_summary &amp;lt;- flights %&amp;gt;% 
   summarize(
     min = min(gain, na.rm = TRUE),
@@ -1236,20 +1237,20 @@ kable(gain_summary)&lt;/code&gt;&lt;/pre&gt;
   summarize(num_flights = n()) %&amp;gt;% 
   arrange(desc(num_flights))
 freq_dest&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 105 × 2
-##     dest num_flights
-##    &amp;lt;chr&amp;gt;       &amp;lt;int&amp;gt;
-## 1    ORD       17283
-## 2    ATL       17215
-## 3    LAX       16174
-## 4    BOS       15508
-## 5    MCO       14082
-## 6    CLT       14064
-## 7    SFO       13331
-## 8    FLL       12055
-## 9    MIA       11728
-## 10   DCA        9705
-## # ... with 95 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;# A tibble: 105 × 2
+    dest num_flights
+   &amp;lt;chr&amp;gt;       &amp;lt;int&amp;gt;
+1    ORD       17283
+2    ATL       17215
+3    LAX       16174
+4    BOS       15508
+5    MCO       14082
+6    CLT       14064
+7    SFO       13331
+8    FLL       12055
+9    MIA       11728
+10   DCA        9705
+# ... with 95 more rows&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Answers will vary here. One thing that stands out is that the most flights go to Chicago (ORD) and Atlanta (ATL). These airports are not very close to New York City. Both of these airports are major hubs for airlines though which is likely driving them being at the top of the list as well as Los Angeles (LAX) and Boston (BOS).&lt;/p&gt;
 &lt;hr /&gt;
 &lt;/div&gt;
@@ -1281,14 +1282,14 @@ library(mosaic)
 profiles_subset &amp;lt;- profiles %&amp;gt;% filter(between(height, 55, 85))
 ggplot(data = profiles_subset, mapping = aes(x = height)) +
   geom_histogram(bins = 20, color = &amp;quot;white&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;#####content/problem-sets/ps-key_files/figure-html/unnamed-chunk-23-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/problem-sets/ps-key/figures/unnamed-chunk-23-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;set.seed(2017)
 profiles_sample1 &amp;lt;- profiles_subset %&amp;gt;% 
   resample(size = 100, replace = FALSE)
 ggplot(data = profiles_sample1, mapping = aes(x = height)) +
   geom_histogram(bins = 20, color = &amp;quot;white&amp;quot;, fill = &amp;quot;red&amp;quot;) +
   coord_cartesian(xlim = c(55, 85))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;#####content/problem-sets/ps-key_files/figure-html/unnamed-chunk-23-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/problem-sets/ps-key/figures/unnamed-chunk-23-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;The overall shape of the sample is similar to the overall shape of the population. It also covers roughly the same values as the population covers in its histogram.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;lc6.11&#34; class=&#34;section level2&#34;&gt;
@@ -1350,6 +1351,98 @@ ggplot(data = profiles_sample1, mapping = aes(x = height)) +
 &lt;p&gt;What are some flaws with hypothesis testing? How could we alleviate them?&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
 &lt;p&gt;The biggest flaw with hypothesis testing is the fact that it only has two competing hypothesis and a choice must be made one way or the other based on the data. When we reject the null hypothesis, we often want to also know “But how far away might we expect the mean of one group to be from the other?” or similar questions. Much like a criminal trial, we aren’t necessarily sure of just “how guilty” a person may be and type I and type II errors can be made in criminal trials and hypothesis tests. Unfortunately, this is something built in to the process of both. The dichotomy is alleviated some by using confidence intervals to estimate the difference as is discussed in Chapter 8 of ModernDive.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ps13-key&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Problem Set 13&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Modify the code I provided in the &lt;a href=&#34;https://ismayc.github.io/soc301_s2017/slides/slide_deck.html#haven&#34;&gt;slides&lt;/a&gt; in an R script and explain your results to the following problem:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Repeat the sampling, bootstrapping, and confidence interval R code steps above, but this time using the median and the IQR instead of the mean and standard deviation.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Provide your modified code and explain what each line of code is doing.&lt;/li&gt;
+&lt;li&gt;What changes in the results of the analysis?&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Do we get the same result as with the mean and standard deviation?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Discussion&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;Copying the code from the slides, we begin with installing the &lt;code&gt;haven&lt;/code&gt; package as shown on the slide &lt;a href=&#34;https://ismayc.github.io/soc301_s2017/slides/slide_deck.html#haven&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(&amp;quot;haven&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We then load the package via the &lt;code&gt;library&lt;/code&gt; function:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(haven)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can now read in the data as a data frame with the name &lt;code&gt;global13_full&lt;/code&gt; stored in the SPSS file format downloaded from my webpage:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;url &amp;lt;- &amp;quot;https://ismayc.github.io/global13sdss_0.sav&amp;quot;
+global13_full &amp;lt;- read_sav(url)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Next, we choose only a couple columns of interest to us:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;global13 &amp;lt;- global13_full %&amp;gt;% select(country, FEMALEOFFICE)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We proceed to plot the distribution of all percentage of females in national office after loading the &lt;code&gt;ggplot2&lt;/code&gt; package. (Note that nothing has changed yet in terms of &lt;u&gt;mean&lt;/u&gt; and &lt;u&gt;standard deviation&lt;/u&gt; being replaced with &lt;u&gt;median&lt;/u&gt; and &lt;u&gt;interquartile range&lt;/u&gt; yet. This code is exactly the same so far as what was done in class.)&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)
+ggplot(data = global13, mapping = aes(x = FEMALEOFFICE)) +
+  geom_histogram(color = &amp;quot;white&amp;quot;, bins = 15)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/problem-sets/ps-key/figures/unnamed-chunk-28-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We begin by selecting a single sample of size 25 from the population and calculating its median. We will set the seed to the random number generator to be &lt;code&gt;2017&lt;/code&gt;. (If you didn’t choose this same initial seed, you will obtain slightly different results in what follows.)&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sample1 &amp;lt;- global13 %&amp;gt;% resample(size = 25, replace = FALSE)
+(median_s1_f &amp;lt;- sample1 %&amp;gt;% summarize(median_f = median(FEMALEOFFICE)))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;# A tibble: 1 × 1
+  median_f
+     &amp;lt;dbl&amp;gt;
+1     21.3&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Here we create a sample of size 25 without replacement to simulate the process of selecting 25 countries at random from the pool of all countries in our population. Then we calculate the median of the percentage of females in national office for those 25 selected countries and repeat this process 5000 times. The &lt;code&gt;sample_medians&lt;/code&gt; data frame stores these 5000 sample medians.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sample_medians &amp;lt;- do(5000) * 
+  global13 %&amp;gt;% resample(size = 25, replace = FALSE) %&amp;gt;% 
+  summarize(median_f = median(FEMALEOFFICE))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We next use &lt;code&gt;ggplot2&lt;/code&gt; to plot a histogram of the distribution of sample medians. This is also known of the &lt;u&gt;sampling distribution of the median&lt;/u&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = sample_medians, mapping = aes(x = median_f)) +
+  geom_histogram(color = &amp;quot;white&amp;quot;, bins = 15)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/problem-sets/ps-key/figures/unnamed-chunk-31-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: We see that the distribution of the sample medians looks much different than the nice bell-shaped pattern we saw with the sampling distribution of the means as seen below:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ismayc.github.io/soc301_s2017/slides/slide_deck_files/figure-html/unnamed-chunk-7-1.png&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;The median of the sample medians provides a good estimate for the population median as seen below by computing both:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sample_medians %&amp;gt;% summarize(median_samp_dist = median(median_f))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;  median_samp_dist
+1             18.5&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;global13 %&amp;gt;% summarize(pop_median = median(FEMALEOFFICE))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;# A tibble: 1 × 1
+  pop_median
+       &amp;lt;dbl&amp;gt;
+1      18.55&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We next calculate the interquartile range (IQR) of the sampling distribution of the sample median:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sample_medians %&amp;gt;% summarize(iqr_medians = iqr(median_f))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;  iqr_medians
+1         2.9&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can compare this IQR value to the standard deviation of the sampling distribution of the statistic (previously, this was the mean) is known as the &lt;u&gt;standard error&lt;/u&gt;. It was calculated to be 1.83049 &lt;a href=&#34;https://ismayc.github.io/soc301_s2017/slides/slide_deck.html#stderror&#34;&gt;here&lt;/a&gt;. Recall that this standard error can be interpreted as saying that we expect a sample selected at random from the population to produce a sample mean value about 1.8 percentage points away from the mean value of ALL the sample means of 20.43005 that was calculated &lt;a href=&#34;https://ismayc.github.io/soc301_s2017/slides/slide_deck.html#meanofmeans&#34;&gt;here&lt;/a&gt;. The IQR values and standard error values are similar.&lt;/p&gt;
+&lt;div id=&#34;bootstrapping&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Bootstrapping&lt;/h2&gt;
+&lt;p&gt;We now shift towards using the single sample we selected above with name &lt;code&gt;sample1&lt;/code&gt; to create a guess as to what the shape of the sampling distribution may look like. We will then use this bootstrap distribution to create a confidence interval that will give us a range of plausible values for the population median. We begin by observing what a single bootstrap sample statistic/median may look like:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;set.seed(2017)
+(boot1 &amp;lt;- sample1 %&amp;gt;% resample(orig.id = TRUE))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;# A tibble: 25 × 3
+        country FEMALEOFFICE orig.id
+          &amp;lt;chr&amp;gt;        &amp;lt;dbl&amp;gt;   &amp;lt;chr&amp;gt;
+1       Lebanon          4.7      24
+2          Iran          2.8      14
+3        Canada         24.9      12
+4        Brazil          9.4       8
+5   North Korea         20.1      20
+6   North Korea         20.1      20
+7  Sierra Leone         13.2       1
+8       Iceland         33.3      11
+9        Canada         24.9      12
+10      Ukraine          8.2       7
+# ... with 15 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;bootstrap_medians &amp;lt;- do(5000) * 
+  sample1 %&amp;gt;% resample(replace = TRUE) %&amp;gt;% 
+  summarize(boot_median = median(FEMALEOFFICE))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can then plot the &lt;u&gt;bootstrap distribution&lt;/u&gt; which should give us an approximation for the sampling distribution we calculated above:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = bootstrap_medians, mapping = aes(x = boot_median)) +
+  geom_histogram(color = &amp;quot;white&amp;quot;, bins = 15)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/problem-sets/ps-key/figures/unnamed-chunk-37-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We see that the overall shape is similar compared to the sampling distribution shown above.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;( ciq_median &amp;lt;- confint(bootstrap_medians, level = 0.95, method = &amp;quot;quantile&amp;quot;) )&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;         name lower upper level     method estimate
+1 boot_median  13.2  25.8  0.95 percentile     21.3&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This confidence interval is a bit wider than the &lt;span class=&#34;math inline&#34;&gt;\((14.62, 24.76)\)&lt;/span&gt; confidence interval that was given for the population mean in the slides. This makes sense since the median appears to have more variability going from one sample to another than the mean does. The small sample size here of 25 could also be contributing to this.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 

@@ -31,6 +31,7 @@ class: center, middle
 
 ---
 
+name: haven
 
 ## Global Social Data
 
@@ -107,6 +108,8 @@ ggplot(data = sample_means, mapping = aes(x = mean_f)) +
 
 ---
 
+name: meanofmeans
+
 ## Mean of the sampling distribution
 
 ### The mean of the sampling distribution of means (where the sampling distribution is centered) provides an estimate for our population mean:
@@ -124,6 +127,8 @@ global13 %>% summarize(pop_mean = mean(FEMALEOFFICE))
 ```
 
 ---
+
+name: stderror
 
 ## Standard deviation of the sampling distribution
 
