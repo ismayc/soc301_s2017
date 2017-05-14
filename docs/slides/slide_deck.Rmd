@@ -3,7 +3,7 @@ title: SOC 301 Slides
 subtitle: Pacific University
 author: Chester Ismay
 date: Spring 2017
-output: 
+output: #html_document
   xaringan::moon_reader:
     lib_dir: libs
     nature:
@@ -26,7 +26,7 @@ theme_set(theme_gray(base_size = 26))
 
 layout: true
 
-.footer[[Week 14 - Tuesday](https://ismayc.github.io/soc301_s2017/2017/05/02/week-15---tuesday/)]
+.footer[[Week 14 - Tuesday](https://ismayc.github.io/soc301_s2017/2017/05/02/week-14---tuesday/)]
 
 ---
 
