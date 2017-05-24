@@ -6,7 +6,7 @@ categories: []
 tags: []
 ---
 
-This page provides the final revised `fivethirtyeight` R package vignettes created as a Group Project by Chester Ismay's Spring 2017 Social Statistics Course at Pacific University.
+This page provides the final revised `fivethirtyeight` R package vignettes created as a Group Project by Chester Ismay's Spring 2017 Social Statistics Course at Pacific University.  In the spirit of [reproducible research](https://www.forbes.com/sites/quora/2017/02/09/how-the-reproducibility-crisis-in-academia-is-affecting-scientific-research/#604cb84b3dad), here is a link to all [source code/data](https://github.com/ismayc/soc301_s2017/tree/master/docs/group_projects) for these projects.
 
 1. [Police Killings in Western U.S. During 2015](../group_projects/group1.html) - By Kelsey Graczyk, Cydni Mullikin, and Tia Kinilau
 
