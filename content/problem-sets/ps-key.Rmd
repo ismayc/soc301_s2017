@@ -12,7 +12,7 @@ output:
 Page last updated at `r format(Sys.time(), "%A, %B %d, %Y %X %Z")`
 
 ```{r echo=FALSE}
-knitr::opts_chunk$set(message=FALSE, warning=FALSE)
+knitr::opts_chunk$set(message=FALSE, warning=FALSE, comment = NA)
 ```
 
 
@@ -628,3 +628,257 @@ freq_dest
 
 Answers will vary here.  One thing that stands out is that the most flights go to Chicago (ORD) and Atlanta (ATL).  These airports are not very close to New York City.  Both of these airports are major hubs for airlines though which is likely driving them being at the top of the list as well as Los Angeles (LAX) and Boston (BOS).
 
+***
+
+# Problem Set 10 {#ps10-key}
+
+Learning Checks [LC6.1, LC6.3, LC6.9, LC6.11, LC6.13, LC6.15](https://ismayc.github.io/moderndiver-book/6-sim.html)
+
+
+## LC6.1
+
+Explain in your own words how tasting soup relates to the concepts of sampling covered here.
+
+**Discussion**:
+
+The entire pot of soup is the population.  A sample would be a bowl of soup from that pot.  Sampling is the process of selecting a bowl from the pot of soup.  If the pot is stirred and the scoop is done at random, we can generalize to the entire pot of soup any characteristics we notice in the bowl of soup.  If the pot is not stirred and there is bias in the selection of the sample (say if all carrots are chosen), we cannot generalize to the whole pot of soup but only to the sample selected.
+
+## LC6.3
+
+Why isn’t our population all bowls of soup? All bowls of Indian chicken soup?
+
+**Discussion**:
+
+All bowls of Indian chicken soup (and thus all bowls of soup) may not have the same characteristics as this particular bowl of soup.
+
+## LC6.9
+
+Does this random sample of `height` represent the population height variable well? Explain why or why not in a couple of sentences.
+
+**Discussion**:
+
+This question is referring to the following population plot and sample plot (with red fill):
+
+```{r}
+library(okcupiddata)
+library(dplyr)
+library(ggplot2)
+library(mosaic)
+profiles_subset <- profiles %>% filter(between(height, 55, 85))
+ggplot(data = profiles_subset, mapping = aes(x = height)) +
+  geom_histogram(bins = 20, color = "white")
+set.seed(2017)
+profiles_sample1 <- profiles_subset %>% 
+  resample(size = 100, replace = FALSE)
+ggplot(data = profiles_sample1, mapping = aes(x = height)) +
+  geom_histogram(bins = 20, color = "white", fill = "red") +
+  coord_cartesian(xlim = c(55, 85))
+```
+
+The overall shape of the sample is similar to the overall shape of the population.  It also covers roughly the same values as the population covers in its histogram.
+
+## LC6.11
+
+Why is random sampling so important here to create a distribution of sample means that provide a range of plausible values for the population mean height?
+
+**Discussion**:
+
+Without random sampling we have the potential for bias in our samples.  If these samples are biased, when we calculate the mean of each sample we will have biased mean readings that will deviate far from what the actual population mean is.  Random sampling ensures that bias is as close to eliminated as possible so we can be confident that our process would lead to a better estimation procedures of the population parameter.
+
+## LC6.13
+
+What is our observed statistic?
+
+**Discussion**:
+
+This question refers to the "Lady Tasting Tea" experiment.  Here it is the proportion of times the woman was able to correctly identify whether the tea or the milk was added first.  The value here is 9/10 = 0.9.
+
+## LC6.15
+
+How could we test to see whether the person is just guessing or if they have some special talent of identifying milk before tea or vice-versa?
+
+**Discussion**:
+
+We would begin by setting out 10 cups.  We then use a coin to randomly assign to each cup whether we will add milk first or second.  For our purposes, we will say that "heads" corresponds to milk first.  We then ask the lady to taste each cup and identify whether or not milk was added first or second.  It is important between each cup tasting for her to cleanse her palette so that each trial is independent of the others.  If she correctly identifies a large proportion of the 10 cups correctly, we have reason to believe she may have a special talent.  
+
+This can be verified by performing many different coin flip simulations assuming a fair coin in sets of 10 and counting the number of heads.  We can then see where the number we observed her getting correct falls on this distribution.  If it falls out in the right tail, we can assume our initial assumption that she was just guessing may not be correct.  If the observed number falls closer to the center of the distribution, we do not have evidence to go against or original assumption that she is just guessing.
+
+***
+
+# Problem Set 11 {#ps11-key}
+
+Learning Checks [LC7.1 - LC7.5](https://ismayc.github.io/moderndiver-book/7-hypo.html)
+
+
+## LC7.1
+
+Could we make the same type of immediate conclusion that SFO had a statistically greater `air_time` if, say, its corresponding standard deviation was 200 minutes? What about 100 minutes? Explain.
+
+**Discussion**:
+
+If SFO had a standard deviation of 100 minutes, the boxplots would likely still not overlap so we could have the same immediate conclusion.  With a standard deviation of 200 minutes though, the data would be much more variable and likely there would be some overlap between the boxplot for SFO and BOS.
+
+
+## LC7.2
+
+Reproduce the table above about errors, but for a hypothesis test, instead of the one provided for a criminal trial.
+
+**Discussion**:
+
+The original table for a criminal trial is below.
+
+
+<img src="https://ismayc.github.io/moderndiver-book/images/errors.png" alt="Drawing" style="width: 400px;"/>
+
+
+The corresponding table for a hypothesis test follows.
+
+![](http://vignette3.wikia.nocookie.net/whatilearned/images/4/45/Type_I_and_Type_II_Error_Table.jpg/revision/latest?cb=20110522022621)
+
+## LC7.3
+
+What is wrong about saying "The defendant is innocent." based on the US system of criminal trials?
+
+**Discussion**:
+
+You can never prove non-existence.  You can only have evidence for or against a claim.  Therefore, it is more appropriate and correct to say "The defendant is not guilty." or better yet "There is not evidence to conclude that the defendant is guilty."
+
+## LC7.4
+
+What is the purpose of hypothesis testing?
+
+**Discussion**:
+
+Much like a criminal trial, hypothesis testing is used to see if the sample collected brings evidence forth against or in favor of the null hypothesis.  If the sample and its observed statistic deviates far from what we expect to be true in the null hypothesis, we reject the original assumption in favor of the alternative hypothesis.  The alternative hypothesis usually represents what the researchers are interested in testing or a claim that has been made.
+
+## LC7.5
+
+What are some flaws with hypothesis testing? How could we alleviate them?
+
+**Discussion**:
+
+The biggest flaw with hypothesis testing is the fact that it only has two competing hypothesis and a choice must be made one way or the other based on the data.  When we reject the null hypothesis, we often want to also know "But how far away might we expect the mean of one group to be from the other?" or similar questions.  Much like a criminal trial, we aren't necessarily sure of just "how guilty" a person may be and type I and type II errors can be made in criminal trials and hypothesis tests.  Unfortunately, this is something built in to the process of both.  The dichotomy is alleviated some by using confidence intervals to estimate the difference as is discussed in Chapter 8 of ModernDive.
+
+***
+
+# Problem Set 13 {#ps13-key}
+
+- Modify the code I provided in the [slides](https://ismayc.github.io/soc301_s2017/slides/slide_deck.html#haven) in an R script and explain your results to the following problem:
+
+Repeat the sampling, bootstrapping, and confidence interval R code steps above, but this time using the median and the IQR instead of the mean and standard deviation.
+
+- Provide your modified code and explain what each line of code is doing.
+- What changes in the results of the analysis?  
+- Do we get the same result as with the mean and standard deviation?
+
+**Discussion**:
+
+Copying the code from the slides, we begin with installing the `haven` package as shown on the slide [here](https://ismayc.github.io/soc301_s2017/slides/slide_deck.html#haven).  
+
+```{r eval=FALSE}
+install.packages("haven")
+```
+
+We then load the package via the `library` function:
+
+```{r}
+library(haven)
+```
+
+We can now read in the data as a data frame with the name `global13_full` stored in the SPSS file format downloaded from my webpage:
+
+```{r}
+url <- "https://ismayc.github.io/global13sdss_0.sav"
+global13_full <- read_sav(url)
+```
+
+Next, we choose only a couple columns of interest to us:
+
+```{r}
+global13 <- global13_full %>% select(country, FEMALEOFFICE)
+```
+
+We proceed to plot the distribution of all percentage of females in national office after loading the `ggplot2` package.  (Note that nothing has changed yet in terms of <u>mean</u> and <u>standard deviation</u> being replaced with <u>median</u> and <u>interquartile range</u> yet.  This code is exactly the same so far as what was done in class.)
+
+```{r}
+library(ggplot2)
+ggplot(data = global13, mapping = aes(x = FEMALEOFFICE)) +
+  geom_histogram(color = "white", bins = 15)
+```
+
+We begin by selecting a single sample of size 25 from the population and calculating its median.  We will set the seed to the random number generator to be `2017`.  (If you didn't choose this same initial seed, you will obtain slightly different results in what follows.)
+
+
+```{r}
+sample1 <- global13 %>% resample(size = 25, replace = FALSE)
+(median_s1_f <- sample1 %>% summarize(median_f = median(FEMALEOFFICE)))
+```
+
+
+Here we create a sample of size 25 without replacement to simulate the process of selecting 25 countries at random from the pool of all countries in our population.  Then we calculate the median of the percentage of females in national office for those 25 selected countries and repeat this process 5000 times.  The `sample_medians` data frame stores these 5000 sample medians.
+
+```{r cache=TRUE}
+sample_medians <- do(5000) * 
+  global13 %>% resample(size = 25, replace = FALSE) %>% 
+  summarize(median_f = median(FEMALEOFFICE))
+```
+
+We next use `ggplot2` to plot a histogram of the distribution of sample medians.  This is also known of the <u>sampling distribution of the median</u>.
+
+```{r}
+ggplot(data = sample_medians, mapping = aes(x = median_f)) +
+  geom_histogram(color = "white", bins = 15)
+```
+
+**Note**: We see that the distribution of the sample medians looks much different than the nice bell-shaped pattern we saw with the sampling distribution of the means as seen below:
+
+```{r echo=FALSE}
+knitr::include_graphics("https://ismayc.github.io/soc301_s2017/slides/slide_deck_files/figure-html/unnamed-chunk-7-1.png")
+```
+
+The median of the sample medians provides a good estimate for the population median as seen below by computing both:
+
+```{r}
+sample_medians %>% summarize(median_samp_dist = median(median_f))
+global13 %>% summarize(pop_median = median(FEMALEOFFICE))
+```
+
+We next calculate the interquartile range (IQR) of the sampling distribution of the sample median:
+
+```{r}
+sample_medians %>% summarize(iqr_medians = iqr(median_f))
+```
+
+
+We can compare this IQR value to the standard deviation of the sampling distribution of the statistic (previously, this was the mean) is known as the <u>standard error</u>.  It was calculated to be 1.83049 [here](https://ismayc.github.io/soc301_s2017/slides/slide_deck.html#stderror).  Recall that this standard error can be interpreted as saying that we expect a sample selected at random from the population to produce a sample mean value about 1.8 percentage points away from the mean value of ALL the sample means of 20.43005 that was calculated [here](https://ismayc.github.io/soc301_s2017/slides/slide_deck.html#meanofmeans).  The IQR values and standard error values are similar.
+
+## Bootstrapping
+
+We now shift towards using the single sample we selected above with name `sample1` to create a guess as to what the shape of the sampling distribution may look like.  We will then use this bootstrap distribution to create a confidence interval that will give us a range of plausible values for the population median. We begin by observing what a single bootstrap sample statistic/median may look like:
+
+```{r}
+set.seed(2017)
+(boot1 <- sample1 %>% resample(orig.id = TRUE))
+```
+
+
+```{r cache=TRUE}
+bootstrap_medians <- do(5000) * 
+  sample1 %>% resample(replace = TRUE) %>% 
+  summarize(boot_median = median(FEMALEOFFICE))
+```
+
+We can then plot the <u>bootstrap distribution</u> which should give us an approximation for the sampling distribution we calculated above:
+
+```{r}
+ggplot(data = bootstrap_medians, mapping = aes(x = boot_median)) +
+  geom_histogram(color = "white", bins = 15)
+```
+
+We see that the overall shape is similar compared to the sampling distribution shown above.
+
+```{r}
+( ciq_median <- confint(bootstrap_medians, level = 0.95, method = "quantile") )
+```
+
+This confidence interval is a bit wider than the $(14.62, 24.76)$ confidence interval that was given for the population mean in the slides.  This makes sense since the median appears to have more variability going from one sample to another than the mean does.  The small sample size here of 25 could also be contributing to this.

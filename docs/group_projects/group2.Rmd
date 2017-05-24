@@ -28,6 +28,7 @@ library(forcats)
 library(knitr)
 library(ggthemes)
 library(maps)
+library(mapproj)
 ```
 
 # Data preparation

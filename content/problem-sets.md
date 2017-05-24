@@ -3,7 +3,68 @@ date: 2017-01-30T20:05:05-08:00
 title: Problem Sets
 ---
 
-This page will list the Problem Sets and when they will be turned in on paper throughout the course.  You will turn in one problem set per group.  You can find discussions about all of the Problem Sets [here](ps-key/index.html).  Links to specific Problem Set discussions will be posted after the Problem Set is turned in below the Problem Set assignment here.
+This page will list the Problem Sets and when they will usually be turned in on paper throughout the course (unless otherwise noted below).  You will usually turn in one problem set per group though some assignments will be turned in individually.  You can find discussions about many of the Problem Sets [here](ps-key/index.html).  Links to specific Problem Set discussions from ModernDive will be posted after the Problem Set is turned in below the Problem Set assignment here.
+
+
+# PS 13 (Due Tues, May 2 by 2:45 PM) {#ps13}
+
+- Can be hand-written or shared as a Google Doc
+- Turned in individually
+- Modify the code I provided in the slides in an R script and explain your results from the [Problem](https://ismayc.github.io/soc301_s2017/slides/slide_deck.html#ciprob) in the slides.
+    - Provide your modified code and explain what each line of code is doing.
+    - What changes in the results of the analysis?  
+    - Do we get the same result as with the mean and standard deviation?
+- Read the article about [Margin of Errors and Polling](http://www.pewresearch.org/fact-tank/2016/09/08/understanding-the-margin-of-error-in-election-polls/) from Pew Research
+    - In two to three paragraphs, summarize the article and discuss how confidence intervals are useful in polling.
+
+
+- DISCUSSION [here](ps-key/index.html#ps13-key)
+
+# PS 12 (Due Tues, April 25 by 1:00 PM) {#ps12}
+
+- Read [this article](http://fivethirtyeight.com/features/you-cant-trust-what-you-read-about-nutrition/) about _p_-hacking from 538
+  - Summarize the main findings from the article and how it relates to the content in Chapter 7 of ModernDive in 3-5 paragraphs
+- Create AT LEAST five multiple choice questions covering Chapters 6 and 7 of [ModernDive](http://moderndive.com).
+    - Create a Google Doc with your questions and share with isma5720@pacificu.edu
+    - Please follow the layout I have provided in the Sample Question Layout document [here](https://docs.google.com/a/pacificu.edu/document/d/1QrhQl_R5YrYSPNyx8WxTFesYZvSARN_TDGzmD6HeMvQ/edit?usp=sharing).  Copy over the content of this document into a new Google Doc and then enter your questions.    
+    - Each question should have four possible answers.
+    - Don't mark what you choose to be the correct answer on what you turn in, but make note of your choice elsewhere to facilitate your learning.
+    - **Please use Courier New font for all pieces of R code.**
+
+# PS 11 (Due Thurs, April 20 by 2:45 PM) {#ps11}
+
+- Read Chapter 7 of [ModernDive](https://ismayc.github.io/moderndiver-book/7-hypo.html)
+    - As you read, take careful notes of what you see as the key points conveyed and key things to remember about the R code.
+- Learning Checks [LC7.1 - LC7.5](https://ismayc.github.io/moderndiver-book/7-hypo.html)
+- Read the two articles from 538 and play with the interactives on the second one
+  - [Statisticians Found One Thing They Can Agree On: It’s Time To Stop Misusing P-Values](http://fivethirtyeight.com/features/statisticians-found-one-thing-they-can-agree-on-its-time-to-stop-misusing-p-values/)
+  - [Science Isn't Broken](https://fivethirtyeight.com/features/science-isnt-broken)
+  - Answer the questions in regards to the articles
+        1. Why is it difficult for scientists to quantify in simple terms what a *p*-value is?
+        2. What is p-hacking and why is it dangerous?
+        3. What is meant by "Instead, you can think of the p-value as an index of surprise."?
+
+- DISCUSSION [here](ps-key/index.html#ps11-key)
+
+# PS 10 (Due Thurs, April 13 by 4:20 PM) {#ps10}
+
+- Read Chapter 6 of [ModernDive](https://ismayc.github.io/moderndiver-book/6-sim.html)
+    - As you read, take careful notes of what you see as the key points conveyed and key things to remember about the R code.
+- Learning Checks [LC6.1, LC6.3, LC6.9, LC6.11, LC6.13, LC6.15](https://ismayc.github.io/moderndiver-book/6-sim.html)
+
+- DISCUSSION [here](ps-key/index.html#ps10-key)
+
+
+
+# PS 9 (Due Thurs, Apr 6 by 11:59 PM) {#ps9}
+
+- Check your email for a link to your Google Drive folder containing the needed files
+- Complete the `ps9.Rmd` file with an updated `ggplot2` plot and creation of a `dplyr` summarization
+  - You'll need to copy over relevant chunks from the group `.Rmd` file to reproduce and add to their analysis
+- Also provide a summary of the vignette you've been assigned and a short discussion on how your plot and summarization better adds
+to the overall message of the vignette
+  - Focus on improving the social perspective of the vignette
+- You'll knit the `ps9.Rmd` file to create a `ps9.html` file that exists in your Google Drive folder.
 
 # PS 8 (Due Thurs, Mar 23 by 4:20 PM) {#ps8}
 
